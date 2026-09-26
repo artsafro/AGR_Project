@@ -1,6 +1,9 @@
 # Digital Twin AI — состояние для продолжения
 
-Дата: 2026-09-26. Рабочая ветка: `feature/digital-twin-core`.
+Дата: 2026-09-26. Ветка разработки: `feature/digital-twin-core`; перенос в `main`
+через [PR #1](https://github.com/artsafro/AGR_Project/pull/1).
+Актуальное дополнение о проверках перед слиянием находится в конце документа;
+записи ниже сохраняют историю этапов. Точный checkout: `git log -1 --format=%H`.
 Базовый коммит исходников: `e77018f5994dc66e1640585fa7ba2758546ffbb9`.
 Коммит реализации: `c2f3a5a5838ef0ce69875cd2e1529d613fa2534f`.
 Текущий коммит кода: `8f58339745574f3c5a668b8120e21e293a742f29`
@@ -283,3 +286,36 @@ Skills не объявлены ready; DCC integration/real pilot по-прежн
 с JSON; ссылки новых отчётов существуют. Повторно прочитаны24 selected source
 hashes и48 archive hashes — оригиналы неизменны. Тесты проекта:32 passed,1 skipped
 (DCC без DT_BLENDER не выполнялся), ожидаемое duplicate ZIP warning. Diff check OK.
+
+## Дополнение 26.09.2026 — GitHub и проверки перед слиянием
+
+Исходный head: `c0c4fb2d9653d9878bae9d938819ef088171485f`.
+PR: https://github.com/artsafro/AGR_Project/pull/1, feature/digital-twin-core → main.
+Пользователь поручил выполнить перенос самостоятельно. Код и workflow не менялись.
+Коммит этой записи: `git log -1 --format=%H -- STATE.md`.
+
+Повторные локальные проверки на указанном коде:
+
+- `.venv\Scripts\python.exe -X utf8 -m pytest -q`: 32 passed, 1 skipped.
+- С `DT_BLENDER=C:\Program Files\Blender Foundation\Blender 4.4\blender.exe`:
+  та же команда — **33 passed, 0 skipped**, 16.03 s, включая отдельный фоновый
+  Blender export/readback на синтетической модели. Рабочие сцены не затрагивались.
+- `.venv\Scripts\dt.exe profiles check`: 3 profiles OK;
+  `.venv\Scripts\dt.exe schemas --check`: 7 schemas OK.
+- `.venv\Scripts\python.exe -X utf8 tools/render_inventory.py --check`: 73 tools OK.
+- `git diff --check main...HEAD`: OK. Единственный warning — ожидаемый duplicate
+  member в отрицательном ZIP-тесте.
+
+GitHub Actions **не проверил проект**: run 36269917204 завершился startup_failure
+до создания jobs. В аннотации GitHub сообщает о failed account payments либо
+необходимости увеличить spending limit. Ссылка на наблюдавшийся результат:
+https://github.com/artsafro/AGR_Project/actions/runs/36269917204.
+Это ограничение аккаунта, а не установленная ошибка кода или workflow.
+Оплата, лимиты, защита веток и настройки Actions не изменялись. API main на момент
+проверки: protected=false, required status checks enforcement=off. CI нельзя
+объявлять успешным; владелец должен проверить Billing & plans, затем повторить CI.
+Фактическое состояние слияния и merge SHA проверяются по PR #1 и `origin/main`.
+
+Следующая задача разработки остаётся INT-001. Готовность production DCC-интеграции
+и пилота на реальном ОКС не изменилась: нет. Локальный synthetic Blender round-trip
+не является проверкой реального проекта и не заменяет Linux CI.
