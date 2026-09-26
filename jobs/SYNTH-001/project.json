@@ -167,7 +167,7 @@
   "project": {
     "address_token": "Synthetic_001",
     "inputs": {
-      "fixture-definition.json": "e7e5df722b5f62e8000ace96a1a52cd54b914a6bdd9d0e43b596204cc220ca3a"
+      "fixture-definition.json": "b49ac9b966ab96b1be0b8c9fa9ef4801294f1c00288172a253bdc6704aa05142"
     },
     "placement": {
       "coordinate_system": "SYNTHETIC_LOCAL",
