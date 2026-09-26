@@ -118,7 +118,7 @@
         "DT-022",
         "DT-033"
       ],
-      "evidence": "Octopus DLL загружена; global OctopusInterface существует. 16 активных записей в двух меню; A101LP содержит 63058 символов команд.",
+      "evidence": "Octopus DLL загружена; global OctopusInterface существует. 16 активных записей в двух меню; A101LP содержит 63058 символов команд. Fresh Octopus myscripts416/422 links Copitor; installedv3 script hash matches source.",
       "dependencies": "Octopus; вызываемые MCR/плагины; Max2024",
       "source_code": "XML-команды доступны, плагин закрыт",
       "limitations": "Вынести принадлежащую команде логику из меню в версионируемые функции с явными входами. Наличие кнопки не доказывает частоту её использования.",
@@ -347,7 +347,7 @@
         "DT-012",
         "DT-013"
       ],
-      "evidence": "LoadStartupScripts=1; loader files; UVTools button в toolbar и Octopus.",
+      "evidence": "LoadStartupScripts=1; loader files; UVTools button в toolbar и Octopus. Fresh SHA: UVTools3.2m macro matches installed;3.3.05 macro differs. This does not identify full runtime version.",
       "dependencies": "Max Unwrap_UVW, коммерческие пакеты",
       "source_code": "Три startup MSE раскрыты; основной UVTools/PolyUnwrapper/auvn не исследован.",
       "limitations": "Использовать существующий ручной этап. Из отсутствия выбранного global нельзя заключать, что модуль не загружен. Output всё равно проверяет профиль. auvn_autoload имеет пустой try: этот путь не запускает основной скрипт; другие пути запуска неизвестны. UVTools loader меняет INI/DLX; не выполнять для read-only анализа.",
@@ -874,7 +874,7 @@
       "evidence": "hosts/autocad.py GetActiveObject; revit.py named pipe; jobs/export.py agr_export_fbx/dry-run.",
       "dependencies": "Python,pywin32,Max/Revit bridge",
       "source_code": "Python открыт",
-      "limitations": "Не создавать второй orchestrator/registry. Использовать хостовые функции через узкий контракт; существующие правила сверить с PDF, fallback не приравнивать к выполненному экспорту.",
+      "limitations": "Не создавать второй orchestrator/registry. Использовать хостовые функции через узкий контракт; существующие правила сверить с PDF, fallback не приравнивать к выполненному экспорту. Revit export dry-run fallback explicitly returns document info without FBX; source jobs/export.py48–74.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
     },
@@ -1258,7 +1258,8 @@
       "paths": [
         "C:\\usermacros\\XViewInspectorMax.mcr",
         "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\scripts\\startup\\xview_inspector_max_startup.ms",
-        "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\scripts\\startup\\PRUNESCENE_ACTIVE_PROTECTION.ms"
+        "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\scripts\\startup\\PRUNESCENE_ACTIVE_PROTECTION.ms",
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\XViewInspectorMax\\XViewInspectorMax.mzp"
       ],
       "version": "версии неизвестны",
       "purpose": "Диагностика сцены и защита/очистка.",
@@ -1267,10 +1268,10 @@
       "tasks": [
         "DT-021"
       ],
-      "evidence": "xView и PruneScene есть в текущем toolbar; startup files присутствуют.",
+      "evidence": "xView и PruneScene есть в текущем toolbar; startup files присутствуют. Fresh follow-up:40 Python modules SHA-identical between MZP and installed package; startup reread.",
       "dependencies": "Max xView; PruneScene",
-      "source_code": "Смешанный MS/MCR/MSE",
-      "limitations": "Использовать read-only inspection отдельно от cleanup. Наличие защиты не доказывает отсутствие дефектов в реальном файле.",
+      "source_code": "Смешанный MS/MCR/MSE xview_max Python0.1.0 available; all rights reserved; local adapter before source copying.",
+      "limitations": "Использовать read-only inspection отдельно от cleanup. Наличие защиты не доказывает отсутствие дефектов в реальном файле. xView MeshData uses0-based faces, findings1-based; self-intersection limit20000 raises RuntimeError; fan triangulation/duplicate vertex-ID semantics require tests.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
     },
@@ -1433,6 +1434,305 @@
       "limitations": "prototype; alpha теряется, RGB input отклоняется; радиус CLI не найден; без -o перезаписывает вход",
       "copy_policy": "В Git только свой harness/metadata; исходные DLL/EXE не копируются. Права переноса/модификации уточнить отдельно.",
       "usage_confirmation": "Synthetic test доказан для CLI; использование этой поставки командой не подтверждено."
+    },
+    {
+      "id": "MAX-31",
+      "application": "3ds Max",
+      "name": "Andrew Maf Tools",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Andrew_scripts\\Maf Tools.mcr"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "MatID→UDIM, texel density, tile packing",
+      "status": "distribution_available",
+      "decision": "обернуть адаптером",
+      "tasks": [
+        "DT-012",
+        "DT-013",
+        "DT-014"
+      ],
+      "evidence": "стр.243 unwrapByMatIDToUDIM_Advanced;438 units;819 ua_packTiles; folder-followup-evidence.json",
+      "dependencies": "3ds Max/Unwrap UVW",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "ConvertToPoly/channel1/selection changes; preserve IDs/UV, sparse IDs and scale tests required; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-32",
+      "application": "3ds Max",
+      "name": "Andrew Poly Actions Copy",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Andrew_scripts\\Poly Actions Copy_V6.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Повторение extrude/inset/MatID/connect по группам, backup/restore, PAC presets",
+      "status": "distribution_available",
+      "decision": "доработать",
+      "tasks": [
+        "DT-030",
+        "DT-031",
+        "DT-032"
+      ],
+      "evidence": "UI v7.6.0; functions buildGroupFrame/applyRecorded; PAC import line765; folder-followup-evidence.json",
+      "dependencies": "3ds Max Editable Poly",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "PAC import executes text; declarative safe parser and topology/rollback tests required; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-33",
+      "application": "3ds Max",
+      "name": "Collizii bbox/convex UI",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Collizii.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Поиск bbox пересечений и эвристическая выпуклость",
+      "status": "distribution_available",
+      "decision": "заменить",
+      "tasks": [
+        "DT-021",
+        "DT-033"
+      ],
+      "evidence": "checkPreciseIntersection:144–161 only bbox+snapshots then true; isConvex:352–398; folder-followup-evidence.json",
+      "dependencies": "3ds Max snapshotAsMesh",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Precise does not test triangle intersections; fixed tolerance0.001; <4 faces/verts returns convex true; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-34",
+      "application": "3ds Max",
+      "name": "UDIM Viewer",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\UDIM Viewer_V1.2.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Preview UDIM с назначением MatID и PhysicalMaterial",
+      "status": "distribution_available",
+      "decision": "доработать",
+      "tasks": [
+        "DT-013"
+      ],
+      "evidence": "Header v7.4; ERM recognized43–45 but no assignment branch257–275; folder-followup-evidence.json",
+      "dependencies": "3ds Max PhysicalMaterial/Normal_Bump",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "ERM/ORM ignored; convertToPoly, MatID by UV centroid, negative UV clamp; not read-only validator; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-35",
+      "application": "3ds Max",
+      "name": "Collect Asset",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\collect_asset_v2.099b.mzp"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Поиск/сбор IFL, xref, maps, proxy и renderer assets, hashes, relink",
+      "status": "distribution_available",
+      "decision": "обернуть адаптером",
+      "tasks": [
+        "DT-012",
+        "DT-022"
+      ],
+      "evidence": "Archive collect_asset_2.099.ms: getAssetFiles/getAssetFilesSelected/getFileHash/collect_as; folder-followup-evidence.json",
+      "dependencies": "3ds Max; Corona/V-Ray classes; bundled7z",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Isolate discovery/copy; same UI also deletes files, saves scene and recursively removes temp paths; installer not executed; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-36",
+      "application": "3ds Max",
+      "name": "Zavod Max scene census",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\scene\\agr_inspect_max.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\scene\\scene_load_report.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Scene→JSON: identity/units/bbox/materials/maps/instances; layer weight report",
+      "status": "distribution_available",
+      "decision": "обернуть адаптером",
+      "tasks": [
+        "DT-020",
+        "DT-021"
+      ],
+      "evidence": "agr_inspect_max JSON fields186–261, writeOut273; scene_load_report counts/layers; folder-followup-evidence.json",
+      "dependencies": "3ds Max; agr CLI reads temp report",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Fixed temp output overwritten; pin PID/scene, job-specific path and readback required; not run now; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-37",
+      "application": "3ds Max",
+      "name": "Zavod map audit and collection",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\optimizer\\audit_scene_maps.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\optimizer\\collect_scene_maps.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Аудит used/missing/unused maps; copy/relink и _manifest.txt",
+      "status": "distribution_available",
+      "decision": "доработать",
+      "tasks": [
+        "DT-012",
+        "DT-022"
+      ],
+      "evidence": "collect_scene_maps globals6–10; dryRun=false202; manifest288; audit deleteFilesWithConfirm155; folder-followup-evidence.json",
+      "dependencies": "3ds Max materials/assets/filesystem",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Explicit dry-run needed; environment excluded by default; audit can delete files; split read/copy/delete; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-38",
+      "application": "3ds Max",
+      "name": "Zavod proxy and pipe LOD",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\optimizer\\zavod_lib_proxy.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\pipes\\pipe_lo_axis_pca.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\pipes\\pipe_to_cylinder9.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\pipes\\pipe_optimize_clone.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Corona proxy decimation; PCA-based low-poly pipe representation",
+      "status": "distribution_available",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-012",
+        "DT-030"
+      ],
+      "evidence": "ZavodProxy_writeCgeoFromMesh124; PCA/cylinder9; clone tool; folder-followup-evidence.json",
+      "dependencies": "3ds Max, Corona, ProOptimizer",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Proxy kernel overwrites .cgeo; clone output and quantitative geometry preservation needed;9 sides is not a PDF norm; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-39",
+      "application": "3ds Max",
+      "name": "CA/UDP/channel cleaner",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\ClearCustomAttributesAndObjProp_001.ms",
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\ClearCustomAttributesAndObjProp_010.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Очистка custom attributes/user properties/map channels/animation",
+      "status": "distribution_available",
+      "decision": "доработать",
+      "tasks": [
+        "DT-021",
+        "DT-022"
+      ],
+      "evidence": "010 UI587–598 defaults; wipeNodeAllPlaces480; folder-followup-evidence.json",
+      "dependencies": "3ds Max",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Defaults clear provenance/UDP/animation/vertex channels; export-copy allowlist required;001/010 not proved duplicates; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-40",
+      "application": "3ds Max",
+      "name": "rapidTools distribution",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\rapidToolsInstaller_v1.14.mzp"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Mesh cleanup, quad/ngon, panelizer/conform, OBJ exporter",
+      "status": "installed_usage_unknown",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-030",
+        "DT-033"
+      ],
+      "evidence": "31 archive macros SHA-identical to C:/usermacros; installer only inspected; folder-followup-evidence.json",
+      "dependencies": "3ds Max; MSE kernels + macros",
+      "source_code": "MSE kernels; installer/macros visible",
+      "limitations": "Macro presence not kernel/runtime proof; main functions encrypted MSE; do not run installer to inventory; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-41",
+      "application": "3ds Max",
+      "name": "Object replacement and door template placement",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Andrew_scripts\\Zamena_V2.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\doors\\align_door_pivots_to_bottom.ms",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\doors\\place_box001_on_doors.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Замена по имени/world transform; размещение шаблона по дверям",
+      "status": "distribution_available",
+      "decision": "доработать",
+      "tasks": [
+        "DT-031",
+        "DT-032"
+      ],
+      "evidence": "Zamena_V2 headerMax2024, replacement105+; doors file15 hardcoded Box001; folder-followup-evidence.json",
+      "dependencies": "3ds Max; Box001 and scene naming conventions",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Use approved WindowType/manifest and IDs, clone-only output; source templates are not measured real OKS geometry; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "MAX-42",
+      "application": "3ds Max",
+      "name": "Road Markings Generator",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\ArchViz Tools\\Road Markings Generator 2.0\\RMG.mzp",
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Road Markings Generator v2.0\\RMG.mzp",
+        "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Road Markings Generator v2.0\\Road Markings Generator v2.0.mzp"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Генератор дорожной разметки для Ground",
+      "status": "installed_usage_unknown",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-012",
+        "DT-030"
+      ],
+      "evidence": "3 archive SHA-identical; installed MSE/macro identical to members; folder-followup-evidence.json",
+      "dependencies": "3ds Max; MSE and supplied assets",
+      "source_code": "MSE kernels; installer/macros visible",
+      "limitations": "Configured usage not verified; original geometry/coordinates must come from project; archives not installed; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
+    },
+    {
+      "id": "GEN-13",
+      "application": "Python / 3ds Max",
+      "name": "Zavod offline FBX metadata inspector",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\fbx\\inspect_fbx.py",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\fbx\\export_fbx_inventory.ms"
+      ],
+      "version": "По исходнику/имени поставки; см. ZAVOD_AND_MAX_PLUGINS_REVIEW.md. Runtime не проверен.",
+      "purpose": "Binary/ASCII FBX→metadata JSON; paired Max exporter",
+      "status": "distribution_available",
+      "decision": "обернуть адаптером",
+      "tasks": [
+        "DT-020",
+        "DT-021",
+        "DT-022"
+      ],
+      "evidence": "inspect_fbx.py parse_binary_nodes123/parse_ascii226/inspect_fbx257/CLI341; folder-followup-evidence.json",
+      "dependencies": "Python stdlib for parser; Max required only for exporter",
+      "source_code": "Source text inspected in place/archive; not copied to Git",
+      "limitations": "Parser is not UV/normals/geometry verifier; -o required to avoid sidecars in input folder; no fresh execution here; production workflow prototype.",
+      "copy_policy": "Оригинал не менялся; в Git только метаданные/выводы. Права переноса исходников не предполагаются.",
+      "usage_confirmation": "Функция не запускалась; использование командой не установлено. Наличие/настройка не равно успешной работе."
     }
   ],
   "path_evidence": {
@@ -2191,6 +2491,156 @@
       "kind": "file",
       "bytes": 475136,
       "sha256": "33229bd81a00c2d15673a144f702c643bb00ef45917e5ee928b925a2353c575e"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\XViewInspectorMax\\XViewInspectorMax.mzp": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 44553,
+      "sha256": "f2f593e9f48cc197cdc20d8c6c47ce408fa2ba859cac21b35fd7e57d4028cc10"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Andrew_scripts\\Maf Tools.mcr": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 152261,
+      "sha256": "df1a3a3ef97f4c195c284231291ec6b6285ac412983646e9a0481e378e19fa05"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Andrew_scripts\\Poly Actions Copy_V6.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 48868,
+      "sha256": "f8f2581645ba06c7599ec2ac662e337d230b48819fed63cbc1696a71fe57b970"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Collizii.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 20013,
+      "sha256": "a11bca545c5e46d66cc57cb20dd63fcf4a233d0bc2cee94fb380d66e2ea78c4d"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\UDIM Viewer_V1.2.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 12119,
+      "sha256": "1f284bbd1b1bb438a603e4f3838b6c9bb68580cea94ab5ce66dcc128b62c2f95"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\collect_asset_v2.099b.mzp": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 764398,
+      "sha256": "ff44f2d24b940a78d23199a8d7db5e56d41cde90ef1e9c204a7453f388c3a987"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\scene\\agr_inspect_max.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 7661,
+      "sha256": "ea79dfc035a918cf144d56ac1abcc7641ea086c05ed696d52e042905a6b4446e"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\scene\\scene_load_report.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 3461,
+      "sha256": "a9b76b4fb8c2338ca5a9088831328457ac546a00fc2a0075076095d1dfda59a3"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\optimizer\\audit_scene_maps.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 8126,
+      "sha256": "e9601693458995c2b7e2cb0bd8ca546175960a83ed969a6802b5273930c4a382"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\optimizer\\collect_scene_maps.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 10749,
+      "sha256": "ce77809fe39f52ccf5fa34582f6547db589c4aeff656b4ab4b30897790c97290"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\optimizer\\zavod_lib_proxy.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 12403,
+      "sha256": "21666ae8fbe6d3aa9c34f5580133b5fbe085f5fd17baeee8feb7b265577b9474"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\pipes\\pipe_lo_axis_pca.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 2811,
+      "sha256": "9e99b17556128c601637fff5b91b8672a2aa48e29885eeb09f2767d6ca2cb22a"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\pipes\\pipe_to_cylinder9.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 12128,
+      "sha256": "0d2acbc9545c2caad42f9c1dfe5441907ddb34422b2c7eceac3aed55be53de00"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\pipes\\pipe_optimize_clone.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 5903,
+      "sha256": "466809e8c0f55baab3a5612c38cecb6a9f869cf973bb8530a0abe21e7e743f1c"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\ClearCustomAttributesAndObjProp_001.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 10556,
+      "sha256": "4a429dc20d28269c1cbb289e4cefa32210008a931bdb350ca92a6b02dc730b13"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\ClearCustomAttributesAndObjProp_010.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 34132,
+      "sha256": "c1c52e21cf5adf67e6c35a5719669754a7511335573f778128f2a0c26904e53c"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\rapidToolsInstaller_v1.14.mzp": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 295241,
+      "sha256": "ffe09299110a524cae8f3cf310f866ec8626d254b207e17c6f8a238312c6694e"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Andrew_scripts\\Zamena_V2.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 7074,
+      "sha256": "a44ac2310d5fe0a5b72e71be2a9e9b2753f2c6550e5eb8f1695d7d5dc60defa3"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\doors\\align_door_pivots_to_bottom.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 4930,
+      "sha256": "e22ab117fb9741ce5afb9f8069bd63abe4ccab2d431a9b4609a12a4750611608"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\doors\\place_box001_on_doors.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 5820,
+      "sha256": "93eb2d12148646b50d35dd8abdb901295a6193c90e4505bfdbf652f0ca15a928"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\ArchViz Tools\\Road Markings Generator 2.0\\RMG.mzp": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 88499446,
+      "sha256": "7b6fc1e723dcf8e54ff94e114c452d4fd60d19a9b35b086762696adcfcaec31c"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Road Markings Generator v2.0\\RMG.mzp": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 88499446,
+      "sha256": "7b6fc1e723dcf8e54ff94e114c452d4fd60d19a9b35b086762696adcfcaec31c"
+    },
+    "C:\\Users\\artsafro\\Desktop\\!3D viz\\Плагины 3dMax\\Road Markings Generator v2.0\\Road Markings Generator v2.0.mzp": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 88499446,
+      "sha256": "7b6fc1e723dcf8e54ff94e114c452d4fd60d19a9b35b086762696adcfcaec31c"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\fbx\\inspect_fbx.py": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 12333,
+      "sha256": "b2e2055ae478f423efacbcb146c33a53df512038e5f2ea566e2e69c947f06734"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\scripts\\fbx\\export_fbx_inventory.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 14805,
+      "sha256": "fd109644dd2b05f06c16eeb96905c4273f5fcbfdf1fa9caabe63e85507e60d62"
     }
   }
 }

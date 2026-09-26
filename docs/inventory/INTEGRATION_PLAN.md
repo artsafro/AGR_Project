@@ -184,3 +184,28 @@ containment/convexity/closure/coverage; чужой exit0 не является p
 не писать дублирующие geometry kernels до оценки этих кандидатов. Они не являются
 обязательной зависимостью ядра и не блокируют INT-001. Основной GeoAGR UI/экспорт,
 обновление установленной версии и лицензирование не менялись.
+
+## Дополнение: zavod и библиотека плагинов Max
+
+[Статический разбор](ZAVOD_AND_MAX_PLUGINS_REVIEW.md) расширил каталог до73 записей.
+Новых рабочих сцен/моделей не открывали, найденные scripts/installers не выполняли.
+
+- INT-001: добавить xView0.1.0 как кандидат локального preflight backend.
+  40 Python-модулей совпадают с установленными; отделены MeshData/settings/checks.
+  Нормализовать0-based вход/1-based findings, сохранять RuntimeError/not_run при
+  лимите20000 треугольников; тестировать fan triangulation и duplicate-ID semantics.
+  Сначала fixture mapping, затем local worker, без копирования защищённого кода.
+- INT-002: MAX-36 census и GEN-13 FBX metadata parser использовать для inspect.
+  Не заменять ими DCC round-trip; явные PID/scene identity и job-specific outputs.
+- INT-003: MAX-31 Maf Tools для MatID→UDIM/texel density, MAX-35/37 для asset
+  discovery/manifest. Отделить read/copy/relink/delete. MAX-34 не эталон ERM:
+  ветки подключения ERM/ORM отсутствуют, UV centroid не проверяет границы плитки.
+- INT-005: MAX-32 action replay и MAX-41 replacement — только после manifest/ID
+  контракта, безопасного parser вместо execute(.pac) и clone/rollback тестов.
+- INT-006: MAX-33 Collizii precise не использовать как доказательство пересечения;
+  его код ограничен bbox. Проверять GeoAGR/xView/SINTEZ и отдельные UCX gates.
+
+MAX-38 proxy LOD и MAX-39 cleaner не запускать автоматически перед экспортом:
+первый перезаписывает cgeo, второй может стереть provenance/UDP/animation.
+MAX-40 rapidTools и MAX-42 разметка — дополнительные кандидаты тестовой сцены,
+не новые обязательные зависимости. INT-001 остаётся следующей задачей.

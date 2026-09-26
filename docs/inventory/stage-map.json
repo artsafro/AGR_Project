@@ -35,7 +35,12 @@
         "MAX-14",
         "MAX-06",
         "MAX-27",
-        "GEN-12"
+        "GEN-12",
+        "MAX-31",
+        "MAX-35",
+        "MAX-37",
+        "MAX-38",
+        "MAX-42"
       ],
       "gate": "approved registry + geometry"
     },
@@ -53,7 +58,9 @@
         "GEN-08",
         "MAX-06",
         "MAX-27",
-        "GEN-12"
+        "GEN-12",
+        "MAX-31",
+        "MAX-34"
       ],
       "gate": "ERM/normal pixel proof + tile/slot mapping"
     },
@@ -64,7 +71,8 @@
       ],
       "tools": [
         "GEN-08",
-        "BL-09"
+        "BL-09",
+        "MAX-31"
       ],
       "gate": "input hashes + stable IDs + approved preserved"
     },
@@ -85,7 +93,13 @@
         "GEN-07",
         "GEN-08",
         "MAX-29",
-        "GEN-11"
+        "GEN-11",
+        "MAX-33",
+        "MAX-35",
+        "MAX-36",
+        "MAX-37",
+        "MAX-39",
+        "GEN-13"
       ],
       "gate": "PDF rule mapping + actual ZIP readback + manual gates"
     },
@@ -124,7 +138,12 @@
         "MAX-25",
         "GEN-01",
         "MAX-28",
-        "MAX-30"
+        "MAX-30",
+        "MAX-32",
+        "MAX-38",
+        "MAX-40",
+        "MAX-41",
+        "MAX-42"
       ],
       "gate": "contours/openings/source IDs verified"
     },
@@ -145,7 +164,12 @@
         "GEN-11",
         "MAX-28",
         "MAX-30",
-        "GEN-11"
+        "GEN-11",
+        "MAX-33",
+        "MAX-36",
+        "MAX-39",
+        "MAX-40",
+        "GEN-13"
       ],
       "gate": "closed/convex/overlap/passages/coverage + collision review"
     }

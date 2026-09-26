@@ -250,3 +250,36 @@ INT-003 после защиты alpha/радиуса. MAX-28/29/30 — prototype
 отклоняют неизвестный executable до запуска. Inventory60/profiles3/schemas7 — OK.
 Продукт: **32 passed,1 skipped** (DT_BLENDER не задавался, DCC round-trip здесь
 не повторялся), ожидаемое предупреждение теста duplicate ZIP. `git diff --check` OK.
+
+## Дополнение 26.09.2026 — zavod и Плагины 3dMax
+
+База: `37930230ec9bbb8345f58821594380c19903dc0c`.
+Коммит: `git log -1 --format=%H -- docs/inventory/ZAVOD_AND_MAX_PLUGINS_REVIEW.md`.
+Отчёт: `docs/inventory/ZAVOD_AND_MAX_PLUGINS_REVIEW.md`; evidence:
+`docs/inventory/folder-followup-evidence.json`. Каталог: **73 tools/162 paths**.
+
+- Свежий read-only scan указанных двух корней:479+919=1398 metadata records,
+  0 traversal errors. Все48 MZP прочитаны как ZIP без установки. Охват ограничен
+  extensions/pruned directories; это не полное изучение1398 исходников.
+- 60 targeted deployment comparisons:57 same/3 different; отдельно40 Python
+  модулей xView совпали с установленными. Startup/Octopus прочитаны заново.
+  Количество вызовов/применение командой не доказаны. Ничего найденного не исполнялось.
+- Новые кандидаты: Maf Tools MatID/UDIM, PAC actions, scene census, FBX metadata,
+  asset collection, proxy/pipe LOD, replacement/doors, cleaners, rapidTools/RMG.
+- Существенные ограничения: Collizii precise только bbox; UDIM Viewer ERM/ORM
+  распознаёт без подключения; PAC импортирует через execute; cleanup удаляет UDP,
+  keys/CA; collect dryRun=false; proxy kernel переписывает cgeo. Не запускать blindly.
+- 3 RMG archives — exact duplicates; H_instancer — exact duplicate. Не удалялись.
+  UVTools3.2m macro совпал с установленным,3.3.05 отличается; runtimeversion не доказана.
+- Код сторонних инструментов не копировался; Git содержит только metadata/docs.
+  Сырые результаты находятся в ignored `tmp/inventory/folder-followup`.
+
+INT-001 остаётся следующим: SINTEZ/xView native findings→PDF, error/not_run и fixtures.
+При интеграции взять Max census/FBX inventory и Maf Tools как кандидатов повторного
+использования, отделить чтение от действий с ресурсами. Никакие новые production
+Skills не объявлены ready; DCC integration/real pilot по-прежнему нет.
+
+Проверки дополнения: inventory73, profiles3, schemas7 — OK; все поля CSV совпали
+с JSON; ссылки новых отчётов существуют. Повторно прочитаны24 selected source
+hashes и48 archive hashes — оригиналы неизменны. Тесты проекта:32 passed,1 skipped
+(DCC без DT_BLENDER не выполнялся), ожидаемое duplicate ZIP warning. Diff check OK.

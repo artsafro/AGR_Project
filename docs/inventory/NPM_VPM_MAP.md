@@ -68,3 +68,18 @@ GEN-10 QuickBMS используется только при исследова�
   вложенность пропущена; возвращает имена, не полное нормативное заключение.
 
 Контракты, результаты и команды: [GEOAGR_13_63_REVIEW.md](GEOAGR_13_63_REVIEW.md).
+
+## Дополнение двух папок
+
+- НПМ/ВПМ подготовка: MAX-31 (MatID/UDIM/texel density), MAX-35/37 (assets/manifest).
+  MAX-34 требует полноценного ERM wiring; не считать его готовым preview.
+- Inspect/export QA: MAX-36 scene census, GEN-13 offline FBX metadata, MAX-26 xView.
+  Metadata не заменяет geometry/UV round-trip; checker errors не превращаются в pass.
+- Повторяющиеся body/windows: MAX-32 actions и MAX-41 replacement; источник геометрии
+  и WindowType должен быть утверждён. MAX-38 LOD/40 rapidTools — испытать отдельно.
+- UCX: MAX-33 оставить только как broad-phase кандидат; точного теста в коде нет.
+- Экспортная очистка: MAX-39 — allowlist на копии, с сохранением provenance/ID.
+  Ground разметка MAX-42 — возможный ассетный инструмент, без доказанной интеграции.
+
+Все эти дополнения имеют production-статус prototype; результаты статического
+разбора и ограничения: [ZAVOD_AND_MAX_PLUGINS_REVIEW.md](ZAVOD_AND_MAX_PLUGINS_REVIEW.md).
