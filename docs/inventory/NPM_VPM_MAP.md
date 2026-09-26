@@ -48,3 +48,11 @@ flowchart TD
   пока не проверен. Для спорных UCX-лимитов сохраняется ADR-0002, PDF36–37.
 
 Машиночитаемая версия карты: [stage-map.json](stage-map.json).
+
+## Дополнение после исследования MSE
+
+DT-012/013: RizomUV Bridge — готовый кандидат для FBX/Lua обмена и переноса UV;
+Decal Projector — исследовательский кандидат для проекции и запекания.
+DT-030/033: RappaTools3 содержит функции spline/elements/normals, пока без
+проверки алгоритмов. Ограничения: [MSE_REVIEW.md](MSE_REVIEW.md).
+GEN-10 QuickBMS используется только при исследовании, вне production pipeline.

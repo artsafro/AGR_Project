@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "date": "2026-09-26",
-  "mode": "read-only discovery; no third-party script executed; existing Max queried read-only",
+  "mode": "Read-only originals/settings; Max queried read-only in first stage; reviewed decoder executed to local ignored text; no recovered script evaluated",
   "status_definitions": {
     "runtime_verified": "Успешный текущий read-only вызов",
     "runtime_loaded": "Есть live DLL/global; функция инструмента не тестировалась",
@@ -39,8 +39,8 @@
       ],
       "evidence": "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\en-US\\UI\\Workspaces\\usersave\\artsafro__usersave__.cuix:477; Octopus myscripts:88–94. Макрос указывает на GeoAGR.mse. tech2 описывает workflow; запуск не выполнялся.",
       "dependencies": "3ds Max, EXE/MSE, ImageMagick, 7z, FbxFormatConverter, normalmap.exe",
-      "source_code": "Точка входа MCR открыта; основной EXE/MSE закрыт.",
-      "limitations": "Нет проверенного CLI/API; версии правил и совместимость с PDF 2026 не доказаны. Сначала записать контрольный вывод, затем решать об адаптере. Лицензионные настройки исключены из реестра.",
+      "source_code": "MSE-загрузчик раскрыт: EXE + выполнение clipboard. Алгоритмы EXE не исследованы; см. MSE_REVIEW.md.",
+      "limitations": "Нет проверенного CLI/API; версии правил и совместимость с PDF 2026 не доказаны. Сначала записать контрольный вывод, затем решать об адаптере. Лицензионные настройки исключены из реестра. Статически подтверждён clipboard execution; не считать поддерживаемым API.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
     },
@@ -220,20 +220,21 @@
       "name": "RizomUV Bridge",
       "paths": [
         "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\scripts\\RizomuvBridge\\RizomuvBridge.mse",
-        "C:\\usermacros\\Titus_Scripts-RizomuvBridge.mcr"
+        "C:\\usermacros\\Titus_Scripts-RizomuvBridge.mcr",
+        "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\scripts\\RizomuvBridge\\RizomuvBridge_functions.mse"
       ],
-      "version": "installer1.5.1; установленная версия не доказана",
+      "version": "1.5.1 по changelog раскрытого UI; runtime не проверен",
       "purpose": "Вынос UV-развёртки в RizomUV и возврат.",
       "status": "configured_ui",
-      "decision": "изучить на тестовой сцене",
+      "decision": "доработать",
       "tasks": [
         "DT-012",
         "DT-013"
       ],
-      "evidence": "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\en-US\\UI\\Workspaces\\usersave\\artsafro__usersave__.cuix:455–462; MCR вызывает установленный MSE.",
+      "evidence": "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\en-US\\UI\\Workspaces\\usersave\\artsafro__usersave__.cuix:455–462; MCR вызывает установленный MSE. MSE_REVIEW.md и mse-evidence.json: FBX/Lua/channel transfer исследованы статически.",
       "dependencies": "RizomUV executable/license; Max",
-      "source_code": "MCR открыт, основной MSE закрыт",
-      "limitations": "Не заменяет source→material mapping, padding/UDIM правила. Runtime RizomUV не подтверждён.",
+      "source_code": "UI и functions MSE раскрыты локально; исходники не включены в Git.",
+      "limitations": "Не заменяет source→material mapping, padding/UDIM правила. Runtime RizomUV не подтверждён. New очищает UV2+; execute для ID; нет проверки топологии и надёжного сигнала готовности. Нужен job isolation и UV round-trip.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
     },
@@ -344,8 +345,8 @@
       ],
       "evidence": "LoadStartupScripts=1; loader files; UVTools button в toolbar и Octopus.",
       "dependencies": "Max Unwrap_UVW, коммерческие пакеты",
-      "source_code": "Часть MCR открыта, основная логика MSE",
-      "limitations": "Использовать существующий ручной этап. Из отсутствия выбранного global нельзя заключать, что модуль не загружен. Output всё равно проверяет профиль.",
+      "source_code": "Три startup MSE раскрыты; основной UVTools/PolyUnwrapper/auvn не исследован.",
+      "limitations": "Использовать существующий ручной этап. Из отсутствия выбранного global нельзя заключать, что модуль не загружен. Output всё равно проверяет профиль. auvn_autoload имеет пустой try: этот путь не запускает основной скрипт; другие пути запуска неизвестны. UVTools loader меняет INI/DLX; не выполнять для read-only анализа.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
     },
@@ -1239,9 +1240,9 @@
         "DT-031",
         "DT-023"
       ],
-      "evidence": "global RappaTools3 exists; SplineBridge в текущем toolbar; Startup scripts enabled.",
+      "evidence": "global RappaTools3 exists; SplineBridge в текущем toolbar; Startup scripts enabled. MSE_REVIEW.md: найдены точки анализа spline/normals/elements/material IDs, не runtime proof.",
       "dependencies": "Max; установленный MSE",
-      "source_code": "LBTools MS и macro wrappers открыты, Rappa core закрыт",
+      "source_code": "RappaTools3 MSE раскрыт в локальный текст: 621 fn, 11 строк; минифицирован, полный аудит не выполнен.",
       "limitations": "Сохранить ручной производственный этап. Не переписывать удобства моделирования; генератор требует явных source IDs и геометрического QA.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
@@ -1268,6 +1269,56 @@
       "limitations": "Использовать read-only inspection отдельно от cleanup. Наличие защиты не доказывает отсутствие дефектов в реальном файле.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
+    },
+    {
+      "copy_policy": "В Git только метаданные и наблюдения; восстановленный текст остаётся в игнорируемой tmp. Право переноса чужого кода отдельно от декодирования.",
+      "usage_confirmation": "Проверка этого этапа не доказывает использование командой.",
+      "id": "GEN-10",
+      "application": "Исследование / 3ds Max",
+      "name": "QuickBMS MSE decoder",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\quickbms.exe",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\Mse_Decrypter.txt",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\README.md",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\LICENSE"
+      ],
+      "version": "QuickBMS 0.6.4 runtime; recipe 0.1.1; README bundle 0.6.4a",
+      "purpose": "Статическое исследование логики локальных MSE без их выполнения.",
+      "status": "runtime_verified",
+      "decision": "использовать как есть",
+      "tasks": [
+        "DT-012",
+        "DT-013",
+        "DT-030",
+        "DT-033"
+      ],
+      "evidence": "MSE_REVIEW.md; mse-evidence.json. Пример совпал побайтово, 7 установленных MSE раскрыты; входы не изменились.",
+      "dependencies": "Windows executable QuickBMS + рецепт; для декодирования Max не нужен",
+      "source_code": "Рецепт доступен; исходного C QuickBMS в папке нет. LICENSE MIT, quickbms.txt отдельно указывает GPL.",
+      "limitations": "Runtime_verified относится только к декодированию. Не универсальный декомпилятор EXE/DLL; успешный decode не доказывает корректность инструмента."
+    },
+    {
+      "copy_policy": "В Git только метаданные и наблюдения; восстановленный текст остаётся в игнорируемой tmp. Право переноса чужого кода отдельно от декодирования.",
+      "usage_confirmation": "Проверка этого этапа не доказывает использование командой.",
+      "id": "MAX-27",
+      "application": "3ds Max",
+      "name": "Decal Projector — пример MSE decoder",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\input\\encrypded_file.mse",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\output\\encrypded_file.ms"
+      ],
+      "version": "0.87o по коду, OYH 2011; совместимость Max2024 неизвестна",
+      "purpose": "Проекция decal, UV по лучу/точке, разделение по UV-швам, композиция и baking.",
+      "status": "workflow_artifacts",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-012",
+        "DT-013"
+      ],
+      "evidence": "MSE_REVIEW.md; восстановленный пример идентичен комплектному output. Установленное подключение не найдено.",
+      "dependencies": "3ds Max; стандартные mesh/material APIs; UI assets DecalProjector; viewport/render context",
+      "source_code": "Раскрытый MAXScript доступен локально; условия переноса не установлены.",
+      "limitations": "Bake меняет сцену, предлагает удалить lights, удаляет dpObject_*; это не готовый нормативный atlas/ERM pipeline."
     }
   ],
   "path_evidence": {
@@ -1942,6 +1993,48 @@
       "kind": "file",
       "bytes": 151,
       "sha256": "37af19b793a835d34fe20cd84060ec4563ee5b6550670c3311ca6cef87824fc8"
+    },
+    "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\scripts\\RizomuvBridge\\RizomuvBridge_functions.mse": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 13081,
+      "sha256": "d45e4a26fbba8f96012e246cd54bc205914417d8435dfbcc28d9d1e173bee9fc"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\quickbms.exe": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 11305984,
+      "sha256": "6c8f950f82f0eb56083dc20675b4a14a869a058e8bb547b71d66276f475106ee"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\Mse_Decrypter.txt": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 2185,
+      "sha256": "a127ec810fd95ff216e609ab867ff477e5efc8d301524ddd5c438f77bcc889b3"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\README.md": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 7925,
+      "sha256": "aa148e514bbb6aaf370e8b7f3c3e437e76a99e358d75c70a658a77031b691257"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\LICENSE": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 1070,
+      "sha256": "ff591d1a2190c5eaa39f183d7844b6ef7f2643d7ca64b6819445b50b462aaa84"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\input\\encrypded_file.mse": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 59120,
+      "sha256": "97d6347704044b4115e51710f1ff0c3a54136941b69bdb7b098caff508b6b86b"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\3ds-max-maxscript-mse-encoder-main\\output\\encrypded_file.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 58998,
+      "sha256": "8d57edb10b2413ac879ed15c514f6ec70222ee6a80a13f6e3dd3057da5996dd4"
     }
   }
 }
