@@ -15,3 +15,16 @@
 master_geometry_approved, facade_and_windows_approved, placement_approved,
 collision_review_approved для ВПМ, delivery_approved. Сейчас они не реализованы
 как механизм публикации и не считаются пройденными подписью fixture-author.
+
+## Интеграция после инвентаризации 26.09.2026
+
+Текущий synthetic pipeline выше сохраняется. Найдены готовые GeoAGR/SINTEZ,
+Max↔Blender, CAD→Max, Revit contours и UCX инструменты. Перед расширением
+DT-020/021 выполняется INT-001 — сопоставление проверок SINTEZ с PDF и наши
+контрольные фикстуры в изолированном worker. Следом INT-002 — явные FBX профили
+через существующие bridges, INT-003 — атласы/карты с утверждённым registry.
+INT-004–006 переиспользуют координаты, геометрию и UCX по мере готовности входов.
+
+[План и контракты будущих адаптеров](../inventory/INTEGRATION_PLAN.md),
+[карта этапов](../inventory/NPM_VPM_MAP.md), [ADR-0004](../decisions/ADR-0004-reuse-installed-toolchains.md).
+Это порядок дальнейшей разработки, не уже подключённые интеграции.

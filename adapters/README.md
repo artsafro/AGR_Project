@@ -15,3 +15,9 @@ fbx/blend/atlas/result. Layout содержит XYZ, UV по углам гран
 Blender 4.4: реализация в `blender/bridge.py`, выполнены export и повторный import.
 Max/Revit/CAD: контракты направления описаны в подкаталогах, исполняемых адаптеров нет.
 Наличие установленного приложения не подтверждает интеграцию.
+
+После инвентаризации: внешние реализации Max MCP, BMAX, CAD COM, RevitBridge,
+ContourProbe и SINTEZ найдены на рабочей машине. Переиспользовать их по
+[плану](../docs/inventory/INTEGRATION_PLAN.md), сохраняя независимые file contracts,
+native findings и provenance. В репозитории они пока не обёрнуты адаптерами.
+Read-only Max handshake проверен; AutoCAD/Revit runtime в инвентаризации не проверен.
