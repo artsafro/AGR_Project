@@ -1,0 +1,321 @@
+# Digital Twin AI — состояние для продолжения
+
+Дата: 2026-09-26. Ветка разработки: `feature/digital-twin-core`; перенос в `main`
+через [PR #1](https://github.com/artsafro/AGR_Project/pull/1).
+Актуальное дополнение о проверках перед слиянием находится в конце документа;
+записи ниже сохраняют историю этапов. Точный checkout: `git log -1 --format=%H`.
+Базовый коммит исходников: `e77018f5994dc66e1640585fa7ba2758546ffbb9`.
+Коммит реализации: `c2f3a5a5838ef0ce69875cd2e1529d613fa2534f`.
+Текущий коммит кода: `8f58339745574f3c5a668b8120e21e293a742f29`
+(исправлены переносы строк генератора для совпадения хешей после checkout).
+Следующий коммит содержит только этот документ состояния и протокол проверки;
+его ID определяется `git log -1 --format=%H -- STATE.md`.
+
+## Входы и источники
+
+- `DIGITAL_TWIN_AI_HANDOFF.zip` найден в Downloads и безопасно распакован
+  в игнорируемую `tmp/handoff/`. Все пять файлов совпали с исходным репозиторием.
+- Бриф и YAML прочитаны целиком. Текст всех 56 страниц PDF прочитан; все страницы
+  отрисованы, иллюстрации просмотрены; формула на стр.32 проверена крупным планом.
+- PDF: `standards/source/Rasporyajenies19012026trebovaniya(2).pdf`.
+- SHA-256 PDF: `933f6b700c074d0db6b82030fc79d1dbe9db4a0067495ca716e0636acd544222`.
+- SHA исходного ZIP и результаты: `docs/examples/verification.json`.
+- Оригинальные PDF/бриф/YAML перемещены без изменений; Git распознал 100% rename.
+- YAML версии 0.1.0, контракты версии 1.0.0. Профили не объявлены исчерпывающими.
+
+## Выполнено
+
+- DT-001: структура раздела 6, пакет Python, CLI `dt`, README, AGENTS,
+  CI-конфигурация независимого ядра, Git-ветка и коммиты.
+- DT-002: контрольные суммы и проверка неизменности профилей; 232 уникальные
+  строки трассировки всех имеющихся правил и V001–V017 с PDF-страницами,
+  пунктами/разделами и предполагаемыми методами проверки. 12 расхождений,
+  ограничений или пробелов профилей записаны в ADR-0002. Общий нормативный
+  валидатор и дополнение пропущенных правил не завершены.
+- DT-003: 7 Pydantic/JSON Schema контрактов, связанные ID, provenance,
+  ограничения approved/synthetic, проверки существенных отрицательных случаев.
+- DT-010: индексатор текста страниц и встроенных изображений. На исходном PDF:
+  56 страниц, 96 изображений. Ссылки содержат source hash, номер, полный page bbox.
+  OCR, извлечение таблиц в семантические данные и распознавание материалов не готовы.
+- DT-011: файловый реестр; merge сохраняет approved и отдельно выдаёт конфликты.
+- DT-012–013: синтетический куб, RGB НПМ-атлас 512², VPM Diffuse/ERM/Normal
+  2048² на плитках 1001/1002; один экспортный slot независимо от двух material IDs.
+  Паддинг 8/16 px. Отрицание зелёного канала OpenGL→DirectX выполнено кодом.
+- Blender 4.4.0: в отдельных процессах созданы editable blend и бинарные FBX 7400.
+  Оба FBX прочитаны заново из ZIP. Подтверждены 12 треугольников, XYZ/UV,
+  один UV-канал/материал, identity transforms; НПМ PNG восстановлен из FBX
+  без исходной текстуры рядом. У ВПМ отсутствуют внешние image paths.
+- DT-014: изменение материала отражается в необходимых PNG/общем атласе,
+  соседняя плитка/неизменённые каналы и UV сохраняются; есть changes.json.
+  Полноценного DAG-планировщика и инвалидации ручных ворот пока нет.
+
+## Проверки и команды
+
+Выполнять из корня репозитория, Python 3.11+:
+
+```powershell
+.venv\Scripts\python.exe -m pip install -e '.[dev]'
+.venv\Scripts\dt.exe profiles check
+.venv\Scripts\dt.exe schemas --check
+$env:DT_BLENDER = 'C:\Program Files\Blender Foundation\Blender 4.4\blender.exe'
+.venv\Scripts\python.exe -m pytest -q
+.venv\Scripts\dt.exe build --job jobs/SYNTH-001/project.json --blender $env:DT_BLENDER
+```
+
+Результат полной локальной проверки: 33 passed, без пропусков при заданном Blender.
+Одно ожидаемое предупреждение zipfile возникает в тесте специально дублированных
+имён ZIP. Проверки профилей, схем и `pip check` успешны.
+
+Чистый локальный clone коммита `8f58339` в `tmp/clean-check/`: создано новое venv,
+установка `.[dev]`, `dt --help`, profiles/schema checks и сборка прошли.
+Без DT_BLENDER: 32 passed, 1 skipped (настоящая DCC-интеграция намеренно пропущена).
+GitHub Actions пока не проверены удалённым запуском; наличие YAML не означает CI pass.
+
+HTML-отчёт открыт в браузере, DOM и читаемость проверены. В нём явно показаны
+«Готовность к сдаче: НЕТ» и успешные C001–C004. Не путать с полной приёмкой V001–V017.
+
+## Артефакты текущей машины
+
+`jobs/SYNTH-001/outputs/` исключён из Git, пересоздаётся командой build:
+
+- `development_bundle.zip` — 12 файлов: 7 PNG, 2 FBX, 3 JSON.
+- `npm/synthetic_npm.blend`, `npm/SM_Synthetic_001_npm.fbx` и атлас.
+- `vpm/synthetic_vpm.blend`, `vpm/SM_Synthetic_001_vpm.fbx` и 6 PNG.
+- `report.json`, `report.html`, `dcc-roundtrip.json`, `changes.json`.
+- `pdf-index/index.json` и текст/изображения всех страниц источника.
+
+В ВПМ blend сохранены геометрия и UV; карты пока не подключены к shader nodes.
+FBX и ZIP используют внутренние тестовые имена, не маски официальной сдачи.
+Текущий development report: C001–C004 pass, delivery `passed=false`.
+
+## Непроверенное и необходимые входы
+
+- Нет реального ОКС, альбома фасадов, DWG/СПОЗУ, точки МСК-77 и отметки нуля.
+- Нет официального ZIP publisher, GeoJSON, Ground, UCX, стекла, окон и света.
+- Нет автоматической реконструкции master body и согласования фасадных материалов.
+- Max/Revit/CAD не проверены интеграционно. Наличие приложений на Windows известно,
+  но выполнялся только Blender 4.4.0. Текущие сцены приложений не менялись.
+- Противоречия PDF: ADR-0002, особенно GeoJSON обязательность, UCX limits,
+  МБ/ГБ, НПМ px/м² и заглушки, VPM 100 tiles/slots.
+- Фиктивная подпись fixture-author — только для теста, не решение заказчика.
+- Context7: встроенный инструмент этой задачи ещё отдавал ошибку старого ключа;
+  Pydantic-документация получена реальными прямыми MCP resolve/query на официальном
+  HTTP endpoint без ключа. Изменений глобальной конфигурации в этой задаче нет.
+
+## Следующая задача до инвентаризации (заменена порядком ниже)
+
+DT-020: реализовать отдельный инспектор **нормативного** ZIP (не development bundle),
+PNG/имён/GeoJSON; тестировать неверные составы, маски, схему ObjectFeature/Glasses,
+точность/пустые поля и near-boundary размер. Спорные нормы оставлять review до
+утверждённого ADR. Затем DT-021 — расширить аудит FBX за пределы куба.
+
+Для реального пилота запросить разрешённый FBX + альбом + DWG/СПОЗУ + координаты/
+отметку нуля + принимаемый GeoJSON/пример пакета + отдельное ТЗ. До этого не
+подставлять реальные адреса или случайные координаты и не выставлять delivery pass.
+
+## Инвентаризация 26.09.2026 — новая точка продолжения
+
+База этапа: `b100da21dd00413418c79920ded65592601b65cb`.
+Коммит инвентаризации: `git log -1 --format=%H -- docs/inventory/catalog.json`.
+Код продукта/схемы/нормативные профили не изменены. Настройки приложений,
+исходники чужих инструментов и пользовательские сцены не изменялись.
+
+- 53 инструмента/семейства/цепочки: `docs/inventory/catalog.json/.csv/.html`.
+- 123 пути подтверждены; охват56 roots,70623 уникальных метаданных файлов;
+  21 выбранная группа SHA-дубликатов. Ограничения: `docs/inventory/coverage.json`.
+- Есть текущие read-only ответы одного Max2024 bridge: плагины, текущий UI,
+  пути, FBX2014/triangulate=true/embed=false. Два процесса Max — требуется pin PID.
+- Blender4.4 prefs разобраны без запуска addons: SINTEZ1.6.1/BMAX/QuadRemesher
+  включены. CheckToolBox1.5 применяется через сохранённые batch runners, хотя
+  не включён в prefs. Profile5.0 содержит SINTEZ1.5.0; enabled state5.0 неизвестен.
+- AutoCAD2025/Revit2025.2 установлены, не запущены; runtime подключения не заявлены.
+- GeoAGR подключён к toolbar/Octopus. В Octopus A101LP — большой inline script.
+  BMAX exchange настроен, но FBX2012 нельзя использовать как нормативный preset.
+- Новые относительно старых заметок FacadePipeline/UCX результаты найдены и
+  прочитаны. Это исторические артефакты конкретных моделей, не проверка текущего ОКС.
+- Чужой код не копировался. Собственные сканер/HTML-renderer находятся в tools/;
+  сырые метаданные остаются в игнорируемой tmp/inventory.
+
+Архитектура/порядок: `docs/decisions/ADR-0004-reuse-installed-toolchains.md`,
+`docs/inventory/INTEGRATION_PLAN.md`, `NPM_VPM_MAP.md`, `stage-map.json`.
+Следующая конкретная задача **INT-001 для DT-020/021**: сопоставить native checks
+SINTEZ1.6.1 с PDF/нашими V-codes, отделить read checks от fix/import side effects,
+затем подготовить изолированный synthetic harness и findings adapter. Не начинать
+новый полный валидатор или третий DCC bridge без подтверждённого пробела.
+
+Далее INT-002 явные FBX profiles, INT-003 registry→существующие atlas/UDIM tools,
+INT-004 CAD placement, INT-005 Revit/FBX body/windows, INT-006 UCX.
+Вопросы команды: рабочая версия GeoAGR/SINTEZ, canonical atlas builder,
+права на перенос внутреннего кода, canonical общая папка. Они не блокируют INT-001.
+
+Проверка артефактов: `.venv\Scripts\python.exe tools/render_inventory.py --check`.
+Проверки продукта предыдущего этапа:33 passed с Blender; не выдавать их за новый
+прогон инвентаризации.
+
+Проверки этого этапа прошли: целостность 53 записей/решений/ссылок карты этапов,
+соответствие CSV и HTML реестру, чтение всех JSON, отсутствие битых локальных
+Markdown-ссылок и пропавших путей в снимке. Собственные скрипты компилируются;
+повторное статическое чтение Blender prefs совпало с evidence. HTML открыт в
+браузере: поиск SINTEZ даёт2 записи, раскрытие показывает зависимости/основания/
+пути, читаемость проверена скриншотом. `profiles check` и `schemas --check` прошли.
+Внешние инструменты и тесты реального проекта на этом этапе не запускались.
+
+## Дополнение 26.09.2026 — MSE decoder
+
+База: b2a8289f9c3aaa73ee8509e9ca8eb18bb1288815. Коммит дополнения:
+`git log -1 --format=%H -- docs/inventory/MSE_REVIEW.md`.
+
+По указанной пользователем папке исследован и запущен QuickBMS0.6.4 с прочитанным
+рецептом MSE0.1.1. Это уточнение предыдущего read-only этапа: выполнялся decoder,
+но не восстановленные MAXScript. Восемь входов включая комплектный пример
+превращены в текст; пример совпал с комплектным output, хеши семи установленных
+MSE до/после совпали. Нет запуска в Max, изменения сцен/настроек/оригиналов.
+
+Результаты: docs/inventory/MSE_REVIEW.md и mse-evidence.json. Каталог теперь
+55 записей/130 путей. Добавлены GEN-10 decoder и MAX-27 Decal Projector.
+GeoAGR MSE — EXE/clipboard launcher; EXE не раскрыт. RizomUV UI/functions
+содержат пригодную для адаптера цепочку, но очищают UV2+ в New и не проверяют
+топологию при обратном переносе. auvn_autoload сам основной скрипт не вызывает.
+RappaTools3 раскрыт, но минифицирован; полный аудит не выполнен.
+
+Раскрытые тексты и журнал находятся только в игнорируемой tmp/inventory/mse-review.
+Не включать их в коммит; право переноса исходников не выводить из лицензии decoder.
+Следующая задача по-прежнему INT-001; находки уточняют INT-002/003, без новой
+зависимости production от декодера. Код продукта и нормативные профили не менялись.
+
+Проверено повторно: renderer --check (55 записей), mse-evidence (совпадение
+примера/неизменность 7 входов), dt profiles check (3), dt schemas --check (7),
+python -m pytest -q: 32 passed, 1 skipped; git diff --check без ошибок.
+DCC round-trip в этом дополнении не выполнялся: DT_BLENDER не задавался,
+соответствующий интеграционный тест пропущен.
+
+## Аудит готовности 26.09.2026 — перед крупной разработкой
+
+Проверенная база: ef18dfc305047d78bbc8d57f60a16bdddcb26603.
+Отчёт: `docs/READINESS_REPORT.md`; новый протокол: `docs/examples/readiness-evidence.json`.
+Коммит отчёта: `git log -1 --format=%H -- docs/READINESS_REPORT.md`.
+
+- Повторно прочитаны весь бриф, три YAML и текст56 страниц PDF. Все страницы
+  просмотрены обзорно; PDF32/40 заново отрисованы и проверены крупно.
+- Новое расхождение: рисунок PDF40 (800000 ОКС/3000000 Ground) против таблицы
+  PDF28–29 (1000000 ОКС/ступени Ground до4500000). Добавлен ADR-0002 §13,
+  исходные YAML/source-lock не менялись; нормативное решение остаётся открытым.
+- Свежие проверки с DT_BLENDER: **33 passed,0 skipped**; profiles3/schemas7,
+  pip check и inventory55 — OK. Полный index-pdf:56 страниц/96 изображений.
+- Свежая отдельная build в `tmp/readiness/build`: Blender4.4.0,2 FBX из ZIP
+  прочитаны заново, C001–004 pass. V001–014 not_run; V015–017 review; passed=false.
+- Context7 resolve_library_id снова вернул Invalid API key. Конфигурация не менялась;
+  канал документации не объявлен работающим по наличию настройки.
+- Реестр Skills в отчёте отделяет установленные generic инструкции, проверенные
+  узкие операции backend и необходимые производственные workflow. SKILL.md не создавались.
+
+Заключение: **ядро к дальнейшей разработке — ДА; общая DCC-интеграция — НЕТ;
+реальный пилот — НЕТ**. Blender synthetic round-trip подтверждён; остальные
+приложения/плагины не проверены сквозной DT-задачей. Сборщик отклоняет real job.
+Следующая задача INT-001 (SINTEZ native findings→V-code/PDF, check/fix isolation,
+контрольные пакеты); потом DT-020/021/022/023 в порядке плана. Реальный ОКС нужен
+для назначения материалов/окон, координат, визуальных утверждений и приёмки.
+
+## Дополнение 26.09.2026 — GeoAGR13.63
+
+Проверенная база: `3dfaaef37af4b1bb82289df491928d773ed4946c`.
+Коммит дополнения: `git log -1 --format=%H -- docs/inventory/GEOAGR_13_63_REVIEW.md`.
+Источник: `C:\Users\artsafro\Desktop\zavod\GeoAGR13.63`. Основной отчёт и
+машинный протокол: `docs/inventory/GEOAGR_13_63_REVIEW.md`,
+`docs/inventory/geoagr-13.63-evidence.json`. Каталог: **60 tools/137 paths**.
+
+- GeoScripts60 файлов; license INI исключён. 59 SHA сравнивались с Max2024:
+  32 same,14 different,13 absent. После диагностики все59 хешей сохранились.
+- MSE совпал с известным launcher; EXE содержит AutoIt SCRIPT5 210 010bytes,
+  но основная программа не декомпилирована/не запускалась. Не менялись установки,
+  DCC-настройки, сцены и лицензия. Наличие13.63 на Desktop не доказывает её использование.
+- API DelaunayCore/FastFaceFinder/moveall прочитан собственным PEReader-инструментом
+  `tools/assembly_inventory` (.NET10, без target Assembly.Load/выполнения DLL).
+  Сигнатуры известны; packing/index conventions/p1–p5 ещё неизвестны.
+- `tools/probe_geoagr_ucx.py`:5 synthetic OBJ cases. Пересечение и касание найдены,
+  вложенность пропущена; broken OBJ даёт exit1 без .txt. Exit0 не означает pass.
+  Создаёт .txt имён и .log рядом с копией OBJ. Исходники неизменны.
+- `tools/probe_geoagr_uvdilate.py`: RGBA→RGB dilation работает, alpha теряется;
+  RGB input отклоняется. Два synthetic case, явный output, входы неизменны.
+- Оба harness закрепляют SHA256, работают только на собственных temp-фикстурах,
+  timeout20s/case, читают фактические outputs. Это не DCC/real OKS испытания.
+- В Git включены свои анализатор/probes, метаданные и документация; чужих DLL/EXE,
+  восстановленных исходников и license contents нет. Сырьё в ignored tmp/inventory.
+
+Команды повторения приведены в новом отчёте. Следующий этап остаётся INT-001;
+GEN-11 добавить как частичный native checker в INT-006, GEN-12 исследовать для
+INT-003 после защиты alpha/радиуса. MAX-28/29/30 — prototype до выяснения контрактов
+и испытаний. Не подменять ими source PDF/approved materials и полную UCX-проверку.
+Уровни readiness неизменны: ядро к разработке да, общая DCC-интеграция нет, пилот нет.
+
+Проверки дополнения: metadata inspector собран без warnings/errors; JSON прочитан,
+три основные сигнатуры проверены; UCX5/uvdilate2 случая воспроизведены, hash guards
+отклоняют неизвестный executable до запуска. Inventory60/profiles3/schemas7 — OK.
+Продукт: **32 passed,1 skipped** (DT_BLENDER не задавался, DCC round-trip здесь
+не повторялся), ожидаемое предупреждение теста duplicate ZIP. `git diff --check` OK.
+
+## Дополнение 26.09.2026 — zavod и Плагины 3dMax
+
+База: `37930230ec9bbb8345f58821594380c19903dc0c`.
+Коммит: `git log -1 --format=%H -- docs/inventory/ZAVOD_AND_MAX_PLUGINS_REVIEW.md`.
+Отчёт: `docs/inventory/ZAVOD_AND_MAX_PLUGINS_REVIEW.md`; evidence:
+`docs/inventory/folder-followup-evidence.json`. Каталог: **73 tools/162 paths**.
+
+- Свежий read-only scan указанных двух корней:479+919=1398 metadata records,
+  0 traversal errors. Все48 MZP прочитаны как ZIP без установки. Охват ограничен
+  extensions/pruned directories; это не полное изучение1398 исходников.
+- 60 targeted deployment comparisons:57 same/3 different; отдельно40 Python
+  модулей xView совпали с установленными. Startup/Octopus прочитаны заново.
+  Количество вызовов/применение командой не доказаны. Ничего найденного не исполнялось.
+- Новые кандидаты: Maf Tools MatID/UDIM, PAC actions, scene census, FBX metadata,
+  asset collection, proxy/pipe LOD, replacement/doors, cleaners, rapidTools/RMG.
+- Существенные ограничения: Collizii precise только bbox; UDIM Viewer ERM/ORM
+  распознаёт без подключения; PAC импортирует через execute; cleanup удаляет UDP,
+  keys/CA; collect dryRun=false; proxy kernel переписывает cgeo. Не запускать blindly.
+- 3 RMG archives — exact duplicates; H_instancer — exact duplicate. Не удалялись.
+  UVTools3.2m macro совпал с установленным,3.3.05 отличается; runtimeversion не доказана.
+- Код сторонних инструментов не копировался; Git содержит только metadata/docs.
+  Сырые результаты находятся в ignored `tmp/inventory/folder-followup`.
+
+INT-001 остаётся следующим: SINTEZ/xView native findings→PDF, error/not_run и fixtures.
+При интеграции взять Max census/FBX inventory и Maf Tools как кандидатов повторного
+использования, отделить чтение от действий с ресурсами. Никакие новые production
+Skills не объявлены ready; DCC integration/real pilot по-прежнему нет.
+
+Проверки дополнения: inventory73, profiles3, schemas7 — OK; все поля CSV совпали
+с JSON; ссылки новых отчётов существуют. Повторно прочитаны24 selected source
+hashes и48 archive hashes — оригиналы неизменны. Тесты проекта:32 passed,1 skipped
+(DCC без DT_BLENDER не выполнялся), ожидаемое duplicate ZIP warning. Diff check OK.
+
+## Дополнение 26.09.2026 — GitHub и проверки перед слиянием
+
+Исходный head: `c0c4fb2d9653d9878bae9d938819ef088171485f`.
+PR: https://github.com/artsafro/AGR_Project/pull/1, feature/digital-twin-core → main.
+Пользователь поручил выполнить перенос самостоятельно. Код и workflow не менялись.
+Коммит этой записи: `git log -1 --format=%H -- STATE.md`.
+
+Повторные локальные проверки на указанном коде:
+
+- `.venv\Scripts\python.exe -X utf8 -m pytest -q`: 32 passed, 1 skipped.
+- С `DT_BLENDER=C:\Program Files\Blender Foundation\Blender 4.4\blender.exe`:
+  та же команда — **33 passed, 0 skipped**, 16.03 s, включая отдельный фоновый
+  Blender export/readback на синтетической модели. Рабочие сцены не затрагивались.
+- `.venv\Scripts\dt.exe profiles check`: 3 profiles OK;
+  `.venv\Scripts\dt.exe schemas --check`: 7 schemas OK.
+- `.venv\Scripts\python.exe -X utf8 tools/render_inventory.py --check`: 73 tools OK.
+- `git diff --check main...HEAD`: OK. Единственный warning — ожидаемый duplicate
+  member в отрицательном ZIP-тесте.
+
+GitHub Actions **не проверил проект**: run 36269917204 завершился startup_failure
+до создания jobs. В аннотации GitHub сообщает о failed account payments либо
+необходимости увеличить spending limit. Ссылка на наблюдавшийся результат:
+https://github.com/artsafro/AGR_Project/actions/runs/36269917204.
+Это ограничение аккаунта, а не установленная ошибка кода или workflow.
+Оплата, лимиты, защита веток и настройки Actions не изменялись. API main на момент
+проверки: protected=false, required status checks enforcement=off. CI нельзя
+объявлять успешным; владелец должен проверить Billing & plans, затем повторить CI.
+Фактическое состояние слияния и merge SHA проверяются по PR #1 и `origin/main`.
+
+Следующая задача разработки остаётся INT-001. Готовность production DCC-интеграции
+и пилота на реальном ОКС не изменилась: нет. Локальный synthetic Blender round-trip
+не является проверкой реального проекта и не заменяет Linux CI.

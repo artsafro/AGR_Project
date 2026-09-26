@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digital-twin-ai"
+version = "0.1.0"
+description = "Traceable NPM/VPM synthetic vertical slice"
+requires-python = ">=3.11"
+dependencies = ["PyYAML==6.0.3", "pydantic==2.13.5", "Pillow==12.3.0", "pypdf==6.19.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+pdf-review = ["PyMuPDF==1.28.2"]
+
+[project.scripts]
+dt = "dt_ai.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["dcc: requires an explicitly supplied Blender executable"]

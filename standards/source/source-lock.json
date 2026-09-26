@@ -1,0 +1,12 @@
+{
+  "handoff_matches_initial_commit": "e77018f",
+  "pdf_file": "Rasporyajenies19012026trebovaniya(2).pdf",
+  "pdf_pages": 56,
+  "pdf_sha256": "933f6b700c074d0db6b82030fc79d1dbe9db4a0067495ca716e0636acd544222",
+  "profile_status": "original_0.1.0_with_open_decisions",
+  "profiles": {
+    "DELIVERY_VALIDATOR.yaml": "7f58cc21d69e8a8738314c073d40aae21ff9dbf3e0cfedc22617991b9cb17ab1",
+    "NPM_STANDARD.yaml": "7fa1200635c6873d6e49535777080183d80032d0c9e540f505e2f09fe81429b9",
+    "VPM_STANDARD.yaml": "f31188cd3b387201a0522c4e93cb12791b65740d73e95704bb515e75370ec192"
+  }
+}
