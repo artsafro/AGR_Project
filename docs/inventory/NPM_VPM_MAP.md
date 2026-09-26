@@ -56,3 +56,15 @@ Decal Projector — исследовательский кандидат для �
 DT-030/033: RappaTools3 содержит функции spline/elements/normals, пока без
 проверки алгоритмов. Ограничения: [MSE_REVIEW.md](MSE_REVIEW.md).
 GEN-10 QuickBMS используется только при исследовании, вне production pipeline.
+
+## Дополнение GeoAGR13.63
+
+- DT-012/013: GEN-12 uvdilate — испытан на RGBA/RGB фикстурах; alpha теряется,
+  поэтому адаптер padding остаётся prototype, для прозрачных объектов нужен контроль маски.
+- DT-020/021: MAX-29 FindOverlaps — известна сигнатура, алгоритм ещё не испытан.
+- DT-030/033: MAX-28 ProcessAllFaces и MAX-30 SolveCollisions — metadata candidates,
+  формат массивов/индексов и p1–p5 сначала восстановить, не подставлять догадки.
+- DT-021/033: GEN-11 UCX CLI — пять synthetic checks. Пересечение/касание найдено,
+  вложенность пропущена; возвращает имена, не полное нормативное заключение.
+
+Контракты, результаты и команды: [GEOAGR_13_63_REVIEW.md](GEOAGR_13_63_REVIEW.md).

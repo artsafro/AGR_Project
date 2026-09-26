@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "date": "2026-09-26",
-  "mode": "Read-only originals/settings; Max queried read-only in first stage; reviewed decoder executed to local ignored text; no recovered script evaluated",
+  "mode": "Originals/settings unchanged; static metadata and isolated synthetic CLI probes; main GeoAGR/DLL methods/DCC scenes not executed in GeoAGR follow-up",
   "status_definitions": {
     "runtime_verified": "Успешный текущий read-only вызов",
     "runtime_loaded": "Есть live DLL/global; функция инструмента не тестировалась",
@@ -11,7 +11,9 @@
     "workflow_artifacts": "Исходники+сохранённый результат; в этом этапе не пересчитывался",
     "installed_usage_unknown": "Файл установлен/лежит на диске; запуск не доказан",
     "older_version": "Версия старее соседней; не обязательно ненужная",
-    "duplicate_evidence": "Побайтовое равенство подтверждено SHA256"
+    "duplicate_evidence": "Побайтовое равенство подтверждено SHA256",
+    "synthetic_verified": "Узкая операция проверена на синтетических файлах; не production integration или real OKS",
+    "distribution_available": "Компонент поставки на диске; подключение в рабочее приложение и использование не подтверждены"
   },
   "tools": [
     {
@@ -22,9 +24,11 @@
         "C:\\Program Files\\Autodesk\\3ds Max 2024\\GeoScripts\\GeoAGR.exe",
         "C:\\Program Files\\Autodesk\\3ds Max 2024\\GeoScripts\\GeoAGR.mse",
         "C:\\usermacros\\Geoscript-GeoAGR.mcr",
-        "C:\\Program Files\\Autodesk\\3ds Max 2024\\GeoScripts\\tech2.txt"
+        "C:\\Program Files\\Autodesk\\3ds Max 2024\\GeoScripts\\tech2.txt",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\GeoAGR.exe",
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoAGR_start.ms"
       ],
-      "version": "версия EXE не указана в VersionInfo; host 2024",
+      "version": "Рабочая установка Max2024 без EXE VersionInfo; отдельно поставка GeoAGR13.63 по имени папки, не установлена",
       "purpose": "НПМ/ВПМ: материалы, UDIM, GeoJSON, UCX, позиционирование и упаковка по локальным подсказкам.",
       "status": "configured_ui",
       "decision": "изучить на тестовой сцене",
@@ -37,10 +41,10 @@
         "DT-023",
         "DT-033"
       ],
-      "evidence": "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\en-US\\UI\\Workspaces\\usersave\\artsafro__usersave__.cuix:477; Octopus myscripts:88–94. Макрос указывает на GeoAGR.mse. tech2 описывает workflow; запуск не выполнялся.",
+      "evidence": "C:\\Users\\artsafro\\AppData\\Local\\Autodesk\\3dsMax\\2024 - 64bit\\ENU\\en-US\\UI\\Workspaces\\usersave\\artsafro__usersave__.cuix:477; Octopus myscripts:88–94. Макрос указывает на GeoAGR.mse. tech2 описывает workflow; запуск не выполнялся. Поставка13.63: 32 same/14 different/13 absent относительно GeoScripts2024; запуск основного EXE не выполнялся.",
       "dependencies": "3ds Max, EXE/MSE, ImageMagick, 7z, FbxFormatConverter, normalmap.exe",
-      "source_code": "MSE-загрузчик раскрыт: EXE + выполнение clipboard. Алгоритмы EXE не исследованы; см. MSE_REVIEW.md.",
-      "limitations": "Нет проверенного CLI/API; версии правил и совместимость с PDF 2026 не доказаны. Сначала записать контрольный вывод, затем решать об адаптере. Лицензионные настройки исключены из реестра. Статически подтверждён clipboard execution; не считать поддерживаемым API.",
+      "source_code": "MSE loader раскрыт ранее; новый EXE — AutoIt SCRIPT resource, не декомпилирован. API трёх DLL прочитан как metadata. См. GEOAGR_13_63_REVIEW.md.",
+      "limitations": "Нет проверенного CLI/API; версии правил и совместимость с PDF 2026 не доказаны. Сначала записать контрольный вывод, затем решать об адаптере. Лицензионные настройки исключены из реестра. Статически подтверждён clipboard execution; не считать поддерживаемым API. Новый каталог на Desktop не доказывает использование13.63. Два CLI отдельно испытаны: GEN-11/12; это не проверка GeoAGR целиком.",
       "copy_policy": "Исходники/бинарники не скопированы. Для переноса внутреннего кода подтвердить владельца; для стороннего сохранить условия поставки.",
       "usage_confirmation": "Частота и использование командой требуют подтверждения, если нет свежего журнала конкретной операции."
     },
@@ -1319,6 +1323,116 @@
       "dependencies": "3ds Max; стандартные mesh/material APIs; UI assets DecalProjector; viewport/render context",
       "source_code": "Раскрытый MAXScript доступен локально; условия переноса не установлены.",
       "limitations": "Bake меняет сцену, предлагает удалить lights, удаляет dpObject_*; это не готовый нормативный atlas/ERM pipeline."
+    },
+    {
+      "id": "MAX-28",
+      "application": "3ds Max / .NET",
+      "name": "GeoAGR DelaunayCore",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\DelaunayCore.dll"
+      ],
+      "version": "Assembly0.0.0.0, mscorlib4.0; pinned SHA256 в evidence",
+      "purpose": "Триангуляция граней: ProcessAllFaces -> Int32[]; семантика рёбер/индексов ещё не проверена.",
+      "status": "distribution_available",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-030",
+        "DT-033"
+      ],
+      "evidence": "GEOAGR_13_63_REVIEW.md; geoagr-13.63-evidence.json. PEReader metadata без Assembly.Load/выполнения DLL.",
+      "dependencies": ".NET Framework reference mscorlib4.0; Delaunay/FastFace также System.Core4.0; host compatibility untested",
+      "source_code": "Имена типов/методов/параметров доступны; C#/IL не декомпилировались.",
+      "limitations": "prototype; metadata only; packing и база индексов неизвестны",
+      "copy_policy": "В Git только свой harness/metadata; исходные DLL/EXE не копируются. Права переноса/модификации уточнить отдельно.",
+      "usage_confirmation": "Компонент отсутствует в проверенной установке Max2024; фактическое использование неизвестно."
+    },
+    {
+      "id": "MAX-29",
+      "application": "3ds Max / .NET",
+      "name": "GeoAGR FastFaceFinder",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\FastFaceFinder.dll"
+      ],
+      "version": "Assembly0.0.0.0, mscorlib4.0; pinned SHA256 в evidence",
+      "purpose": "Поиск перекрытий треугольников: FindOverlaps -> Boolean[].",
+      "status": "distribution_available",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-020",
+        "DT-021"
+      ],
+      "evidence": "GEOAGR_13_63_REVIEW.md; geoagr-13.63-evidence.json. PEReader metadata без Assembly.Load/выполнения DLL.",
+      "dependencies": ".NET Framework reference mscorlib4.0; Delaunay/FastFace также System.Core4.0; host compatibility untested",
+      "source_code": "Имена типов/методов/параметров доступны; C#/IL не декомпилировались.",
+      "limitations": "prototype; metadata only; mapping flags, tolerances, adjacency не проверены",
+      "copy_policy": "В Git только свой harness/metadata; исходные DLL/EXE не копируются. Права переноса/модификации уточнить отдельно.",
+      "usage_confirmation": "Компонент отсутствует в проверенной установке Max2024; фактическое использование неизвестно."
+    },
+    {
+      "id": "MAX-30",
+      "application": "3ds Max / .NET",
+      "name": "GeoAGR FastCollisionSolver",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\moveall.dll"
+      ],
+      "version": "Assembly0.0.0.0, mscorlib4.0; pinned SHA256 в evidence",
+      "purpose": "Решатель коррекции коллизий: SolveCollisions -> Double[].",
+      "status": "distribution_available",
+      "decision": "изучить на тестовой сцене",
+      "tasks": [
+        "DT-030",
+        "DT-033"
+      ],
+      "evidence": "GEOAGR_13_63_REVIEW.md; geoagr-13.63-evidence.json. PEReader metadata без Assembly.Load/выполнения DLL.",
+      "dependencies": ".NET Framework reference mscorlib4.0; Delaunay/FastFace также System.Core4.0; host compatibility untested",
+      "source_code": "Имена типов/методов/параметров доступны; C#/IL не декомпилировались.",
+      "limitations": "prototype; значения p1-p5 и смысл результата неизвестны; не выполнять с выдуманными параметрами",
+      "copy_policy": "В Git только свой harness/metadata; исходные DLL/EXE не копируются. Права переноса/модификации уточнить отдельно.",
+      "usage_confirmation": "Компонент отсутствует в проверенной установке Max2024; фактическое использование неизвестно."
+    },
+    {
+      "id": "GEN-11",
+      "application": "Windows CLI",
+      "name": "GeoAGR UCX checker (CGAL)",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\ucx_check.exe"
+      ],
+      "version": "Версия не в VersionInfo; pinned SHA256 в evidence; ucx banner CGAL6.2",
+      "purpose": "OBJ -> .txt имён + .log: частичная проверка попарных пересечений поверхностей.",
+      "status": "synthetic_verified",
+      "decision": "обернуть адаптером",
+      "tasks": [
+        "DT-021",
+        "DT-033"
+      ],
+      "evidence": "GEOAGR_13_63_REVIEW.md; geoagr-13.63-evidence.json. Реальные CLI-вызовы на собственных синтетических файлах и readback.",
+      "dependencies": "Windows; локальный EXE; Python+Pillow для probe",
+      "source_code": "Бинарник без исходников; проверен файловый интерфейс.",
+      "limitations": "prototype; вложенный куб пропущен, касание finding; exit0 бывает и при пересечениях; не проверяет полное UCX соответствие",
+      "copy_policy": "В Git только свой harness/metadata; исходные DLL/EXE не копируются. Права переноса/модификации уточнить отдельно.",
+      "usage_confirmation": "Synthetic test доказан для CLI; использование этой поставки командой не подтверждено."
+    },
+    {
+      "id": "GEN-12",
+      "application": "Windows CLI",
+      "name": "GeoAGR uvdilate",
+      "paths": [
+        "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\uvdilate.exe"
+      ],
+      "version": "Версия не в VersionInfo; pinned SHA256 в evidence; ucx banner CGAL6.2",
+      "purpose": "RGBA PNG -> RGB PNG с заполненным фоном; CLI pixel dilation.",
+      "status": "synthetic_verified",
+      "decision": "доработать",
+      "tasks": [
+        "DT-012",
+        "DT-013"
+      ],
+      "evidence": "GEOAGR_13_63_REVIEW.md; geoagr-13.63-evidence.json. Реальные CLI-вызовы на собственных синтетических файлах и readback.",
+      "dependencies": "Windows; локальный EXE; Python+Pillow для probe",
+      "source_code": "Бинарник без исходников; проверен файловый интерфейс.",
+      "limitations": "prototype; alpha теряется, RGB input отклоняется; радиус CLI не найден; без -o перезаписывает вход",
+      "copy_policy": "В Git только свой harness/metadata; исходные DLL/EXE не копируются. Права переноса/модификации уточнить отдельно.",
+      "usage_confirmation": "Synthetic test доказан для CLI; использование этой поставки командой не подтверждено."
     }
   ],
   "path_evidence": {
@@ -2035,6 +2149,48 @@
       "kind": "file",
       "bytes": 58998,
       "sha256": "8d57edb10b2413ac879ed15c514f6ec70222ee6a80a13f6e3dd3057da5996dd4"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\GeoAGR.exe": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 6168064,
+      "sha256": "22d425d6f669a65998a1e8f754a2f06b52d335ca97fa7e44a928c0d0f228e593"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoAGR_start.ms": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 103,
+      "sha256": "484a8e1be4a35324f69afa31556bf19679a3ad70cb3e5641c6403488341755b7"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\DelaunayCore.dll": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 7168,
+      "sha256": "a481d857243d04a51213a265a174583c3d1196e12cf991cf27203299d99f9866"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\FastFaceFinder.dll": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 8192,
+      "sha256": "2fce02ecdf5deeb5e20fbe581a5268b76efec69c5ad0941a94118e7bfc3c533b"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\moveall.dll": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 9728,
+      "sha256": "aee152cc3d669084ea5ca645fa14912832e5078a7363840fedfb13e5b74a1bea"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\ucx_check.exe": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 624640,
+      "sha256": "e40e33a5b32362d557c8712608fc4018ffa1bd43585824d950b1a48da1d0484f"
+    },
+    "C:\\Users\\artsafro\\Desktop\\zavod\\GeoAGR13.63\\GeoScripts\\uvdilate.exe": {
+      "exists": true,
+      "kind": "file",
+      "bytes": 475136,
+      "sha256": "33229bd81a00c2d15673a144f702c643bb00ef45917e5ee928b925a2353c575e"
     }
   }
 }

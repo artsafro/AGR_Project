@@ -212,3 +212,41 @@ DCC round-trip в этом дополнении не выполнялся: DT_BL
 Следующая задача INT-001 (SINTEZ native findings→V-code/PDF, check/fix isolation,
 контрольные пакеты); потом DT-020/021/022/023 в порядке плана. Реальный ОКС нужен
 для назначения материалов/окон, координат, визуальных утверждений и приёмки.
+
+## Дополнение 26.09.2026 — GeoAGR13.63
+
+Проверенная база: `3dfaaef37af4b1bb82289df491928d773ed4946c`.
+Коммит дополнения: `git log -1 --format=%H -- docs/inventory/GEOAGR_13_63_REVIEW.md`.
+Источник: `C:\Users\artsafro\Desktop\zavod\GeoAGR13.63`. Основной отчёт и
+машинный протокол: `docs/inventory/GEOAGR_13_63_REVIEW.md`,
+`docs/inventory/geoagr-13.63-evidence.json`. Каталог: **60 tools/137 paths**.
+
+- GeoScripts60 файлов; license INI исключён. 59 SHA сравнивались с Max2024:
+  32 same,14 different,13 absent. После диагностики все59 хешей сохранились.
+- MSE совпал с известным launcher; EXE содержит AutoIt SCRIPT5 210 010bytes,
+  но основная программа не декомпилирована/не запускалась. Не менялись установки,
+  DCC-настройки, сцены и лицензия. Наличие13.63 на Desktop не доказывает её использование.
+- API DelaunayCore/FastFaceFinder/moveall прочитан собственным PEReader-инструментом
+  `tools/assembly_inventory` (.NET10, без target Assembly.Load/выполнения DLL).
+  Сигнатуры известны; packing/index conventions/p1–p5 ещё неизвестны.
+- `tools/probe_geoagr_ucx.py`:5 synthetic OBJ cases. Пересечение и касание найдены,
+  вложенность пропущена; broken OBJ даёт exit1 без .txt. Exit0 не означает pass.
+  Создаёт .txt имён и .log рядом с копией OBJ. Исходники неизменны.
+- `tools/probe_geoagr_uvdilate.py`: RGBA→RGB dilation работает, alpha теряется;
+  RGB input отклоняется. Два synthetic case, явный output, входы неизменны.
+- Оба harness закрепляют SHA256, работают только на собственных temp-фикстурах,
+  timeout20s/case, читают фактические outputs. Это не DCC/real OKS испытания.
+- В Git включены свои анализатор/probes, метаданные и документация; чужих DLL/EXE,
+  восстановленных исходников и license contents нет. Сырьё в ignored tmp/inventory.
+
+Команды повторения приведены в новом отчёте. Следующий этап остаётся INT-001;
+GEN-11 добавить как частичный native checker в INT-006, GEN-12 исследовать для
+INT-003 после защиты alpha/радиуса. MAX-28/29/30 — prototype до выяснения контрактов
+и испытаний. Не подменять ими source PDF/approved materials и полную UCX-проверку.
+Уровни readiness неизменны: ядро к разработке да, общая DCC-интеграция нет, пилот нет.
+
+Проверки дополнения: metadata inspector собран без warnings/errors; JSON прочитан,
+три основные сигнатуры проверены; UCX5/uvdilate2 случая воспроизведены, hash guards
+отклоняют неизвестный executable до запуска. Inventory60/profiles3/schemas7 — OK.
+Продукт: **32 passed,1 skipped** (DT_BLENDER не задавался, DCC round-trip здесь
+не повторялся), ожидаемое предупреждение теста duplicate ZIP. `git diff --check` OK.
