@@ -12,6 +12,9 @@ sys.path.insert(0,str(addon.parent))
 checker=importlib.import_module(addon.name+'.scripts.autochecks.check_utils').CheckUtils
 report={'scope':'installed AGR Checker _calculate_td on BODY only; not full checker/export validation','variants':{}}
 for variant in ('NPM_ATLAS','VPM_UDIM'):
+    if variant=='NPM_ATLAS':
+        report['variants'][variant]={'density_status':'not_applicable','reason':'OKS exempt: source PDF10 section6 item2. Ground-only density must not gate architecture.'}
+        continue
     bpy.ops.wm.open_mainfile(filepath=str(out/f'OBR22_K02_v011_{variant}.blend'))
     obj=next(o for o in bpy.context.scene.objects if o.type=='MESH' and o.data.name=='BODY')
     known={p.index for p in obj.data.polygons if obj.data.attributes['finish_id'].data[p.index].value in (2,3,4,5)}

@@ -8,7 +8,9 @@ import bpy
 import numpy as np
 from mathutils import Vector
 
-root=Path(sys.argv[sys.argv.index('--')+1]).resolve();out=root/'shared_v011'
+root=Path(sys.argv[sys.argv.index('--')+1]).resolve()
+revision='v012' if '--npm-v012' in sys.argv else 'v011'
+out=root/('npm_v012' if revision=='v012' else 'shared_v011')
 d=json.loads((out/'shared-uv-manifest.json').read_text(encoding='utf-8'))
 old=json.loads((root/'uv_trial/uv-manifest.json').read_text(encoding='utf-8'))
 
@@ -66,7 +68,7 @@ for variant,data in d['variants'].items():
     bpy.data.texts.new('SHARED_UV_PROVENANCE.json').write(json.dumps(d,ensure_ascii=False,indent=2))
     scene.display.shading.color_type='TEXTURE';scene.display.shading.light='FLAT'
     scene.camera=bpy.data.objects['Наружная_оболочка']
-    file=out/f'OBR22_K02_v011_{variant}.blend'
+    file=out/f'OBR22_K02_{revision}_{variant}.blend'
     bpy.ops.wm.save_as_mainfile(filepath=str(file),relative_remap=False)
     bpy.ops.wm.open_mainfile(filepath=str(file));assert geometry()==before
     scene=bpy.context.scene
