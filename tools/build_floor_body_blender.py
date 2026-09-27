@@ -50,9 +50,14 @@ provenance = np.concatenate(source_indices).astype(np.int32)
 np.savez_compressed(p / 'body-mesh.npz', vertices=vertices, faces=faces, source_indices=provenance)
 compact = '--compact' in sys.argv
 structured = '--structured' in sys.argv
+optimized = '--optimized' in sys.argv
 if compact or structured:
     packed = np.load(p / ('body-structured-mesh.npz' if structured else 'body-compact-mesh.npz'))
     vertices, faces, provenance = packed['vertices'], packed['faces'], packed['source_indices']
+if optimized:
+    packed = np.load(p / 'body-optimized-mesh.npz')
+    vertices, faces, provenance = packed['vertices'], packed['faces'], packed['source_indices']
+    optimization = json.loads((p / 'body-optimization.json').read_text(encoding='utf-8'))
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene = bpy.context.scene
@@ -67,10 +72,18 @@ obj = bpy.data.objects.new('BODY_Этаж_02', mesh)
 collection.objects.link(obj)
 obj.color = (0.72, 0.74, 0.76, 1)
 attr = mesh.attributes.new('source_wall_index', 'INT', 'FACE')
-attr.data.foreach_set('value', provenance)
+wall_provenance = provenance
+if optimized:
+    mesh.attributes.new('source_group_index', 'INT', 'FACE').data.foreach_set('value', provenance)
+    representatives = np.array([0]+[g[0] if len(g)==1 else 0 for g in optimization['source_groups']], dtype=np.int32)
+    wall_provenance = representatives[provenance]
+    bpy.data.texts.new('BODY_source_groups.json').write(json.dumps(optimization['source_groups']))
+attr.data.foreach_set('value', wall_provenance)
 ids = np.array([0]+[int(w['props']['revit_element_id']) for w in build['wall_records']], dtype=np.int32)
-mesh.attributes.new('revit_element_id', 'INT', 'FACE').data.foreach_set('value', ids[provenance])
+mesh.attributes.new('revit_element_id', 'INT', 'FACE').data.foreach_set('value', ids[wall_provenance])
 obj['provenance'] = 'Face source_wall_index -> BODY_source_mapping.json; internal union faces removed'
+if optimized:
+    obj['provenance'] = 'source_group_index (1-based) -> BODY_source_groups.json -> wall records. source_wall_index/revit_element_id=0 for multi-source faces.'
 obj['stage'] = 'BODY first. Windows must be modelled separately from source contours and seated in openings.'
 scene['local_to_revit_internal_m'] = build['local_to_revit_internal_m']
 scene['source_rvt_sha256'] = '4e6dff5ed6ba9b81c471ebd01e2e7f202d740d807d52c4b8aeb7c8c1ba7973d6'
@@ -128,10 +141,12 @@ for screen in bpy.data.screens:
 out = p / ('OBR22_K02_typical_floor_v003_BODY.blend' if compact else 'OBR22_K02_typical_floor_v002_BODY.blend')
 if structured:
     out = p / 'OBR22_K02_typical_floor_v004_BODY.blend'
+if optimized:
+    out = p / 'OBR22_K02_typical_floor_v005_BODY.blend'
 bpy.ops.wm.save_as_mainfile(filepath=str(out))
 for cam, name, w, h in [(overview, 'body-overview.png', 2000, 850), (detail, 'body-detail.png', 1600, 1100)]:
     scene.camera = cam
     scene.render.resolution_x, scene.render.resolution_y = w, h
-    scene.render.filepath = str(p / name)
+    scene.render.filepath = str(p / (('optimized-'+name) if optimized else name))
     bpy.ops.render.render(write_still=True)
 print('BODY saved', len(vertices), len(faces), str(out))
