@@ -7,8 +7,9 @@
 
 - Обр22: [PR #4](https://github.com/artsafro/AGR_Project/pull/4) — приняты геометрия,
   масштаб материалов, НПМ v012 и UV ВПМ v011; полная сдача ОКС не подтверждена.
-- ГЛБ: [PR #2](https://github.com/artsafro/AGR_Project/pull/2) — урок отклонённого
-  упрощения составного окна, не приёмка модели.
+- ГЛБ: [ошибка упрощения составного окна](../lessons/SKETCHUP_COMPOSITE_WINDOW_OPENINGS.md)
+  ([PR #2](https://github.com/artsafro/AGR_Project/pull/2)) — урок отклонённого
+  результата, не приёмка модели и не разрешение продолжать моделирование.
 - Ground, MASHI, Facades: [PR #16](https://github.com/artsafro/AGR_Project/pull/16)
   — частичные результаты и ошибки; ignored outputs остаются локальными.
 - REVIT-OPENINGS: [PR #19](https://github.com/artsafro/AGR_Project/pull/19)
