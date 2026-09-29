@@ -1,5 +1,9 @@
 # GROUND — оптимизированная версия v008
 
+Исторический отчёт; [область публикации и воспроизведения](../../docs/case_studies/CASEFILE_INDEX.md).
+Числа QA ниже относятся к исходному этапу. Модели и скрипты этого конвейера
+в данный PR не входят; новое чтение FBX или нативная проверка Max не выполнялись.
+
 27.09.2026. Blender4.4; база Git d7ecdfd, локально, без нового коммита/push.
 Предыдущая v003 сохранена. Исходный GROUND.fbx не изменён (SHA256 подтверждён).
 
@@ -65,4 +69,3 @@ dt profiles check —3OK; dt schemas --check —8OK;
 dt build --job jobs/SYNTH-001/project.json --blender <Blender4.4> — development=true, delivery=false.
 Context7: документация Blender и Shapely прочитана.
 Следующий шаг: оценка новой сетки и плавности пользователем в Max.
-

@@ -10,7 +10,8 @@
 - ГЛБ: [ошибка упрощения составного окна](../lessons/SKETCHUP_COMPOSITE_WINDOW_OPENINGS.md)
   ([PR #2](https://github.com/artsafro/AGR_Project/pull/2)) — урок отклонённого
   результата, не приёмка модели и не разрешение продолжать моделирование.
-- Ground, MASHI, Facades: [PR #16](https://github.com/artsafro/AGR_Project/pull/16)
+- Ground, MASHI, Facades: [кейсы и границы приёмки](CASEFILE_INDEX.md)
+  ([PR #16](https://github.com/artsafro/AGR_Project/pull/16))
   — частичные результаты и ошибки; ignored outputs остаются локальными.
 - REVIT-OPENINGS: [PR #19](https://github.com/artsafro/AGR_Project/pull/19)
   — пилот с открытой визуальной приёмкой.
