@@ -13,3 +13,5 @@
 - Проверки: `python -m pytest -q`, `dt profiles check`, `dt schemas --check`.
 - DCC-тест: `dt build --job jobs/SYNTH-001/project.json --blender <blender.exe>`.
 - После этапа обнови `STATE.md`: коммит, команды, результаты, ограничения, следующий шаг.
+- Для навигации по направлениям и текущим PR/Issues используй
+  `docs/organization/PROJECT_MAP.md`; черновой PR не считай слитым в `main`.
