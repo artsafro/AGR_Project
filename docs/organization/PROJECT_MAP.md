@@ -34,12 +34,24 @@
   документ о неудачном упрощении составного окна. Это урок, не принятая модель.
 - [PR #3 — цикл опыта](https://github.com/artsafro/AGR_Project/pull/3):
   реестр 43 чатов и ежедневная процедура. Первый плановый запуск ещё не проверен.
+- [PR #15 — AdapterReport](https://github.com/artsafro/AGR_Project/pull/15):
+  контракт отчёта операции; тестовый процесс пока не завершился штатно.
 
 PR и состояние `main` проверять перед началом работы: этот раздел — снимок, а не
 автоматический статус GitHub. Не удалять старые ветки до merge, проверки ancestry
 и сохранения локальной работы.
 
 ## Пакеты следующего переноса
+
+Очередь GitHub: [резервная копия #6](https://github.com/artsafro/AGR_Project/issues/6),
+[CI #7](https://github.com/artsafro/AGR_Project/issues/7),
+[AdapterReport #8](https://github.com/artsafro/AGR_Project/issues/8),
+[геометрия #9](https://github.com/artsafro/AGR_Project/issues/9),
+[Workbench #10](https://github.com/artsafro/AGR_Project/issues/10),
+[атласы #11](https://github.com/artsafro/AGR_Project/issues/11),
+[кейсы объектов #12](https://github.com/artsafro/AGR_Project/issues/12),
+[внешние инструменты #13](https://github.com/artsafro/AGR_Project/issues/13),
+[конфликт норм #14](https://github.com/artsafro/AGR_Project/issues/14).
 
 1. `AdapterReport`: контракт, схема, reader и тесты. Затем геометрические
    адаптеры Connect/Exterior/Shell вместе с обёртками и тестами.
