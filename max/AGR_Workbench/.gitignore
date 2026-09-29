@@ -1,0 +1,7 @@
+paths.ini
+batch-listener.log
+test-results.txt
+ui-check.txt
+*.fbx
+*.fbx.*.readback.json
+
