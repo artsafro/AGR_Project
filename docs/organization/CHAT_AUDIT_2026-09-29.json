@@ -1,0 +1,366 @@
+{
+  "snapshot": {
+    "date": "2026-09-29",
+    "scope": "AGR and related 3D projects",
+    "threads_reviewed": 43,
+    "branches": [
+      {
+        "name": "feature/digital-twin-core",
+        "commit": {
+          "sha": "96340db441866564fd0fe1fc42260585fea7de80",
+          "url": "https://api.github.com/repos/artsafro/AGR_Project/commits/96340db441866564fd0fe1fc42260585fea7de80"
+        },
+        "protected": false
+      },
+      {
+        "name": "feature/revit-typical-floor",
+        "commit": {
+          "sha": "d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc",
+          "url": "https://api.github.com/repos/artsafro/AGR_Project/commits/d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc"
+        },
+        "protected": false
+      },
+      {
+        "name": "main",
+        "commit": {
+          "sha": "8e1b24f66065dd4b9eb65baaf7c0293c1a5ac959",
+          "url": "https://api.github.com/repos/artsafro/AGR_Project/commits/8e1b24f66065dd4b9eb65baaf7c0293c1a5ac959"
+        },
+        "protected": false
+      }
+    ],
+    "pull_requests": [
+      {
+        "number": 1,
+        "title": "Digital Twin AI: синтетический НПМ/ВПМ срез и аудит инструментов",
+        "url": "https://github.com/artsafro/AGR_Project/pull/1",
+        "state": "closed",
+        "merged": true,
+        "head": "feature/digital-twin-core",
+        "head_sha": "96340db441866564fd0fe1fc42260585fea7de80"
+      }
+    ],
+    "recent_actions": [
+      {
+        "url": "https://github.com/artsafro/AGR_Project/actions/runs/36312416422",
+        "head_sha": "d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc",
+        "conclusion": "startup_failure"
+      },
+      {
+        "url": "https://github.com/artsafro/AGR_Project/actions/runs/36312116210",
+        "head_sha": "1824ca54f2551a178a44a9b66245611b9caba564",
+        "conclusion": "startup_failure"
+      },
+      {
+        "url": "https://github.com/artsafro/AGR_Project/actions/runs/36270207631",
+        "head_sha": "96340db441866564fd0fe1fc42260585fea7de80",
+        "conclusion": "startup_failure"
+      },
+      {
+        "url": "https://github.com/artsafro/AGR_Project/actions/runs/36270207309",
+        "head_sha": "8e1b24f66065dd4b9eb65baaf7c0293c1a5ac959",
+        "conclusion": "startup_failure"
+      },
+      {
+        "url": "https://github.com/artsafro/AGR_Project/actions/runs/36270195762",
+        "head_sha": "96340db441866564fd0fe1fc42260585fea7de80",
+        "conclusion": "startup_failure"
+      }
+    ],
+    "rulesets_read": "403: repository plan does not enable feature",
+    "local_snapshot": {
+      "base": "d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc",
+      "branch": "feature/revit-typical-floor",
+      "commits_ahead_main": 14,
+      "tracked_modified_files": 10,
+      "untracked_files_before_audit": 297,
+      "ignored_output_files": 1874,
+      "ignored_output_bytes": 3949175015,
+      "approved_obr22_hashes": "7/7 match"
+    },
+    "limitations": [
+      "Live scene QA not rerun",
+      "Chat excerpts are evidence of reported work, not independent confirmation",
+      "Active GLB chat can change workspace and GitHub during audit",
+      "Shell Git remote failed SEC_E_NO_CREDENTIALS; connector reads succeeded"
+    ],
+    "final_remote_readback": {
+      "date": "2026-09-29",
+      "branch_count": 4,
+      "new_branch": "codex/glb-window-lessons",
+      "new_draft_pr": 2,
+      "url": "https://github.com/artsafro/AGR_Project/pull/2",
+      "head_sha": "a8c6564de65355c8541cda66cb830c1910e4d672",
+      "created_by": "another chat during audit",
+      "merged": false
+    },
+    "validation_this_audit": {
+      "pytest_passed": 116,
+      "pytest_skipped": 1,
+      "profiles_ok": 3,
+      "schemas_ok": 8,
+      "dcc_run": false,
+      "approved_obr22_hashes_ok": 7
+    }
+  },
+  "threads": [
+    {
+      "thread_id": "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff",
+      "title": "Спланировать моделирование башенок Н",
+      "topic": "ГЛБ / SketchUp",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0ddd1-4d2c-79e3-84a7-b8048f0cb972",
+      "title": "Изучи папки проекта",
+      "topic": "Ядро / Обр22 / адаптеры / фасадные атласы",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0ec14-b5fa-7810-abe3-e87a72701103",
+      "title": "Найти и смоделировать оконные типы",
+      "topic": "СОШ1150 / окна и материалы",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0e971-82fa-73c0-9845-eefe8ee09648",
+      "title": "Оптимизировать полигоны меша",
+      "topic": "Object013 / оптимизация",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0b06f-8dad-7260-8d16-78414060b95b",
+      "title": "Исследовать FacadePipeline",
+      "topic": "FacadePipeline / Revit-контуры",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0e70a-4dd2-7343-8269-c301d2c44403",
+      "title": "Найти лимит объектов коллизий",
+      "topic": "UCX / трактовка требований",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0e378-3f54-71e0-ab85-bada998da713",
+      "title": "Смоделируй в Blender",
+      "topic": "Фасадные знаки и отдельный оконный PNG",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0e311-3cdc-7603-8c56-6991321d1e06",
+      "title": "Оцени готовность LP модели",
+      "topic": "MASHI / LP и Revit master",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0e3ad-2c25-7ac3-a07d-fc1a625ff687",
+      "title": "Спроецировать ground на рельеф",
+      "topic": "Ground / проекция и упрощение",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0e218-32e0-76c3-ba8f-48b0a68300d4",
+      "title": "Обновить правила ВПМ и НПМ",
+      "topic": "Workbench / инструменты НПМ–ВПМ",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0dd01-3411-70a1-bc4f-2e2d0eac1a50",
+      "title": "Устранить пересечения коллизий",
+      "topic": "UCX / затем UDIM1008",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0d907-b0c4-7e82-b0f1-23c8a5a10d4b",
+      "title": "Уложить UV фасадов в атлас",
+      "topic": "Фасадные UV / периодический перенос",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0c037-b514-7292-bab9-5d25fc9713c6",
+      "title": "Создать атлас типов окон 2K",
+      "topic": "Оконный атлас DOCX / PDF",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0d7bd-48d4-7be1-8ea6-67c7cbd2ded7",
+      "title": "Подготовить атлас табличек",
+      "topic": "Таблички / плейны / UV",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0c82b-fa20-71c2-8ff4-6f8552c09696",
+      "title": "Обвести рамы плейном",
+      "topic": "Рамные плейны / затем мишка",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a0704d-11f9-7180-9cd1-b24c19ffc6d7",
+      "title": "Настроить Blender пайплайн",
+      "topic": "Blender / KPX131 и правила QA",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a08009-dc2e-7390-a4dc-25636b1c5f30",
+      "title": null,
+      "topic": "Материалы / перепривязка FBM",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a08009-dc32-7631-90d6-e7ac1c8410d3",
+      "title": null,
+      "topic": "Альбомы / проектировщики и заказчики",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a08009-dc37-7843-869d-8ed1426033b4",
+      "title": null,
+      "topic": "AutoCAD / генплан / слои Max",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a07176-c792-77b3-b4d3-e8828ea8af23",
+      "title": "Настроить pivot кондиционеров",
+      "topic": "Pivot кондиционеров",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a06899-fc54-7fe2-a78d-26d43858e0c5",
+      "title": "Очистить сетку вокруг проёмов",
+      "topic": "Border-loop cleaner",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a06899-b01d-7cd2-925a-c280fe77240f",
+      "title": null,
+      "topic": "FBX tool / путь скрипта",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a06899-b024-7552-965f-42fe7579a74d",
+      "title": null,
+      "topic": "Очистка сетки проёмов, ранний вариант",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a06899-b015-7262-8d64-28a813742f79",
+      "title": null,
+      "topic": "Поиск инструмента фасадных камер",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a057a7-ef60-7e70-890f-085c65a711ca",
+      "title": null,
+      "topic": "Max / инвентарь и Reset XForm–Weld",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a057a7-ef48-7d93-8052-c4b5745d0e14",
+      "title": null,
+      "topic": "Материалы Main / текстурные ноды",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a057a7-ef5c-7de0-b14d-dd50bfdfaa68",
+      "title": null,
+      "topic": "Выбор coplanar faces",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a057a7-ef5a-70d3-ad7b-39be3becd420",
+      "title": null,
+      "topic": "FBX импорт без Ground",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a057a7-ef5e-7f12-96d3-60b5d59ec7fd",
+      "title": null,
+      "topic": "Maya Collision Splitter / план Max",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a02f8a-b12d-78a0-98e5-2e373889c6c5",
+      "title": "Импортировать FBX по слоям",
+      "topic": "FBX / слои, неполное распределение",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a02db7-57a4-7230-8a88-2b3a1b707e74",
+      "title": "Разархивировать все архивы",
+      "topic": "НПМ / ZIP и FBX по слоям",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01f3b-a686-7640-bb03-c40c373d8dbe",
+      "title": "Заменить альфа-канал на фон",
+      "topic": "PNG / прозрачность на чёрный фон",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01e20-da35-7732-aef6-933da779aed1",
+      "title": "Найди отличия",
+      "topic": "Сравнение PDF требований",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01984-9d2a-7f80-870e-0cae546d6010",
+      "title": "Изучить проект",
+      "topic": "Max MCP / рабочая среда",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01953-d647-7070-bab6-b20ff61318b3",
+      "title": "Создать среду 3D Max MCP",
+      "topic": "Среда codex-3ds-max",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c8e8-79d0-97c2-99f361b38c0d",
+      "title": null,
+      "topic": "Фасадные камеры / Atlas UV / затем карты",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c8eb-7262-8f84-276da496bc05",
+      "title": null,
+      "topic": "FacadeAtlasBuilder / доставка EXE",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c8e1-7481-a92c-54d79095e8c8",
+      "title": null,
+      "topic": "Сохранение сцены Max",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c8e4-7530-bf44-5cf28a659e61",
+      "title": null,
+      "topic": "Материалы / viewport",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c8ea-7a00-b72a-11a6ac54d10c",
+      "title": null,
+      "topic": "Ground материалы / viewport",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c8f4-7e81-8dee-c53cc42c5c12",
+      "title": null,
+      "topic": "Ground / текстуры и имена",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c900-7e71-9c10-527e04bcdb38",
+      "title": null,
+      "topic": "Переносимый MAXScript kit",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    },
+    {
+      "thread_id": "01a01922-c914-7a33-8d77-3f5f08abec50",
+      "title": null,
+      "topic": "Структура визуализационной сцены",
+      "evidence_level": "chat summary; acceptance and current QA require source check"
+    }
+  ]
+}
