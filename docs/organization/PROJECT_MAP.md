@@ -40,6 +40,8 @@
   частичная приёмка Ground и атласов, аудит MASHI и явные открытые проверки.
 - [PR #17 — рисунок фасадов](https://github.com/artsafro/AGR_Project/pull/17):
   проверенная числовая функция и тесты; полный Blender/Max-конвейер ещё в #11.
+- [PR #18 — AGR Workbench](https://github.com/artsafro/AGR_Project/pull/18):
+  исходники и smoke-сценарии; новый native `fileIn`/readback ещё требуется.
 
 PR и состояние `main` проверять перед началом работы: этот раздел — снимок, а не
 автоматический статус GitHub. Не удалять старые ветки до merge, проверки ancestry
