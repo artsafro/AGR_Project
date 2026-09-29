@@ -42,6 +42,8 @@
   проверенная числовая функция и тесты; полный Blender/Max-конвейер ещё в #11.
 - [PR #18 — AGR Workbench](https://github.com/artsafro/AGR_Project/pull/18):
   исходники и smoke-сценарии; новый native `fileIn`/readback ещё требуется.
+- [PR #19 — REVIT-OPENINGS](https://github.com/artsafro/AGR_Project/pull/19):
+  статус пилота СОШ1150; модели и визуальная приёмка остаются локальными.
 
 PR и состояние `main` проверять перед началом работы: этот раздел — снимок, а не
 автоматический статус GitHub. Не удалять старые ветки до merge, проверки ancestry
