@@ -180,3 +180,8 @@ class ValidationReport(Contract):
 
 SCHEMAS = {c.__name__: c for c in [ProjectManifest, MaterialRegistry, WindowType,
                                    Placement, BuildJob, ValidationReport, MasterBuilding]}
+
+
+from dt_ai.core.adapter_report import AdapterReport
+SCHEMAS["AdapterReport"] = AdapterReport
+
