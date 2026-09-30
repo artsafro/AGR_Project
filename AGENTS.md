@@ -22,3 +22,9 @@
 - Проверки: `python -m pytest -q`, `dt profiles check`, `dt schemas --check`.
 - DCC-тест: `dt build --job jobs/SYNTH-001/project.json --blender <blender.exe>`.
 - После этапа обнови `STATE.md`: коммит, команды, результаты, ограничения, следующий шаг.
+- Для навигации по направлениям и текущим PR/Issues используй
+  `docs/organization/PROJECT_MAP.md`; черновой PR не считай слитым в `main`.
+- При явной положительной оценке результата фиксируй точную область приёмки,
+  ошибки и доказательства по `docs/EXPERIENCE_CAPTURE.md` и
+  `docs/case_studies/TEMPLATE.md`; обнови реестр кейсов и `STATE.md`.
+  Похвала не заменяет QA; общий Skill требует проверки на втором проекте.
