@@ -2,6 +2,13 @@
 import numpy as np
 
 def pattern(mid, x, y, color, panel_joint=.005, panel_dimensions=None):
+    """Sample RGB at broadcastable NumPy x/y arrays in metres.
+
+    ID 101 uses brick; IDs 102-105 use solid panels. Dimensions are (width,
+    height); omitted dimensions retain the historical v003/v004 sizes.
+    For v005 pass (1.2, .6) for brick or (.6, 1.2) for the other panels.
+    Color is a normalized RGB triplet; panel_joint is the full joint width.
+    """
     pw, ph = panel_dimensions or ((1.6, 1.2) if mid == 101 else (1.2, 1.6))
     px, py = x % pw, y % ph
     color = np.asarray(color)
@@ -24,7 +31,11 @@ def pattern(mid, x, y, color, panel_joint=.005, panel_dimensions=None):
     return np.clip(np.where(joint[..., None], joint_color, rgb), 0, 1)
 
 def raster(mid, width, height, extent, color, joint=.005, offset=(0,0), panel_dimensions=None):
-    """Bottom-origin RGB, integrated with 4x4 subpixel samples in row blocks."""
+    """Bottom-origin float32 RGB (height, width, 3), with 4x4 subpixel samples.
+
+    extent and offset are (x, y) in metres; width/height are pixel counts.
+    Panel dimensions follow pattern(), including its historical defaults.
+    """
     result = np.empty((height, width, 3), dtype=np.float32)
     for start in range(0, height, 64):
         end = min(start+64, height)
@@ -36,4 +47,3 @@ def raster(mid, width, height, extent, color, joint=.005, offset=(0,0), panel_di
                 rgb += pattern(mid,x,y,color,joint,panel_dimensions)/16
         result[start:end] = rgb
     return result
-

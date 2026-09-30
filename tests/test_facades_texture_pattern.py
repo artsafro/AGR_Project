@@ -29,3 +29,27 @@ def test_updated_600_1200_modules(mid):
     a=module.pattern(mid,x,y,color,panel_dimensions=dims)
     np.testing.assert_allclose(a,module.pattern(mid,x+dims[0],y+dims[1],color,panel_dimensions=dims),atol=1e-9)
 
+
+@pytest.mark.parametrize('mid', [101, 102])
+def test_raster_periodicity_with_offset_and_row_blocks(mid):
+    dims = (1.2, .6) if mid == 101 else (.6, 1.2)
+    args = dict(mid=mid, width=7, height=65, extent=(.7, .65),
+                color=[.6, .48, .38], panel_dimensions=dims)
+    a = module.raster(**args, offset=(-.123, -.213))
+    b = module.raster(**args, offset=(-.123 + dims[0], -.213 + dims[1]))
+    assert a.shape == (65, 7, 3)
+    assert a.dtype == np.float32
+    assert np.isfinite(a).all()
+    assert 0 <= a.min() <= a.max() <= 1
+    np.testing.assert_allclose(a, b, atol=2e-7)
+    # Read the last row as a separate image with matching physical origin.
+    last = module.raster(mid, 7, 1, (.7, .01), [.6, .48, .38],
+                         offset=(-.123, -.213 + .64), panel_dimensions=dims)
+    np.testing.assert_allclose(a[64:], last, atol=2e-7)
+
+
+def test_raster_solid_panel_without_joint_preserves_color():
+    color = [.6, .48, .38]
+    result = module.raster(102, 9, 3, (.6, 1.2), color, joint=0,
+                           panel_dimensions=(.6, 1.2))
+    np.testing.assert_allclose(result, np.broadcast_to(color, result.shape), atol=2e-7)
