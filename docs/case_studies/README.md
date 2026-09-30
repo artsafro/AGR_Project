@@ -13,7 +13,8 @@
 - Ground, MASHI, Facades: [кейсы и границы приёмки](CASEFILE_INDEX.md)
   ([PR #16](https://github.com/artsafro/AGR_Project/pull/16))
   — частичные результаты и ошибки; ignored outputs остаются локальными.
-- REVIT-OPENINGS: [PR #19](https://github.com/artsafro/AGR_Project/pull/19)
+- REVIT-OPENINGS: [статус пилота СОШ1150](../../jobs/REVIT-OPENINGS/STATE.md)
+  ([PR #19](https://github.com/artsafro/AGR_Project/pull/19))
   — пилот с открытой визуальной приёмкой.
 
 После слияния соответствующих PR связывай кейсы по постоянным путям в репозитории.
