@@ -1,5 +1,28 @@
 # Digital Twin AI — состояние для продолжения
 
+## Ревью PR #4 — 30.09.2026
+
+Проверена миграция инструментов Обр22 в отдельном checkout. База main:
+`e675e9e6326e0789989b20ee36e7ecd80d74c4ae`; исходный PR head:
+`d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc`; интеграционный коммит `a0f7290`.
+NumPy/Shapely добавлены в dev для геометрических тестов; реестр ведёт прямо на кейс.
+Проверки: `python -m pytest -q` — 64 passed, 1 skipped; `dt profiles check` — 3;
+`dt schemas --check` — 7; `git diff --check` — без ошибок. Использовано существующее
+локальное окружение; установка зависимостей с нуля и Ubuntu runner не проверены.
+`dt build --job jobs/SYNTH-001/project.json --blender <Blender 4.4> --output tmp/pr4-synth-20260930`:
+пакет и повторный импорт обоих FBX проверены, development=true, delivery=false.
+SHA256 и размеры 7/7 утверждённых файлов совпали. `check_npm_vpm_scale.py` на отдельных
+копиях сохранённых blend: 455 вертикальных граней, max phase error 4.073e-7 м,
+масштаб 0.999995084–1.000002511; утверждённые ВПМ/карты неизменны.
+Отчёты остаются локально: `tmp/pr4-synth-20260930/` и
+`tmp/pr4-approved-readback/outputs/npm_v012/npm-vpm-scale-qa.json` в review checkout.
+Actions не подтверждён: ранее зафиксирована блокировка billing; применён согласованный
+локальный маршрут из PROJECT_MAP.md. Полная сдача Обр22 не заявлена: ID0, PBR,
+стекло/FBX/GeoJSON и полный AGR Checker открыты. Approved outputs не публикуются.
+Следующий шаг: завершить слияние PR #4, затем отдельно проверить PR #15.
+Записи ниже — история работ по Обр22 и её прежние результаты.
+
+
 ## Отчёт об успешном опыте Обр22
 
 `docs/case_studies/OBR22_ACCEPTED_WORKFLOW.md`: ожидания пользователя, принятые версии,

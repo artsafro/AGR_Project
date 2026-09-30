@@ -103,4 +103,3 @@ for cam,name,w,h in [(overview,'exterior-overview-wire.png',2000,900),(detail,'e
     s.camera=cam;s.render.resolution_x=w;s.render.resolution_y=h;s.render.filepath=str(p/name)
     bpy.ops.render.render(write_still=True)
 print('SAVED',str(blend),len(mesh.polygons),'quads')
-

@@ -5,7 +5,7 @@
 Новый кейс оформляй по [шаблону](TEMPLATE.md) и
 [правилу фиксации](../EXPERIENCE_CAPTURE.md).
 
-- Обр22: [PR #4](https://github.com/artsafro/AGR_Project/pull/4) — приняты геометрия,
+- Обр22: [принятый рабочий процесс](OBR22_ACCEPTED_WORKFLOW.md) ([PR #4](https://github.com/artsafro/AGR_Project/pull/4)) — приняты геометрия,
   масштаб материалов, НПМ v012 и UV ВПМ v011; полная сдача ОКС не подтверждена.
 - ГЛБ: [ошибка упрощения составного окна](../lessons/SKETCHUP_COMPOSITE_WINDOW_OPENINGS.md)
   ([PR #2](https://github.com/artsafro/AGR_Project/pull/2)) — урок отклонённого
