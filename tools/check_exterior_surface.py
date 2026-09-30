@@ -8,10 +8,13 @@ import shapely
 from shapely.geometry import Polygon
 
 
-def check(p):
+def check(p, angle=None):
     report=json.loads((p/'exterior-surface.json').read_text(encoding='utf-8'))
     data=np.load(p/'exterior-readback.npz')
-    angle=float(np.load(p/'body-grid.npz')['angle'])
+    if angle is None:
+        angle=report.get('angle_rad')
+    if angle is None:
+        angle=float(np.load(p/'body-grid.npz')['angle'])
     v=data['vertices'].copy()
     v[:,:2]=v[:,:2]@np.array([[np.cos(angle),-np.sin(angle)],[np.sin(angle),np.cos(angle)]])
     faces=data['faces'];labels=data['facade_indices']
@@ -57,6 +60,17 @@ def check(p):
     qa['remaining']=['Resolve recorded height/top-gap assumptions against source design intent','Enable and validate Shell 0.4m, then model and fit windows']
     (p/'exterior-surface-check.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     (p/'exterior-qa.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
+    if (p/'report.json').exists():
+        import sys
+        sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
+        from dt_ai.core.adapter_report import AdapterReport
+        record=json.loads((p/'report.json').read_text(encoding='utf-8'))
+        if record.get('operation')=='extract-exterior':
+            for item in record['checks']:
+                if item['id']=='dcc_profile_readback':
+                    item.update(status='pass' if ok else 'fail',evidence=str(p/'exterior-surface-check.json'))
+            record=AdapterReport.model_validate(record).model_dump(mode='json')
+            (p/'report.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(result))
     assert ok, result
     return result

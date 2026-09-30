@@ -667,3 +667,25 @@ https://github.com/artsafro/AGR_Project/actions/runs/36269917204.
 Следующая задача разработки остаётся INT-001. Готовность production DCC-интеграции
 и пилота на реальном ОКС не изменилась: нет. Локальный synthetic Blender round-trip
 не является проверкой реального проекта и не заменяет Linux CI.
+## Exterior выделен отдельным пакетом — 30.09.2026
+
+База main `eebcecc7dcaae7b44f038bdcb655fbdb867d4730`; Issue #9, только Exterior.
+Ядро, runner, конфигурация Обр22, AdapterReport, Blender save/readback и независимая
+проверка профилей подготовлены в `codex/exterior-adapter`. Shell не включён.
+В отдельном checkout: `python -m pytest -q` — 115 passed/1 skipped;
+`dt profiles check` — 3 OK; `dt schemas --check` — 8 OK; py_compile/diff-check OK.
+Импорт `dt_ai` указывает на checkout; существующая Windows .venv, чистая установка
+и hosted CI не проверены. `tests/test_exterior_adapter.py` и старые рисковые тесты:
+13 targeted passed; проверены явный window ID, пустой проём, ID владельцев и ошибки входа.
+На копиях локальных входов Обр22 runner дал 544 вершины/357 квадов/40 фасадных
+участков; arrays и геометрическая часть отчёта точно совпали с сохранённым v001.
+Blender4.4 создал и повторно открыл EXTERIOR_SURFACE.blend; mesh.validate не делал
+исправлений, дубли/неправильные нормали/лишние резы/заполнение проёмов отсутствуют,
+overlap `3.6415e-14 м²`, readback error `1.6899e-6 м`. Сообщение extensions cache
+нефатальное, процессы завершились exit0. AdapterReport: три checks pass, но ручное
+решение по высоте/верхним разрывам открыто, `delivery_passed=false`.
+Хеши/размеры 7/7 approved файлов совпали; originals читались без записи.
+SYNTH-001 FBX roundtrip: development=true, delivery=false.
+Локальные отчёты: `tmp/exterior-review-20260930/result-validate/` и
+`tmp/exterior-synth-20260930/`. Второй проект и визуальная приёмка не выполнены.
+Далее: опубликовать Exterior; затем отдельный Shell. PR #18 отложен.
