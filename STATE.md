@@ -1,3 +1,24 @@
+## Connect выделен отдельным пакетом — 30.09.2026
+
+База main `c684d65f7e05b24f9094fc5f60e6a245715c2ec0`; Issue #9, только Connect.
+Ядро `src/dt_ai/geometry/connect.py`, совместимая обёртка `tools/quad_connect.py`,
+тесты и `docs/ADAPTER_EXTRACTION.md`. Exterior/Shell и их отчёты не переносятся.
+Локально в отдельном checkout: `python -m pytest -q` — 104 passed/1 skipped;
+`dt profiles check` — 3 OK, `dt schemas --check` — 8 OK, diff-check OK.
+Импорт src проверен; существующая Windows .venv, чистая установка не проверялась.
+Все 4 mesh Обр22 дали точное равенство vertices/faces/parents прежней функции
+из main c684d65; хеши 7/7 approved файлов совпали. Только чтение originals.
+Blender 4.4: `tests/dcc/connect_readback.py` сохранил/открыл синтетический blend,
+12 вершин/6 квадов, координаты/parents/finish_id (включая ID0) сохранены;
+mesh.validate без исправлений. Сообщение кэша extensions не помешало, exit 0.
+`dt build --job jobs/SYNTH-001/project.json --blender <Blender4.4> --output tmp/connect-synth-20260930`:
+FBX из пакета повторно импортированы, development=true/delivery=false.
+Отчёты: tmp/connect-compatibility.json, tmp/connect-readback-20260930/readback.json,
+tmp/connect-synth-20260930/report.json в review checkout.
+Нет новой визуальной приёмки/второго проекта/полного QA топологии. Weld до 8 знаков
+сохранён с известными ограничениями; hosted CI не заявлен пройденным.
+Далее: опубликовать этот пакет, затем отдельно Exterior/Shell по #9. #18 отложен.
+
 ## Ревью PR #17 — 30.09.2026
 
 Периодический метрический рисунок фасадов ID101–105 и растеризация 4×4.
