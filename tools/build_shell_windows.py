@@ -22,19 +22,8 @@ def components(item):
     return list(groups.values())
 
 
-class Mesh:
-    def __init__(self,name):
-        self.name=name;self.vertices=[];self.faces=[];self.materials=[];self.lookup={}
-    def face(self,points,normal,material=0):
-        q=np.array(points,dtype=float)
-        if np.dot(np.cross(q[1]-q[0],q[2]-q[0]),normal)<0:q=q[::-1]
-        f=[]
-        for v in q:
-            key=tuple(np.round(v,9))
-            if key not in self.lookup:self.lookup[key]=len(self.vertices);self.vertices.append(v.tolist())
-            f.append(self.lookup[key])
-        self.faces.append(f);self.materials.append(material)
-    def dump(self):return {'name':self.name,'vertices':self.vertices,'faces':self.faces,'materials':self.materials}
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from dt_ai.geometry.shell import Mesh, shell_body
 
 
 def build(p,clean=False):
@@ -42,27 +31,13 @@ def build(p,clean=False):
     angle=float(np.load(p/'body-grid.npz')['angle']);R=np.array([[np.cos(angle),-np.sin(angle)],[np.sin(angle),np.cos(angle)]])
     v=exterior['vertices'].copy();v[:,:2]=v[:,:2]@R
     f=exterior['faces'];labels=exterior['facade_indices']
-    body=Mesh('BODY_Shell_400mm_NoInnerFaces')
-    # Intersection of inward-offset facade planes, including mitered corners.
-    normals=defaultdict(set);edges={}
-    for face,label in zip(f,labels):
-        run=report['profiles'][label-1];normal=tuple(run['outward']+[0.])
-        body.face(v[face],normal)
-        for i in face:normals[int(i)].add(normal)
-        for i,j in zip(face,np.roll(face,-1)):
-            key=tuple(sorted((int(i),int(j))))
-            if key in edges:edges[key]=None
-            else:edges[key]=(int(i),int(j))
-    inner=v.copy()
-    for i,ns in normals.items():
-        A=np.array(list(ns));inner[i]+=np.linalg.lstsq(A,np.full(len(A),-.4),rcond=None)[0]
-    for edge in edges.values():
-        if edge is None:continue
-        i,j=edge;q=np.array([v[i],inner[i],inner[j],v[j]])
-        body.face(q,np.cross(q[1]-q[0],q[2]-q[0]))
+    result = shell_body(v, f, [report['profiles'][label-1]['outward']+[0.] for label in labels],
+                        thickness_m=.4, name='BODY_Shell_400mm_NoInnerFaces', units='m',
+                        source_refs=[f"facade:{label}" for label in labels])
+    body_data = result['mesh']
     source=json.loads((p/'contour-source.json').read_text(encoding='utf-8'))
     items={i['props'].get('revit_element_id'):i for i in source['items']}
-    meshes=[body.dump()];records=[];pending=[]
+    meshes=[body_data];records=[];pending=[]
     for ri,run in enumerate(report['profiles'],1):
         a,u=run['axis'],run['along_axis'];sign=run['outward'][a];plane=run['start'][a]
         for oi,opening in enumerate(run['openings']):
