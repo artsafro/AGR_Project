@@ -10,8 +10,9 @@ requires-python = ">=3.11"
 dependencies = ["PyYAML==6.0.3", "pydantic==2.13.5", "Pillow==12.3.0", "pypdf==6.19.0"]
 
 [project.optional-dependencies]
-dev = ["pytest==9.1.1", "numpy==2.5.3"]
+dev = ["pytest==9.1.1", "numpy==2.5.3", "shapely==2.1.2"]
 pdf-review = ["PyMuPDF==1.28.2"]
+contour-model = ["numpy==2.5.3", "shapely==2.1.2"]
 
 [project.scripts]
 dt = "dt_ai.cli.main:main"
@@ -22,4 +23,3 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = ["dcc: requires an explicitly supplied Blender executable"]
-
