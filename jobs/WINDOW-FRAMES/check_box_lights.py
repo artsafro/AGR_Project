@@ -13,7 +13,24 @@ for saved in src['objects']:
     assert len(o.data.vertices)==len(saved['verts']) and len(o.data.polygons)==len(saved['faces'])
     assert max((o.matrix_world@v.co-Vector(p)).length for v,p in zip(o.data.vertices,saved['verts']))<1e-6
     assert all(list(p.vertices)==s['v'] for p,s in zip(o.data.polygons,saved['faces']))
+    assert [m.name if m else None for m in o.data.materials]==saved['materials']
+    assert all(p.material_index==s['material'] for p,s in zip(o.data.polygons,saved['faces']))
 o=bpy.data.objects['BoxLights_AllFrames_v001']; m=o.data
+assert m.validate(verbose=False,clean_customdata=False) is False
+attr=m.attributes.get('source_frame_face')
+assert attr is not None and attr.domain=='FACE' and attr.data_type=='INT'
+expected_sources=[None]*len(m.polygons)
+for item in qa['mapping']:
+    for j in range(5):
+        index=item['face_start']+j
+        assert expected_sources[index] is None
+        expected_sources[index]=item['source_face']
+assert all(source is not None for source in expected_sources)
+assert [value.value for value in attr.data]==expected_sources
+assert abs(float(o['inset_m'])-float(qa['inset_m']))<1e-12
+assert abs(float(o['drop_m'])-float(qa['drop_m']))<1e-12
+assert abs(float(o['height_m'])-float(qa['height_m']))<1e-12
+assert bool(o['open_top_intentional']) is True and o['source_object']=='frames'
 warps=[]
 for p in m.polygons:
     vv=[m.vertices[i].co for i in p.vertices]
@@ -34,6 +51,10 @@ for i,(lo,hi) in enumerate(boxes):
         a,b=boxes[j]
         if all(min(hi[k],b[k])-max(lo[k],a[k])>1e-6 for k in range(3)) and trees[i].overlap(trees[j]): overlaps.append([i,j])
 assert not overlaps,overlaps
-qa['readback']={'original_frames_unchanged':True,'sample_unchanged':True,'warped_quads':len(warps),'light_light_surface_intersections':len(overlaps),'saved_objects':len([o for o in bpy.context.scene.objects if o.type=='MESH'])}
+qa['readback']={'original_frames_unchanged':True,'sample_unchanged':True,
+    'source_materials_unchanged':True,'provenance_preserved':True,
+    'properties_preserved':True,'mesh_validate_repairs':0,
+    'warped_quads':len(warps),'light_light_surface_intersections':len(overlaps),
+    'saved_objects':len([o for o in bpy.context.scene.objects if o.type=='MESH'])}
 (ROOT/'box_lights_v002_readback.json').write_text(json.dumps(qa,indent=2))
 print(json.dumps(qa['readback']))

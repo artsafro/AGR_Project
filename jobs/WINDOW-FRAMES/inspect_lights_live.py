@@ -1,6 +1,5 @@
 import bpy, json, os
 from pathlib import Path
-import os
 ROOT=Path(os.environ['AGR_BOX_LIGHT_OUTPUT']).resolve()
 ROOT.mkdir(parents=True, exist_ok=True)
 out=ROOT

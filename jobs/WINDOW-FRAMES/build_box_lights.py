@@ -1,7 +1,6 @@
-import bpy, bmesh, json, hashlib
+import bpy, bmesh, json
 from pathlib import Path
 from mathutils import Vector
-from mathutils.geometry import intersect_line_line
 import os
 ROOT=Path(os.environ['AGR_BOX_LIGHT_OUTPUT']).resolve()
 ROOT.mkdir(parents=True, exist_ok=True)

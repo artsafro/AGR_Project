@@ -11,7 +11,8 @@
   несмотря на историческое имя, работает в background Blender.
 - `analyze_lights.py` — связанные компоненты и отбор верхних внутренних граней.
 - `build_box_lights.py` — native inset, планарность, открытая оболочка и provenance.
-- `check_box_lights.py` — readback исходников, планарность и BVH surface-intersections.
+- `check_box_lights.py` — readback геометрии/материалов исходников, provenance,
+  свойств результата, планарности и BVH surface-intersections.
 - `evidence/readback-v002-summary.json` — компактная историческая проверка;
   `evidence/replay-2026-10-01.json` — проверка опубликованного сценария.
 
