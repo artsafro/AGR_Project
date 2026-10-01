@@ -1,3 +1,22 @@
+## Техническая библиотека и ретроспективный аудит — 01.10.2026
+
+Ветка `codex/recovered-technical-library`, база main `351077a5a165307187e8105240db6af244be8b8d`.
+Проверены 15 GitHub PR и локальные исходники AGR/связанных 3D-папок.
+По уточнению пользователя массовый архив548 шаблонов не публикуется.
+`technical_library/README.md` — вход в компактные пакеты операций.
+UV v006:10 исторических операций объединены в4 этапа и common.py.
+Четырёхэтапный replay Blender4.4/Python/FBX/ZIP exit0; все численные поля
+геометрического/UV readback совпадают с прежним маршрутом.42686квадов.
+Происхождение сохранено SHA операций, временные версии остаются локально.
+WorkBench PR18 отложен, PR25 box lights отдельный; другие семьи классифицированы,
+не все рефакторинги выполнены. Ежедневная automation обновлена: reuse/dedup/refactor.
+Native Max/full AGR/второй проект не проверены. Inputs и outputs остаются локальными.
+QA: `python -m pytest -q` —132 passed/1 skipped/1 expected warning;
+`dt profiles check` —3 OK, `dt schemas --check` —8 OK;
+точные результаты см. `docs/organization/TECHNICAL_MIGRATION_AUDIT.md`.
+Новый пакет — draft PR, не main. Следующий шаг: ревью компактного UV-пакета,
+далее одна операция атласа с reuse ядра рисунка; слияние только отдельно.
+
 ## Connect выделен отдельным пакетом — 30.09.2026
 
 База main `c684d65f7e05b24f9094fc5f60e6a245715c2ec0`; Issue #9, только Connect.
