@@ -158,7 +158,9 @@ def main():
         configs[name] = target
         inputs['config:' + name] = target
         return target
-    config('renders', {'blend': str(blend), 'fbx': str(fbx), 'output_dir': str(render)})
+    render_mesh_names = export_facts['selected_mesh_names']
+    config('renders', {'blend': str(blend), 'fbx': str(fbx), 'output_dir': str(render),
+                       'mesh_names': render_mesh_names})
     for path in sources.values():
         target = scale / path.relative_to(source_root)
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -202,7 +204,9 @@ def main():
             return False
     stage('renders', blender(ROOT / 'tools/render_profile_comparison.py', configs['renders']),
           {'evidence': render / 'render-evidence.json', **{label: render / (label + '.png') for label in ('source-front', 'source-oblique', 'reimport-front', 'reimport-oblique')}},
-          render, lambda value: len(value.get('renders', [])) == 4)
+          render, lambda value: len(value.get('renders', [])) == 4
+          and value.get('mesh_names') == render_mesh_names
+          and all(item.get('mesh_names') == render_mesh_names for item in value['renders']))
     stage('scale', blender(ROOT / 'tools/check_npm_vpm_scale.py', scale),
           {'evidence': scale / 'npm_v012/npm-vpm-scale-qa.json'}, scale,
           lambda value: value.get('compared_faces', 0) > 0 and value.get('approved_vpm_and_four_maps_unchanged') is True)

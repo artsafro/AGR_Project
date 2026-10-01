@@ -1,3 +1,16 @@
+## PR28: исправления перед разрешённым merge — 01.10.2026
+
+Пять review findings originalhead c61dd0b исправлены; код/regrtests/native
+evidence: docs/organization/local-orchestration/PR28_FIX_QA.json.
+QA:213passed/1skipped/1expectedwarning, profiles3/schemas8OK;
+SYNTH DCC development=true/delivery=false; real golden FBX46/5206 readbackOK;
+synthetic native render scope/dependencies/camera/scale/sourceSHA проверены.
+Independent code gate закрыт,300 matching cases vs brute-force без расхождений.
+Основной dirty checkout и approved inputs сохранены. Live Cursor/Max не запускались,
+legacy CLI summaries не перезаписаны; Context7 tools этой сессии недоступны.
+Следующий шаг: commit/push fixes, проверить exact GitHub head и выполнить
+разрешённый пользователем squash merge; hosted CI отдельное ограничение Issue7.
+
 ## Оркестрация Codex: опубликовано в PR #28 — 01.10.2026
 
 База main fc48f1a; ветка codex/local-orchestration; PR https://github.com/artsafro/AGR_Project/pull/28 открыт, не слит. Implementation head db371f8. Hosted run213:startup_failure до jobs (Issue7); localQA отдельно.

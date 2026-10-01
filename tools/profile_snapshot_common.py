@@ -22,7 +22,7 @@ def digest(path):
 
 def write(path, value):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8')
+    Path(path).write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')
 
 
 def request():
@@ -110,26 +110,58 @@ def snapshot(objects):
             'images': image_facts(used_images(objects))}
 
 
+def render_scope(objects, names):
+    """Resolve the exact exported mesh scope before framing or rendering."""
+    if not names or len(names) != len(set(names)):
+        raise ValueError('Explicit nonempty unique mesh_names required')
+    by_name = {obj.name: obj for obj in objects if obj.type == 'MESH'}
+    if not set(names) <= set(by_name):
+        raise ValueError('Render scope contains missing mesh objects')
+    return [by_name[name] for name in names]
+
+
+def orthographic_fit(x, y, aspect):
+    """Fit projected points about the fixed camera target, including asymmetry."""
+    if not x or not y or not math.isfinite(aspect) or aspect <= 0 or not all(math.isfinite(v) for v in [*x, *y]):
+        raise ValueError('Finite projected points and positive aspect required')
+    scale = 2 * max(max(abs(v) for v in x), max(abs(v) for v in y) * aspect) * 1.15
+    if scale <= 0:
+        raise ValueError('Degenerate projected bounds')
+    return scale
+
+
 def compare_triangles(expected, actual):
-    """Permutation independent, winding preserving; adjacent-cell search avoids rounding borders."""
-    from collections import defaultdict
+    """Finite, winding-preserving maximum matching within the numerical budget."""
+    from collections import defaultdict, deque
     from itertools import product
     budget = NUMERICAL_BUDGET
+    def valid(tri):
+        def corners(value, dimensions):
+            return len(value) == 3 and all(len(p) == dimensions and all(math.isfinite(c) for c in p) for p in value)
+        try:
+            return (corners(tri['positions'], 3) and
+                    (tri['uv'] is None or corners(tri['uv'], 2)) and
+                    all(corners(layer, 2) for layer in tri.get('uv_layers', {}).values()))
+        except (TypeError, KeyError, ValueError, OverflowError):
+            return False
+    invalid_expected = sum(not valid(tri) for tri in expected)
+    invalid_actual = sum(not valid(tri) for tri in actual)
+    if invalid_expected or invalid_actual:
+        return {'expected_triangles': len(expected), 'actual_triangles': len(actual),
+                'unmatched_expected': len(expected), 'unmatched_actual': len(actual),
+                'invalid_expected': invalid_expected, 'invalid_actual': invalid_actual,
+                'max_matched_position_error': 0.0, 'max_matched_uv_error': 0.0, 'passed': False}
     buckets = defaultdict(list)
     def cell(tri):
         return tuple(math.floor(sum(p[d] for p in tri['positions']) / 3 / budget) for d in range(3))
     for index, tri in enumerate(actual):
         buckets[cell(tri)].append(index)
-    used = set()
-    unmatched = 0
-    max_position = max_uv = 0.0
+    candidates = []
     for wanted in expected:
         key = cell(wanted)
-        match = None
+        compatible = {}
         for delta in product((-1, 0, 1), repeat=3):
             for index in buckets.get(tuple(a + b for a, b in zip(key, delta)), ()):
-                if index in used:
-                    continue
                 got = actual[index]
                 if (wanted['material'] != got['material'] or
                         wanted.get('material_index') != got.get('material_index') or
@@ -146,19 +178,37 @@ def compare_triangles(expected, actual):
                     for wl, gl in zip(wanted_layers, got_layers):
                         ue = max(ue, max(abs(wl[j][d] - gl[(j + shift) % 3][d]) for j in range(3) for d in range(2)))
                     if pe <= budget and ue <= budget:
-                        match = (index, pe, ue)
+                        compatible[index] = (index, pe, ue)
                         break
-                if match:
+        candidates.append(dict(sorted(compatible.items(), key=lambda item: (item[1][1], item[1][2], item[0]))))
+    # Augmenting paths allow an earlier ambiguous choice to be reassigned.
+    # Iterative BFS avoids recursion limits on duplicate/near-identical surfaces.
+    matches, owners = {}, {}
+    for start in range(len(expected)):
+        queue, seen_expected, parent_actual = deque([start]), {start}, {}
+        free = None
+        while queue and free is None:
+            wanted_index = queue.popleft()
+            for actual_index in candidates[wanted_index]:
+                if actual_index in parent_actual:
+                    continue
+                parent_actual[actual_index] = wanted_index
+                if actual_index not in owners:
+                    free = actual_index
                     break
-            if match:
-                break
-        if match:
-            used.add(match[0])
-            max_position = max(max_position, match[1])
-            max_uv = max(max_uv, match[2])
-        else:
-            unmatched += 1
+                previous = owners[actual_index]
+                if previous not in seen_expected:
+                    seen_expected.add(previous)
+                    queue.append(previous)
+        while free is not None:
+            wanted_index = parent_actual[free]
+            old = matches.get(wanted_index)
+            matches[wanted_index] = candidates[wanted_index][free]
+            owners[free] = wanted_index
+            free = old[0] if old else None
+    unmatched = len(expected) - len(matches)
     return {'expected_triangles': len(expected), 'actual_triangles': len(actual),
-            'unmatched_expected': unmatched, 'unmatched_actual': len(actual) - len(used),
-            'max_matched_position_error': max_position, 'max_matched_uv_error': max_uv,
-            'passed': unmatched == 0 and len(used) == len(actual)}
+            'unmatched_expected': unmatched, 'unmatched_actual': len(actual) - len(owners),
+            'max_matched_position_error': max((m[1] for m in matches.values()), default=0.0),
+            'max_matched_uv_error': max((m[2] for m in matches.values()), default=0.0),
+            'passed': unmatched == 0 and len(owners) == len(actual)}

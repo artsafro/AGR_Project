@@ -1,3 +1,22 @@
+## Исправления ревью PR28 — 01.10.2026
+
+Все пять замечаний c61dd0b исправлены; критерии и фактическая QA —
+[PR28_FIX_QA.json](PR28_FIX_QA.json). Nonfinite XYZ/UV отклоняются, matching
+ищет полное соответствие, renderer использует selected_mesh_names с одной
+камерой/масштабом и сохраняет hidden parent/constraint dependencies. Устранено
+обрезание projected bounds и нормализован pixel aspect. Cursor v2 summary
+проверяет authoritative ledger/input fingerprint/output hashes; failed/legacy
+отказывается до записи. Version probe тоже RunRecord-owned с timeout/treecleanup.
+213passed/1skipped/1expectedwarning; profiles3/schemas8OK; SYNTH DCC passed
+development only. Actual golden FBX:46objects/5206tris, native readback passed.
+Synthetic native render: selected cube, hiddenfar mesh и parent Camera;
+четыре actualPNG, scope/camera/scale согласованы, source SHA не изменён.
+Independent matching:300 brute-force cases без расхождений; final code gate
+без blockers. Native render/real FBX проверил ведущий. Новый real Cursor не
+вызывался, legacy004 summaries сохранены. Context7 tools недоступны этой сессии.
+Пользователь явно разрешил исправления и merge. Hosted CI остаётся отдельным
+статусом; полная сдача модели не заявлена. Следующие сведения исторические.
+
 # Публикация настройки оркестрации — 01.10.2026
 
 Изолированная ветка codex/local-orchestration от main fc48f1a.

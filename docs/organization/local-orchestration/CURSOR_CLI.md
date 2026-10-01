@@ -68,3 +68,16 @@ profiles3/schemas8OK,py_compile/gitdiffcheck exit0. Три synthetic stream fixt
 существует отдельно от fixtures. Каталог cli-runs игнорируется Git.
 Проверяющий отметил исторически устаревшие поля design spec и CLI pending в
 прочитанном STATE/evidence; они не опровергают фактические artifact evidence.
+
+## Evidence v2 после ревью PR28
+
+Version probe и verifier выполняются через owned_command/RunRecord с timeout.
+CLI stdout/stderr теперь объявленные хешируемые outputs в attempt:
+`cursor_verifier-stdout.jsonl`, `cursor_verifier-stderr.log`, process JSON.
+`logs/cursor_verifier/stdout.log` относится к управляющему worker.
+`--summarize` сверяет статус/authoritative stage, fingerprint входов и SHA outputs.
+При изменённом transcript или failed stage прежние summary/verdict не заменяются.
+Legacy evidence004 не имеет v2 ledger binding и новым parser отвергается;
+его исходные summaries остаются историческим свидетельством. Для нового
+подтверждения требуется новый run, не переписывание старого SHA.
+Исправления проверены synthetic/mocked worker tests; live CLI вновь не вызывался.
