@@ -29,3 +29,8 @@ Models/approved scenes/atlases/ZIPs/raw transcripts/session logs находят�
 GitHub publication и hosted CI — отдельные статусы. PR сохранит изменения в
 GitHub; включение в main требует merge. Исторический Issue7 фиксирует блокировку
 hosted Actions; результаты текущего PR сообщаются отдельно от local QA.
+
+Опубликовано: https://github.com/artsafro/AGR_Project/pull/28 (open, не merged).
+Implementation head db371f854e02f1b0885c8b0361fdddc6237705f2 проверен на remote.
+Hosted Actions run213 (36882627185) завершился startup_failure до jobs;
+это не результат тестов. LocalQA выше пройден. PR18 сохранён без изменений.

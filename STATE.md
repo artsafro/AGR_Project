@@ -1,6 +1,6 @@
-## Оркестрация Codex: подготовлена публикация — 01.10.2026
+## Оркестрация Codex: опубликовано в PR #28 — 01.10.2026
 
-База main fc48f1a; отдельная ветка codex/local-orchestration.
+База main fc48f1a; ветка codex/local-orchestration; PR https://github.com/artsafro/AGR_Project/pull/28 открыт, не слит. Implementation head db371f8. Hosted run213:startup_failure до jobs (Issue7); localQA отдельно.
 AGENTS задаёт обязательный цикл: цель → изучение → вопросы → требования → план →
 исполнение → независимая проверка → исправления → передача/STATE.
 TASK_CONTEXT/AGENT_WORKFLOW, dt-verifier, RunRecord и узкие локальные runners
