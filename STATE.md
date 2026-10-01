@@ -1,15 +1,20 @@
-## PR28: исправления перед разрешённым merge — 01.10.2026
+## PR28 слит в main — 01.10.2026
 
-Пять review findings originalhead c61dd0b исправлены; код/regrtests/native
-evidence: docs/organization/local-orchestration/PR28_FIX_QA.json.
-QA:213passed/1skipped/1expectedwarning, profiles3/schemas8OK;
-SYNTH DCC development=true/delivery=false; real golden FBX46/5206 readbackOK;
-synthetic native render scope/dependencies/camera/scale/sourceSHA проверены.
-Independent code gate закрыт,300 matching cases vs brute-force без расхождений.
-Основной dirty checkout и approved inputs сохранены. Live Cursor/Max не запускались,
-legacy CLI summaries не перезаписаны; Context7 tools этой сессии недоступны.
-Следующий шаг: commit/push fixes, проверить exact GitHub head и выполнить
-разрешённый пользователем squash merge; hosted CI отдельное ограничение Issue7.
+Пять замечаний исправлены, regression fixtures и независимое ревью завершены.
+Exact reviewed head: 5aee477472f9363aed7681ec9fa2f4d9fc55c5d9.
+Squash merge: 64441f5bf1230b9cb73d65708b4ee95b974dbbab; GitHub merged=true
+и origin/main перечитаны. PR28 закрыт; PR18 остаётся отложенным.
+QA:213passed/1skipped/1expectedwarning; profiles3/schemas8OK;
+SYNTH DCC development=true/delivery=false; actual golden FBX46objects/5206tris
+readbackOK; synthetic native render scope/dependencies/camera/scale/sourceSHA
+проверены. Полная сдача модели не заявлена. Evidence:
+docs/organization/local-orchestration/PR28_FIX_QA.json.
+Hosted Actions reviewedhead run217/36923667587 startup_failure,jobs=[];
+это отдельное ограничение Issue7, не local test failure или CI pass.
+Основной dirty checkout не переключался; approved inputs/legacyCLI сохранены.
+Следующий шаг: новая задача по циклу AGENT_WORKFLOW; перед продолжением сверить
+локальный код с main. Для Issue7 восстановить запуск GitHub Actions.
+Ниже сохранена история публикационных этапов.
 
 ## Оркестрация Codex: опубликовано в PR #28 — 01.10.2026
 
