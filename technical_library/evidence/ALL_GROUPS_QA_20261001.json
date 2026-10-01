@@ -27,5 +27,7 @@
   "first_test_attempt": "one Shell name-guard failure from root editable install; not evidence about PR checkout",
   "native_max": "BRIDGE_DOWN; not tested",
   "hosted_ci": "not claimed",
-  "delivery_passed": false
+  "delivery_passed": false,
+  "implementation_commit": "2ff5782",
+  "merge_tree_with_PR25": "clean; tree68a390b5250755a2ad1ce08e7cc8229eb1301ccf"
 }
