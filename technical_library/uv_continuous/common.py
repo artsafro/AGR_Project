@@ -40,7 +40,7 @@ def run_dcc(script, root, blender):
     if blender is None or not blender.is_file():
         raise ValueError('Supply an existing --blender executable')
     command = [str(blender.resolve()), '--background', '--factory-startup',
-               '--python-exit-code', '1', '--python', str(script.resolve()), '--',
+               '--disable-autoexec', '--python-exit-code', '1', '--python', str(script.resolve()), '--',
                '--output', str(root), '--phase', 'dcc']
     with (root / (script.stem + '-blender.log')).open('w', encoding='utf-8') as log:
         subprocess.run(command, stdout=log, stderr=subprocess.STDOUT, check=True)

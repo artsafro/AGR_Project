@@ -157,13 +157,13 @@
     },
     {
       "number": 25,
-      "state": "open",
-      "merged": false,
-      "draft": true,
+      "state": "closed",
+      "merged": true,
+      "draft": false,
       "head": "codex/window-frames-box-lights-case",
-      "head_sha": "60f93473352fb641acbdbf763f7a017f93331b8c",
+      "head_sha": "bd5f5cdce9375aa308edd990758932bf5d89a541",
       "changed_files": 14,
-      "title": "feat: сохранить рабочие скрипты box lights и библиотеку опыта",
+      "title": "Preserve reviewed box-lights scenario and evidence",
       "url": "https://github.com/artsafro/AGR_Project/pull/25"
     }
   ]
