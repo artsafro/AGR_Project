@@ -5,6 +5,9 @@
 Новый кейс оформляй по [шаблону](TEMPLATE.md) и
 [правилу фиксации](../EXPERIENCE_CAPTURE.md).
 
+- Декоративные рамки: [box lights v002](WINDOW_FRAMES_BOX_LIGHTS.md) — принята
+  раскладка на этом узле; 247 новых секций, native readback и hash локального
+  `.blend` проверены. UV, FBX, Checker и второй объект не проверены.
 - Обр22: [принятый рабочий процесс](OBR22_ACCEPTED_WORKFLOW.md) ([PR #4](https://github.com/artsafro/AGR_Project/pull/4)) — приняты геометрия,
   масштаб материалов, НПМ v012 и UV ВПМ v011; полная сдача ОКС не подтверждена.
 - ГЛБ: [ошибка упрощения составного окна](../lessons/SKETCHUP_COMPOSITE_WINDOW_OPENINGS.md)
