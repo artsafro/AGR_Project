@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-01",
+  "base_main": "351077a5a165307187e8105240db6af244be8b8d",
+  "branch": "codex/recovered-technical-library",
+  "pytest": {
+    "passed": 156,
+    "skipped": 1,
+    "warning": "expected duplicate ZIP member in negative test",
+    "exit_code": 0
+  },
+  "profiles": 3,
+  "schemas": 8,
+  "blender_saved_file_audits": 9,
+  "kpp_pngs_pixel_and_byte_identical": 11,
+  "archive_member_readback_equal": true,
+  "synthetic_dcc": {
+    "development_checks_passed": true,
+    "delivery_passed": false
+  },
+  "groups": 15,
+  "source_paths": 601,
+  "source_read": 590,
+  "deferred_Workbench_metadata_only": 11,
+  "byte_duplicate_clusters": 5,
+  "identical_function_candidates": 57,
+  "python_import_path": "PR checkout/src explicitly selected through PYTHONPATH; root editable install not used for final checks",
+  "first_test_attempt": "one Shell name-guard failure from root editable install; not evidence about PR checkout",
+  "native_max": "BRIDGE_DOWN; not tested",
+  "hosted_ci": "not claimed",
+  "delivery_passed": false
+}
