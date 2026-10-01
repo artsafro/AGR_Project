@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "base_main": "351077a5a165307187e8105240db6af244be8b8d",
+  "base_main": "946acade8b7e90244be156d37afff38a17d62434",
   "branch": "codex/recovered-technical-library",
   "pytest": {
     "passed": 156,
@@ -28,6 +28,27 @@
   "native_max": "BRIDGE_DOWN; not tested",
   "hosted_ci": "not claimed",
   "delivery_passed": false,
-  "implementation_commit": "2ff5782",
-  "merge_tree_with_PR25": "clean; tree68a390b5250755a2ad1ce08e7cc8229eb1301ccf"
+  "implementation_commit": "4a34712a19babdd7438777b31099f4dda1a92412",
+  "pr25": "merged in base main as 946acad",
+  "mesh_audit_replay": {
+    "cases_matching_reference": 9,
+    "source_unchanged": true,
+    "ground_blend_object": "SM_GROUND_NPM_Ground",
+    "native_max_verified": false
+  },
+  "uv_four_stage_replay": {
+    "passed": true,
+    "blender": "4.4.0",
+    "disable_autoexec": true,
+    "fbx_readback": true,
+    "common_sha256": "ba1a2c207d7764b5ca7c88d35d78d51c5d72a9fc124f95dacd132588d3bf136e",
+    "native_max_verified": false
+  },
+  "static_validation": {
+    "compileall": true,
+    "json": true,
+    "source_paths": 601,
+    "groups": 15,
+    "diff_check": true
+  }
 }

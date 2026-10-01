@@ -13,11 +13,13 @@ Native Blender4.4:9 read-only saved-file audits, SHA входов неизмен
 QA PR checkout:156passed/1skipped/1expected ZIP warning; profiles3/schemas8OK;
 SYNTH-001 DCC readback:development=true/delivery=false. PYTHONPATH указывал src
 этой рабочей копии, не editable install общего checkout. Hosted CI не заявлен.
-Max BRIDGE_DOWN; PR18 отложен. PR25/26 draft, автоматического слияния нет.
-GitHub база main351077a5, ветка codex/recovered-technical-library,
-реализация2ff5782; текущий draft PR26 содержит проверенные операции.
-Большие outputs не загружаются; SHA-реестр не бэкап. Далее ревью операций,
-для Max восстановить live bridge и отдельно проверить нужный инструмент;
+Max BRIDGE_DOWN; PR18 отложен и не затронут. PR25 слит в `main` как `946acad`.
+PR26 проверен в отдельном checkout на базе `946acad`; реализация и актуализация
+статусов зафиксированы в `4a34712`. Все9 mesh readback совпали с evidence;
+для ground `.blend` выбран документированный объект `SM_GROUND_NPM_Ground`.
+UV replay повторён с `--disable-autoexec`: все4 стадии и FBX readback прошли.
+Большие outputs не загружаются; SHA-реестр не бэкап. Пакет публикуется через
+PR26; далее для Max восстановить live bridge и отдельно проверить нужный инструмент;
 второй проект/полная визуальная и Checker приёмка остаются отдельными воротами.
 
 [Предыдущие состояния и проверки](docs/history/TECHNICAL_LIBRARY_STATE_BEFORE_ALL_GROUPS_2026-10-01.md).
