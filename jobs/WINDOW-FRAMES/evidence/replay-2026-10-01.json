@@ -9,11 +9,12 @@
     "readback": 0
   },
   "source_blend_sha256": "03af771f4a8b99814721a026d37ff404d7732430f29a88069cd25f7868f4a5fc",
+  "script_hash_encoding": "SHA256 of Git blobs with LF line endings",
   "script_sha256": {
-    "analyze_lights.py": "47bf53628383bfba23be71b67b337466a19cb21d2b05fc290e9540f019796a13",
-    "build_box_lights.py": "c7bb0f47e84467d4a569b07880f3feedf015e282d5ff5944929c34d4c39fbac7",
-    "check_box_lights.py": "5fc3e4777df8b34cd06ed6cf1871962d98c5097be53aa7610ebb2032d7c25c3d",
-    "inspect_lights_live.py": "78dd180c117ddd75dec551fec29abe0c9a363cf59ccaf4b1ead6307ccb7e7ff4"
+    "analyze_lights.py": "ba2be05e24a57523d1ff3661dd6d9969cdf0e321377e3a2372787eafad0f55f9",
+    "build_box_lights.py": "8268202c71ca632eb4c9bfc3fde92a3a41fe034c4c102add55e0fdca9c1424ea",
+    "check_box_lights.py": "ad2a76603a7c14b637e0d6b2e3a7d4b5ae6c3cdf6adbec693d8d6c489de78601",
+    "inspect_lights_live.py": "f2d10a6c444cf61f6b35b3c10405c3c5093140ede4b8af32545cf69bbaf90c59"
   },
   "qa": {
     "new_lights": 247,
