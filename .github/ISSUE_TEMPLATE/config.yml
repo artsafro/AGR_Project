@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Сообщить об уязвимости приватно
+    url: https://github.com/artsafro/AGR_Project/security
+    about: Не публикуйте секреты или данные заказчика в обычном Issue.

@@ -1,0 +1,26 @@
+name: Задача
+description: Ограниченная операция с проверяемым результатом
+title: "[Task] "
+labels: ["status: triage"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Требуемый результат
+      description: Один конкретный результат и его пользователь.
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Входы и ограничения
+      description: Источники, версии, запрещённые изменения и ручные ворота.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии готовности
+      description: Команды, readback, DCC и область пользовательской приёмки.
+    validations:
+      required: true

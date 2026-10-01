@@ -72,19 +72,20 @@
 
 - Историческая фиксация QA01.10.2026 до пользовательской оценки: отчёты
   прочитаны и хеши принятых файлов пересчитаны. При последующей миграции
-  DCC повторён в новых папках; новые доказательства перечислены ниже.
-- [Native readback](../../jobs/UV-CONTINUOUS/outputs/readback_v006.json):
+  DCC повторён в новых папках; компактный опубликованный результат —
+  [UV_FOUR_STAGES_REPLAY.json](../../technical_library/evidence/UV_FOUR_STAGES_REPLAY.json).
+- Локальный `jobs/UV-CONTINUOUS/outputs/readback_v006.json`:
   47800вершин/42686квадов, TD550.921–614.890px/м,0вне диапазона/тайла,
   Mesh.validate repairs=false,0loose vertices/рёбер>2faces; packed hash совпал.
 - 159584endpoint samples общих рёбер вертикальных стен: max phase0.0127px,
   0samples>0.1px. Горизонтальные20soffit faces вне этой проверки фазы.
   Native render `walls_view_v006.png` осмотрен.
-- [AGR scope](../../jobs/UV-CONTINUOUS/outputs/agr_scoped_v006.json):
+- Локальный `jobs/UV-CONTINUOUS/outputs/agr_scoped_v006.json`:
   TD less/greater/margin failures0/0/0. Это проверка TD/UV, не полный Checker.
-- [FBX readback](../../jobs/UV-CONTINUOUS/outputs/FBX_For_Max_v006/FBX_READBACK.json):
+- Локальный `jobs/UV-CONTINUOUS/outputs/FBX_For_Max_v006/FBX_READBACK.json`:
   42686квадов,1UV/1material, UV max error0.0, world max error9.78e-6м;
   встроенныйPNG проверен по фактическим FBX Content bytes, привязка сохранена.
-- [ZIP readback](../../jobs/UV-CONTINUOUS/outputs/FBX_For_Max_v006/PACKAGE_QA.json):
+- Локальный `jobs/UV-CONTINUOUS/outputs/FBX_For_Max_v006/PACKAGE_QA.json`:
   состав и байты файлов совпадают. Native Max импорт остаётся непроверенным.
 - Локально за UV-этап: pytest116passed/1skipped/1warning, profiles3, schemas8OK;
   SYNTH development=true/delivery=false. Hosted CI и полный ОКС не подтверждены.
