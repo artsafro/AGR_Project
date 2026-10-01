@@ -161,7 +161,7 @@
       "merged": true,
       "draft": false,
       "head": "codex/window-frames-box-lights-case",
-      "head_sha": "bd5f5cdce9375aa308edd990758932bf5d89a541",
+      "head_sha": "c5e84b05d095798d7011e14bca681258a0b97db5",
       "changed_files": 14,
       "title": "Preserve reviewed box-lights scenario and evidence",
       "url": "https://github.com/artsafro/AGR_Project/pull/25"
