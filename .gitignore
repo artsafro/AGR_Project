@@ -11,3 +11,5 @@ dist/
 *.egg-info/
 jobs/*/outputs/
 *.blend1
+jobs/*/runs/
+jobs/*/cli-runs/

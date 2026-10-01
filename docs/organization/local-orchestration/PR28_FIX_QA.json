@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-01",
+  "reviewed_original_head": "c61dd0baf10f5432c699394a019955ca5b81356e",
+  "five_findings_closed": [
+    "reject nonfinite positions/UV; strict JSON",
+    "hash-bound ledger Cursor summary; failed/legacy reject",
+    "maximum triangle matching",
+    "verified render scope with dependencies kept hidden; fixed aspect/framing",
+    "owned version probe timeout"
+  ],
+  "pytest": {
+    "passed": 213,
+    "skipped": 1,
+    "warning": "expected duplicate ZIP member negative test",
+    "seconds": 18.69
+  },
+  "profiles": 3,
+  "schemas": 8,
+  "synthetic_dcc": {
+    "development_checks_passed": true,
+    "delivery_passed": false
+  },
+  "matching_independent": {
+    "synthetic_random_matching_cases": 300,
+    "brute_force_mismatches": 0,
+    "performance": {
+      "1000_unique": {
+        "seconds": 0.033027899989974685,
+        "passed": true
+      },
+      "100_duplicates": {
+        "seconds": 0.03498469998885412,
+        "passed": true
+      }
+    }
+  },
+  "native_scope_fixture": {
+    "synthetic": true,
+    "mesh_names": [
+      "selected"
+    ],
+    "hidden_far_reference_excluded": true,
+    "parent_camera_dependency_preserved": true,
+    "source_unchanged": true,
+    "pairs": [
+      {
+        "view": "front",
+        "camera_and_scale_equal": true,
+        "pixels_equal": true,
+        "source_png_sha256": "50f391b65eb4313e6f8a71042a5c883301f1893f817f85dd22a99d25c815a89f",
+        "reimport_png_sha256": "837a4209e4efff987bd5c3cb8f2bcb3a878a7189f0806f73daa06adfe27d13b2"
+      },
+      {
+        "view": "oblique",
+        "camera_and_scale_equal": true,
+        "pixels_equal": false,
+        "source_png_sha256": "250049c2687b68cf7bf6fb676a128526110f8ec7c8798b2a57e196d246ba7c03",
+        "reimport_png_sha256": "216b945674184c66d212f3125401ad4cc0ca5e9a43ea25c31c814433cf106ff6"
+      }
+    ]
+  },
+  "golden_fbx": {
+    "sha256": "cb29fcef0be8ecb4b913db3ce6d2aed293f70f617a67056dbee4ef4b47320104",
+    "reference_sha256": "7636baaafdbde0c4d96c23d5b7c4e910e6afeb4afc658466c331f3543fc3698d",
+    "objects": 46,
+    "triangles": 5206,
+    "transfer_technical_checks_passed": true,
+    "delivery_passed": false
+  },
+  "independent_code_review": "Final gate closed; no remaining blockers in reviewed scope",
+  "cursor_live_rerun": false,
+  "context7": "tools unavailable in this session; existing APIs checked by native Blender4.4 runs",
+  "limitations": [
+    "Synthetic render is not user model acceptance",
+    "Native Max/full Checker/new visual acceptance not rerun",
+    "Legacy Cursor evidence is historical and intentionally not resummarized by v2",
+    "Hosted CI reported separately"
+  ],
+  "implementation_sha256": {
+    "tools\\profile_snapshot_common.py": "4e772984d457fcf8ce0782a3ed8fc08f4ec76d3dd010a11ff2824eea6ed6641e",
+    "tools\\render_profile_comparison.py": "303a1a22b5e6273edbb4de224c6e7aa20de8ecbdc2d303d890b42af0f5ed21df",
+    "tools\\run_profile_checks.py": "4acb4c689abe3989e395f71dac0ac7c58170d5a455432b8b95ff3c92d2fe698d",
+    "tools\\run_cursor_verifier.py": "1d58569614e3457fc7193753f53c37bcbf286b4b532090233428dda5faecafc1"
+  }
+}

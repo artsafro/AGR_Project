@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-01",
+  "scope": "local checkout audit; production pilot not executed",
+  "git": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit": 0,
+    "stdout": "d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc\n",
+    "stderr": ""
+  },
+  "dirty_status": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "exit": 0,
+    "stdout": " M AGENTS.md\n M STATE.md\n M docs/GEOMETRY_RULES.md\n M docs/case_studies/OBR22_ACCEPTED_WORKFLOW.md\n M src/dt_ai/core/models.py\n M tools/build_exterior_surface.py\n M tools/build_shell_windows.py\n M tools/check_exterior_surface.py\n M tools/compact_floor_body.py\n M tools/quad_connect.py\n?? .cursor/rules/experience-capture.mdc\n?? .cursor/rules/task-context.mdc\n?? adapters/sketchup/\n?? docs/ADAPTER_EXTRACTION.md\n?? docs/ADAPTER_REPORT.md\n?? docs/AGENT_WORKFLOW.md\n?? docs/BODY_SHELL_ADAPTER.md\n?? docs/EXPERIENCE_CAPTURE.md\n?? docs/EXTERIOR_ADAPTER.md\n?? docs/TASK_CONTEXT.md\n?? docs/case_studies/CASEFILE_INDEX.md\n?? docs/case_studies/FACADES_ATLAS_PARTIAL_ACCEPTANCE.md\n?? docs/case_studies/GLB_AB_REFERENCE_AND_PLANES.md\n?? docs/case_studies/GLB_SKETCHUP_CONNECTION.md\n?? docs/case_studies/GROUND_CONTOURS_AND_NPM.md\n?? docs/case_studies/MASHI_LP_SCENE_AUDIT.md\n?? docs/case_studies/README.md\n?? docs/case_studies/SOSH1150_CONTINUOUS_WALL_UV_FBX.md\n?? docs/case_studies/TEMPLATE.md\n?? docs/case_studies/WINDOW_FRAMES_BOX_LIGHTS.md\n?? docs/history/\n?? docs/lessons/\n?? docs/organization/\n?? docs/research/\n?? jobs/FACADE-SIGNS/\n?? jobs/FACADES-ATLAS/\n?? jobs/GLB-NPM/\n?? jobs/GROUND-PROJECTION/\n?? jobs/MASHI-LP/\n?? jobs/MESH-OPT-AUDIT/\n?? jobs/OBR22-K02/body-shell-adapter-verification.json\n?? jobs/OBR22-K02/body-shell-adapter.json\n?? jobs/OBR22-K02/body-shell-from-exterior-adapter.json\n?? jobs/OBR22-K02/exterior-adapter-verification.json\n?? jobs/OBR22-K02/exterior-adapter.json\n?? jobs/REVIT-OPENINGS/\n?? jobs/UV-CONTINUOUS/\n?? jobs/WINDOW-ATLAS/\n?? jobs/WINDOW-FRAMES/\n?? max/\n?? schemas/AdapterReport.schema.json\n?? src/dt_ai/core/adapter_report.py\n?? src/dt_ai/geometry/connect.py\n?? src/dt_ai/geometry/exterior.py\n?? src/dt_ai/geometry/grid_patches.py\n?? src/dt_ai/geometry/shell.py\n?? tests/contracts/test_adapter_report.py\n?? tests/test_connect_adapter.py\n?? tests/test_exterior_adapter.py\n?? tests/test_facades_texture_pattern.py\n?? tests/test_glb_clearance.py\n?? tests/test_shell_adapter.py\n?? tools/adapter_report.py\n?? tools/audit_max_tool_sources.py\n?? tools/body_shell_blender.py\n?? tools/build_facades_textures_v004.py\n?? tools/check_body_shell_readback.py\n?? tools/check_facades_atlas.py\n?? tools/check_facades_max_roundtrip.py\n?? tools/check_facades_v005_package.py\n?? tools/export_facades_max.py\n?? tools/exterior_adapter_blender.py\n?? tools/facades_texture_pattern.py\n?? tools/inspect_facades_atlas.py\n?? tools/inventory_workbench_candidates.py\n?? tools/package_facades_v004.py\n?? tools/probe_facades_uv.py\n?? tools/remap_facades_atlas.py\n?? tools/render_facades_atlas.py\n?? tools/run_body_shell.py\n?? tools/run_exterior.py\n?? tools/stabilize_facades_phase.py\n?? tools/update_facades_600x1200.py\n",
+    "stderr": ""
+  },
+  "profiles": {
+    "command": [
+      "C:\\Users\\artsafro\\.AGR_Project\\.venv\\Scripts\\dt.exe",
+      "profiles",
+      "check"
+    ],
+    "exit": 0,
+    "stdout": "OK: 3 profiles, source hash, traceability pages\n",
+    "stderr": ""
+  },
+  "schemas": {
+    "command": [
+      "C:\\Users\\artsafro\\.AGR_Project\\.venv\\Scripts\\dt.exe",
+      "schemas",
+      "--check"
+    ],
+    "exit": 0,
+    "stdout": "OK: 8 schemas\n",
+    "stderr": ""
+  },
+  "pytest": {
+    "exit": 0,
+    "passed": 116,
+    "skipped": 1,
+    "warnings": 1,
+    "log": "tmp/orchestration-audit-20261001/pytest.txt",
+    "initial_attempt": "86 passed, 30 setup errors: missing parent of explicit basetemp; parent created and rerun without changing tests"
+  },
+  "synth_dcc": {
+    "exit": 0,
+    "blender": "4.4.0",
+    "development_checks_passed": true,
+    "passed": false,
+    "report": "tmp/orchestration-audit-20261001/synth-dcc/report.json",
+    "checks": [
+      {
+        "id": "C001",
+        "status": "pass",
+        "observed": "12 members, contracts and SHA-256 verified"
+      },
+      {
+        "id": "C002",
+        "status": "pass",
+        "observed": "7 PNGs; RGB, ERM R/G/B, DirectX green, padding checked"
+      },
+      {
+        "id": "C003",
+        "status": "pass",
+        "observed": "UDIM [1001, 1002]; edge density 1008.0..1008.0 px/m"
+      },
+      {
+        "id": "C004",
+        "status": "pass",
+        "observed": "Both FBX 7400 files reimported in isolated Blender; triangles, world vertices, UV, materials and embedding match"
+      }
+    ]
+  },
+  "approved_files": [
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\npm_v012\\OBR22_K02_v012_NPM_ATLAS.blend",
+      "exists": true,
+      "expected_sha256": "1cdb088043489334b3cc22865fdcc4eccae1ae2cf6919636681b1c21693a024a",
+      "actual_sha256": "1cdb088043489334b3cc22865fdcc4eccae1ae2cf6919636681b1c21693a024a",
+      "matches": true
+    },
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\npm_v012\\NPM_ATLAS_Diffuse.png",
+      "exists": true,
+      "expected_sha256": "04ed6549340c9ab249a7e7ec66def11c1cce7a27a0c5d98d58a03095b3822c8f",
+      "actual_sha256": "04ed6549340c9ab249a7e7ec66def11c1cce7a27a0c5d98d58a03095b3822c8f",
+      "matches": true
+    },
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\shared_v011\\OBR22_K02_v011_VPM_UDIM.blend",
+      "exists": true,
+      "expected_sha256": "d35ea7eb6c64029770a9044071719d7dbbe3f2e86e28e4dcea25bac450a98b34",
+      "actual_sha256": "d35ea7eb6c64029770a9044071719d7dbbe3f2e86e28e4dcea25bac450a98b34",
+      "matches": true
+    },
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\shared_v011\\VPM_Diffuse.1001.png",
+      "exists": true,
+      "expected_sha256": "02c00f100a0e462d9133e8f966418b876778bfe27eb580cf0a38883092b795dc",
+      "actual_sha256": "02c00f100a0e462d9133e8f966418b876778bfe27eb580cf0a38883092b795dc",
+      "matches": true
+    },
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\shared_v011\\VPM_Diffuse.1002.png",
+      "exists": true,
+      "expected_sha256": "73e14bd20f8280bb9d53bdc92fcaf05318f1feb37b2ab1a2180953284da4caaf",
+      "actual_sha256": "73e14bd20f8280bb9d53bdc92fcaf05318f1feb37b2ab1a2180953284da4caaf",
+      "matches": true
+    },
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\shared_v011\\VPM_Diffuse.1003.png",
+      "exists": true,
+      "expected_sha256": "894d63d8f9128310f54ea0ea783f798a140bd938625d4b5f153102d162c53984",
+      "actual_sha256": "894d63d8f9128310f54ea0ea783f798a140bd938625d4b5f153102d162c53984",
+      "matches": true
+    },
+    {
+      "path": "jobs\\OBR22-K02\\outputs\\shared_v011\\VPM_Diffuse.1004.png",
+      "exists": true,
+      "expected_sha256": "cee95e4aa386e27c065e2f1df8a228a130830bd188e3db353ed7dd05650396ac",
+      "actual_sha256": "cee95e4aa386e27c065e2f1df8a228a130830bd188e3db353ed7dd05650396ac",
+      "matches": true
+    }
+  ],
+  "tcp_connect_only": [
+    {
+      "port": 8765,
+      "candidate": "Max",
+      "status": "unreachable: timed out",
+      "scene_verified": false
+    },
+    {
+      "port": 9876,
+      "candidate": "Blender or SketchUp; never infer identity from port",
+      "status": "unreachable: timed out",
+      "scene_verified": false
+    },
+    {
+      "port": 9877,
+      "candidate": "Blender candidate",
+      "status": "unreachable: timed out",
+      "scene_verified": false
+    },
+    {
+      "port": 7891,
+      "candidate": "Revit TCP candidate; does not check named pipe",
+      "status": "unreachable: timed out",
+      "scene_verified": false
+    }
+  ],
+  "process_query": "Get-Process found Cursor PIDs only; no blender/3dsmax/Revit/SketchUp in observable process list. CIM denied; no PID/scene claims.",
+  "cursor": {
+    "desktop_version": "3.21.16",
+    "desktop_commit": "8ae78e8eee1e63479c7e0504b664bc0a80c68000",
+    "cli": "agent/cursor-agent not resolved on PATH or .local/bin. cursor agent --help/--version returned desktop help/version; agent binary not verified. No install/auth changes."
+  },
+  "context7": "No callable Context7 tool in this session; official web docs used for Cursor. No libraries installed or upgraded.",
+  "normative_source": {
+    "sha256": "933f6b700c074d0db6b82030fc79d1dbe9db4a0067495ca716e0636acd544222",
+    "profiles_sha256": {
+      "DELIVERY_VALIDATOR.yaml": "7f58cc21d69e8a8738314c073d40aae21ff9dbf3e0cfedc22617991b9cb17ab1",
+      "NPM_STANDARD.yaml": "7fa1200635c6873d6e49535777080183d80032d0c9e540f505e2f09fe81429b9",
+      "VPM_STANDARD.yaml": "f31188cd3b387201a0522c4e93cb12791b65740d73e95704bb515e75370ec192"
+    }
+  },
+  "no_production_scene_mutations": true,
+  "isolated_synthetic_scene_operations": true,
+  "production_pilot_executed": false,
+  "flora_atlas": {
+    "inventory_id": "MAX-03",
+    "path": "C:\\usermacros\\Flora Tools-FloraAtlas.mcr",
+    "exists": true,
+    "sha256": "c343563ca0f355b3ee6d70ee4360929cc0f4d039804a85e67c8583fecfde6d5d",
+    "source_inspection": "ATLAS_collectFromSelection, opacity/alpha bitmap processing, CSharp helper and save path found; runtime not executed"
+  },
+  "independent_review": {
+    "scope": "read-only design review plus rereading pytest/SYNTH reports",
+    "result": "component-transfer scope and proposed/verified boundaries confirmed; broad scene-mutation flag corrected to production-only"
+  }
+}
