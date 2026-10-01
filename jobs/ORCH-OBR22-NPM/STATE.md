@@ -42,4 +42,3 @@ Actual custom dt-verifier task completed; только read/task tools,пять 
 design input, факт execution устанавливается evidence и run ledger.
 Следующий шаг: visualacceptance или отдельный fullOKSjob.
 Не объявлять универсальный adapter до проверки на втором объекте.
-
