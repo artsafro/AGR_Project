@@ -1,3 +1,14 @@
+## GitHub audit remediation — 01.10.2026
+
+База `main` `a99b8ec`; ветка `codex/github-audit-remediation`. Аудит: последние
+100 Actions runs — `startup_failure`, main unprotected, GitHub health28%.
+Чистый новый venv прошёл install/pip check, profiles3, schemas8 и
+pytest156passed/1skipped/1expected warning; pip-audit CVE0, secret-pattern hits0.
+Добавлены TASK_CONTEXT/AGENT_WORKFLOW, governance/security/templates/dependabot;
+workflow ограничен и pin по SHA, stale docs/links исправлены. PR18 не затронут.
+Далее: локальный QA, PR/merge, затем GitHub settings/labels/branch cleanup и
+проверка нового Actions run. Billing/protection могут остаться внешним блокером.
+
 ## Все группы технической базы — 01.10.2026
 
 Пройдены15 групп:601 исходный путь, из них11 Workbench учтены по прошлому

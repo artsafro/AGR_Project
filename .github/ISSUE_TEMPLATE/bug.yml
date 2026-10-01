@@ -1,0 +1,32 @@
+name: Ошибка
+description: Воспроизводимый дефект кода, данных или проверки
+title: "[Bug] "
+labels: ["bug", "status: triage"]
+body:
+  - type: textarea
+    id: result
+    attributes:
+      label: Фактический результат
+      description: Что произошло и в каком файле или версии.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Воспроизведение и evidence
+      description: Команды, версии, входные хеши и компактный лог без закрытых данных.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Проверка данных
+      options:
+        - label: В Issue нет секретов, данных заказчика и тяжёлых outputs
+          required: true
