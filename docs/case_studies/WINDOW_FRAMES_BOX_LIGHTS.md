@@ -48,9 +48,10 @@
 
 ## Воспроизведение
 
-- Скрипты в `jobs/WINDOW-FRAMES/`: `inspect_lights_live.py`, `analyze_lights.py`,
-  `save_light_source.py`, `build_box_lights.py`, `check_box_lights.py`,
-  `append_lights_live.py`, `update_lights_live.py`.
+- Опубликованный файловый маршрут в `jobs/WINDOW-FRAMES/`: `inspect_lights_live.py`,
+  `analyze_lights.py`, `build_box_lights.py`, `check_box_lights.py`.
+  Исторические `save_light_source.py`, `append_lights_live.py`, `update_lights_live.py`
+  и live-транспорт остаются локальными; для background-маршрута они не нужны.
 - Live-транспорт: существующий локальный Blender MCP на 127.0.0.1:9876 через
   `jobs/MASHI-LP/scripts/live_call.py`. Сначала подтвердить PID, сцену и объекты.
 - Изолированное построение: Blender `--background <source.blend>
@@ -94,6 +95,9 @@
 - Связанный опыт: `OBR22_ACCEPTED_WORKFLOW.md` — сохранение исходника,
   отдельные геометрические этапы и различение QA/визуальной приёмки.
 - Универсальный Skill и автоматическая сборка любого фасада не объявлены.
-- Скрипты, отчёты и `.blend` остаются в локальном job; в Git публикуется
-  только этот кейс. Клон репозитория не восстанавливает сцену и не позволяет
-  повторить native QA без локальных входов.
+- В Git опубликованы четыре скрипта сценария, команды и небольшие отчёты:
+  [README](../../jobs/WINDOW-FRAMES/README.md). Локальная сцена нужна как вход.
+  01.10.2026 повторный background Blender build/readback подтвердил 247 секций,
+  1235 квадов, неизменные рамки/образец и нулевые warped quads/intersections.
+  Изменены только выбор каталога output, защита от перезаписи и поиск исходных
+  объектов по именам; математика сохранена. `.blend` и большие outputs вне Git.

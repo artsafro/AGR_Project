@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-01",
+  "blender_version": "4.4.0",
+  "kind": "native saved-file replay of published case scripts",
+  "commands_exit_code": {
+    "inspect": 0,
+    "analyze": 0,
+    "build": 0,
+    "readback": 0
+  },
+  "source_blend_sha256": "03af771f4a8b99814721a026d37ff404d7732430f29a88069cd25f7868f4a5fc",
+  "script_sha256": {
+    "analyze_lights.py": "47bf53628383bfba23be71b67b337466a19cb21d2b05fc290e9540f019796a13",
+    "build_box_lights.py": "c7bb0f47e84467d4a569b07880f3feedf015e282d5ff5944929c34d4c39fbac7",
+    "check_box_lights.py": "5fc3e4777df8b34cd06ed6cf1871962d98c5097be53aa7610ebb2032d7c25c3d",
+    "inspect_lights_live.py": "78dd180c117ddd75dec551fec29abe0c9a363cf59ccaf4b1ead6307ccb7e7ff4"
+  },
+  "qa": {
+    "new_lights": 247,
+    "total_lights_including_sample": 248,
+    "frame_components_served": 148,
+    "quads": 1235,
+    "non_quads": 0,
+    "zero_area": 0,
+    "boundary_edges": 988,
+    "edges_more_than_two_faces": 0,
+    "duplicate_faces": 0,
+    "inset_m": 0.1146,
+    "height_m": 0.09459304809570312,
+    "drop_m": 0.0211029052734375,
+    "skipped": [
+      {
+        "face": 1081,
+        "reason": "existing sample retained"
+      }
+    ],
+    "delivery_passed": false,
+    "pending": [
+      "visual acceptance",
+      "AGR Checker and export outside this modeling stage"
+    ],
+    "readback": {
+      "original_frames_unchanged": true,
+      "sample_unchanged": true,
+      "warped_quads": 0,
+      "light_light_surface_intersections": 0,
+      "saved_objects": 3
+    }
+  },
+  "limitations": [
+    "one local source",
+    "visual acceptance not repeated",
+    "UV/export/Checker not run",
+    "source scene remains local"
+  ]
+}
