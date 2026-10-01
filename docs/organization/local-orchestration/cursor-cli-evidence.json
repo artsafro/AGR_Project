@@ -1,0 +1,27 @@
+{
+  "actual_dt_verifier_invoked": true,
+  "cli_exit_code": 0,
+  "delegation_call_ids": [
+    "toolu_016x1rNB61u7hhzgZZDqMTXi"
+  ],
+  "delegation_tool": "taskToolCall",
+  "delivery_passed": false,
+  "duration_ms": 39366,
+  "limitation": "Verification of CLI connection and actual delegation; raw DCC artifacts not rechecked by this narrow document review",
+  "no_observed_shell_dcc_mcp_or_write_calls": true,
+  "observed_read_paths": [
+    "C:\\Users\\artsafro\\.AGR_Project\\.cursor\\agents\\dt-verifier.md",
+    "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\local-orchestration\\REVIEW.md",
+    "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\local-orchestration\\execution-evidence.json",
+    "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\STATE.md",
+    "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\pilot-spec.json"
+  ],
+  "observed_tool_types": [
+    "readToolCall",
+    "taskToolCall"
+  ],
+  "stream_result": "success",
+  "summary_generator_sha256": "26874ce71546d5e152933ce396e4302ca65d8ab9d7b6013686ea49ebfd2b70f5",
+  "transcript": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\cli-runs\\cursor-20261001-004\\attempt-001\\logs\\cursor_verifier\\stdout.log",
+  "transcript_sha256": "3b29e86c9c1892ae278e2c3e3c12e4655e800bef9af10a5ac9663715f5ba9e20"
+}

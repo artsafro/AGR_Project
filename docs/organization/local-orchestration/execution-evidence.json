@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-01",
+  "scope": "real NPM OBR22 component transfer, not full OKS delivery",
+  "base_head": "d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc",
+  "dirty_checkout_preserved": true,
+  "run": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004",
+  "review": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003",
+  "delivery_passed": false,
+  "technical_transfer_passed": true,
+  "approved_inputs_preserved": 7,
+  "mesh_count": 46,
+  "resume": {
+    "exit_code": 0,
+    "elapsed_s": 1.83,
+    "attempts": 1,
+    "stage_statuses": {
+      "editable_readback": "verified",
+      "export": "verified",
+      "inspect": "verified",
+      "readback": "verified"
+    },
+    "no_reexport": true
+  },
+  "verification": {
+    "pytest": {
+      "passed": 135,
+      "skipped": 1,
+      "warnings": 1,
+      "exit_code": 0
+    },
+    "profiles": 3,
+    "schemas": 8,
+    "synth_development_passed": true,
+    "synth_delivery_passed": false
+  },
+  "max_reverse": {
+    "comparison": {
+      "expected_triangles": 5206,
+      "actual_triangles": 5206,
+      "unmatched_expected": 0,
+      "unmatched_actual": 0,
+      "max_matched_position_error": 3.814697265625e-06,
+      "max_matched_uv_error": 0.0,
+      "passed": true
+    },
+    "mesh_names_equal": true,
+    "ordered_material_slots_equal": true,
+    "atlas_sha_matches": true,
+    "numerical_budget": 1e-05,
+    "numerical_budget_basis": "src/dt_ai/validate/bundle.py:triangle_signature rounds world/UV to 5 decimal places; serialization comparison only, not customer tolerance",
+    "transfer_technical_checks_passed": true,
+    "delivery_passed": false,
+    "limitations": [
+      "Max custom polygon finish_id/instance reconstruction not certified; compare surface material names and UV",
+      "Texture hash match checks resolved image bytes; reverse FBX embedding is not independently certified",
+      "FBX UnitScaleFactor metadata unverified; physical scale checked through world-coordinate surface comparison"
+    ]
+  },
+  "scale": {
+    "scope": "saved vertical facade/reveal faces at matching coordinates; horizontal rims excluded from phase comparison",
+    "compared_faces": 455,
+    "max_phase_error_m": 4.0729844863474085e-07,
+    "material_scale_ratio_min_max": [
+      0.9999950836521605,
+      1.0000025109981747
+    ],
+    "approved_vpm_and_four_maps_unchanged": true,
+    "npm_oks_density_requirement": "not_applicable",
+    "brick_face_m": [
+      0.25,
+      0.065
+    ],
+    "tile_face_m": [
+      0.6,
+      1.2
+    ],
+    "source_pdf_page": 10
+  },
+  "agr": {
+    "status_counts": {
+      "review": 42,
+      "fail": 9,
+      "pass": 2
+    },
+    "internal_errors": 0,
+    "failed_checks": [
+      {
+        "ids": [
+          "2.10.3.2"
+        ],
+        "name": "Проверка наименований. Fbx",
+        "error_count": 1
+      },
+      {
+        "ids": [
+          "2.10.3.3"
+        ],
+        "name": "Проверка наименований. Объекты геометрии",
+        "error_count": 46
+      },
+      {
+        "ids": [
+          "2.10.3.5"
+        ],
+        "name": "Проверка наименований. Материалы",
+        "error_count": 184
+      },
+      {
+        "ids": [
+          "2.10.3.4"
+        ],
+        "name": "Проверка наименований. Текстуры",
+        "error_count": 92
+      },
+      {
+        "ids": [
+          "2.3.14"
+        ],
+        "name": "Проверка геометрии. Трансформации",
+        "error_count": 21
+      },
+      {
+        "ids": [
+          "2.1.6"
+        ],
+        "name": "Проверка файлов. Благоустройство",
+        "error_count": 1
+      },
+      {
+        "ids": [
+          "2.1.4"
+        ],
+        "name": "Проверка FBX. Состав файлов ОКС",
+        "error_count": 2
+      },
+      {
+        "ids": [
+          "2.5.11"
+        ],
+        "name": "Проверка материалов. Количество",
+        "error_count": 46
+      },
+      {
+        "ids": [
+          "2.5.6"
+        ],
+        "name": "Проверка материалов. Наличие карт",
+        "error_count": 138
+      }
+    ]
+  },
+  "component_findings": [
+    {
+      "evidence": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\renders\\render-evidence.json",
+      "id": "renders",
+      "status": "pass"
+    },
+    {
+      "evidence": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\scale-snapshot\\npm_v012\\npm-vpm-scale-qa.json",
+      "id": "scale",
+      "status": "pass"
+    },
+    {
+      "evidence": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\agr-native\\agr-diagnostic.json",
+      "id": "agr_diagnostic",
+      "status": "pass"
+    },
+    {
+      "evidence": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\max-batch\\max-native.json",
+      "id": "max_import_export",
+      "status": "pass"
+    },
+    {
+      "evidence": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\max-batch\\blender-reverse-readback.json",
+      "id": "max_reverse_readback",
+      "status": "pass"
+    },
+    {
+      "id": "protected_inputs",
+      "status": "pass"
+    },
+    {
+      "id": "visual_acceptance",
+      "reason": "Four renders require explicit user acceptance",
+      "status": "pending"
+    },
+    {
+      "id": "full_delivery",
+      "reason": "Component diagnostics do not satisfy full OKS delivery gates",
+      "status": "pending"
+    }
+  ],
+  "artifacts": {
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\technical-transfer.zip": {
+      "sha256": "7e076c35bd16f2c2d255f82b54e0ffac64b04c7e7b3d7b2ae1e43458e46486c7",
+      "bytes": 577635
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\report.json": {
+      "sha256": "2d8f35f2d843fe6ccf99e267fb36ead70428a9f111af020ae218554339e4520f",
+      "bytes": 2341
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\export\\export-manifest.json": {
+      "sha256": "7636baaafdbde0c4d96c23d5b7c4e910e6afeb4afc658466c331f3543fc3698d",
+      "bytes": 14430615
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\editable-readback\\source-snapshot.json": {
+      "sha256": "231f2dc2fb30aeb80029c1b278a74a7e6ef4d63b20b9c8a9a128363ff2f6ff52",
+      "bytes": 7207406
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\actual-file-readback.json": {
+      "sha256": "cdd4d04aa2ffca5d7f2dac6e177fbaa3d22777801f76afda1651d9ffb9f5521b",
+      "bytes": 7250384
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\review-report.json": {
+      "sha256": "39e9c7e8ff2c5e388225caec409c9b0095a4324208dd3392889067f9f38bc4f0",
+      "bytes": 93935
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\max-batch\\max-native.json": {
+      "sha256": "b749783c57a6c96bf076d9e02be94f2d00d022cc2aad865021c0492d49e7df68",
+      "bytes": 8414
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\max-batch\\blender-reverse-readback.json": {
+      "sha256": "c3bb8b4bc74825dbd247e73a0e02cb1a42e8dc1a85c9d1c817e49a76557bdea1",
+      "bytes": 7234810
+    },
+    "jobs\\ORCH-OBR22-NPM\\runs\\pilot-20261001-004\\attempt-001\\reviews\\native-003\\agr-native\\agr-diagnostic.json": {
+      "sha256": "b3aeef4a9f2ab0efda089dd565b3c38fbbca00bec4b741e371087527403cdfdf",
+      "bytes": 97053
+    }
+  },
+  "cursor_cli": {
+    "binary_version": "2026.03.20-44cb435",
+    "probe": "success",
+    "previous_probe": "blocked_by_auto_review",
+    "actual_dt_verifier_invoked": true,
+    "delegation_tool": "taskToolCall",
+    "evidence": "jobs/ORCH-OBR22-NPM/cli-runs/cursor-20261001-004/cursor-verifier-summary.json",
+    "mode": "ask",
+    "windows_sandbox": "disabled allowlist; explicitly authorized",
+    "workspace_trust": "explicitly authorized"
+  },
+  "limitations": [
+    "Full delivery and user visual acceptance pending",
+    "FBX file UnitScaleFactor metadata unverified",
+    "Custom finish_id and instance reconstruction via FBX not certified",
+    "Existing finish_id0 preserved",
+    "Saved Max file not separately reopened",
+    "No cloud DCC, commit, push or production scene mutation"
+  ]
+}

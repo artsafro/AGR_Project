@@ -1,3 +1,19 @@
+## Оркестрация Codex: подготовлена публикация — 01.10.2026
+
+База main fc48f1a; отдельная ветка codex/local-orchestration.
+AGENTS задаёт обязательный цикл: цель → изучение → вопросы → требования → план →
+исполнение → независимая проверка → исправления → передача/STATE.
+TASK_CONTEXT/AGENT_WORKFLOW, dt-verifier, RunRecord и узкие локальные runners
+публикуются вместе с compact audit/pilot/CLI evidence. Codex ведёт текущий чат;
+Cursor CLI дополнительный reviewer, actual custom dt-verifier подтверждён.
+Реальный pilot-004: saved-file/ZIP/Blender/Max reverse transfer и resume проверены;
+full delivery/visual gates остаются открытыми, delivery=false.
+Документы: docs/organization/local-orchestration/README.md, EXECUTION.md,
+CURSOR_CLI.md и cursor-cli-evidence.json. Sources/scenes/outputs/transcripts
+локальные и не копируются; чужие изменения checkout сохранены. PR18 не затронут.
+QA publishing: pytest178passed/1skipped/1warning,profiles3/schemas8OK; SYNTH-001 development=true/delivery=false,exit0. PUBLICATION.md описывает команды и ограничения. Прошлые числа в evidence
+относятся к исходному локальному pilot, а не тестам нового main.
+
 ## GitHub audit remediation — 01.10.2026
 
 База `main` `a99b8ec`; ветка `codex/github-audit-remediation`. Аудит: последние

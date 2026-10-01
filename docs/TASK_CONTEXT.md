@@ -5,6 +5,21 @@
 прочитайте [`DIGITAL_TWIN_AI_PROJECT_BRIEF.md`](DIGITAL_TWIN_AI_PROJECT_BRIEF.md)
 и три профиля в `standards/`; при продолжении читайте только выбранный маршрут.
 
+## Локальная оркестрация NPM/VPM
+- Постоянный цикл Codex: AGENTS.md → docs/AGENT_WORKFLOW.md. Результат настройки
+  оценивается по работе этого цикла; пилот передачи — его проверочный пример.
+- Внешний Cursor CLI: docs/organization/local-orchestration/CURSOR_CLI.md;
+  tools/run_cursor_verifier.py. Передача контекста требует явного разрешения;
+  native verifier discovery не объявлять до фактического вызова.
+- Аудит/схема: docs/organization/local-orchestration/README.md.
+- Пилот: docs/organization/local-orchestration/PILOT.md;
+  jobs/ORCH-OBR22-NPM/STATE.md и pilot-spec.json.
+- Код/запуск: tools/run_profile_pilot.py; src/dt_ai/core/run_record.py;
+  tools/export_profile_snapshot.py и tools/check_profile_snapshot.py.
+- Проверяющий: .cursor/agents/dt-verifier.md; реальные artifacts и checks отдельно
+  от пользовательской приёмки и полного delivery.
+
+
 ## GitHub, очередь и публикация
 
 - Текущая карта: [`organization/PROJECT_MAP.md`](organization/PROJECT_MAP.md).

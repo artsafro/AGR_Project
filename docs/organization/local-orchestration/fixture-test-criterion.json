@@ -1,0 +1,37 @@
+{
+  "kind": "SYNTHETIC_TEST_FIXTURE",
+  "native_dcc_evidence": false,
+  "production_model_modified": false,
+  "source": {
+    "description": "Invented unit square with one editable quad, four positions and atlas UV corners",
+    "polygon_sizes": {"4": 1},
+    "triangulated_surface_count": 2
+  },
+  "export_fixture": {
+    "polygon_sizes": {"3": 2},
+    "triangles_count": 2
+  },
+  "initial_test": {
+    "criterion": "FBX must retain source quad polygon sizes",
+    "verdict": "expected_failure",
+    "reason": "NPM transfer exports triangulated FBX; editable source remains quad"
+  },
+  "corrected_test": {
+    "criterion": "Source quad representation and triangulated export are separately asserted; oriented surface triangles preserve world corners, all UV channels and material names/indices",
+    "verdict": "passed_on_synthetic_fixture",
+    "production_criteria_changed": false
+  },
+  "negative_controls": [
+    "active UV corruption rejected",
+    "secondary UV channel corruption rejected",
+    "numeric material index permutation with unchanged name rejected",
+    "reversed triangle winding rejected",
+    "missing triangle rejected"
+  ],
+  "verification": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests/test_profile_snapshot_fixture.py --basetemp tmp/run-record-tests/snapshot-fixture-01",
+    "result": "6 passed",
+    "exit_code": 0
+  },
+  "scope": "Pure compare_triangles regression only; no native export, geometry acceptance, AGR Checker, Max or delivery claim"
+}
