@@ -1,3 +1,19 @@
+## Чат-опыт ГЛБ: draft, 02.10.2026
+
+База main07e9ec8; отдельная ветка codex/glb-atlas-learning-20261002.
+Один Python renderer+конфигурация A/B, README/SOURCE/QA и два кейса.
+A v001/B v002 PNG replay совпал по пикселям и байтам; независимый QA подтвердил.
+Полный локальный recheck:213passed/1skipped/1expectedwarning,profiles3,schemas8.
+Первый restricted pytest дал taskkill returncode1; targeted и full recheck прошли.
+Доказательства: technical_library/glb_atlas/QA.json и
+docs/organization/CHAT_AUDIT_2026-10-02.json; курсоры успешного разбора обновлены.
+Native MAX remap пока не перенесён: новый параметризованный fileIn/readback
+не проверен; README задаёт следующий шаг на отдельной копии сцены.
+A v004 был пересохранён: старые ID13=114/ID5=0 не описывают текущий v005.
+FBX/alpha/Checker и полная сдача не заявлены; два корпуса — один проект.
+Большие outputs остаются локальными; PR18 отложен; этот draft не слит.
+Следующий шаг: ревью draft и отдельный native Max remap/readback.
+
 ## PR28 слит в main — 01.10.2026
 
 Пять замечаний исправлены, regression fixtures и независимое ревью завершены.
