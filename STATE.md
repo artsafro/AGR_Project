@@ -1,3 +1,40 @@
+## PR29 findings: исправления и повторный QA, 02.10.2026
+
+Исправления опубликованы в существующий draft PR #29 implementation-коммитом
+`1cd8cb6`. GitHub после push: open=true, draft=true, mergeable=true;
+hosted runs `37039712576` и `37039707811` завершились `startup_failure` до jobs,
+поэтому не считаются CI-проверкой. Слияние не выполнялось. Следующий шаг —
+повторное ревью опубликованного head и отдельное решение пользователя о merge.
+
+Все findings первичного ревью исправлены локально: встроенные A/B-сценарии
+привязаны к SHA256 входов и ожидаемого PNG, манифест фиксирует входы,
+конфигурацию, renderer и результат, добавлены regression-тесты. Выяснено, что
+файл по mutable-пути A v001 изменился после исходной фиксации: строгий replay
+совпадает с закреплённым SHA256 `1d91e004...`, но не с текущим файлом
+`3a9b2a6a...`; B v002 остаётся равен текущему референсу. Delivery=false,
+native MAX/FBX/Checker открыты. Независимое повторное read-only ревью не нашло
+новых findings и подтвердило закрытие четырёх исходных. Полный local QA:
+pytest 217 passed/1 skipped/1 warning; profiles 3,
+schemas 8; strict A/B replay и изменённый вход проверены; SYNTH DCC
+development=true/delivery=false. PR #29 остаётся draft и не сливается.
+
+## Чат-опыт ГЛБ: draft, 02.10.2026
+
+База main07e9ec8; отдельная ветка codex/glb-atlas-learning-20261002.
+Один Python renderer+конфигурация A/B, README/SOURCE/QA и два кейса.
+A/B strict replay совпал с закреплёнными SHA256; текущий mutable A v001 расходится,
+текущий B v002 совпадает по пикселям и байтам. Первичный review выявил findings.
+Актуальный полный локальный recheck:217passed/1skipped/1warning,profiles3,schemas8.
+Предыдущий restricted pytest дал taskkill returncode1; последующие полные recheck прошли.
+Доказательства: technical_library/glb_atlas/QA.json и
+docs/organization/CHAT_AUDIT_2026-10-02.json; курсоры успешного разбора обновлены.
+Native MAX remap пока не перенесён: новый параметризованный fileIn/readback
+не проверен; README задаёт следующий шаг на отдельной копии сцены.
+A v004 был пересохранён: старые ID13=114/ID5=0 не описывают текущий v005.
+FBX/alpha/Checker и полная сдача не заявлены; два корпуса — один проект.
+Большие outputs остаются локальными; PR18 отложен; этот draft не слит.
+Следующий шаг: ревью draft и отдельный native Max remap/readback.
+
 ## PR28 слит в main — 01.10.2026
 
 Пять замечаний исправлены, regression fixtures и независимое ревью завершены.

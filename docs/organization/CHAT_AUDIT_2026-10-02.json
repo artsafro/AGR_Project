@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-02",
+  "scheduled_run": 3,
+  "method": "Native thread list/read plus scoped read-only local index; source files, manifests, GitHub PR/issues/main checked",
+  "reviewed_cursors": {
+    "01a0c037-b514-7292-bab9-5d25fc9713c6": 1790793878,
+    "01a0ddd1-4d2c-79e3-84a7-b8048f0cb972": 1790886389,
+    "01a0e378-3f54-71e0-ab85-bada998da713": 1790854662,
+    "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff": 1790861780,
+    "01a0ec14-b5fa-7810-abe3-e87a72701103": 1790855472,
+    "01a0edad-00b6-7712-acac-7ff555a2d751": 1790928495,
+    "01a0edee-a911-7162-abf8-024af82794db": 1790887735,
+    "01a0f241-ec48-76c2-91a0-7cf37b529e1b": 1790858108,
+    "01a0f403-0b4f-7ab1-b544-8a887ba49039": 1790858110,
+    "01a0f5e1-0424-7093-b17c-5a9f6ff5c692": 1790858175,
+    "01a0f6be-fba5-7833-9df9-5232fdc338ff": 1790885065
+  },
+  "already_published": [
+    "PR25 box lights",
+    "PR26 consolidated operations",
+    "PR27 GitHub organization",
+    "PR28 orchestration and five review fixes"
+  ],
+  "new_experience": {
+    "thread": "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff",
+    "scope": "A/B current atlas/ID result praised; only Python PNG reconstruction migrated and replayed",
+    "technical_library": "technical_library/glb_atlas/README.md"
+  },
+  "first_three_run_checks": {
+    "false_acceptance": "A previous v004 readback is not current v005 QA; PNG equality is not model acceptance",
+    "duplicates": "One shared A/B renderer; existing window_atlas/texture_tiles checked; merged packages not recopied",
+    "generalization": "Two towers of one project; no universal Skill or PDF/YAML rule changes"
+  },
+  "local_qa": {
+    "pytest": "217 passed, 1 skipped, 1 expected warning on full recheck",
+    "profiles": 3,
+    "schemas": 8,
+    "png_replay": "Strict A/B replays match pinned historical SHA256; current B v002 is pixel/byte equal, current mutable A v001 diverged; finite changed A input is rejected before output"
+  },
+  "unverified": [
+    "New native MAX remap/fileIn/readback",
+    "Current A v005 UV/ID export QA",
+    "FBX alpha roundtrip",
+    "AGR Checker",
+    "Hosted CI"
+  ],
+  "github_before_draft": {
+    "main": "07e9ec8155c6b278c4dda05718e6fda193ee5176",
+    "merged_pr_count": 17,
+    "open_prs": [
+      18
+    ],
+    "issues_checked": [
+      6,
+      7,
+      11,
+      12
+    ]
+  },
+  "outputs_uploaded": false,
+  "external_backup": false,
+  "deferred_pr18_untouched": true,
+  "independent_review": "Repeat read-only review found no new findings; all four initial findings are closed in the publication candidate"
+}
