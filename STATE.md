@@ -1,5 +1,10 @@
 ## Контур Codex ↔ GitHub: настройка, 02.10.2026
 
+Опубликован draft PR #30: https://github.com/artsafro/AGR_Project/pull/30,
+implementation-коммит `f4c4c5d`. GitHub после публикации: open=true,
+draft=true, mergeable=true; hosted runs `37043213434`/`37043142999` получили
+`startup_failure` до jobs и не считаются CI. Merge не выполнялся.
+
 База `origin/main=f652432` после merge PR29; работа ведётся в отдельной ветке
 `codex/github-continuous-workflow`, dirty основной checkout не изменяется.
 Добавляются единый lifecycle GitHub, always-on rule и read-only аудит локальных
