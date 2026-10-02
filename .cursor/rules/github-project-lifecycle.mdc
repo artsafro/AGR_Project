@@ -1,0 +1,22 @@
+---
+description: Keep Codex and GitHub synchronized without polluting main
+alwaysApply: true
+---
+
+# GitHub project lifecycle
+
+- Start GitHub-backed tasks by reading `STATE.md` and `docs/TASK_CONTEXT.md`,
+  fetching remotes, and recording the exact `origin/main` SHA.
+- Use a separate worktree and `codex/<scope>` branch for new work. Preserve a
+  dirty primary checkout and never reset it to make the task easier.
+- Run `tools/project_hygiene.py` before migrating local material. Treat its
+  categories as review candidates, not automatic permission to publish.
+- Keep reusable code, tests, technical documentation, accepted decisions and
+  scoped case studies in Git. Keep secrets, full chats, outputs, caches, large
+  DCC assets and temporary variants outside ordinary Git.
+- Make small thematic commits, run risk-based QA, publish a draft PR, and obtain
+  independent review. Merge only after review and an explicit user decision.
+- After merge, verify the merge SHA and `origin/main`, archive the worktree, and
+  update concise state and experience records. “Learning” means repository
+  evidence and rules; never claim that the model retrained itself.
+- Follow `docs/organization/GITHUB_CODEX_WORKFLOW.md` for the complete procedure.

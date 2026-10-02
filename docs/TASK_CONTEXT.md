@@ -67,3 +67,11 @@
 - Шаблон: [`case_studies/TEMPLATE.md`](case_studies/TEMPLATE.md).
 - Реестр: [`case_studies/README.md`](case_studies/README.md).
 - Публикация, технический QA и пользовательская приёмка — независимые статусы.
+
+## GitHub, локальная гигиена и публикация
+
+- Постоянный цикл: [`organization/GITHUB_CODEX_WORKFLOW.md`](organization/GITHUB_CODEX_WORKFLOW.md).
+- Read-only аудит кандидатов: `tools/project_hygiene.py`; отчёт писать в ignored
+  `tmp/`, не считать его разрешением на публикацию или удаление.
+- Карта веток, PR и Issues: [`organization/PROJECT_MAP.md`](organization/PROJECT_MAP.md);
+  перед действием обновлять факты с GitHub и не принимать сохранённый снимок за live-состояние.
