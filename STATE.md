@@ -1,3 +1,18 @@
+## Контур Codex ↔ GitHub: настройка, 02.10.2026
+
+База `origin/main=f652432` после merge PR29; работа ведётся в отдельной ветке
+`codex/github-continuous-workflow`, dirty основной checkout не изменяется.
+Добавляются единый lifecycle GitHub, always-on rule и read-only аудит локальных
+кандидатов `tools/project_hygiene.py` с тестами. Цель: автоматически готовить
+узкие коммиты/draft PR и сохранять только воспроизводимый код, техдокументацию,
+принятые решения и scoped опыт. Модель не переобучается; продолжение обеспечивают
+GitHub main, STATE, case studies и technical library. QA: pytest 222 passed,
+1 skipped, 1 expected warning; profiles 3; schemas 8; compile OK. Read-only
+проверка основного checkout: 12 tracked changes, 393 untracked кандидата,
+18038 ignored-файлов, ошибок чтения 0; полный JSON остаётся локально в `tmp/`.
+Первичное независимое review нашло два P2 в secret/symlink/error handling;
+они исправлены. Повторное review: blocking findings нет. Merge отдельно.
+
 ## PR29 findings: исправления и повторный QA, 02.10.2026
 
 Исправления опубликованы в существующий draft PR #29 implementation-коммитом

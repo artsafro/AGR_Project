@@ -46,3 +46,10 @@
 - После этапа обнови `STATE.md`: коммит, команды, результаты, ограничения, следующий шаг.
 - Для навигации по направлениям и текущим PR/Issues используй
   `docs/organization/PROJECT_MAP.md`; черновой PR не считай слитым в `main`.
+- Для GitHub-задач соблюдай `docs/organization/GITHUB_CODEX_WORKFLOW.md`:
+  сначала fetch и exact SHA `origin/main`, затем отдельный worktree/ветка.
+  Dirty основной checkout не переключай и не очищай. Перед переносом локальных
+  файлов запускай read-only `tools/project_hygiene.py`; публикуй только
+  воспроизводимый код, техдокументацию, принятые решения и scoped опыт.
+  Коммиты и draft PR разрешены в рамках задачи; merge — после review и явного
+  решения пользователя. После merge перепроверь GitHub/main и обнови STATE.

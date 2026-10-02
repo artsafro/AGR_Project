@@ -12,6 +12,11 @@
 
 ## Проверенные точки входа
 
+- Гигиена локального проекта: `tools/project_hygiene.py` — read-only Git-инвентарь
+  tracked/untracked/ignored, классификация кандидатов, чувствительных и локальных
+  файлов, безопасный отказ от symlink/reparse и поиск точных дублей малых
+  untracked-файлов с явными ошибками чтения. Политика и цикл:
+  [Codex ↔ GitHub](GITHUB_CODEX_WORKFLOW.md).
 - [Box lights на декоративных рамках](../../jobs/WINDOW-FRAMES/README.md):
   Blender4.4, измеренный образец → отдельные открытые корпуса;
   один принятый источник, native повторный запуск/readback. Имена и геометрические
