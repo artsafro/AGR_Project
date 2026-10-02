@@ -1,10 +1,25 @@
+## PR29 findings: исправления и повторный QA, 02.10.2026
+
+Все findings первичного ревью исправлены локально: встроенные A/B-сценарии
+привязаны к SHA256 входов и ожидаемого PNG, манифест фиксирует входы,
+конфигурацию, renderer и результат, добавлены regression-тесты. Выяснено, что
+файл по mutable-пути A v001 изменился после исходной фиксации: строгий replay
+совпадает с закреплённым SHA256 `1d91e004...`, но не с текущим файлом
+`3a9b2a6a...`; B v002 остаётся равен текущему референсу. Delivery=false,
+native MAX/FBX/Checker открыты. Независимое повторное read-only ревью не нашло
+новых findings и подтвердило закрытие четырёх исходных. Полный local QA:
+pytest 217 passed/1 skipped/1 warning; profiles 3,
+schemas 8; strict A/B replay и изменённый вход проверены; SYNTH DCC
+development=true/delivery=false. PR #29 остаётся draft и не сливается.
+
 ## Чат-опыт ГЛБ: draft, 02.10.2026
 
 База main07e9ec8; отдельная ветка codex/glb-atlas-learning-20261002.
 Один Python renderer+конфигурация A/B, README/SOURCE/QA и два кейса.
-A v001/B v002 PNG replay совпал по пикселям и байтам; независимый QA подтвердил.
-Полный локальный recheck:213passed/1skipped/1expectedwarning,profiles3,schemas8.
-Первый restricted pytest дал taskkill returncode1; targeted и full recheck прошли.
+A/B strict replay совпал с закреплёнными SHA256; текущий mutable A v001 расходится,
+текущий B v002 совпадает по пикселям и байтам. Первичный review выявил findings.
+Актуальный полный локальный recheck:217passed/1skipped/1warning,profiles3,schemas8.
+Предыдущий restricted pytest дал taskkill returncode1; последующие полные recheck прошли.
 Доказательства: technical_library/glb_atlas/QA.json и
 docs/organization/CHAT_AUDIT_2026-10-02.json; курсоры успешного разбора обновлены.
 Native MAX remap пока не перенесён: новый параметризованный fileIn/readback

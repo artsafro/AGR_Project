@@ -6,33 +6,46 @@
   "cases": [
     {
       "node": "A_Main",
-      "reference": "jobs/A-MAIN-ATLAS/outputs/v001/A_Main_1001_2048_RGBA.png",
-      "png_sha256": "1d91e00464e534fb3155cb86fa16ffecac55abdb190a3f88cc56a8a5a0f39a7c",
+      "historical_reference_path": "jobs/A-MAIN-ATLAS/outputs/v001/A_Main_1001_2048_RGBA.png",
+      "expected_replay_sha256": "1d91e00464e534fb3155cb86fa16ffecac55abdb190a3f88cc56a8a5a0f39a7c",
+      "replay_sha256": "1d91e00464e534fb3155cb86fa16ffecac55abdb190a3f88cc56a8a5a0f39a7c",
+      "strict_replay_matches_expected_hash": true,
+      "current_reference_sha256": "3a9b2a6ae6055af8dc209cbc2f5341014b5ce7b6c376d26872f182363bd14036",
       "size": [
         2048,
         2048
       ],
-      "pixels_equal": true,
-      "png_bytes_equal": true,
+      "current_reference_pixels_equal": false,
+      "current_reference_png_bytes_equal": false,
+      "reference_status": "Mutable local path changed after the original evidence; current file is not the pinned replay target",
       "overwrite_rejected": true,
       "native_fileIn": "NOT_RUN"
     },
     {
       "node": "B_Main",
-      "reference": "jobs/B-MAIN-ATLAS/outputs/v002/B_Main_1001_2048_RGBA.png",
-      "png_sha256": "1c5c675dcbdfe99a810d0e8acfd8342392648588dd476cb1a79a3df92277fb42",
+      "historical_reference_path": "jobs/B-MAIN-ATLAS/outputs/v002/B_Main_1001_2048_RGBA.png",
+      "expected_replay_sha256": "1c5c675dcbdfe99a810d0e8acfd8342392648588dd476cb1a79a3df92277fb42",
+      "replay_sha256": "1c5c675dcbdfe99a810d0e8acfd8342392648588dd476cb1a79a3df92277fb42",
+      "strict_replay_matches_expected_hash": true,
+      "current_reference_sha256": "1c5c675dcbdfe99a810d0e8acfd8342392648588dd476cb1a79a3df92277fb42",
       "size": [
         2048,
         2048
       ],
-      "pixels_equal": true,
-      "png_bytes_equal": true,
+      "current_reference_pixels_equal": true,
+      "current_reference_png_bytes_equal": true,
       "overwrite_rejected": true,
       "native_fileIn": "NOT_RUN"
     }
   ],
   "nonfinite_input_rejected": true,
-  "inputs_and_goldens_unchanged": true,
+  "changed_input_rejected": true,
+  "wrong_expected_png_rejected_before_output": true,
+  "strict_input_hashes_match": true,
+  "strict_provenance_manifest": true,
+  "tracked_regression_tests": 4,
+  "inputs_unchanged": true,
+  "current_goldens_unchanged": false,
   "inputs": [
     {
       "path": "jobs/A-MAIN-ATLAS/outputs/v001/uv_before.csv",
@@ -64,14 +77,16 @@
     }
   ],
   "code": {
-    "build.py": "47b2f9a73af9519329f8c581bf3bec12315a91f8ca5546e514156a3ed3b26d58",
-    "scenarios.json": "f3b70dc661fd0bd813772895f97b4e63c24a07d876a5811e6f8fd277d94f8e47"
+    "build.py": "df0e3bf75c17258ffa5bdce5f24fcab9262a4ee542d61d115d5a3d496fa489e1",
+    "scenarios.json": "e97414b65ec4f6569a44dddc9ec974d6c8e2f593d8ea11e39371c6c5df5675ed",
+    "tests/test_glb_atlas.py": "b9af048570279e638ff346f99cc413c2376e8a7b78a36b03aede10a0848db721"
   },
   "limitations": [
     "No new native MAXScript fileIn, MAX readback, FBX round-trip, alpha export or AGR Checker.",
+    "The mutable A v001 reference path no longer contains the originally recorded PNG; replay is validated against the pinned historical SHA256.",
     "A v001 PNG replay does not reproduce later ID5-to13 mutation or unknown v005 scene edits.",
     "Two buildings are one project; no universal atlas algorithm claimed."
   ],
-  "code_hash_format": "SHA256 of exact Git LF blob bytes; extracted from committed tree and replayed A/B PNG byte equality",
+  "code_hash_format": "SHA256 of exact Git LF blob bytes; independently matched against the publication candidate",
   "git_blob_replay": true
 }

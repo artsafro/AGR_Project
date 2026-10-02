@@ -32,10 +32,10 @@
     "generalization": "Two towers of one project; no universal Skill or PDF/YAML rule changes"
   },
   "local_qa": {
-    "pytest": "213 passed, 1 skipped, 1 expected warning on full recheck; initial restricted run had taskkill returncode1, targeted unrestricted recheck passed",
+    "pytest": "217 passed, 1 skipped, 1 expected warning on full recheck",
     "profiles": 3,
     "schemas": 8,
-    "png_replay": "A v001/B v002 pixel and byte equal independently; seven input hashes unchanged"
+    "png_replay": "Strict A/B replays match pinned historical SHA256; current B v002 is pixel/byte equal, current mutable A v001 diverged; finite changed A input is rejected before output"
   },
   "unverified": [
     "New native MAX remap/fileIn/readback",
@@ -60,5 +60,5 @@
   "outputs_uploaded": false,
   "external_backup": false,
   "deferred_pr18_untouched": true,
-  "independent_review": "PNG byte/pixel equality, source/input/code hashes, privacy and acceptance/version scope independently checked; no blocking findings"
+  "independent_review": "Repeat read-only review found no new findings; all four initial findings are closed in the publication candidate"
 }

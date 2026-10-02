@@ -1,6 +1,8 @@
 """GLB A/B captured-UV atlas recipe. No DCC mutation; case-specific."""
 import argparse
 import csv
+import hashlib
+import io
 import json
 import math
 from collections import defaultdict
@@ -8,26 +10,59 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-def validate_inputs(input_dir, config, node):
-    expected = config["scenarios"][node]["face_count"]
+def sha256(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def canonical_sha256(value):
+    payload = json.dumps(value, ensure_ascii=False, sort_keys=True,
+                         separators=(",", ":"), allow_nan=False).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def input_inventory(input_dir, source_dir, config):
+    paths = {
+        "input/uv_before.csv": input_dir / "uv_before.csv",
+        "input/face_uv_before.csv": input_dir / "face_uv_before.csv",
+    }
+    for item in config["textures"]:
+        paths[f"textures/{item['file']}"] = source_dir / item["file"]
+    return {name: sha256(path) for name, path in paths.items()}
+
+
+def validate_inputs(input_dir, source_dir, config, node):
+    scenario = config["scenarios"][node]
+    expected = scenario["face_count"]
+    observed_ids = {}
     for filename, columns in [("uv_before.csv", ("u", "v")),
                               ("face_uv_before.csv", ("u0", "v0", "u1", "v1"))]:
         with (input_dir / filename).open(newline="", encoding="utf-8") as stream:
             rows = list(csv.DictReader(stream))
         if not rows or (filename.startswith("face_") and len(rows) != expected):
             raise ValueError("Wrong captured face count or empty CSV")
+        observed_ids[filename] = {int(row["id"]) for row in rows}
         for row in rows:
             if int(row["id"]) not in config["POTENTIAL_ORDER"]:
                 raise ValueError("Unknown source material ID")
             if not all(math.isfinite(float(row[key])) for key in columns):
                 raise ValueError("Non-finite UV input")
+    if observed_ids["uv_before.csv"] != observed_ids["face_uv_before.csv"]:
+        raise ValueError("UV and face captures use different material IDs")
+    expected_ids = set(scenario.get("material_ids", ()))
+    if expected_ids and observed_ids["uv_before.csv"] != expected_ids:
+        raise ValueError("Captured material IDs do not match the selected scenario")
+    actual = input_inventory(input_dir, source_dir, config)
+    expected_hashes = scenario.get("input_sha256")
+    if expected_hashes and actual != expected_hashes:
+        raise ValueError("Input SHA256 mismatch for selected scenario")
+    return actual
 
 
 def build(config, input_dir, source_dir, output_dir, node):
     INPUT, SOURCE, OUTPUT = map(Path, (input_dir, source_dir, output_dir))
     if OUTPUT.exists():
         raise FileExistsError("Choose a new output directory; overwrite is forbidden")
-    validate_inputs(INPUT, config, node)
+    inventory = validate_inputs(INPUT, SOURCE, config, node)
     SIZE, PAD = config["SIZE"], config["PAD"]
     POTENTIAL_ORDER = config["POTENTIAL_ORDER"]
     LABELS = {int(k): v for k, v in config["LABELS"].items()}
@@ -156,8 +191,13 @@ def build(config, input_dir, source_dir, output_dir, node):
             perforate(32, face_box)
 
     atlas_path = OUTPUT / f"{node}_1001_2048_RGBA.png"
-    OUTPUT.mkdir(parents=True, exist_ok=False)
-    atlas.save(atlas_path)
+    encoded = io.BytesIO()
+    atlas.save(encoded, format="PNG")
+    png_bytes = encoded.getvalue()
+    png_sha256 = hashlib.sha256(png_bytes).hexdigest()
+    expected_png = config["scenarios"][node].get("expected_png_sha256")
+    if expected_png and png_sha256 != expected_png:
+        raise ValueError("Rendered PNG SHA256 does not match the selected scenario")
     manifest = {
         "status": "TRIAL / QA NOT PASSED",
         "size": [SIZE, SIZE],
@@ -165,7 +205,17 @@ def build(config, input_dir, source_dir, output_dir, node):
         "node": node,
         "atlas_file": atlas_path.name,
         "source_case": "GLB A/B Main; local SketchUp texture capture",
-        "source_textures": ["mat_25_colorized.png", "mat_26_colorized.png", "mat_09_colorized.png"],
+        "source_textures": [item["file"] for item in config["textures"]],
+        "provenance": {
+            "input_sha256": inventory,
+            "expected_input_sha256": config["scenarios"][node].get("input_sha256"),
+            "strict_input_match": bool(config["scenarios"][node].get("input_sha256")),
+            "config_canonical_sha256": canonical_sha256(config),
+            "renderer_sha256": sha256(__file__),
+            "png_sha256": png_sha256,
+            "expected_png_sha256": expected_png,
+            "strict_png_match": bool(expected_png),
+        },
         "visual_reconstructions": ["windows", "AC perforation opacity"],
         "materials": [
             {"old_id": material_id, "new_id": index + 1, "finish": LABELS[material_id],
@@ -174,7 +224,10 @@ def build(config, input_dir, source_dir, output_dir, node):
             for index, material_id in enumerate(ORDER)
         ],
     }
-    (OUTPUT / "atlas_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUTPUT.mkdir(parents=True, exist_ok=False)
+    atlas_path.write_bytes(png_bytes)
+    (OUTPUT / "atlas_manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
     return manifest
 
 def main():
