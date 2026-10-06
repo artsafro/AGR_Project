@@ -1,6 +1,6 @@
 # Digital Twin AI
 
-Работа по независимым задачам: [шесть направлений работы](docs/history/organization/TASK_BOARD_BEFORE_CONSOLIDATION.md).
+Работа по независимым задачам: [шесть направлений работы](docs/organization/PROJECT_MAP.md).
 Текущий аудит и сохранность чатов: [отчёт06.10](docs/organization/HYGIENE_AUDIT_2026-10-06.md).
 
 Принятый пользователем реальный пример: [типовой этаж Обр22 — технология, скрипты,
