@@ -1,5 +1,8 @@
 # Digital Twin AI
 
+Работа по независимым задачам: [доска из восьми направлений](docs/organization/TASK_BOARD.md).
+Текущий аудит и сохранность чатов: [отчёт06.10](docs/organization/HYGIENE_AUDIT_2026-10-06.md).
+
 Принятый пользователем реальный пример: [типовой этаж Обр22 — технология, скрипты,
 математика и выводы](docs/case_studies/OBR22_ACCEPTED_WORKFLOW.md).
 

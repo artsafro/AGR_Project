@@ -1,5 +1,8 @@
 # Указатель контекста — выбрать один маршрут
 
+Для выбора одной независимой задачи и её worktree: [TASK_BOARD](organization/TASK_BOARD.md).
+Аудит чатов/сессий и retirement: [HYGIENE_AUDIT06.10](organization/HYGIENE_AUDIT_2026-10-06.md).
+
 Общий вход: [`STATE.md`](../STATE.md). Перед сходной задачей найдите принятый
 опыт в [`case_studies/README.md`](case_studies/README.md). При первом знакомстве
 прочитайте [`DIGITAL_TWIN_AI_PROJECT_BRIEF.md`](DIGITAL_TWIN_AI_PROJECT_BRIEF.md)
