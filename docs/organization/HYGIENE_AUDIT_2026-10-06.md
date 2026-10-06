@@ -15,7 +15,12 @@ PR31 independently reviewed и squash-merged в main: d53cb5f96a71c8aabe549d9974
 f17b35a4a742459574c6d6f791f0330e4f34c853bc79407cb12afbc53f3874b0.
 Уникальные bootstrap docs сохранены в history. Остальные worktrees с незавершёнными
 изменениями/ignored-результатами сохранены; primary assets и активная КПП1 сохранены.
-Финальная интеграция структуры, QA и её merge выполняются отдельно.
+Интегрированный local QA:248passed/1skipped/1expected warning (43.96s), profiles3/schemas8.
+Финальное независимое review и merge структуры выполняются отдельно.
+Два bootstrap-снимка STATE_BEFORE_HYGIENE_2026-10-02.md и LOCAL_HYGIENE_2026-10-03.md
+сохранены byte-identical; их внутренние ссылки описывают прежнее расположение в
+agr-bootstrap-20261002 и не служат текущей навигацией. Полный старый checkout
+восстанавливается из сохранённого bundle; актуальный вход — PROJECT_MAP.
 
 ## Сохранённый результат первого этапа
 

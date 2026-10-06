@@ -9,7 +9,7 @@
 
 ## Разработка
 
-2. **Оркестрация и инструменты.** «AGR · Оркестрация агентов» (`01a0f6be-fba5-7833-9df9-5232fdc338ff`) и «AGR · Skills и правила» (`01a111bc-11b7-7360-b35a-5d020abc72b3`). Harness branch `codex/harness-engineering-20261003@c4f2f095`; отдельный inspector PR31@06ecba51. A/B требует продолжения, installer handoff сохранён отдельно. Вход — [оркестрация](local-orchestration/README.md), [библиотека](../../technical_library/README.md). Workbench/PR18/Issue10 остаются отложенными; их не возобновлять из гигиены.
+2. **Оркестрация и инструменты.** «AGR · Оркестрация агентов» (`01a0f6be-fba5-7833-9df9-5232fdc338ff`) и «AGR · Skills и правила» (`01a111bc-11b7-7360-b35a-5d020abc72b3`). Harness branch `codex/harness-engineering-20261003@c4f2f095`; inspector PR31 слит в main d53cb5f (reviewed head06ecba51). A/B требует продолжения, installer handoff сохранён отдельно. Вход — [оркестрация](local-orchestration/README.md), [библиотека](../../technical_library/README.md). Workbench/PR18/Issue10 остаются отложенными; их не возобновлять из гигиены.
 
 ## Объекты
 

@@ -1,7 +1,7 @@
 ## Исправления ревью PR28 — 01.10.2026
 
 Все пять замечаний c61dd0b исправлены; критерии и фактическая QA —
-[PR28_FIX_QA.json](PR28_FIX_QA.json). Nonfinite XYZ/UV отклоняются, matching
+[PR28_FIX_QA.json](../../../organization/local-orchestration/PR28_FIX_QA.json). Nonfinite XYZ/UV отклоняются, matching
 ищет полное соответствие, renderer использует selected_mesh_names с одной
 камерой/масштабом и сохраняет hidden parent/constraint dependencies. Устранено
 обрезание projected bounds и нормализован pixel aspect. Cursor v2 summary

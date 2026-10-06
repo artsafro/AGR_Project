@@ -17,7 +17,9 @@ Sidebar: AGR · Проект / AGR · Разработка / AGR · Объект
 
 Интегрирован main d53cb5f после независимо проверенного merge PR31.
 RunRecord inspector: docs/organization/local-orchestration/RUN_EVIDENCE.md.
-Предыдущий exact-base QA:222passed/1skipped/1expected warning, profiles3/schemas8.
-Финальный QA/review/publish/merge текущей ревизии пока pending.
-Следующий шаг: independently review сохранённые кандидаты → адресная уборка →
-exact-head QA → local commit → reviewed PR → merge и fresh-main readback.
+Интегрированный local QA:248passed/1skipped/1expected warning (43.96s),
+profiles3/source hash/traceability и schemas8 OK.11 чатов архивированы;
+два старых чистых worktree закрыты после независимого восстановления411файлов.
+История и ветки сохранены; один рабочий PROJECT_MAP и один каталог операций.
+Финальное independent review и публикация/merge структуры пока pending.
+Следующий шаг: independent exact-head review → reviewed PR/merge → fresh-main readback.
