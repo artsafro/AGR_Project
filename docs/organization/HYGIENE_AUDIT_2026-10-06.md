@@ -16,7 +16,9 @@ f17b35a4a742459574c6d6f791f0330e4f34c853bc79407cb12afbc53f3874b0.
 Уникальные bootstrap docs сохранены в history. Остальные worktrees с незавершёнными
 изменениями/ignored-результатами сохранены; primary assets и активная КПП1 сохранены.
 Интегрированный local QA:248passed/1skipped/1expected warning (43.96s), profiles3/schemas8.
-Финальное независимое review и merge структуры выполняются отдельно.
+Независимое review snapshot80cb8c79: открытых findings нет. Публикация структуры —
+[PR32](https://github.com/artsafro/AGR_Project/pull/32); актуальный merged/head/base
+проверяется по GitHub. Hosted CI остаётся отдельной проверкой.
 Два bootstrap-снимка STATE_BEFORE_HYGIENE_2026-10-02.md и LOCAL_HYGIENE_2026-10-03.md
 сохранены byte-identical; их внутренние ссылки описывают прежнее расположение в
 agr-bootstrap-20261002 и не служат текущей навигацией. Полный старый checkout

@@ -4,7 +4,7 @@
 Код и повторяемые операции: [technical_library](technical_library/README.md).
 Технические маршруты: [TASK_CONTEXT](docs/TASK_CONTEXT.md).
 
-06.10.2026: выполняется реальная гигиена и интеграция по расширенному запросу пользователя.
+06.10.2026: выполнена гигиена и интеграция по расширенному запросу пользователя.
 Владелец root; worktree `codex/project-hygiene-20261006`, исходная base7c418f34,
 предыдущий verified stage090d8b2. Исторические docs вынесены в history,
 TASK_BOARD объединён в PROJECT_MAP, SCRIPT_LIBRARY — в technical_library/README.
@@ -21,5 +21,11 @@ RunRecord inspector: docs/organization/local-orchestration/RUN_EVIDENCE.md.
 profiles3/source hash/traceability и schemas8 OK.11 чатов архивированы;
 два старых чистых worktree закрыты после независимого восстановления411файлов.
 История и ветки сохранены; один рабочий PROJECT_MAP и один каталог операций.
-Финальное independent review и публикация/merge структуры пока pending.
-Следующий шаг: independent exact-head review → reviewed PR/merge → fresh-main readback.
+Независимое review snapshot80cb8c79: открытых findings нет;
+247 действующих Markdown-ссылок valid,108 сохранённых artifact SHA совпали.
+Публикационный статус структуры: [PR32](https://github.com/artsafro/AGR_Project/pull/32);
+реальная merged/head/base информация проверяется по GitHub, hosted CI отдельно.
+Evidence/recovery: local-only tmp/project-hygiene-20261006/{final-consolidation-review,
+integrated-qa-receipt,worktree-retirement-manifest}; full bundle рядом в retained-worktrees.
+Следующий этап: выбрать одну задачу в PROJECT_MAP и начать её от fresh main;
+продолжение активной КПП1 сохраняет свой job STATE и базу.
