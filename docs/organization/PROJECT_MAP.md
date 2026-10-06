@@ -1,48 +1,36 @@
-# Карта AGR — 06.10.2026
+# AGR — рабочий проект
 
-Начало: [STATE](../../STATE.md) → [восемь направлений](TASK_BOARD.md) → один job/операция.
-Это карта работы; статус сдачи берётся из job evidence и manual gates.
+[STATE](../../STATE.md) — текущий этап; [TASK_CONTEXT](../TASK_CONTEXT.md) — технический маршрут;
+[библиотека операций](../../technical_library/README.md) — повторяемый код и QA.
 
-## Версии
+## Проект
 
-- Published default branch после fetch: `origin/main@7c418f34b74c3669d03ce6a530c366d6894d7a2f`.
-- Этот worktree: `codex/project-hygiene-20261006`, та же base; local docs change.
-- Primary: `feature/revit-typical-floor@d7ecdfda5f83d0c0ad672a65fc954031fca0cfbc`,
-  dirty и активно используется КПП1. Не переносить незавершённые файлы blanket staging.
-- Bootstrap docs: `026b1474d314098104a5f3b0592d87dbaeda2f81`, локально.
-- Harness: `c4f2f095b1166d9f1d3c78e0de6fa615e7e1c54b`, локально.
-- Run evidence: `06ecba51b30be4d23bb0016ed77d77d0349add11`, open PR31.
-  Local monitor/global skills не объявляются включёнными в published main.
+1. **Гигиена и интеграция.** Чаты «AGR · Гигиена и структура» (`01a112ee-e174-7230-99ad-f97f66d76f2a`) и «AGR · GitHub и накопление опыта» (`01a0edad-00b6-7712-acac-7ff555a2d751`). Ветка `codex/project-hygiene-20261006`; начало этого этапа090d8b2, base7c418f34. Issues6/7: сохранность assets и фактически выполненный CI; Issue14: PDF/YAML конфликт, нормы без отдельного решения не заменяются. Вход — [аудит и фактические действия](HYGIENE_AUDIT_2026-10-06.md).
 
-## Файлы и действия
+## Разработка
 
-- [TASK_CONTEXT](../TASK_CONTEXT.md): конкретный маршрут к правилам, коду и QA.
-- [Каталог операций](SCRIPT_LIBRARY.md) и [technical library](../../technical_library/GROUP_REVIEW.md).
-- [Кейсы](../case_studies/README.md): точная область успеха/неудач/приёмки.
-- [Аудит гигиены](HYGIENE_AUDIT_2026-10-06.md) и [chat manifest](CHAT_RETIREMENT_2026-10-06.json).
-- [Исторический реестр чатов](CHAT_REGISTER.md), снимки CHAT_AUDIT от29.09/02.10;
-  не использовать их старые P-очереди без сверки.
-- [GitHub lifecycle](GITHUB_CODEX_WORKFLOW.md): проверки, publication и merge.
+2. **Оркестрация и инструменты.** «AGR · Оркестрация агентов» (`01a0f6be-fba5-7833-9df9-5232fdc338ff`) и «AGR · Skills и правила» (`01a111bc-11b7-7360-b35a-5d020abc72b3`). Harness branch `codex/harness-engineering-20261003@c4f2f095`; отдельный inspector PR31@06ecba51. A/B требует продолжения, installer handoff сохранён отдельно. Вход — [оркестрация](local-orchestration/README.md), [библиотека](../../technical_library/README.md). Workbench/PR18/Issue10 остаются отложенными; их не возобновлять из гигиены.
 
-## GitHub: проверено native search 06.10
+## Объекты
 
-Открыты [PR31](https://github.com/artsafro/AGR_Project/pull/31) и
-[PR18](https://github.com/artsafro/AGR_Project/pull/18). PR18 отложен: не review/QA/merge.
-PR31 — перенос inspector; его QA не переносится на другой head, merge не выполнен.
-Issues [6](https://github.com/artsafro/AGR_Project/issues/6),
-[7](https://github.com/artsafro/AGR_Project/issues/7),
-[10](https://github.com/artsafro/AGR_Project/issues/10),
-[11](https://github.com/artsafro/AGR_Project/issues/11),
-[12](https://github.com/artsafro/AGR_Project/issues/12),
-[13](https://github.com/artsafro/AGR_Project/issues/13),
-[14](https://github.com/artsafro/AGR_Project/issues/14) открыты.
-Hosted CI и billing в этом аудите заново не проверялись. `gh` CLI вернул401;
-native connector дал список PR/Issues. Никаких remote writes в этом этапе.
+3. **КПП1 · ВПМ здания.** Чат `01a112cd-280b-7862-befb-f228eecc5efe`; активный владелец Revit/Blender. Local-only `C:/Users/artsafro/.AGR_Project/jobs/KPP1-VPM/STATE.md`; primary feature/revit-typical-floor@d7ecdfda dirty, автоматически не переключается. BODY → окна → кровля → декор → оборудование; native/readback/visual/Checker по job.
 
-## Сохранность
+4. **Обр22 · Геометрия и операции.** Чат `01a0ddd1-4d2c-79e3-84a7-b8048f0cb972`; [принятый кейс и ограничения](../case_studies/OBR22_ACCEPTED_WORKFLOW.md), `jobs/OBR22-K02/STATE.md` в primary. Connect/Exterior/Shell — из библиотеки; отдельные новые операции получают свой worktree.
 
-Ignored blend/FBX/PNG не восстанавливаются из Git. Issue6 сохраняет запрет загрузки
-около4ГБ outputs в GitHub. Архивы и recovery receipts03.10 остаются локально;
-текущий аудит не повторяет cleanup. Original/approved/unknown/active retain.
-Исходная карта доступна как `7c418f34b74c3669d03ce6a530c366d6894d7a2f:docs/organization/PROJECT_MAP.md`,
-blob `cd25ef40a98b2fcf632a2d46f27328978c49cc64`; это история, а не текущая очередь.
+5. **ГЛБ · НПМ и фасадные атласы.** Чат `01a0ebe4-71b4-70c3-90dc-03fa3cc956ff`; [GLB package](../../technical_library/glb_atlas/README.md), [границы A](../case_studies/GLB_A_MAIN_ATLAS.md), [границы B](../case_studies/GLB_B_MAIN_ATLAS.md). Верхушка была отклонена; её не возобновлять автоматически. Max reverse-export/readback и manual gates остаются у job.
+
+6. **СОШ1150 · Окна и витражи.** Чат `01a0ec14-b5fa-7810-abe3-e87a72701103`; local-only `C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/STATE.md`, [оконный атлас](../../technical_library/window_atlas/README.md). Приблизительные типы/placements не приняты; геометрия и native QA требуют своего контракта.
+
+## Одна задача — один результат
+
+Направления выше содержат очередь узких задач; все шесть не запускаются одновременно.
+В существующем job STATE/PLAN или STATE worktree записывать цель/критерии, входы/версии, owner, allowed files, worktree/branch/base/head, зависимости, actual QA/evidence, acceptance/publication и next.
+Новая независимая code-задача — fresh-main worktree `codex/<scope>`; продолжение сохраняет свою базу. У общей сцены/порта/экспорта один writer.
+Успех и полезная неудачная проба сохраняются тематическим local commit с честным статусом: named staging → review → commit → readback. Публикация/merge отдельны.
+Чат архивируется после durable handoff; assets/session files не удаляются вместе с ним. Unknown и уникальные материалы остаются сохранены.
+
+## Состояние и история
+
+Текущие chat/worktree действия — [manifest](CHAT_RETIREMENT_2026-10-06.json) и [аудит](HYGIENE_AUDIT_2026-10-06.md).
+Исторические audits/реестры — [docs/history/organization](../history/organization/).
+Исходные STATE/PROJECT_MAP на base7c418f34 сохранены в Git; датированные статусы старых PR не сегодняшняя очередь. Ignored blend/FBX/PNG не восстанавливаются из клона; Issue6 запрещает их массовую загрузку.

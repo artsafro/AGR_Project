@@ -1,9 +1,9 @@
 # Библиотека рабочих сценариев AGR
 
-- [ГЛБ A/B, source UV → RGBA](../../technical_library/glb_atlas/README.md):
+- [ГЛБ A/B, source UV → RGBA](../../../technical_library/glb_atlas/README.md):
   один renderer, A/B-конфигурация, fresh PNG replay; отдельные
-  [границы A](../case_studies/GLB_A_MAIN_ATLAS.md) /
-  [границы B](../case_studies/GLB_B_MAIN_ATLAS.md). Max remap ещё не перенесён.
+  [границы A](../../case_studies/GLB_A_MAIN_ATLAS.md) /
+  [границы B](../../case_studies/GLB_B_MAIN_ATLAS.md). Max remap ещё не перенесён.
 
 
 Перед новой задачей найти подходящий вход/операцию здесь, прочитать README,
@@ -16,8 +16,8 @@
   tracked/untracked/ignored, классификация кандидатов, чувствительных и локальных
   файлов, безопасный отказ от symlink/reparse и поиск точных дублей малых
   untracked-файлов с явными ошибками чтения. Политика и цикл:
-  [Codex ↔ GitHub](GITHUB_CODEX_WORKFLOW.md).
-- [Box lights на декоративных рамках](../../jobs/WINDOW-FRAMES/README.md):
+  [Codex ↔ GitHub](../../organization/GITHUB_CODEX_WORKFLOW.md).
+- [Box lights на декоративных рамках](../../../jobs/WINDOW-FRAMES/README.md):
   Blender4.4, измеренный образец → отдельные открытые корпуса;
   один принятый источник, native повторный запуск/readback. Имена и геометрические
   критерии привязаны к кейсу. UV/экспорт/Checker остаются открытыми.
@@ -42,7 +42,7 @@
 [PR #26](https://github.com/artsafro/AGR_Project/pull/26) слит в `main` как
 `a99b8ec`: десять операций UV v006 сведены в четыре этапа и общий модуль с
 native replay. Вход в объединённую библиотеку —
-[`technical_library/README.md`](../../technical_library/README.md).
+[`technical_library/README.md`](../../../technical_library/README.md).
 Массовый архив временных скриптов не публикуется.
 
 Переносить собственные скрипты, которыми получен подтверждённый результат,

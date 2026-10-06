@@ -15,13 +15,13 @@
 
 В этом аудите повторно прочитаны целиком:
 
-- [Бриф 0.1, разделы 1–14](DIGITAL_TWIN_AI_PROJECT_BRIEF.md), включая приёмку DT,
+- [Бриф 0.1, разделы 1–14](../DIGITAL_TWIN_AI_PROJECT_BRIEF.md), включая приёмку DT,
   открытые вопросы и различие предложений архитектуры и требований заказчика.
-- [NPM_STANDARD.yaml](../standards/NPM_STANDARD.yaml), версия 0.1.0.
-- [VPM_STANDARD.yaml](../standards/VPM_STANDARD.yaml), версия 0.1.0.
-- [DELIVERY_VALIDATOR.yaml](../standards/DELIVERY_VALIDATOR.yaml), версия 0.1.0,
+- [NPM_STANDARD.yaml](../../standards/NPM_STANDARD.yaml), версия 0.1.0.
+- [VPM_STANDARD.yaml](../../standards/VPM_STANDARD.yaml), версия 0.1.0.
+- [DELIVERY_VALIDATOR.yaml](../../standards/DELIVERY_VALIDATOR.yaml), версия 0.1.0,
   статус `specification_only`: V001–V017 — спецификация, не готовые проверки.
-- [Исходный PDF](../standards/source/Rasporyajenies19012026trebovaniya(2).pdf):
+- [Исходный PDF](../../standards/source/Rasporyajenies19012026trebovaniya(2).pdf):
   текст всех **56 страниц** извлечён заново и прочитан; все страницы просмотрены
   обзорно на ранее подготовленных контактных листах. Страницы **32 и 40** заново
   отрисованы и проверены крупно. Обзор страниц не равен чтению мелкой подписи:
@@ -29,7 +29,7 @@
 
 SHA256 PDF: `933f6b700c074d0db6b82030fc79d1dbe9db4a0067495ca716e0636acd544222`.
 Хеши всех пяти документов, фактические результаты этого прогона и версии находятся
-в [readiness-evidence.json](examples/readiness-evidence.json). `profiles check`
+в [readiness-evidence.json](../examples/readiness-evidence.json). `profiles check`
 подтвердил неизменность PDF и трёх YAML относительно `source-lock.json`.
 Повторный запуск индексатора дал **56 страниц и 96 встроенных изображений**.
 
@@ -39,8 +39,8 @@ SHA256 PDF: `933f6b700c074d0db6b82030fc79d1dbe9db4a0067495ca716e0636acd544222`.
 Аудит проверяет переданную версию, не действующее законодательство за её пределами.
 
 Проверены код CLI/контрактов/сборки/валидации/Blender bridge, тесты, исходный lock,
-[трассировка](../standards/traceability.json), ADR, [каталог 55 инструментов](inventory/catalog.html),
-его свидетельства и [разбор MSE](inventory/MSE_REVIEW.md). Сведения о прошлых
+[трассировка](../../standards/traceability.json), ADR, [каталог 55 инструментов](../inventory/catalog.html),
+его свидетельства и [разбор MSE](../inventory/MSE_REVIEW.md). Сведения о прошлых
 Max/CAD/Revit исследованиях обозначены как сохранённые свидетельства; они не
 выдаются за запуск в этом аудите.
 
@@ -74,7 +74,7 @@ Max/CAD/Revit исследованиях обозначены как сохра�
 
 ## 3. Противоречия и ограничения нормативной базы
 
-[ADR-0002](decisions/ADR-0002-source-discrepancies.md) содержит теперь 13 записей.
+[ADR-0002](../decisions/ADR-0002-source-discrepancies.md) содержит теперь 13 записей.
 Ни один из перечисленных конфликтов не разрешён молчаливой правкой YAML.
 
 - GeoJSON: обязательность всех полей ОКС, кроме other, на PDF27 против допуска
@@ -136,7 +136,7 @@ FBX-тест доказывает смысловые инварианты одн
 
 ## 5. Задачи: готовая основа, новый код и зависимости
 
-Внешние инструменты ниже обозначены ID из [каталога](inventory/catalog.json).
+Внешние инструменты ниже обозначены ID из [каталога](../inventory/catalog.json).
 «Кандидат» означает доступный код/настройку/сохранённый результат, не готовый адаптер.
 
 | Задачи | Что уже обеспечено | Что требуется разработать/проверить | Зависимость и реальные исходники |
@@ -268,7 +268,7 @@ SKILL.md для этих операций **не создан**; ready отно�
 | `dt-light-ground` /этап4 | Установленные Max/Blender tools, общего DT-контракта нет | Подтверждённый проект территории/света → Ground/Flora/Light exports | Отдельная fixture и нормативный readback, затем полный состав проекта | **missing** интегрированная операция |
 
 Внешние пути/API и зависимости каждой семьи хранятся в
-[catalog.json](inventory/catalog.json), например:
+[catalog.json](../inventory/catalog.json), например:
 
 - BL-01: `C:/Users/artsafro/AppData/Roaming/Blender Foundation/Blender/4.4/extensions/user_default/sintez_agr_checker/scripts/`.
 - BL-09: `C:/Users/artsafro/.window_facades/layout_facade_atlas_uv.py` и `verify_facade_fbx_roundtrip.py`.
@@ -366,19 +366,19 @@ $env:DT_BLENDER = 'C:\Program Files\Blender Foundation\Blender 4.4\blender.exe'
 ```
 
 Проверочные FBX/blend/PNG и логи оставлены в игнорируемой `tmp/readiness/`;
-в Git сохранён компактный [протокол](examples/readiness-evidence.json).
+в Git сохранён компактный [протокол](../examples/readiness-evidence.json).
 Свежая установка на новой машине и удалённый GitHub Actions в этом аудите
 не выполнялись. `checks.yml` проверяет независимое ядро на Linux и пропускает
 DCC-тест без DT_BLENDER; это не замена Windows/DCC-проверкам.
 
-Точка продолжения — [STATE.md](../STATE.md). Коммит отчёта определяется командой
+Точка продолжения — [STATE.md](../../STATE.md). Коммит отчёта определяется командой
 `git log -1 --format=%H -- docs/READINESS_REPORT.md`. Нельзя переносить результаты
 этого снимка на изменённые профили/адаптеры без повторной проверки.
 
 ## Дополнение 26.09.2026: GeoAGR13.63
 
-[Исследование поставки](inventory/GEOAGR_13_63_REVIEW.md) и
-[протокол](inventory/geoagr-13.63-evidence.json) добавляют пять кандидатов операций:
+[Исследование поставки](../inventory/GEOAGR_13_63_REVIEW.md) и
+[протокол](../inventory/geoagr-13.63-evidence.json) добавляют пять кандидатов операций:
 MAX-28 ProcessAllFaces, MAX-29 FindOverlaps, MAX-30 SolveCollisions (входы/выходы
 из CLR metadata), GEN-11 OBJ UCX checker, GEN-12 PNG dilation. Для каждого
 в отчёте есть вход/выход, способ проверки, зависимости и ограничения.
@@ -394,7 +394,7 @@ UCX5 случаев выявили пропуск вложенности и find
 
 ## Дополнение 26.09.2026: две папки скриптов
 
-[Новый разбор](inventory/ZAVOD_AND_MAX_PLUGINS_REVIEW.md) уточнил xView и добавил
+[Новый разбор](../inventory/ZAVOD_AND_MAX_PLUGINS_REVIEW.md) уточнил xView и добавил
 MAX-31–42, GEN-13 в каталог (73 записи/162 пути). Для новых операций описаны
 назначение, вход/выход, зависимости, проверка и ограничения; все workflow
 **prototype**, без пустых Skills. Проверено содержимое48 MZP без установки,

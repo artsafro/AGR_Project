@@ -1,9 +1,29 @@
-# Аудит и реорганизация AGR — 06.10.2026
+# Гигиена AGR — фактические действия06.10
+
+Пользователь расширил задачу: реально вычистить, переименовать, объединить и замержить.
+Активный вход теперь [PROJECT_MAP](PROJECT_MAP.md):3 раздела,6 направлений,8 сохраняемых рабочих чатов.
+13 исторических/дублирующих документов перенесены в history; source bytes сохранены в Git
+на090d8b2 и local freeze. TASK_BOARD объединён в PROJECT_MAP; SCRIPT_LIBRARY в technical_library.
+11 проверенных чатов обратимо архивированы с native list readback. Дополнительное
+извлечение:22 страницы/142turns,11archive candidates; management heartbeat и skills
+handoff сохраняются,34чата других проектов не удаляются.
+Exact path/hash/action manifest и recovery receipts: `C:/Users/artsafro/.AGR_Project/tmp/project-hygiene-20261006/`.
+PR31 independently reviewed и squash-merged в main: d53cb5f96a71c8aabe549d9974d07a3e7ccfcfdb.
+Два чистых checkout glb-lessons/agr-bootstrap закрыты; обе ветки сохранены.
+Полноценный bundle23,348,279bytes; восстановлены411tracked-файлов53,643,947bytes,
+все SHA и два Git tree независимо совпали. Bundle SHA256:
+f17b35a4a742459574c6d6f791f0330e4f34c853bc79407cb12afbc53f3874b0.
+Уникальные bootstrap docs сохранены в history. Остальные worktrees с незавершёнными
+изменениями/ignored-результатами сохранены; primary assets и активная КПП1 сохранены.
+Финальная интеграция структуры, QA и её merge выполняются отдельно.
+
+## Сохранённый результат первого этапа
+
 
 Задача: небольшой рефакторинг разделов и строгая проверка того, что можно убрать
 из активных чатов; 5–8 направлений с независимыми задачами/worktree/коммитами.
-Результат этапа: [восемь направлений](TASK_BOARD.md), короткие STATE/PROJECT_MAP,
-адресные входы README/TASK_CONTEXT и [manifest54 чатов](CHAT_RETIREMENT_2026-10-06.json).
+Результат этапа: [восемь направлений](../history/organization/TASK_BOARD_BEFORE_CONSOLIDATION.md), короткие STATE/PROJECT_MAP,
+адресные входы README/TASK_CONTEXT и [manifest54 чатов](../history/organization/CHAT_RETIREMENT_INITIAL_2026-10-06.json).
 Папки src/adapters/jobs/docs/standards/tests уже разделяют ответственность;
 массовое перемещение без проверки зависимостей не оправдано этим аудитом.
 
@@ -121,7 +141,7 @@ Behind/ahead и clean состояние — из read-only snapshot, ignored ev
 raw audit receipts находятся в primary tmp. Источник полной проверки branches/base:
 `C:/Users/artsafro/.AGR_Project/tmp/project-hygiene-20261006/structure-audit.md`.
 
-## Продолжение
+## Историческое продолжение первого этапа
 
 Прочитать TASK_BOARD и manifest → выбрать одну pending extraction/операцию →
 назначить owner/resource → проверить файлы и сохранить опыт → пересмотреть

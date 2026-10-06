@@ -1,0 +1,385 @@
+# STATE до гигиены — сохранённый снимок 02.10.2026
+
+Этот архив содержит прежний STATE полностью. Указанные внутри open/draft PR29/30
+и старые базы относятся к моментам публикации; текущий статус находится в
+[корневом STATE](../../STATE.md). Этот снимок не означает новую приёмку модели.
+
+Происхождение: `STATE.md` свежего worktree на ветке `codex/agr-bootstrap-20261002`,
+HEAD/base `7c418f34b74c3669d03ce6a530c366d6894d7a2f`; основной dirty checkout не служил источником этого архива.
+
+- Original working-file bytes: 11634; SHA256 `19c53a0d0df6c1b8b2620af40c80af4405729cdaf74cec496b00ee6d09f17f54`.
+- Exact source Git blob bytes: 11634; SHA256 `19c53a0d0df6c1b8b2620af40c80af4405729cdaf74cec496b00ee6d09f17f54`.
+- Кодировка исходных working bytes: UTF-8 без BOM; переносы LF.
+- Base64 ниже хранит точные working bytes, включая переносы и финальный newline;
+  это полный сохранённый файл, а не только хеш или ссылка на Git.
+
+Ссылки исходного текста показаны как код и сохраняют исходные root-relative цели;
+они не превращаются в сломанные ссылки относительно docs/history. Для навигации:
+[предыдущая история технической библиотеки](TECHNICAL_LIBRARY_STATE_BEFORE_ALL_GROUPS_2026-10-01.md),
+[карта проекта](../organization/PROJECT_MAP.md), [библиотека операций](../../technical_library/README.md).
+
+## Исходный текст STATE
+
+````markdown
+## Контур Codex ↔ GitHub: настройка, 02.10.2026
+
+Опубликован draft PR #30: https://github.com/artsafro/AGR_Project/pull/30,
+implementation-коммит `f4c4c5d`. GitHub после публикации: open=true,
+draft=true, mergeable=true; hosted runs `37043213434`/`37043142999` получили
+`startup_failure` до jobs и не считаются CI. Merge не выполнялся.
+
+База `origin/main=f652432` после merge PR29; работа ведётся в отдельной ветке
+`codex/github-continuous-workflow`, dirty основной checkout не изменяется.
+Добавляются единый lifecycle GitHub, always-on rule и read-only аудит локальных
+кандидатов `tools/project_hygiene.py` с тестами. Цель: автоматически готовить
+узкие коммиты/draft PR и сохранять только воспроизводимый код, техдокументацию,
+принятые решения и scoped опыт. Модель не переобучается; продолжение обеспечивают
+GitHub main, STATE, case studies и technical library. QA: pytest 222 passed,
+1 skipped, 1 expected warning; profiles 3; schemas 8; compile OK. Read-only
+проверка основного checkout: 12 tracked changes, 393 untracked кандидата,
+18038 ignored-файлов, ошибок чтения 0; полный JSON остаётся локально в `tmp/`.
+Первичное независимое review нашло два P2 в secret/symlink/error handling;
+они исправлены. Повторное review: blocking findings нет. Merge отдельно.
+
+## PR29 findings: исправления и повторный QA, 02.10.2026
+
+Исправления опубликованы в существующий draft PR #29 implementation-коммитом
+`1cd8cb6`. GitHub после push: open=true, draft=true, mergeable=true;
+hosted runs `37039712576` и `37039707811` завершились `startup_failure` до jobs,
+поэтому не считаются CI-проверкой. Слияние не выполнялось. Следующий шаг —
+повторное ревью опубликованного head и отдельное решение пользователя о merge.
+
+Все findings первичного ревью исправлены локально: встроенные A/B-сценарии
+привязаны к SHA256 входов и ожидаемого PNG, манифест фиксирует входы,
+конфигурацию, renderer и результат, добавлены regression-тесты. Выяснено, что
+файл по mutable-пути A v001 изменился после исходной фиксации: строгий replay
+совпадает с закреплённым SHA256 `1d91e004...`, но не с текущим файлом
+`3a9b2a6a...`; B v002 остаётся равен текущему референсу. Delivery=false,
+native MAX/FBX/Checker открыты. Независимое повторное read-only ревью не нашло
+новых findings и подтвердило закрытие четырёх исходных. Полный local QA:
+pytest 217 passed/1 skipped/1 warning; profiles 3,
+schemas 8; strict A/B replay и изменённый вход проверены; SYNTH DCC
+development=true/delivery=false. PR #29 остаётся draft и не сливается.
+
+## Чат-опыт ГЛБ: draft, 02.10.2026
+
+База main07e9ec8; отдельная ветка codex/glb-atlas-learning-20261002.
+Один Python renderer+конфигурация A/B, README/SOURCE/QA и два кейса.
+A/B strict replay совпал с закреплёнными SHA256; текущий mutable A v001 расходится,
+текущий B v002 совпадает по пикселям и байтам. Первичный review выявил findings.
+Актуальный полный локальный recheck:217passed/1skipped/1warning,profiles3,schemas8.
+Предыдущий restricted pytest дал taskkill returncode1; последующие полные recheck прошли.
+Доказательства: technical_library/glb_atlas/QA.json и
+docs/organization/CHAT_AUDIT_2026-10-02.json; курсоры успешного разбора обновлены.
+Native MAX remap пока не перенесён: новый параметризованный fileIn/readback
+не проверен; README задаёт следующий шаг на отдельной копии сцены.
+A v004 был пересохранён: старые ID13=114/ID5=0 не описывают текущий v005.
+FBX/alpha/Checker и полная сдача не заявлены; два корпуса — один проект.
+Большие outputs остаются локальными; PR18 отложен; этот draft не слит.
+Следующий шаг: ревью draft и отдельный native Max remap/readback.
+
+## PR28 слит в main — 01.10.2026
+
+Пять замечаний исправлены, regression fixtures и независимое ревью завершены.
+Exact reviewed head: 5aee477472f9363aed7681ec9fa2f4d9fc55c5d9.
+Squash merge: 64441f5bf1230b9cb73d65708b4ee95b974dbbab; GitHub merged=true
+и origin/main перечитаны. PR28 закрыт; PR18 остаётся отложенным.
+QA:213passed/1skipped/1expectedwarning; profiles3/schemas8OK;
+SYNTH DCC development=true/delivery=false; actual golden FBX46objects/5206tris
+readbackOK; synthetic native render scope/dependencies/camera/scale/sourceSHA
+проверены. Полная сдача модели не заявлена. Evidence:
+docs/organization/local-orchestration/PR28_FIX_QA.json.
+Hosted Actions reviewedhead run217/36923667587 startup_failure,jobs=[];
+это отдельное ограничение Issue7, не local test failure или CI pass.
+Основной dirty checkout не переключался; approved inputs/legacyCLI сохранены.
+Следующий шаг: новая задача по циклу AGENT_WORKFLOW; перед продолжением сверить
+локальный код с main. Для Issue7 восстановить запуск GitHub Actions.
+Ниже сохранена история публикационных этапов.
+
+## Оркестрация Codex: опубликовано в PR #28 — 01.10.2026
+
+База main fc48f1a; ветка codex/local-orchestration; PR https://github.com/artsafro/AGR_Project/pull/28 открыт, не слит. Implementation head db371f8. Hosted run213:startup_failure до jobs (Issue7); localQA отдельно.
+AGENTS задаёт обязательный цикл: цель → изучение → вопросы → требования → план →
+исполнение → независимая проверка → исправления → передача/STATE.
+TASK_CONTEXT/AGENT_WORKFLOW, dt-verifier, RunRecord и узкие локальные runners
+публикуются вместе с compact audit/pilot/CLI evidence. Codex ведёт текущий чат;
+Cursor CLI дополнительный reviewer, actual custom dt-verifier подтверждён.
+Реальный pilot-004: saved-file/ZIP/Blender/Max reverse transfer и resume проверены;
+full delivery/visual gates остаются открытыми, delivery=false.
+Документы: docs/organization/local-orchestration/README.md, EXECUTION.md,
+CURSOR_CLI.md и cursor-cli-evidence.json. Sources/scenes/outputs/transcripts
+локальные и не копируются; чужие изменения checkout сохранены. PR18 не затронут.
+QA publishing: pytest178passed/1skipped/1warning,profiles3/schemas8OK; SYNTH-001 development=true/delivery=false,exit0. PUBLICATION.md описывает команды и ограничения. Прошлые числа в evidence
+относятся к исходному локальному pilot, а не тестам нового main.
+
+## GitHub audit remediation — 01.10.2026
+
+База `main` `a99b8ec`; ветка `codex/github-audit-remediation`. Аудит: последние
+100 Actions runs — `startup_failure`, main unprotected, GitHub health28%.
+Чистый новый venv прошёл install/pip check, profiles3, schemas8 и
+pytest156passed/1skipped/1expected warning; pip-audit CVE0, secret-pattern hits0.
+Добавлены TASK_CONTEXT/AGENT_WORKFLOW, governance/security/templates/dependabot;
+workflow ограничен и pin по SHA, stale docs/links исправлены. PR18 не затронут.
+Далее: локальный QA, PR/merge, затем GitHub settings/labels/branch cleanup и
+проверка нового Actions run. Billing/protection могут остаться внешним блокером.
+
+## Все группы технической базы — 01.10.2026
+
+Пройдены15 групп:601 исходный путь, из них11 Workbench учтены по прошлому
+inventory и отложены. Реестр маршрутов: technical_library/GROUP_REVIEW.md;
+SHA/синтаксис/дубли — SOURCE_COVERAGE.jsonl и GROUP_REVIEW.json. Python AST без
+ошибок; MAXScript syntax/native QA не подтверждены. Пять групп одинаковых файлов,
+57 совпадающих функций отмечены для reuse, originals не удаляются.
+Добавлены mesh_audit (core+Blender), texture_tiles (CLI+панельный recipe+JSON);
+metric_pattern переиспользует tools/facades_texture_pattern.py.
+Native Blender4.4:9 read-only saved-file audits, SHA входов неизменны;
+11 КПП PNG pixel/byte-identical, ZIP readback equal. UV/atlas/box lights — прежние
+проверенные этапные пакеты; непринятые builders остаются локальными кейсами.
+QA PR checkout:156passed/1skipped/1expected ZIP warning; profiles3/schemas8OK;
+SYNTH-001 DCC readback:development=true/delivery=false. PYTHONPATH указывал src
+этой рабочей копии, не editable install общего checkout. Hosted CI не заявлен.
+Max BRIDGE_DOWN; PR18 отложен и не затронут. PR25 слит в `main` как `946acad`.
+PR26 проверен в отдельном checkout на базе `946acad`; реализация и актуализация
+статусов зафиксированы в `4a34712`. Все9 mesh readback совпали с evidence;
+для ground `.blend` выбран документированный объект `SM_GROUND_NPM_Ground`.
+UV replay повторён с `--disable-autoexec`: все4 стадии и FBX readback прошли.
+Большие outputs не загружаются; SHA-реестр не бэкап. Пакет публикуется через
+PR26; далее для Max восстановить live bridge и отдельно проверить нужный инструмент;
+второй проект/полная визуальная и Checker приёмка остаются отдельными воротами.
+
+[Предыдущие состояния и проверки](docs/history/TECHNICAL_LIBRARY_STATE_BEFORE_ALL_GROUPS_2026-10-01.md).
+Маршрут остальных направлений: [PROJECT_MAP](docs/organization/PROJECT_MAP.md).
+````
+
+## Точные байты для восстановления
+
+<!-- ORIGINAL-STATE-BYTES -->
+```base64
+IyMg0JrQvtC90YLRg9GAIENvZGV4IOKGlCBHaXRIdWI6INC90LDRgdGC0YDQvtC50LrQsCwgMDIu
+MTAuMjAyNgoK0J7Qv9GD0LHQu9C40LrQvtCy0LDQvSBkcmFmdCBQUiAjMzA6IGh0dHBzOi8vZ2l0
+aHViLmNvbS9hcnRzYWZyby9BR1JfUHJvamVjdC9wdWxsLzMwLAppbXBsZW1lbnRhdGlvbi3QutC+
+0LzQvNC40YIgYGY0YzRjNWRgLiBHaXRIdWIg0L/QvtGB0LvQtSDQv9GD0LHQu9C40LrQsNGG0LjQ
+uDogb3Blbj10cnVlLApkcmFmdD10cnVlLCBtZXJnZWFibGU9dHJ1ZTsgaG9zdGVkIHJ1bnMgYDM3
+MDQzMjEzNDM0YC9gMzcwNDMxNDI5OTlgINC/0L7Qu9GD0YfQuNC70LgKYHN0YXJ0dXBfZmFpbHVy
+ZWAg0LTQviBqb2JzINC4INC90LUg0YHRh9C40YLQsNGO0YLRgdGPIENJLiBNZXJnZSDQvdC1INCy
+0YvQv9C+0LvQvdGP0LvRgdGPLgoK0JHQsNC30LAgYG9yaWdpbi9tYWluPWY2NTI0MzJgINC/0L7R
+gdC70LUgbWVyZ2UgUFIyOTsg0YDQsNCx0L7RgtCwINCy0LXQtNGR0YLRgdGPINCyINC+0YLQtNC1
+0LvRjNC90L7QuSDQstC10YLQutC1CmBjb2RleC9naXRodWItY29udGludW91cy13b3JrZmxvd2As
+IGRpcnR5INC+0YHQvdC+0LLQvdC+0LkgY2hlY2tvdXQg0L3QtSDQuNC30LzQtdC90Y/QtdGC0YHR
+jy4K0JTQvtCx0LDQstC70Y/RjtGC0YHRjyDQtdC00LjQvdGL0LkgbGlmZWN5Y2xlIEdpdEh1Yiwg
+YWx3YXlzLW9uIHJ1bGUg0LggcmVhZC1vbmx5INCw0YPQtNC40YIg0LvQvtC60LDQu9GM0L3Ri9GF
+CtC60LDQvdC00LjQtNCw0YLQvtCyIGB0b29scy9wcm9qZWN0X2h5Z2llbmUucHlgINGBINGC0LXR
+gdGC0LDQvNC4LiDQptC10LvRjDog0LDQstGC0L7QvNCw0YLQuNGH0LXRgdC60Lgg0LPQvtGC0L7Q
+stC40YLRjArRg9C30LrQuNC1INC60L7QvNC80LjRgtGLL2RyYWZ0IFBSINC4INGB0L7RhdGA0LDQ
+vdGP0YLRjCDRgtC+0LvRjNC60L4g0LLQvtGB0L/RgNC+0LjQt9Cy0L7QtNC40LzRi9C5INC60L7Q
+tCwg0YLQtdGF0LTQvtC60YPQvNC10L3RgtCw0YbQuNGOLArQv9GA0LjQvdGP0YLRi9C1INGA0LXR
+iNC10L3QuNGPINC4IHNjb3BlZCDQvtC/0YvRgi4g0JzQvtC00LXQu9GMINC90LUg0L/QtdGA0LXQ
+vtCx0YPRh9Cw0LXRgtGB0Y87INC/0YDQvtC00L7Qu9C20LXQvdC40LUg0L7QsdC10YHQv9C10YfQ
+uNCy0LDRjtGCCkdpdEh1YiBtYWluLCBTVEFURSwgY2FzZSBzdHVkaWVzINC4IHRlY2huaWNhbCBs
+aWJyYXJ5LiBRQTogcHl0ZXN0IDIyMiBwYXNzZWQsCjEgc2tpcHBlZCwgMSBleHBlY3RlZCB3YXJu
+aW5nOyBwcm9maWxlcyAzOyBzY2hlbWFzIDg7IGNvbXBpbGUgT0suIFJlYWQtb25seQrQv9GA0L7Q
+stC10YDQutCwINC+0YHQvdC+0LLQvdC+0LPQviBjaGVja291dDogMTIgdHJhY2tlZCBjaGFuZ2Vz
+LCAzOTMgdW50cmFja2VkINC60LDQvdC00LjQtNCw0YLQsCwKMTgwMzggaWdub3JlZC3RhNCw0LnQ
+u9C+0LIsINC+0YjQuNCx0L7QuiDRh9GC0LXQvdC40Y8gMDsg0L/QvtC70L3Ri9C5IEpTT04g0L7R
+gdGC0LDRkdGC0YHRjyDQu9C+0LrQsNC70YzQvdC+INCyIGB0bXAvYC4K0J/QtdGA0LLQuNGH0L3Q
+vtC1INC90LXQt9Cw0LLQuNGB0LjQvNC+0LUgcmV2aWV3INC90LDRiNC70L4g0LTQstCwIFAyINCy
+IHNlY3JldC9zeW1saW5rL2Vycm9yIGhhbmRsaW5nOwrQvtC90Lgg0LjRgdC/0YDQsNCy0LvQtdC9
+0YsuINCf0L7QstGC0L7RgNC90L7QtSByZXZpZXc6IGJsb2NraW5nIGZpbmRpbmdzINC90LXRgi4g
+TWVyZ2Ug0L7RgtC00LXQu9GM0L3Qvi4KCiMjIFBSMjkgZmluZGluZ3M6INC40YHQv9GA0LDQstC7
+0LXQvdC40Y8g0Lgg0L/QvtCy0YLQvtGA0L3Ri9C5IFFBLCAwMi4xMC4yMDI2CgrQmNGB0L/RgNCw
+0LLQu9C10L3QuNGPINC+0L/Rg9Cx0LvQuNC60L7QstCw0L3RiyDQsiDRgdGD0YnQtdGB0YLQstGD
+0Y7RidC40LkgZHJhZnQgUFIgIzI5IGltcGxlbWVudGF0aW9uLdC60L7QvNC80LjRgtC+0LwKYDFj
+ZDhjYjZgLiBHaXRIdWIg0L/QvtGB0LvQtSBwdXNoOiBvcGVuPXRydWUsIGRyYWZ0PXRydWUsIG1l
+cmdlYWJsZT10cnVlOwpob3N0ZWQgcnVucyBgMzcwMzk3MTI1NzZgINC4IGAzNzAzOTcwNzgxMWAg
+0LfQsNCy0LXRgNGI0LjQu9C40YHRjCBgc3RhcnR1cF9mYWlsdXJlYCDQtNC+IGpvYnMsCtC/0L7R
+jdGC0L7QvNGDINC90LUg0YHRh9C40YLQsNGO0YLRgdGPIENJLdC/0YDQvtCy0LXRgNC60L7QuS4g
+0KHQu9C40Y/QvdC40LUg0L3QtSDQstGL0L/QvtC70L3Rj9C70L7RgdGMLiDQodC70LXQtNGD0Y7R
+idC40Lkg0YjQsNCzIOKAlArQv9C+0LLRgtC+0YDQvdC+0LUg0YDQtdCy0YzRjiDQvtC/0YPQsdC7
+0LjQutC+0LLQsNC90L3QvtCz0L4gaGVhZCDQuCDQvtGC0LTQtdC70YzQvdC+0LUg0YDQtdGI0LXQ
+vdC40LUg0L/QvtC70YzQt9C+0LLQsNGC0LXQu9GPINC+IG1lcmdlLgoK0JLRgdC1IGZpbmRpbmdz
+INC/0LXRgNCy0LjRh9C90L7Qs9C+INGA0LXQstGM0Y4g0LjRgdC/0YDQsNCy0LvQtdC90Ysg0LvQ
+vtC60LDQu9GM0L3Qvjog0LLRgdGC0YDQvtC10L3QvdGL0LUgQS9CLdGB0YbQtdC90LDRgNC40LgK
+0L/RgNC40LLRj9C30LDQvdGLINC6IFNIQTI1NiDQstGF0L7QtNC+0LIg0Lgg0L7QttC40LTQsNC1
+0LzQvtCz0L4gUE5HLCDQvNCw0L3QuNGE0LXRgdGCINGE0LjQutGB0LjRgNGD0LXRgiDQstGF0L7Q
+tNGLLArQutC+0L3RhNC40LPRg9GA0LDRhtC40Y4sIHJlbmRlcmVyINC4INGA0LXQt9GD0LvRjNGC
+0LDRgiwg0LTQvtCx0LDQstC70LXQvdGLIHJlZ3Jlc3Npb24t0YLQtdGB0YLRiy4g0JLRi9GP0YHQ
+vdC10L3Qviwg0YfRgtC+CtGE0LDQudC7INC/0L4gbXV0YWJsZS3Qv9GD0YLQuCBBIHYwMDEg0LjQ
+t9C80LXQvdC40LvRgdGPINC/0L7RgdC70LUg0LjRgdGF0L7QtNC90L7QuSDRhNC40LrRgdCw0YbQ
+uNC4OiDRgdGC0YDQvtCz0LjQuSByZXBsYXkK0YHQvtCy0L/QsNC00LDQtdGCINGBINC30LDQutGA
+0LXQv9C70ZHQvdC90YvQvCBTSEEyNTYgYDFkOTFlMDA0Li4uYCwg0L3QviDQvdC1INGBINGC0LXQ
+utGD0YnQuNC8INGE0LDQudC70L7QvApgM2E5YjJhNmEuLi5gOyBCIHYwMDIg0L7RgdGC0LDRkdGC
+0YHRjyDRgNCw0LLQtdC9INGC0LXQutGD0YnQtdC80YMg0YDQtdGE0LXRgNC10L3RgdGDLiBEZWxp
+dmVyeT1mYWxzZSwKbmF0aXZlIE1BWC9GQlgvQ2hlY2tlciDQvtGC0LrRgNGL0YLRiy4g0J3QtdC3
+0LDQstC40YHQuNC80L7QtSDQv9C+0LLRgtC+0YDQvdC+0LUgcmVhZC1vbmx5INGA0LXQstGM0Y4g
+0L3QtSDQvdCw0YjQu9C+CtC90L7QstGL0YUgZmluZGluZ3Mg0Lgg0L/QvtC00YLQstC10YDQtNC4
+0LvQviDQt9Cw0LrRgNGL0YLQuNC1INGH0LXRgtGL0YDRkdGFINC40YHRhdC+0LTQvdGL0YUuINCf
+0L7Qu9C90YvQuSBsb2NhbCBRQToKcHl0ZXN0IDIxNyBwYXNzZWQvMSBza2lwcGVkLzEgd2Fybmlu
+ZzsgcHJvZmlsZXMgMywKc2NoZW1hcyA4OyBzdHJpY3QgQS9CIHJlcGxheSDQuCDQuNC30LzQtdC9
+0ZHQvdC90YvQuSDQstGF0L7QtCDQv9GA0L7QstC10YDQtdC90Ys7IFNZTlRIIERDQwpkZXZlbG9w
+bWVudD10cnVlL2RlbGl2ZXJ5PWZhbHNlLiBQUiAjMjkg0L7RgdGC0LDRkdGC0YHRjyBkcmFmdCDQ
+uCDQvdC1INGB0LvQuNCy0LDQtdGC0YHRjy4KCiMjINCn0LDRgi3QvtC/0YvRgiDQk9Cb0JE6IGRy
+YWZ0LCAwMi4xMC4yMDI2CgrQkdCw0LfQsCBtYWluMDdlOWVjODsg0L7RgtC00LXQu9GM0L3QsNGP
+INCy0LXRgtC60LAgY29kZXgvZ2xiLWF0bGFzLWxlYXJuaW5nLTIwMjYxMDAyLgrQntC00LjQvSBQ
+eXRob24gcmVuZGVyZXIr0LrQvtC90YTQuNCz0YPRgNCw0YbQuNGPIEEvQiwgUkVBRE1FL1NPVVJD
+RS9RQSDQuCDQtNCy0LAg0LrQtdC50YHQsC4KQS9CIHN0cmljdCByZXBsYXkg0YHQvtCy0L/QsNC7
+INGBINC30LDQutGA0LXQv9C70ZHQvdC90YvQvNC4IFNIQTI1Njsg0YLQtdC60YPRidC40LkgbXV0
+YWJsZSBBIHYwMDEg0YDQsNGB0YXQvtC00LjRgtGB0Y8sCtGC0LXQutGD0YnQuNC5IEIgdjAwMiDR
+gdC+0LLQv9Cw0LTQsNC10YIg0L/QviDQv9C40LrRgdC10LvRj9C8INC4INCx0LDQudGC0LDQvC4g
+0J/QtdGA0LLQuNGH0L3Ri9C5IHJldmlldyDQstGL0Y/QstC40LsgZmluZGluZ3MuCtCQ0LrRgtGD
+0LDQu9GM0L3Ri9C5INC/0L7Qu9C90YvQuSDQu9C+0LrQsNC70YzQvdGL0LkgcmVjaGVjazoyMTdw
+YXNzZWQvMXNraXBwZWQvMXdhcm5pbmcscHJvZmlsZXMzLHNjaGVtYXM4LgrQn9GA0LXQtNGL0LTR
+g9GJ0LjQuSByZXN0cmljdGVkIHB5dGVzdCDQtNCw0LsgdGFza2tpbGwgcmV0dXJuY29kZTE7INC/
+0L7RgdC70LXQtNGD0Y7RidC40LUg0L/QvtC70L3Ri9C1IHJlY2hlY2sg0L/RgNC+0YjQu9C4LgrQ
+lNC+0LrQsNC30LDRgtC10LvRjNGB0YLQstCwOiB0ZWNobmljYWxfbGlicmFyeS9nbGJfYXRsYXMv
+UUEuanNvbiDQuApkb2NzL29yZ2FuaXphdGlvbi9DSEFUX0FVRElUXzIwMjYtMTAtMDIuanNvbjsg
+0LrRg9GA0YHQvtGA0Ysg0YPRgdC/0LXRiNC90L7Qs9C+INGA0LDQt9Cx0L7RgNCwINC+0LHQvdC+
+0LLQu9C10L3Riy4KTmF0aXZlIE1BWCByZW1hcCDQv9C+0LrQsCDQvdC1INC/0LXRgNC10L3QtdGB
+0ZHQvTog0L3QvtCy0YvQuSDQv9Cw0YDQsNC80LXRgtGA0LjQt9C+0LLQsNC90L3Ri9C5IGZpbGVJ
+bi9yZWFkYmFjawrQvdC1INC/0YDQvtCy0LXRgNC10L07IFJFQURNRSDQt9Cw0LTQsNGR0YIg0YHQ
+u9C10LTRg9GO0YnQuNC5INGI0LDQsyDQvdCwINC+0YLQtNC10LvRjNC90L7QuSDQutC+0L/QuNC4
+INGB0YbQtdC90YsuCkEgdjAwNCDQsdGL0Lsg0L/QtdGA0LXRgdC+0YXRgNCw0L3RkdC9OiDRgdGC
+0LDRgNGL0LUgSUQxMz0xMTQvSUQ1PTAg0L3QtSDQvtC/0LjRgdGL0LLQsNGO0YIg0YLQtdC60YPR
+idC40LkgdjAwNS4KRkJYL2FscGhhL0NoZWNrZXIg0Lgg0L/QvtC70L3QsNGPINGB0LTQsNGH0LAg
+0L3QtSDQt9Cw0Y/QstC70LXQvdGLOyDQtNCy0LAg0LrQvtGA0L/Rg9GB0LAg4oCUINC+0LTQuNC9
+INC/0YDQvtC10LrRgi4K0JHQvtC70YzRiNC40LUgb3V0cHV0cyDQvtGB0YLQsNGO0YLRgdGPINC7
+0L7QutCw0LvRjNC90YvQvNC4OyBQUjE4INC+0YLQu9C+0LbQtdC9OyDRjdGC0L7RgiBkcmFmdCDQ
+vdC1INGB0LvQuNGCLgrQodC70LXQtNGD0Y7RidC40Lkg0YjQsNCzOiDRgNC10LLRjNGOIGRyYWZ0
+INC4INC+0YLQtNC10LvRjNC90YvQuSBuYXRpdmUgTWF4IHJlbWFwL3JlYWRiYWNrLgoKIyMgUFIy
+OCDRgdC70LjRgiDQsiBtYWluIOKAlCAwMS4xMC4yMDI2CgrQn9GP0YLRjCDQt9Cw0LzQtdGH0LDQ
+vdC40Lkg0LjRgdC/0YDQsNCy0LvQtdC90YssIHJlZ3Jlc3Npb24gZml4dHVyZXMg0Lgg0L3QtdC3
+0LDQstC40YHQuNC80L7QtSDRgNC10LLRjNGOINC30LDQstC10YDRiNC10L3Riy4KRXhhY3QgcmV2
+aWV3ZWQgaGVhZDogNWFlZTQ3NzQ3MmY5MzYzYWVkNzY4MWVjOWZhMmY0ZDlmYzU1YzVkOS4KU3F1
+YXNoIG1lcmdlOiA2NDQ0MWY1YmYxMjMwYjljYjczZDY1NzA4YjRlZTk1Yjk3NGRiYmFiOyBHaXRI
+dWIgbWVyZ2VkPXRydWUK0Lggb3JpZ2luL21haW4g0L/QtdGA0LXRh9C40YLQsNC90YsuIFBSMjgg
+0LfQsNC60YDRi9GCOyBQUjE4INC+0YHRgtCw0ZHRgtGB0Y8g0L7RgtC70L7QttC10L3QvdGL0Lwu
+ClFBOjIxM3Bhc3NlZC8xc2tpcHBlZC8xZXhwZWN0ZWR3YXJuaW5nOyBwcm9maWxlczMvc2NoZW1h
+czhPSzsKU1lOVEggRENDIGRldmVsb3BtZW50PXRydWUvZGVsaXZlcnk9ZmFsc2U7IGFjdHVhbCBn
+b2xkZW4gRkJYNDZvYmplY3RzLzUyMDZ0cmlzCnJlYWRiYWNrT0s7IHN5bnRoZXRpYyBuYXRpdmUg
+cmVuZGVyIHNjb3BlL2RlcGVuZGVuY2llcy9jYW1lcmEvc2NhbGUvc291cmNlU0hBCtC/0YDQvtCy
+0LXRgNC10L3Riy4g0J/QvtC70L3QsNGPINGB0LTQsNGH0LAg0LzQvtC00LXQu9C4INC90LUg0LfQ
+sNGP0LLQu9C10L3QsC4gRXZpZGVuY2U6CmRvY3Mvb3JnYW5pemF0aW9uL2xvY2FsLW9yY2hlc3Ry
+YXRpb24vUFIyOF9GSVhfUUEuanNvbi4KSG9zdGVkIEFjdGlvbnMgcmV2aWV3ZWRoZWFkIHJ1bjIx
+Ny8zNjkyMzY2NzU4NyBzdGFydHVwX2ZhaWx1cmUsam9icz1bXTsK0Y3RgtC+INC+0YLQtNC10LvR
+jNC90L7QtSDQvtCz0YDQsNC90LjRh9C10L3QuNC1IElzc3VlNywg0L3QtSBsb2NhbCB0ZXN0IGZh
+aWx1cmUg0LjQu9C4IENJIHBhc3MuCtCe0YHQvdC+0LLQvdC+0LkgZGlydHkgY2hlY2tvdXQg0L3Q
+tSDQv9C10YDQtdC60LvRjtGH0LDQu9GB0Y87IGFwcHJvdmVkIGlucHV0cy9sZWdhY3lDTEkg0YHQ
+vtGF0YDQsNC90LXQvdGLLgrQodC70LXQtNGD0Y7RidC40Lkg0YjQsNCzOiDQvdC+0LLQsNGPINC3
+0LDQtNCw0YfQsCDQv9C+INGG0LjQutC70YMgQUdFTlRfV09SS0ZMT1c7INC/0LXRgNC10LQg0L/R
+gNC+0LTQvtC70LbQtdC90LjQtdC8INGB0LLQtdGA0LjRgtGMCtC70L7QutCw0LvRjNC90YvQuSDQ
+utC+0LQg0YEgbWFpbi4g0JTQu9GPIElzc3VlNyDQstC+0YHRgdGC0LDQvdC+0LLQuNGC0Ywg0LfQ
+sNC/0YPRgdC6IEdpdEh1YiBBY3Rpb25zLgrQndC40LbQtSDRgdC+0YXRgNCw0L3QtdC90LAg0LjR
+gdGC0L7RgNC40Y8g0L/Rg9Cx0LvQuNC60LDRhtC40L7QvdC90YvRhSDRjdGC0LDQv9C+0LIuCgoj
+IyDQntGA0LrQtdGB0YLRgNCw0YbQuNGPIENvZGV4OiDQvtC/0YPQsdC70LjQutC+0LLQsNC90L4g
+0LIgUFIgIzI4IOKAlCAwMS4xMC4yMDI2CgrQkdCw0LfQsCBtYWluIGZjNDhmMWE7INCy0LXRgtC6
+0LAgY29kZXgvbG9jYWwtb3JjaGVzdHJhdGlvbjsgUFIgaHR0cHM6Ly9naXRodWIuY29tL2FydHNh
+ZnJvL0FHUl9Qcm9qZWN0L3B1bGwvMjgg0L7RgtC60YDRi9GCLCDQvdC1INGB0LvQuNGCLiBJbXBs
+ZW1lbnRhdGlvbiBoZWFkIGRiMzcxZjguIEhvc3RlZCBydW4yMTM6c3RhcnR1cF9mYWlsdXJlINC0
+0L4gam9icyAoSXNzdWU3KTsgbG9jYWxRQSDQvtGC0LTQtdC70YzQvdC+LgpBR0VOVFMg0LfQsNC0
+0LDRkdGCINC+0LHRj9C30LDRgtC10LvRjNC90YvQuSDRhtC40LrQuzog0YbQtdC70Ywg4oaSINC4
+0LfRg9GH0LXQvdC40LUg4oaSINCy0L7Qv9GA0L7RgdGLIOKGkiDRgtGA0LXQsdC+0LLQsNC90LjR
+jyDihpIg0L/Qu9Cw0L0g4oaSCtC40YHQv9C+0LvQvdC10L3QuNC1IOKGkiDQvdC10LfQsNCy0LjR
+gdC40LzQsNGPINC/0YDQvtCy0LXRgNC60LAg4oaSINC40YHQv9GA0LDQstC70LXQvdC40Y8g4oaS
+INC/0LXRgNC10LTQsNGH0LAvU1RBVEUuClRBU0tfQ09OVEVYVC9BR0VOVF9XT1JLRkxPVywgZHQt
+dmVyaWZpZXIsIFJ1blJlY29yZCDQuCDRg9C30LrQuNC1INC70L7QutCw0LvRjNC90YvQtSBydW5u
+ZXJzCtC/0YPQsdC70LjQutGD0Y7RgtGB0Y8g0LLQvNC10YHRgtC1INGBIGNvbXBhY3QgYXVkaXQv
+cGlsb3QvQ0xJIGV2aWRlbmNlLiBDb2RleCDQstC10LTRkdGCINGC0LXQutGD0YnQuNC5INGH0LDR
+gjsKQ3Vyc29yIENMSSDQtNC+0L/QvtC70L3QuNGC0LXQu9GM0L3Ri9C5IHJldmlld2VyLCBhY3R1
+YWwgY3VzdG9tIGR0LXZlcmlmaWVyINC/0L7QtNGC0LLQtdGA0LbQtNGR0L0uCtCg0LXQsNC70YzQ
+vdGL0LkgcGlsb3QtMDA0OiBzYXZlZC1maWxlL1pJUC9CbGVuZGVyL01heCByZXZlcnNlIHRyYW5z
+ZmVyINC4IHJlc3VtZSDQv9GA0L7QstC10YDQtdC90Ys7CmZ1bGwgZGVsaXZlcnkvdmlzdWFsIGdh
+dGVzINC+0YHRgtCw0Y7RgtGB0Y8g0L7RgtC60YDRi9GC0YvQvNC4LCBkZWxpdmVyeT1mYWxzZS4K
+0JTQvtC60YPQvNC10L3RgtGLOiBkb2NzL29yZ2FuaXphdGlvbi9sb2NhbC1vcmNoZXN0cmF0aW9u
+L1JFQURNRS5tZCwgRVhFQ1VUSU9OLm1kLApDVVJTT1JfQ0xJLm1kINC4IGN1cnNvci1jbGktZXZp
+ZGVuY2UuanNvbi4gU291cmNlcy9zY2VuZXMvb3V0cHV0cy90cmFuc2NyaXB0cwrQu9C+0LrQsNC7
+0YzQvdGL0LUg0Lgg0L3QtSDQutC+0L/QuNGA0YPRjtGC0YHRjzsg0YfRg9C20LjQtSDQuNC30LzQ
+tdC90LXQvdC40Y8gY2hlY2tvdXQg0YHQvtGF0YDQsNC90LXQvdGLLiBQUjE4INC90LUg0LfQsNGC
+0YDQvtC90YPRgi4KUUEgcHVibGlzaGluZzogcHl0ZXN0MTc4cGFzc2VkLzFza2lwcGVkLzF3YXJu
+aW5nLHByb2ZpbGVzMy9zY2hlbWFzOE9LOyBTWU5USC0wMDEgZGV2ZWxvcG1lbnQ9dHJ1ZS9kZWxp
+dmVyeT1mYWxzZSxleGl0MC4gUFVCTElDQVRJT04ubWQg0L7Qv9C40YHRi9Cy0LDQtdGCINC60L7Q
+vNCw0L3QtNGLINC4INC+0LPRgNCw0L3QuNGH0LXQvdC40Y8uINCf0YDQvtGI0LvRi9C1INGH0LjR
+gdC70LAg0LIgZXZpZGVuY2UK0L7RgtC90L7RgdGP0YLRgdGPINC6INC40YHRhdC+0LTQvdC+0LzR
+gyDQu9C+0LrQsNC70YzQvdC+0LzRgyBwaWxvdCwg0LAg0L3QtSDRgtC10YHRgtCw0Lwg0L3QvtCy
+0L7Qs9C+IG1haW4uCgojIyBHaXRIdWIgYXVkaXQgcmVtZWRpYXRpb24g4oCUIDAxLjEwLjIwMjYK
+CtCR0LDQt9CwIGBtYWluYCBgYTk5YjhlY2A7INCy0LXRgtC60LAgYGNvZGV4L2dpdGh1Yi1hdWRp
+dC1yZW1lZGlhdGlvbmAuINCQ0YPQtNC40YI6INC/0L7RgdC70LXQtNC90LjQtQoxMDAgQWN0aW9u
+cyBydW5zIOKAlCBgc3RhcnR1cF9mYWlsdXJlYCwgbWFpbiB1bnByb3RlY3RlZCwgR2l0SHViIGhl
+YWx0aDI4JS4K0KfQuNGB0YLRi9C5INC90L7QstGL0LkgdmVudiDQv9GA0L7RiNGR0LsgaW5zdGFs
+bC9waXAgY2hlY2ssIHByb2ZpbGVzMywgc2NoZW1hczgg0LgKcHl0ZXN0MTU2cGFzc2VkLzFza2lw
+cGVkLzFleHBlY3RlZCB3YXJuaW5nOyBwaXAtYXVkaXQgQ1ZFMCwgc2VjcmV0LXBhdHRlcm4gaGl0
+czAuCtCU0L7QsdCw0LLQu9C10L3RiyBUQVNLX0NPTlRFWFQvQUdFTlRfV09SS0ZMT1csIGdvdmVy
+bmFuY2Uvc2VjdXJpdHkvdGVtcGxhdGVzL2RlcGVuZGFib3Q7CndvcmtmbG93INC+0LPRgNCw0L3Q
+uNGH0LXQvSDQuCBwaW4g0L/QviBTSEEsIHN0YWxlIGRvY3MvbGlua3Mg0LjRgdC/0YDQsNCy0LvQ
+tdC90YsuIFBSMTgg0L3QtSDQt9Cw0YLRgNC+0L3Rg9GCLgrQlNCw0LvQtdC1OiDQu9C+0LrQsNC7
+0YzQvdGL0LkgUUEsIFBSL21lcmdlLCDQt9Cw0YLQtdC8IEdpdEh1YiBzZXR0aW5ncy9sYWJlbHMv
+YnJhbmNoIGNsZWFudXAg0LgK0L/RgNC+0LLQtdGA0LrQsCDQvdC+0LLQvtCz0L4gQWN0aW9ucyBy
+dW4uIEJpbGxpbmcvcHJvdGVjdGlvbiDQvNC+0LPRg9GCINC+0YHRgtCw0YLRjNGB0Y8g0LLQvdC1
+0YjQvdC40Lwg0LHQu9C+0LrQtdGA0L7QvC4KCiMjINCS0YHQtSDQs9GA0YPQv9C/0Ysg0YLQtdGF
+0L3QuNGH0LXRgdC60L7QuSDQsdCw0LfRiyDigJQgMDEuMTAuMjAyNgoK0J/RgNC+0LnQtNC10L3R
+izE1INCz0YDRg9C/0L86NjAxINC40YHRhdC+0LTQvdGL0Lkg0L/Rg9GC0YwsINC40Lcg0L3QuNGF
+MTEgV29ya2JlbmNoINGD0YfRgtC10L3RiyDQv9C+INC/0YDQvtGI0LvQvtC80YMKaW52ZW50b3J5
+INC4INC+0YLQu9C+0LbQtdC90YsuINCg0LXQtdGB0YLRgCDQvNCw0YDRiNGA0YPRgtC+0LI6IHRl
+Y2huaWNhbF9saWJyYXJ5L0dST1VQX1JFVklFVy5tZDsKU0hBL9GB0LjQvdGC0LDQutGB0LjRgS/Q
+tNGD0LHQu9C4IOKAlCBTT1VSQ0VfQ09WRVJBR0UuanNvbmwg0LggR1JPVVBfUkVWSUVXLmpzb24u
+IFB5dGhvbiBBU1Qg0LHQtdC3CtC+0YjQuNCx0L7QujsgTUFYU2NyaXB0IHN5bnRheC9uYXRpdmUg
+UUEg0L3QtSDQv9C+0LTRgtCy0LXRgNC20LTQtdC90YsuINCf0Y/RgtGMINCz0YDRg9C/0L8g0L7Q
+tNC40L3QsNC60L7QstGL0YUg0YTQsNC50LvQvtCyLAo1NyDRgdC+0LLQv9Cw0LTQsNGO0YnQuNGF
+INGE0YPQvdC60YbQuNC5INC+0YLQvNC10YfQtdC90Ysg0LTQu9GPIHJldXNlLCBvcmlnaW5hbHMg
+0L3QtSDRg9C00LDQu9GP0Y7RgtGB0Y8uCtCU0L7QsdCw0LLQu9C10L3RiyBtZXNoX2F1ZGl0IChj
+b3JlK0JsZW5kZXIpLCB0ZXh0dXJlX3RpbGVzIChDTEkr0L/QsNC90LXQu9GM0L3Ri9C5IHJlY2lw
+ZStKU09OKTsKbWV0cmljX3BhdHRlcm4g0L/QtdGA0LXQuNGB0L/QvtC70YzQt9GD0LXRgiB0b29s
+cy9mYWNhZGVzX3RleHR1cmVfcGF0dGVybi5weS4KTmF0aXZlIEJsZW5kZXI0LjQ6OSByZWFkLW9u
+bHkgc2F2ZWQtZmlsZSBhdWRpdHMsIFNIQSDQstGF0L7QtNC+0LIg0L3QtdC40LfQvNC10L3QvdGL
+OwoxMSDQmtCf0J8gUE5HIHBpeGVsL2J5dGUtaWRlbnRpY2FsLCBaSVAgcmVhZGJhY2sgZXF1YWwu
+IFVWL2F0bGFzL2JveCBsaWdodHMg4oCUINC/0YDQtdC20L3QuNC1CtC/0YDQvtCy0LXRgNC10L3Q
+vdGL0LUg0Y3RgtCw0L/QvdGL0LUg0L/QsNC60LXRgtGLOyDQvdC10L/RgNC40L3Rj9GC0YvQtSBi
+dWlsZGVycyDQvtGB0YLQsNGO0YLRgdGPINC70L7QutCw0LvRjNC90YvQvNC4INC60LXQudGB0LDQ
+vNC4LgpRQSBQUiBjaGVja291dDoxNTZwYXNzZWQvMXNraXBwZWQvMWV4cGVjdGVkIFpJUCB3YXJu
+aW5nOyBwcm9maWxlczMvc2NoZW1hczhPSzsKU1lOVEgtMDAxIERDQyByZWFkYmFjazpkZXZlbG9w
+bWVudD10cnVlL2RlbGl2ZXJ5PWZhbHNlLiBQWVRIT05QQVRIINGD0LrQsNC30YvQstCw0Lsgc3Jj
+CtGN0YLQvtC5INGA0LDQsdC+0YfQtdC5INC60L7Qv9C40LgsINC90LUgZWRpdGFibGUgaW5zdGFs
+bCDQvtCx0YnQtdCz0L4gY2hlY2tvdXQuIEhvc3RlZCBDSSDQvdC1INC30LDRj9Cy0LvQtdC9LgpN
+YXggQlJJREdFX0RPV047IFBSMTgg0L7RgtC70L7QttC10L0g0Lgg0L3QtSDQt9Cw0YLRgNC+0L3R
+g9GCLiBQUjI1INGB0LvQuNGCINCyIGBtYWluYCDQutCw0LogYDk0NmFjYWRgLgpQUjI2INC/0YDQ
+vtCy0LXRgNC10L0g0LIg0L7RgtC00LXQu9GM0L3QvtC8IGNoZWNrb3V0INC90LAg0LHQsNC30LUg
+YDk0NmFjYWRgOyDRgNC10LDQu9C40LfQsNGG0LjRjyDQuCDQsNC60YLRg9Cw0LvQuNC30LDRhtC4
+0Y8K0YHRgtCw0YLRg9GB0L7QsiDQt9Cw0YTQuNC60YHQuNGA0L7QstCw0L3RiyDQsiBgNGEzNDcx
+MmAuINCS0YHQtTkgbWVzaCByZWFkYmFjayDRgdC+0LLQv9Cw0LvQuCDRgSBldmlkZW5jZTsK0LTQ
+u9GPIGdyb3VuZCBgLmJsZW5kYCDQstGL0LHRgNCw0L0g0LTQvtC60YPQvNC10L3RgtC40YDQvtCy
+0LDQvdC90YvQuSDQvtCx0YrQtdC60YIgYFNNX0dST1VORF9OUE1fR3JvdW5kYC4KVVYgcmVwbGF5
+INC/0L7QstGC0L7RgNGR0L0g0YEgYC0tZGlzYWJsZS1hdXRvZXhlY2A6INCy0YHQtTQg0YHRgtCw
+0LTQuNC4INC4IEZCWCByZWFkYmFjayDQv9GA0L7RiNC70LguCtCR0L7Qu9GM0YjQuNC1IG91dHB1
+dHMg0L3QtSDQt9Cw0LPRgNGD0LbQsNGO0YLRgdGPOyBTSEEt0YDQtdC10YHRgtGAINC90LUg0LHR
+jdC60LDQvy4g0J/QsNC60LXRgiDQv9GD0LHQu9C40LrRg9C10YLRgdGPINGH0LXRgNC10LcKUFIy
+Njsg0LTQsNC70LXQtSDQtNC70Y8gTWF4INCy0L7RgdGB0YLQsNC90L7QstC40YLRjCBsaXZlIGJy
+aWRnZSDQuCDQvtGC0LTQtdC70YzQvdC+INC/0YDQvtCy0LXRgNC40YLRjCDQvdGD0LbQvdGL0Lkg
+0LjQvdGB0YLRgNGD0LzQtdC90YI7CtCy0YLQvtGA0L7QuSDQv9GA0L7QtdC60YIv0L/QvtC70L3Q
+sNGPINCy0LjQt9GD0LDQu9GM0L3QsNGPINC4IENoZWNrZXIg0L/RgNC40ZHQvNC60LAg0L7RgdGC
+0LDRjtGC0YHRjyDQvtGC0LTQtdC70YzQvdGL0LzQuCDQstC+0YDQvtGC0LDQvNC4LgoKW9Cf0YDQ
+tdC00YvQtNGD0YnQuNC1INGB0L7RgdGC0L7Rj9C90LjRjyDQuCDQv9GA0L7QstC10YDQutC4XShk
+b2NzL2hpc3RvcnkvVEVDSE5JQ0FMX0xJQlJBUllfU1RBVEVfQkVGT1JFX0FMTF9HUk9VUFNfMjAy
+Ni0xMC0wMS5tZCkuCtCc0LDRgNGI0YDRg9GCINC+0YHRgtCw0LvRjNC90YvRhSDQvdCw0L/RgNCw
+0LLQu9C10L3QuNC5OiBbUFJPSkVDVF9NQVBdKGRvY3Mvb3JnYW5pemF0aW9uL1BST0pFQ1RfTUFQ
+Lm1kKS4K
+```
+
+Восстановление в новую локальную копию из корня checkout:
+
+```python
+import base64, hashlib, re
+from pathlib import Path
+archive = Path('docs/history/STATE_BEFORE_HYGIENE_2026-10-02.md')
+text = archive.read_text(encoding='utf-8')
+block = re.search(r'<!-- ORIGINAL-STATE-BYTES -->\s*```base64\s*(.*?)```', text, re.S).group(1)
+data = base64.b64decode(''.join(block.split()), validate=True)
+assert hashlib.sha256(data).hexdigest() == '19c53a0d0df6c1b8b2620af40c80af4405729cdaf74cec496b00ee6d09f17f54'
+output = Path('tmp/recovered-state-before-hygiene.md')
+if output.exists():
+    raise FileExistsError(output)
+output.parent.mkdir(parents=True, exist_ok=True)
+output.write_bytes(data)
+assert output.read_bytes() == data
+```
+
+Оригинальные Git LF bytes дополнительно доступны через `git show 7c418f34b74c3669d03ce6a530c366d6894d7a2f:STATE.md`;
+их SHA256 указан выше. Исторический QA, ограничения DCC и принятые версии не
+изменены. Восстановление этого STATE не восстанавливает ignored сцены/outputs.

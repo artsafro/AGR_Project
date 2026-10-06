@@ -1,6 +1,6 @@
 # Указатель контекста — выбрать один маршрут
 
-Для выбора одной независимой задачи и её worktree: [TASK_BOARD](organization/TASK_BOARD.md).
+Для выбора одной независимой задачи и её worktree: [PROJECT_MAP](history/organization/TASK_BOARD_BEFORE_CONSOLIDATION.md).
 Аудит чатов/сессий и retirement: [HYGIENE_AUDIT06.10](organization/HYGIENE_AUDIT_2026-10-06.md).
 
 Общий вход: [`STATE.md`](../STATE.md). Перед сходной задачей найдите принятый

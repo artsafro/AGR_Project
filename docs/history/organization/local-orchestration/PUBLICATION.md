@@ -14,7 +14,7 @@ Synthetic native render: selected cube, hiddenfar mesh и parent Camera;
 Independent matching:300 brute-force cases без расхождений; final code gate
 без blockers. Native render/real FBX проверил ведущий. Новый real Cursor не
 вызывался, legacy004 summaries сохранены. Context7 tools недоступны этой сессии.
-Пользователь явно разрешил исправления и merge. Hosted CI остаётся отдельным
+Пользователь явно разрешил публикацию исправлений в PR; merge отдельно. Hosted CI остаётся отдельным
 статусом; полная сдача модели не заявлена. Следующие сведения исторические.
 
 # Публикация настройки оркестрации — 01.10.2026

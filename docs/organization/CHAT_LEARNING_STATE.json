@@ -2,7 +2,7 @@
   "schema_version": 1,
   "initialized_at_utc": "2026-09-29T15:14:09+00:00",
   "scope": "AGR and related 3D-project Codex chats",
-  "baseline_audit": "CHAT_AUDIT_2026-09-29.json",
+  "baseline_audit": "../history/organization/CHAT_AUDIT_2026-09-29.json",
   "last_seen_updated_at": {
     "01a01922-c8e1-7481-a92c-54d79095e8c8": 1786540495,
     "01a01922-c8e4-7530-bf44-5cf28a659e61": 1786526375,
@@ -56,5 +56,5 @@
   },
   "last_run_at_utc": "2026-10-02T08:17:32Z",
   "last_run_status": "third_scheduled_run_reviewed; PR25-28 already merged; new GLB A/B renderer+scoped cases in separate draft branch; native remap/current A v005 QA open",
-  "last_run_audit": "CHAT_AUDIT_2026-10-02.json"
+  "last_run_audit": "../history/organization/CHAT_AUDIT_2026-10-02.json"
 }

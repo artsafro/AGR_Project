@@ -2,8 +2,8 @@
 
 Восемь направлений помогают выбирать работу. Направление содержит очередь отдельных задач;
 worktree создаётся под одну независимую задачу, когда начинается исполнение. Это не восемь
-запущенных исполнителей. Общий процесс уже задан в [AGENT_WORKFLOW](../AGENT_WORKFLOW.md).
-Текущая версия и аудит: [PROJECT_MAP](PROJECT_MAP.md), [HYGIENE_AUDIT](HYGIENE_AUDIT_2026-10-06.md).
+запущенных исполнителей. Общий процесс уже задан в [AGENT_WORKFLOW](../../AGENT_WORKFLOW.md).
+Текущая версия и аудит: [PROJECT_MAP](../../organization/PROJECT_MAP.md), [HYGIENE_AUDIT](../../organization/HYGIENE_AUDIT_2026-10-06.md).
 
 ## Направления и текущие владельцы
 
@@ -12,7 +12,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: root этого чата.
 - Worktree/ветка: codex/project-hygiene-20261006.
 - Состояние: Текущий этап: аудит → docs → review → local commit.
-- Вход: [docs/organization/TASK_BOARD.md](../../docs/organization/TASK_BOARD.md).
+- Вход: [docs/organization/TASK_BOARD.md](TASK_BOARD_BEFORE_CONSOLIDATION.md).
 - Критерий: Проверенные ссылки, manifest кандидатов, сохранённая история.
 
 ### H02. КПП1 / ВПМ
@@ -28,7 +28,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: владелец не подтверждён; сначала сверить активную задачу.
 - Worktree/ветка: codex/harness-engineering-20261003; inspector codex/run-evidence-library-20261006.
 - Состояние: A/B незавершён; PR31 открыт, merge не разрешён.
-- Вход: [docs/organization/local-orchestration/README.md](../../docs/organization/local-orchestration/README.md).
+- Вход: [docs/organization/local-orchestration/README.md](../../organization/local-orchestration/README.md).
 - Критерий: Версии evidence и восстановление; PR31 отдельно от local monitor.
 
 ### H04. Материалы / UV / фасадные атласы
@@ -36,7 +36,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: не назначен.
 - Worktree/ветка: worktree создаётся при запуске независимой операции.
 - Состояние: Очередь Issue11; A/B accepted snapshots сохранить.
-- Вход: [technical_library/glb_atlas/README.md](../../technical_library/glb_atlas/README.md).
+- Вход: [technical_library/glb_atlas/README.md](../../../technical_library/glb_atlas/README.md).
 - Критерий: Повторный FBX→Max→export/readback и соответствующая visual приёмка.
 
 ### H05. Кейсы и геометрические операции
@@ -44,7 +44,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: не назначен.
 - Worktree/ветка: codex/window-frames-box-lights-case занят до проверки владельца.
 - Состояние: Очередь Issue12: Object013, знаки, оконный атлас.
-- Вход: [docs/case_studies/README.md](../../docs/case_studies/README.md).
+- Вход: [docs/case_studies/README.md](../../case_studies/README.md).
 - Критерий: Один объект/операция на task; отрицательные результаты и limits сохранять.
 
 ### H06. DCC-адаптеры и библиотека инструментов
@@ -52,7 +52,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: не назначен.
 - Worktree/ветка: новый worktree при конкретном переносе.
 - Состояние: Очередь Issue13; только собственный bounded package.
-- Вход: [adapters/README.md](../../adapters/README.md).
+- Вход: [adapters/README.md](../../../adapters/README.md).
 - Критерий: Происхождение, запуск, native capability, версии, QA; без копирования всей папки.
 
 ### H07. Нормы и конфликт PDF/YAML
@@ -60,7 +60,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: не назначен.
 - Worktree/ветка: новый worktree при запуске.
 - Состояние: Очередь Issue14; исходные нормы неизменны.
-- Вход: [standards/](../../standards/).
+- Вход: [standards/](../../../standards).
 - Критерий: Страницы/хеши/применимость и отдельное approved решение.
 
 ### H08. GitHub / CI / сохранность assets
@@ -68,7 +68,7 @@ worktree создаётся под одну независимую задачу,
 - Владелец: не назначен.
 - Worktree/ветка: новый worktree для исправления CI при установленной причине.
 - Состояние: Issues7 и6: hosted jobs и резервирование отдельными операциями.
-- Вход: [docs/organization/GITHUB_CODEX_WORKFLOW.md](../../docs/organization/GITHUB_CODEX_WORKFLOW.md).
+- Вход: [docs/organization/GITHUB_CODEX_WORKFLOW.md](../../organization/GITHUB_CODEX_WORKFLOW.md).
 - Критерий: Фактически выполненные hosted jobs; assets backup только в разрешённое место.
 
 ## Карточка одной задачи
@@ -104,7 +104,7 @@ read coverage, missing gates, retention и предлагаемый action. Од
 похожего названия файла недостаточно. Чаты с неудачами можно архивировать после
 сохранения отрицательного опыта; открытые native gates остаются у job.
 
-Текущие рекомендации: [manifest](CHAT_RETIREMENT_2026-10-06.json).
+Текущие рекомендации: [manifest](CHAT_RETIREMENT_INITIAL_2026-10-06.json).
 Он не разрешает удаление session files. Unknown/active/unique остаются retain.
 Реестр 29.09 и предыдущие аудиты — исторические снимки, их не переписывать.
 PR18/Issue10 остаются отложенными и не входят в исполняемую очередь.

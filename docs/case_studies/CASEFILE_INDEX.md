@@ -5,7 +5,7 @@
 отсутствующий в Git `outputs/` не восстанавливается по этой записи.
 
 Для Ground, MASHI, Facades найдены локальные исходники и определены кандидаты
-на объединение по операциям; [аудит](../organization/TECHNICAL_MIGRATION_AUDIT.md).
+на объединение по операциям; [аудит](../history/organization/TECHNICAL_MIGRATION_AUDIT.md).
 Сотни черновиков не публикуются. Первый компактный пакет библиотеки —
 [UV v006](../../technical_library/UV_V006.md). Приёмка ниже не меняется.
 
