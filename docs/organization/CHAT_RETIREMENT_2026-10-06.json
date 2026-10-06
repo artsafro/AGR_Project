@@ -1208,10 +1208,15 @@
         },
         {
           "path": "C:\\Users\\artsafro\\.codex\\worktrees\\agr-bootstrap-20261002\\.AGR_Project",
-          "exists": true,
+          "exists": false,
           "kind": "worktree_snapshot",
           "head": "026b1474d314098104a5f3b0592d87dbaeda2f81",
-          "retention": "retained-worktrees/glb-bootstrap.bundle; recovery clone verified before checkout retirement"
+          "retention": "retained-worktrees/glb-bootstrap.bundle; recovery clone verified before checkout retirement",
+          "source_checkout_removed": true,
+          "recovery_verified": true,
+          "archive_path": "C:/Users/artsafro/.AGR_Project/tmp/project-hygiene-20261006/retained-worktrees/glb-bootstrap.bundle",
+          "archive_sha256": "f17b35a4a742459574c6d6f791f0330e4f34c853bc79407cb12afbc53f3874b0",
+          "branch": "codex/agr-bootstrap-20261002"
         }
       ],
       "session_file_deletion_allowed": false,
