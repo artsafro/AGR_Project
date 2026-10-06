@@ -1,3 +1,18 @@
+## Библиотека RunRecord: draft, 06.10.2026
+
+Base main7c418f34; branch codex/run-evidence-library-20261006, owner root;
+worktree recovered-technical-library/.AGR_Project. Primary dirty сохранён.
+Перенесены read-only inspector/CLI/skill, tests и compact README/QA.
+Из независимого review исправлен malformed stage.status: JSONexit2 вместо traceback.
+Fresh target QA248passed/1skipped/1expectedwarning,profiles3/schemas8;
+independent26tests и CLI negative подтверждены. Actual saved pilot004 integrity
+intact,delivery=false; native/model/visual acceptance не заявлена.
+Evidence: docs/organization/local-orchestration/RUN_EVIDENCE_QA.json;
+audit/cursors: docs/organization/CHAT_AUDIT_2026-10-06.json.
+PR29/30 уже слиты; PR18 не трогали; новый draft не слит. Outputs/archives/global
+installers/panel остаются вне переноса; незавершённый A/B thread pending.
+Следующий шаг: review этого draft, затем применять inspector к разрешённому job.
+
 ## Контур Codex ↔ GitHub: настройка, 02.10.2026
 
 Опубликован draft PR #30: https://github.com/artsafro/AGR_Project/pull/30,
