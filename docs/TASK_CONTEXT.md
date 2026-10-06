@@ -1,5 +1,8 @@
 # Указатель контекста — выбрать один маршрут
 
+- Продолжение сохранённой попытки: [RunRecord inspector](organization/local-orchestration/RUN_EVIDENCE.md), `tools/harness_status.py` и skill agr-run-evidence. Integrity не означает delivery.
+
+
 Общий вход: [`STATE.md`](../STATE.md). Перед сходной задачей найдите принятый
 опыт в [`case_studies/README.md`](case_studies/README.md). При первом знакомстве
 прочитайте [`DIGITAL_TWIN_AI_PROJECT_BRIEF.md`](DIGITAL_TWIN_AI_PROJECT_BRIEF.md)

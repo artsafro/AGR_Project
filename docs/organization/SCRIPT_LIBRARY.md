@@ -1,5 +1,8 @@
 # Библиотека рабочих сценариев AGR
 
+- [Проверка сохранённого RunRecord](local-orchestration/RUN_EVIDENCE.md): один read-only core+CLI, fingerprint/file evidence и next action; не запускает DCC и не принимает модель.
+
+
 - [ГЛБ A/B, source UV → RGBA](../../technical_library/glb_atlas/README.md):
   один renderer, A/B-конфигурация, fresh PNG replay; отдельные
   [границы A](../case_studies/GLB_A_MAIN_ATLAS.md) /

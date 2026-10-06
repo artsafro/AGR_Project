@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-06",
+  "source_commit": "c4f2f095b1166d9f1d3c78e0de6fa615e7e1c54b",
+  "source_first_stage": "828d8e61b9513df1013f9eb0b961b1f69e520b5e",
+  "base_main": "7c418f34b74c3669d03ce6a530c366d6894d7a2f",
+  "source_scope": "AGR-specific committed files; no personal research payloads or full chats",
+  "source_sha256_git_lf": {
+    "src/dt_ai/core/run_inspection.py": "ca04e2bb2c735335433a5ffe68e415030cd8f6bbfef1a820e52d053719689767",
+    "tools/harness_status.py": "17e6893a0c12a6bb959cb13904b6fdeb3cf3dba3f6cbcb24045415edb5d1337c",
+    "tests/test_run_inspection.py": "aafcb9d22129148fda0f8a3b18b2f913626cb5c49cb6660808cf71e0b65fd215",
+    ".agents/skills/agr-run-evidence/SKILL.md": "33409d2d2666c57b67d44a9e7e91b707fec0ca97a913f200ee1e5c305ab728f3"
+  },
+  "migration": "Original CLI unchanged; inspector adds stage status type guard; tests add two malformed status cases; skill changes one documentation reference",
+  "input_units": "file bytes and SHA256; no geometry conversion",
+  "delivery_passed": false,
+  "qa_status": "LOCAL_VERIFIED; native and delivery outside scope",
+  "remaining_gates": [
+    "Actual DCC/visual/manual acceptance is outside this inspector",
+    "Recorded reported pass needs independent evidence review",
+    "No regular scheduler or model retraining claim"
+  ],
+  "checks": {
+    "pytest": {
+      "passed": 248,
+      "skipped": 1,
+      "expected_warning": 1
+    },
+    "profiles": 3,
+    "schemas": 8,
+    "independent_targeted_tests": 26,
+    "runtime_import": "PYTHONPATH=target/src; target run_inspection.__file__ confirmed",
+    "actual_saved_run": {
+      "run_id": "pilot-20261001-004",
+      "current_inputs": "intact",
+      "evidence_integrity": "intact",
+      "errors_total": 0,
+      "delivery_passed": false,
+      "next_action": "review_scope_and_acceptance_no_delivery_claim"
+    },
+    "privacy": "No full chats, personal paths or assets transferred"
+  },
+  "fix": {
+    "trigger": "Malformed JSON stage.status list or object",
+    "before": "TypeError traceback instead of documented JSON rejection",
+    "after": "JSON Invalid stage state, exit2, delivery=false, files unchanged",
+    "scope": "Validation only; no stage execution or acceptance changes"
+  },
+  "migrated_sha256_lf": {
+    "src/dt_ai/core/run_inspection.py": "7f8e6f7cb613ae826b7fa7ccacc3c25f178af5031e4ea13a720dfd9881c070ef",
+    "tools/harness_status.py": "17e6893a0c12a6bb959cb13904b6fdeb3cf3dba3f6cbcb24045415edb5d1337c",
+    "tests/test_run_inspection.py": "69318022c668b6adce023167803cab3e61bedf67bfcd916d6521afb0e869263b",
+    ".agents/skills/agr-run-evidence/SKILL.md": "391599a1ff4df759c5cd6f472d3873c048849e9f188006dacb657fe42385f419"
+  },
+  "commands": [
+    "PYTHONPATH=<target>/src PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider --basetemp <fresh-task-temp>",
+    "dt profiles check",
+    "dt schemas --check",
+    "python tools/harness_status.py --run <saved-pilot-004> --manifest <attempt-001/input-manifest.json>"
+  ],
+  "verification_limits": "Synthetic inspector tests plus current saved-file integrity; no new DCC export, live PID, acceptance, hosted CI or unattended scheduler test"
+}
