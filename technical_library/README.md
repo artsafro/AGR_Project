@@ -57,5 +57,19 @@
 Главный критерий — одна реализация операции и воспроизводимый результат.
 Нельзя объявлять общий Skill по одному объекту; переносимость проверяется отдельно.
 
-[Ретроспективный аудит и группировка](../docs/organization/TECHNICAL_MIGRATION_AUDIT.md).
+[Ретроспективный аудит и группировка](../docs/history/organization/TECHNICAL_MIGRATION_AUDIT.md).
 Большие outputs и модели не опубликованы; hash-манифест не является бэкапом.
+
+
+## Существующие точки входа
+
+- Read-only гигиена: `tools/project_hygiene.py`; цикл — [GitHub workflow](../docs/organization/GITHUB_CODEX_WORKFLOW.md).
+- Connect: `tools/quad_connect.py`, `src/dt_ai/geometry/connect.py`; Exterior: `tools/run_exterior.py`; Shell: `tools/run_body_shell.py`. Читать AdapterReport и ограничения конкретного пакета.
+- Фасадный рисунок: `tools/facades_texture_pattern.py`; геометрия/ID/UV и native roundtrip проверяются отдельно.
+- Box lights: [job README](../jobs/WINDOW-FRAMES/README.md); UV/экспорт/Checker не следуют из принятия размещения.
+
+## Пополнение библиотеки
+
+Сохранять фактически использованный собственный код, зависимости, параметры и запуск, малые QA-отчёты, единицы и предпосылки математики, ограничения и отрицательные примеры. Код одного объекта остаётся сценарием кейса; общий адаптер требует проверки переноса. Outputs/полные чаты/секреты и промежуточные варианты остаются вне обычного Git.
+
+Прежний [каталог операций](../docs/history/organization/SCRIPT_LIBRARY_BEFORE_CONSOLIDATION.md) сохранён как provenance; рабочий каталог теперь этот README.

@@ -39,7 +39,7 @@ definition был заменён одним плейном по его полн�
 
 Источник: чат «Спланировать моделирование башенок Н»,
 ID `01a0ebe4-71b4-70c3-90dc-03fa3cc956ff`, итоговая оценка 29.09.2026;
-см. [реестр чатов](../organization/CHAT_REGISTER.md).
+см. [реестр чатов](../history/organization/CHAT_REGISTER.md).
 Подробная локальная запись: `docs/case_studies/GLB_AB_REFERENCE_AND_PLANES.md`,
 раздел «Итоговая оценка пользователя, 29.09.2026 — этап остановлен»;
 отчёты `jobs/GLB-NPM/TOWER_STAGE_V022.md` и `TOWER_STAGE_V023.md`.

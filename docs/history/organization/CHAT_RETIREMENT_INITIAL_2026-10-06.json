@@ -1,0 +1,2048 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "scope": "43 historical registered AGR/related 3D chats plus 11 recent human chats; not all account conversations",
+  "method": "Read-only native list, 8 latest native thread reads, scoped SQLite mode=ro and maximum 256KiB indexed JSONL tails. No chat or session mutation. Root fully reread UV chat3 turns.",
+  "counts": {
+    "UNKNOWN": 30,
+    "EXTRACTION_PENDING": 18,
+    "ARCHIVE_CANDIDATE": 3,
+    "KEEP": 3
+  },
+  "internal_records": {
+    "guardian_review": 136,
+    "subagent": 21
+  },
+  "limits": [
+    "Only first 50 recent native unarchived entries listed; indexed primary union supplies older registry coverage.",
+    "Archived native first page returned empty with no cursor.",
+    "Missing indexed rollouts are not proof of deleted/empty chats; native imported history can remain accessible.",
+    "Artifacts verified by file existence and small-file SHA256; no DCC re-open or delivery tests.",
+    "No deletion candidates: ARCHIVE_CANDIDATE means reversible UI archive only after final manifest review.",
+    "All primary chats covered by metadata; source reading remains bounded latest-turn/tail coverage, not exhaustive extraction."
+  ],
+  "deletion_allowed": false,
+  "chat_archive_executed": false,
+  "sessions_deleted": false,
+  "chats": [
+    {
+      "id": "01a01922-c8e1-7481-a92c-54d79095e8c8",
+      "title": "сохрани сценц",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1786540495,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c8e4-7530-bf44-5cf28a659e61",
+      "title": "Проанадизируй сцену и материалы на обзектах",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1786526375,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c8eb-7262-8f84-276da496bc05",
+      "title": "такой вопрос есть ли тулзы или иснтрументы которые тебе можно поставить чтобы ты лучще работал с изображениями и атла...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1787080989,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c8ea-7a00-b72a-11a6ac54d10c",
+      "title": "проверь подклбчение к максу",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1786443128,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 1,
+        "native_has_more": true,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c900-7e71-9c10-527e04bcdb38",
+      "title": "Слушай, я хочу у меня коллега установила курсор, и я хочу ей отдать один какой-то файлик, который ее курсор проанализ...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1790694132,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c8f4-7e81-8dee-c53cc42c5c12",
+      "title": "C:\\Users\\artsafro\\Desktop\\!3D viz\\NTR\\22_COD\\maps мне наадо в жтой папке сделать все текстыр поп порядку и под именем...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1786364820,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c914-7a33-8d77-3f5f08abec50",
+      "title": "Посмотри сцену тридмакс и проанализируй схему слоев и структуру сцены, проанализируй, дай мне вывод для чата GPT, что...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1785393969,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01922-c8e8-79d0-97c2-99f361b38c0d",
+      "title": "напиши скрипт который будет ставить free camera в орто режиме по выделеному полигону чтобы четко смотрела камера по нормали полигона",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1787129895,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 1,
+        "native_has_more": true,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\zavod\\facade-atlas\\maxscript\\apply_atlas_uv.ms",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "id": "01a01953-d647-7070-bab6-b20ff61318b3",
+      "title": "Создать среду 3D Max MCP",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1787133397,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\zavod\\codex-3ds-max",
+          "exists": false
+        },
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\zavod\\codex-3ds-max\\AGENTS.md",
+          "exists": false
+        },
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\zavod\\codex-3ds-max\\docs\\MCP.md",
+          "exists": false
+        },
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\zavod\\codex-3ds-max\\mcp\\mcp_config.ini.example",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "id": "01a01984-9d2a-7f80-870e-0cae546d6010",
+      "title": "Изучить проект",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1787136409,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.codex/codex-3ds-max/scripts/test-mcp-server.py",
+          "exists": true,
+          "bytes": 1432,
+          "sha256": "13febd04b28d4755d6c05a2f04c93279db77a326b877a8fd03b4d326e58f7af1"
+        },
+        {
+          "path": "C:/Users/artsafro/.codex/codex-3ds-max/scripts/test-mcp-bridge.py",
+          "exists": true,
+          "bytes": 2572,
+          "sha256": "aa1090f05a7471f2d1b582b9db6e2af9d2d2e3f111279235c8eddcf9522890ba"
+        }
+      ]
+    },
+    {
+      "id": "01a01e20-da35-7732-aef6-933da779aed1",
+      "title": "Найди отличия",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1787212635,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a01f3b-a686-7640-bb03-c40c373d8dbe",
+      "title": "Заменить альфа-канал на фон",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1787230606,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\!3D viz\\NTR\\23_SEVERNIY_LEPESTOK\\rndrs",
+          "exists": true
+        },
+        {
+          "path": "C:\\Users\\artsafro\\Desktop\\!3D viz\\NTR\\23_SEVERNIY_LEPESTOK\\rndrs_alpha_backup_20260820_145532",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "id": "01a02db7-57a4-7230-8a88-2b3a1b707e74",
+      "title": "Разархивировать все архивы",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1787474109,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a02f8a-b12d-78a0-98e5-2e373889c6c5",
+      "title": "Импортировать FBX по слоям",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1787504733,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a057a7-ef5c-7de0-b14d-dd50bfdfaa68",
+      "title": "[Image]",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1788013667,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a057a7-ef60-7e70-890f-085c65a711ca",
+      "title": "Привет, э, задача такая. Сейчас в этой папке уже очень много скриптов для 3D Max, очень много каких-то документов и т...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1788080455,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a057a7-ef5a-70d3-ad7b-39be3becd420",
+      "title": "C:\\Users\\artsafro\\Desktop\\!3D viz\\!А101\\57_4BN\\var1 подгрузи в сцену макса все fbx по пути C:\\Users\\artsafro\\Desktop\\...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1787921659,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a057a7-ef48-7d93-8052-c4b5745d0e14",
+      "title": "проанализируй сцену в 3д макс, количество окс и какие материалы и какие ноды куда подключены",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1788078150,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a057a7-ef5e-7f12-96d3-60b5d59ec7fd",
+      "title": "\"C:\\Users\\artsafro\\Desktop\\zavod\\MayaCollisionSplitter_FREE\"  изучи скрипт для маи и анриала, для макса сможем тоже с...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1787916306,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a06899-b015-7262-8d64-28a813742f79",
+      "title": "а где у меня тут скрипт который ренедрит фасады и ставит камеры?",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod\\scripts",
+      "updated_at": 1788334058,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a06899-b01d-7cd2-925a-c280fe77240f",
+      "title": "[Image]",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod\\scripts",
+      "updated_at": 1788460939,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a06899-b024-7552-965f-42fe7579a74d",
+      "title": "[Image]",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod\\scripts",
+      "updated_at": 1788460820,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a06899-fc54-7fe2-a78d-26d43858e0c5",
+      "title": "Очистить сетку вокруг проёмов",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1788463244,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.codex/codex-3ds-max/projects/border-loop-cleaner/src/tool.ms",
+          "exists": false
+        },
+        {
+          "path": "C:/Users/artsafro/AppData/Local/Temp/3dsmax_viewport.png",
+          "exists": true,
+          "bytes": 959334,
+          "sha256": "4a8e281af60d68bba026e9e36445f1b1e7df9b3f2ef4998c7d6b95adf50ba842"
+        },
+        {
+          "path": "C:/Users/artsafro/.codex/codex-3ds-max/projects/border-loop-cleaner/README.md",
+          "exists": true,
+          "bytes": 2994,
+          "sha256": "beb1ca77dd2b93cd8a7cd1c241bb6ce4c022c0b808036536d535586a6adcc371"
+        }
+      ]
+    },
+    {
+      "id": "01a0704d-11f9-7180-9cd1-b24c19ffc6d7",
+      "title": "Настроить Blender пайплайн",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Documents\\ChatGPT\\Blender",
+      "updated_at": 1790247396,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/Documents/ChatGPT/Blender/AGENTS.md",
+          "exists": true,
+          "bytes": 11633,
+          "sha256": "d522c26ba87a1e3db55a82bf076f9c208de5d0f75b7edda2a99570ca98d26547"
+        }
+      ]
+    },
+    {
+      "id": "01a07176-c792-77b3-b4d3-e8828ea8af23",
+      "title": "Настроить pivot кондиционеров",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.codex\\codex-3ds-max",
+      "updated_at": 1788611463,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.codex/codex-3ds-max/projects/ac-pivot-align/src/tool.ms",
+          "exists": false
+        }
+      ]
+    },
+    {
+      "id": "01a08009-dc2e-7390-a4dc-25636b1c5f30",
+      "title": "Как подключены текстуры к ... материалам, название ноту текстуров, название материалов, название объектов и объекты, ...",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1788854503,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a08009-dc32-7631-90d6-e7ac1c8410d3",
+      "title": "[Image]",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1788813359,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a08009-dc37-7843-869d-8ed1426033b4",
+      "title": "создай новую папку для работы с автокад mcp и настрой подключение к чертежу",
+      "title_source": "local_index",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Desktop\\zavod",
+      "updated_at": 1788779240,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a0b06f-8dad-7260-8d16-78414060b95b",
+      "title": "Исследовать FacadePipeline",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.Facades_Modelling",
+      "updated_at": 1790609505,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.agents/skills/maxscript/SKILL.md",
+          "exists": true,
+          "bytes": 30857,
+          "sha256": "36bd2a12a428cb13dc38b1d6183aac710f6c35cf629e3defc52a550b3d7e18b7"
+        }
+      ]
+    },
+    {
+      "id": "01a0c037-b514-7292-bab9-5d25fc9713c6",
+      "title": "Создать атлас типов окон 2K",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.window_facades",
+      "updated_at": 1790793878,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.window_facades/.cursor/rules/window-atlas.mdc",
+          "exists": true,
+          "bytes": 4212,
+          "sha256": "28387f56807d83e38fbe16c25238f78ca6e8d4ca8842576ad0f46287a37b35f7"
+        },
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/new_building_2026-09-23/new_building_windows_ral_atlas_2048_v8.png",
+          "exists": true,
+          "bytes": 40761,
+          "sha256": "889c1fc54ca543ce6fa541f52f0e1d7081e04e0d1ef2f4d84bd7c94faee848ca"
+        },
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/new_building_2026-09-23/new_building_window_uv_manifest_v8.csv",
+          "exists": true,
+          "bytes": 1454,
+          "sha256": "bd12b25f7cf1b06e199fe50c932e2742211551fc49594973f4564ca7f0ec6435"
+        }
+      ]
+    },
+    {
+      "id": "01a0c82b-fa20-71c2-8ff4-6f8552c09696",
+      "title": "Обвести рамы плейном",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Documents\\ChatGPT\\Blender",
+      "updated_at": 1790247398,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/Documents/ChatGPT/Blender/projects/bear_2500/scenes/bear_2500_v002.blend",
+          "exists": true,
+          "bytes": 609573,
+          "sha256": "e8e1198c70f06ca1db8bc5cd75f223184ec4c465a19f83383890a6eacb7ae6ed"
+        },
+        {
+          "path": "C:/Users/artsafro/Documents/ChatGPT/Blender/projects/bear_2500/renders/three_quarter.png",
+          "exists": true,
+          "bytes": 922065,
+          "sha256": "80db3684b13897f84c12e0ccc03195af0efbfdd558b5d14b93a5b716633a8e0f"
+        },
+        {
+          "path": "C:/Users/artsafro/Documents/ChatGPT/Blender/projects/frames_contours/scenes/frames_planes_v001.blend",
+          "exists": true,
+          "bytes": 3371897,
+          "sha256": "befd1b53518356160afae6fbc7025c7e2cf1fa7442482f96896ef1499af747fd"
+        }
+      ]
+    },
+    {
+      "id": "01a0d7bd-48d4-7be1-8ea6-67c7cbd2ded7",
+      "title": "Подготовить атлас табличек",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.window_facades",
+      "updated_at": 1790951511,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/sign_planes/Untitled1223123_sign_planes_uv_v2.blend",
+          "exists": true,
+          "bytes": 2531314,
+          "sha256": "509f3522a7449c022f158b9fdd529deb0658ee4921bf3deea81c6f4a6edbb786"
+        },
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/sign_planes/door_signs_atlas_uv_v2.png",
+          "exists": true,
+          "bytes": 141742,
+          "sha256": "cfc275d6331ae8b4255cdaa02ccc17ae6658c14f379b3dde4292acdfb0391751"
+        },
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/sign_planes/uv_actual_blender_render.png",
+          "exists": true,
+          "bytes": 2951719,
+          "sha256": "97b9a0928b7cc6f8cdc233122a0f5cb7720f0a7742882157efaa55d4d85f776a"
+        },
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/sign_planes/Untitled1223123_sign_planes_v1.blend",
+          "exists": true,
+          "bytes": 2254076,
+          "sha256": "20712bd6ea4dd2ca7eee17606e868278ca9cabc9f5e7d4b8b365614695a948f8"
+        }
+      ]
+    },
+    {
+      "id": "01a0d907-b0c4-7e82-b0f1-23c8a5a10d4b",
+      "title": "Уложить UV фасадов в атлас",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.window_facades",
+      "updated_at": 1790793881,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/facade_atlas_ids_uv_v003.max",
+          "exists": true,
+          "bytes": 1998848,
+          "sha256": "24e2854b368941af99fee3fac274415b1eba05c67b85a9452130bcb9ae74b54f"
+        },
+        {
+          "path": "C:/Users/artsafro/.window_facades/output/facade_atlas_ids_uv_v003.fbx",
+          "exists": true,
+          "bytes": 1483996,
+          "sha256": "d263e35e605313b5f47bfdb8bb86bfc5d4dbc7b216ac8fa7c164e97df0fc97d6"
+        }
+      ]
+    },
+    {
+      "id": "01a0dd01-3411-70a1-bc4f-2e2d0eac1a50",
+      "title": "Устранить пересечения коллизий",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\Documents\\ChatGPT\\Blender",
+      "updated_at": 1790425184,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/Documents/ChatGPT/Blender/projects/ucx_test/udim8_v001/ucx_udim8_subdivided.blend",
+          "exists": true,
+          "bytes": 46235957,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        }
+      ]
+    },
+    {
+      "id": "01a0ddd1-4d2c-79e3-84a7-b8048f0cb972",
+      "title": "Изучи папки проекта",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791290975,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/max-v005/facades_v005.max",
+          "exists": true,
+          "bytes": 4669440,
+          "sha256": "ed01ee70c1556192fb2b326b0546a7945d6adaa450ae22bc1374c1a282603f25"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/max-v005/facades_v005_Max_with_textures.zip",
+          "exists": true,
+          "bytes": 6539954,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/metric-v005/facades_metric_v005.blend",
+          "exists": true,
+          "bytes": 18573849,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/metric-v005/Facades_3_Atlases_5_Textures_2K_v005.zip",
+          "exists": true,
+          "bytes": 1239545,
+          "sha256": "a0431a9f75d65f05cde8d9b7d76251651eb1a259b1fe87d9736917909c214dc3"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/metric-v005/Object012_brick_detail.png",
+          "exists": true,
+          "bytes": 1438701,
+          "sha256": "6a3d96633e200a14f700db0fd3ced7ff290da9edf00072a205c03220b82f4bac"
+        }
+      ]
+    },
+    {
+      "id": "01a0e218-32e0-76c3-ba8f-48b0a68300d4",
+      "title": "Обновить правила ВПМ и НПМ",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790793884,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/docs/research/max-workbench/EXPANSION_2026-09-27.md",
+          "exists": true,
+          "bytes": 18401,
+          "sha256": "3aa87d959ddba8d26358eabe76c9a868db65c930f04e5c096c39a3510edc6ed5"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/max/AGR_Workbench_v0.5.0.zip",
+          "exists": true,
+          "bytes": 35880,
+          "sha256": "d50d03ed992404b279a88f3f57a19f53590dd0a281c369323da3539d8c273019"
+        }
+      ]
+    },
+    {
+      "id": "01a0e311-3cdc-7603-8c56-6991321d1e06",
+      "title": "Оцени готовность LP модели",
+      "title_source": "native_read",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790582209,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 1,
+        "native_has_more": true,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MASHI-LP/outputs/master-v001/MASHI-comparison-trial-v002.blend",
+          "exists": true,
+          "bytes": 61961806,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MASHI-LP/MASTER_TRIAL_REPORT.md",
+          "exists": true,
+          "bytes": 8488,
+          "sha256": "99e8af0881d8590d2a29f6953e42aa66cd05a354d0fe556950cabb0372eec7e3"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MASHI-LP/outputs/master-v001/LP-and-MASTER.png",
+          "exists": true,
+          "bytes": 1266638,
+          "sha256": "fadf1cb3f03f042dd55a2715cf031c53d24c7c37df3f03af85c38889601e3dc0"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MASHI-LP/outputs/model-v002/LP_working-v002.blend",
+          "exists": true,
+          "bytes": 57017711,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MASHI-LP/MODEL_V002_REPORT.md",
+          "exists": true,
+          "bytes": 8003,
+          "sha256": "217d6e76ef5adc95525091e894abb7df884d2be36f032fb8ceeeb77f8ebcdb31"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/docs/case_studies/MASHI_LP_SCENE_AUDIT.md",
+          "exists": true,
+          "bytes": 4280,
+          "sha256": "7d636eeb33041cf78e1b4422b205a263de019bf9dbc9354229453d96dca85b18"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MASHI-LP/outputs/model-v002/LP-new-wire.png",
+          "exists": true,
+          "bytes": 1176338,
+          "sha256": "455826180a2d455bcb93d953460b4431800169cb9a645a373e9210659b56ae9c"
+        }
+      ]
+    },
+    {
+      "id": "01a0e378-3f54-71e0-ab85-bada998da713",
+      "title": "Смоделируй в Blender",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790854662,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-ATLAS/outputs/v002/windows_atlas.png",
+          "exists": true,
+          "bytes": 830972,
+          "sha256": "6b087dbe7a5c232d2541defd535ddc96f543e69898c54400ab3ba03171fc381c"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-ATLAS/outputs/v002/PROMPT.txt",
+          "exists": true,
+          "bytes": 1890,
+          "sha256": "ecc02bc5cf40b26a3a2e4a8cdafafba4810c751a44b1542a8895b35b64148282"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-ATLAS/outputs/v001/windows_atlas.png",
+          "exists": true,
+          "bytes": 859919,
+          "sha256": "116b0923e9296bfbb509424a36c2ca102476f79953f708bd1af90de815c03ef3"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-ATLAS/PROMPT_v002.txt",
+          "exists": true,
+          "bytes": 10,
+          "sha256": "770c2d18aa4ec3159f46da461ef452972949942ff4f6a9771044485faa146398"
+        }
+      ]
+    },
+    {
+      "id": "01a0e3ad-2c25-7ac3-a07d-fc1a625ff687",
+      "title": "Спроецировать ground на рельеф",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790769888,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v008/GROUND_NPM_QUADS_v008.fbx",
+          "exists": true,
+          "bytes": 2275740,
+          "sha256": "120b897fb56385d7970197513e92eafcd88a71d155f0eaf478f6149fd205752e"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v008/GROUND_NPM_v008.blend",
+          "exists": true,
+          "bytes": 10335664,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v008/wire_detail.png",
+          "exists": true,
+          "bytes": 2099467,
+          "sha256": "31d17f2125200a6815a28153de9b50ffc06534f44c3bee4914a24ff89f7e0afe"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/NPM_RESULT.md",
+          "exists": true,
+          "bytes": 6509,
+          "sha256": "6c2e00d408c117a348acbe93f3685900f9be850dd828694f4669f9cfe777851b"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v008/detail.png",
+          "exists": true,
+          "bytes": 1550246,
+          "sha256": "a4b849db5981d40d64a810d3bb7d7d5f5e2adc09a1073482ebf74fd39bb868ed"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v003/GROUND_projected_v003.fbx",
+          "exists": true,
+          "bytes": 22315932,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v003/GROUND_projected_v003.blend",
+          "exists": true,
+          "bytes": 82572506,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/RESULT.md",
+          "exists": true,
+          "bytes": 7231,
+          "sha256": "81a6662789d7a4d48032edb861cb46ceab644212775b573b92a86ab026e3d6ed"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GROUND-PROJECTION/outputs/v003/overview.png",
+          "exists": true,
+          "bytes": 1256317,
+          "sha256": "91339b1e7e347c6abc64e843fd7bbcfbe81073be42d41c8001dfd2ff36520fb1"
+        }
+      ]
+    },
+    {
+      "id": "01a0e70a-4dd2-7343-8269-c301d2c44403",
+      "title": "Найти лимит объектов коллизий",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790582760,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a0e971-82fa-73c0-9845-eefe8ee09648",
+      "title": "Оптимизировать полигоны меша",
+      "title_source": "prior_native_audit",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790623974,
+      "recommendation": "UNKNOWN",
+      "reason": "Indexed rollout file is absent. Prior summary remains available, but current source-reading and extraction coverage are unverified.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": false,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MESH-OPT-AUDIT/outputs/Object013_optimized_v001.blend",
+          "exists": true,
+          "bytes": 996427,
+          "sha256": "f1239f0bef2704327dcab09f6f0b002cfc5ff97dc3b80fb30c6d99ab96d679c2"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MESH-OPT-AUDIT/outputs/Object013_source.blend",
+          "exists": true,
+          "bytes": 1265525,
+          "sha256": "fef54da31011e6fc13f653eb96f953c1b45777c55a959f02ed37d1ed2838fa87"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MESH-OPT-AUDIT/outputs/optimized-detail.png",
+          "exists": true,
+          "bytes": 277898,
+          "sha256": "c0cfdc3c92c052f70cd04f7539bfb52656f51b3820e063467451218f0bfa1cc7"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/MESH-OPT-AUDIT/AUDIT.md",
+          "exists": true,
+          "bytes": 7389,
+          "sha256": "9aed304bd6caca95a6f19190209980965694215610a18ade817a1116fb616a4c"
+        }
+      ]
+    },
+    {
+      "id": "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff",
+      "title": "Спланировать моделирование башенок Н",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790940690,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/docs/case_studies/GLB_A_MAIN_ATLAS.md",
+          "exists": true,
+          "bytes": 9608,
+          "sha256": "816fd8e9dcb22d3d3c21968c5811833a91a0a7b74ac7c449f56aef1be1521be5"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/A-MAIN-ATLAS/outputs/v005/GLB_A_B_Current_2026-10-01_v005.max",
+          "exists": true,
+          "bytes": 92979200,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GLB-NPM/outputs/tower-k1-v011/GLB_K1_assembled_v023.blend",
+          "exists": true,
+          "bytes": 18248111,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GLB-NPM/outputs/tower-k1-v011/top-upper-window-oblique-v023.png",
+          "exists": true,
+          "bytes": 1063797,
+          "sha256": "5c38f8aed80a0b933176f0f4655bfcf618985cbb80c705523c187a84d517bf7a"
+        }
+      ]
+    },
+    {
+      "id": "01a0ec14-b5fa-7810-abe3-e87a72701103",
+      "title": "Найти и смоделировать оконные типы",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790940689,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": "Latest turns and targeted older turns; not full transcript"
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/Desktop/!3D viz/!Weltbau/5_chertanovo/впм/maps_kpp",
+          "exists": true
+        },
+        {
+          "path": "C:/Users/artsafro/Desktop/!3D viz/!Weltbau/5_chertanovo/впм/maps_kpp/_info/preview.png",
+          "exists": false
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/KPP_UDIM_maps_v001.zip",
+          "exists": true,
+          "bytes": 5071354,
+          "sha256": "d6a6bdbf8447aed1f8e891fa42743c14a5b5752d8685aee2854d181c02633b13"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/SOSH1150_Body_Openings_Replaced_v005.blend",
+          "exists": true,
+          "bytes": 142200857,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/body-review-map.png",
+          "exists": true,
+          "bytes": 3008099,
+          "sha256": "a66fd05422608d68ea65561eb9c225d099545229eaf418ad54288f02f496f74a"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/body-frames-close.png",
+          "exists": true,
+          "bytes": 3482413,
+          "sha256": "660f1f47647ce351b1dcb660b1214022a8cf6853112cb44751a93a6cfb608abd"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/body-opening-map.json",
+          "exists": true,
+          "bytes": 266363,
+          "sha256": "b7195ccb04da30ecf081b14df954e7ed1ae5b3807b0c0e0046214e196f4f739b"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/SOSH1150_FBX_Openings_Placed_v004.blend",
+          "exists": true,
+          "bytes": 142236927,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/elevation-short-side.png",
+          "exists": true,
+          "bytes": 2841372,
+          "sha256": "49768a8ffd29a6860c125308e5d3bd9dfe7f9d11fdb5132c1ec291ce73d4bfef"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/placement-map.json",
+          "exists": true,
+          "bytes": 723548,
+          "sha256": "0d9a0fc5a8cb58b95accede4a6a27933d48a3bca3e1baf0d3c42560c0be6b18d"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/README.md",
+          "exists": true,
+          "bytes": 3167,
+          "sha256": "c0d794c03df8428088a5f9f6d4e78537d210d37b505a6919bf680f79f0707d47"
+        }
+      ]
+    },
+    {
+      "id": "01a0edad-00b6-7712-acac-7ff555a2d751",
+      "title": "Организовать чаты и GitHub",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791315256,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a0edee-a911-7162-abf8-024af82794db",
+      "title": "Разобрать PR и организовать GitHub",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790971259,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/AGENTS.md",
+          "exists": true,
+          "bytes": 10726,
+          "sha256": "cfcf62df4069dc4c0307795e5cfe12cc4ad3f29af37069966bf505ad9d3c825e"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/docs/AGENT_WORKFLOW.md",
+          "exists": true,
+          "bytes": 14277,
+          "sha256": "840b8e26dc17f530e6caa3af71ee82a3e757473812e7997c36f49673e0db3854"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/.cursor/rules/worktree-policy.mdc",
+          "exists": true,
+          "bytes": 871,
+          "sha256": "a13bd11ec2fa6fa9c31b2854bd6987e36a2539938cd36a921aa318aee66324f2"
+        }
+      ]
+    },
+    {
+      "id": "01a0f241-ec48-76c2-91a0-7cf37b529e1b",
+      "title": "Упростить сетку оконных рам",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790858108,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-FRAMES/outputs/window_frames_quad_v002.blend",
+          "exists": true,
+          "bytes": 4036427,
+          "sha256": "80e2d6afe7e8838d2828a2abf04b4568c8557a4b734ad5d57e19bb9e966e7c2c"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-FRAMES/outputs/window_frames_quad_v002_readback.json",
+          "exists": true,
+          "bytes": 453,
+          "sha256": "b3813bb282d6959549836a81198e990acff06e19f624f20f7d2179334446a6cf"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/WINDOW-FRAMES/outputs/window_frames_quad_v002_preview.png",
+          "exists": true,
+          "bytes": 1025413,
+          "sha256": "1488220780742548691f2beb9d153647483fbdc77313ffae582ad299ae4dabd9"
+        }
+      ]
+    },
+    {
+      "id": "01a0f403-0b4f-7ab1-b544-8a887ba49039",
+      "title": "Создать box light на рамках",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790951215,
+      "recommendation": "ARCHIVE_CANDIDATE",
+      "reason": "Native read covers both task and acceptance turns with no older cursor. Accepted v002 case/state/QA/source/output/scripts preserved and accepted scene hash matches. Complete stage history retained; future integration has separate scope.",
+      "confidence": "high",
+      "missing_gates": [
+        "Full NPM/VPM delivery, UV/FBX/Checker outside accepted box-light stage",
+        "Ignored source/output scenes retained locally; chat archive must not remove them"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 2,
+        "native_has_more": false,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "review_reversible_archive",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\WINDOW_FRAMES_BOX_LIGHTS.md",
+          "exists": true,
+          "bytes": 9868,
+          "sha256": "39ab8a44deb521134a9d402b734f1309f31badfe040b4a9555a3dbbf1093112f"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\BOX_LIGHTS_STATE.md",
+          "exists": true,
+          "bytes": 4006,
+          "sha256": "7b5aa9ad3836ada0ae298d50930a06b084b7a90d81dc3f807195acbe2fc0d7bc"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\README.md",
+          "exists": true,
+          "bytes": 4604,
+          "sha256": "73ce078a06e2a50b8c49e6ef6f48d8a15bc3a69839f879b1ba59f6af82dc3390"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\frames_box_lights_live_v002.blend",
+          "exists": true,
+          "bytes": 1381201,
+          "sha256": "ac464bb8fb903976a8aefcc89c2281978d5f1391f028e479aec5395863b7d15a",
+          "expected_sha256": "ac464bb8fb903976a8aefcc89c2281978d5f1391f028e479aec5395863b7d15a",
+          "hash_matches": true
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\box_lights_v002_readback.json",
+          "exists": true,
+          "bytes": 38441,
+          "sha256": "9a96e0f1b12bd5d1c43f6fd61677623ca66cc57e1983b53fc883424f246cea52"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\box_lights_v002_qa.json",
+          "exists": true,
+          "bytes": 38254,
+          "sha256": "c4fda76a883bedbc7a835fa0cafb706078b7fbadec4aa7a2e1200619f88edd8b"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\box_light_source_v001.blend",
+          "exists": true,
+          "bytes": 1270171,
+          "sha256": "03af771f4a8b99814721a026d37ff404d7732430f29a88069cd25f7868f4a5fc"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\inspect_lights_live.py",
+          "exists": true,
+          "bytes": 1025,
+          "sha256": "7129ad7f1e971186e8a48c387bdc57e2fa870afc40c4a3637f16c7f4f6fc5e47"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\analyze_lights.py",
+          "exists": true,
+          "bytes": 1867,
+          "sha256": "ac6573bece954f7e4041cc719a4e88751434bf2b45aa463bde4969b1641ba175"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\build_box_lights.py",
+          "exists": true,
+          "bytes": 3993,
+          "sha256": "b9385a363ea6428e0f3a175d6f793fb3e819cd396e42db7d2e9bf570934867cb"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\check_box_lights.py",
+          "exists": true,
+          "bytes": 2051,
+          "sha256": "eb41887861009546b4b28222d3853b08e84f0dcb5ebf0fe3abc8bdaa31be9886"
+        }
+      ]
+    },
+    {
+      "id": "01a0f5e1-0424-7093-b17c-5a9f6ff5c692",
+      "title": "Разложить UV стенок в UDIM 1001",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790858175,
+      "recommendation": "ARCHIVE_CANDIDATE",
+      "reason": "Latest user accepted UV/FBX v006. Case, job state, accepted manifest, scripts and every named output/report preserved; accepted hashes independently match. Missing Max/full-OKS checks are retained in case and job state; archive does not certify them. Root reread all 3 native turns including initial task, revised allowed density, FBX request and acceptance; no older cursor.",
+      "confidence": "high",
+      "missing_gates": [
+        "Native Max import and full OKS/Checker pending; outside accepted UV/FBX stage",
+        "Do not retire ignored scripts/scenes with chat; ensure local backup retention"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 3,
+        "native_has_more": false,
+        "prior_review_depth": null,
+        "root_full_turn_read": true
+      },
+      "deletion_allowed": false,
+      "proposed_action": "review_reversible_archive",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\SOSH1150_CONTINUOUS_WALL_UV_FBX.md",
+          "exists": true,
+          "bytes": 9954,
+          "sha256": "82378ce44bab4fefe39fd8d423982a747dfc125e8c631c88835c5393743f7732"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\STATE.md",
+          "exists": true,
+          "bytes": 11172,
+          "sha256": "e6d52993506692c9d2185edc50d541a53183601e41b12e21c5f5d6ae872aa31e"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\ACCEPTED_V006.json",
+          "exists": true,
+          "bytes": 1255,
+          "sha256": "38c55eacabde53a7f967953b08e9f5bfcce5d0d49917bc785515a25b35222232"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\walls_UV550-1500_FlipH_v006.blend",
+          "exists": true,
+          "bytes": 33775512,
+          "sha256": "406c66057b5912701abecf01868b46a8f6a839f1bb722403ed164163cc8072ca",
+          "expected_sha256": "406c66057b5912701abecf01868b46a8f6a839f1bb722403ed164163cc8072ca",
+          "hash_matches": true
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\T_Template_Address_001_Diffuse_FlipH_v005.1001.png",
+          "exists": true,
+          "bytes": 271916,
+          "sha256": "e3a6708fbd89d79e2b44de900eb8bac9a41842f44099a9b972e157a5d74d4f99",
+          "expected_sha256": "e3a6708fbd89d79e2b44de900eb8bac9a41842f44099a9b972e157a5d74d4f99",
+          "hash_matches": true
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\FBX_For_Max_v006\\Walls_FlipH_v006.fbx",
+          "exists": true,
+          "bytes": 1506076,
+          "sha256": "df85decb958bf8a6323a28bb17e8eb44c4f5349b940a8d325beb694f57bbe17e",
+          "expected_sha256": "df85decb958bf8a6323a28bb17e8eb44c4f5349b940a8d325beb694f57bbe17e",
+          "hash_matches": true
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\Walls_FlipH_v006_FBX_For_Max.zip",
+          "exists": true,
+          "bytes": 1486625,
+          "sha256": "67f9300596849cd0496eca096573ccd9a512f875dd2263be3c50dbe2c2ea2a40",
+          "expected_sha256": "67f9300596849cd0496eca096573ccd9a512f875dd2263be3c50dbe2c2ea2a40",
+          "hash_matches": true
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\readback_v006.json",
+          "exists": true,
+          "bytes": 905,
+          "sha256": "de28db790459d338fcb2701dec2ddfc6435b1e231bc16c978a682623be2e5b74"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\agr_scoped_v006.json",
+          "exists": true,
+          "bytes": 318,
+          "sha256": "6f59bfb7cf94788f2989997100b185b69b40d21e36f3eee9b0a62ba80ff2cdca"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\FBX_For_Max_v006\\FBX_READBACK.json",
+          "exists": true,
+          "bytes": 856,
+          "sha256": "75db44f56cc5b476c6547bcae567db876e24d79466d8e04069fa5e84320b17b2"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\FBX_For_Max_v006\\PACKAGE_QA.json",
+          "exists": true,
+          "bytes": 750,
+          "sha256": "64c6735ad127991b68fa1b0c6f89a12e7ffbc93be41561d4287dc6fcb2883d76"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\plan.py",
+          "exists": true,
+          "bytes": 3711,
+          "sha256": "87f21216f5e509e7ce40839d4155368491026778dd8d73733dc660cf0256cea8"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\closure_final.py",
+          "exists": true,
+          "bytes": 1829,
+          "sha256": "a019ee034dbe6b6ba7e528aa4b49087f1769722e157adb74628ae06a6e2d1b85"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\final_plan.py",
+          "exists": true,
+          "bytes": 980,
+          "sha256": "46d0e88705a65b2abed0f35fdd51aef4ee5c75e769ff698de90e68be64019b7e"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\build_v005.py",
+          "exists": true,
+          "bytes": 5099,
+          "sha256": "e5a5f80200ca27c9b20c7c1c7247ec53d7b4bfe6d15eb6c4a24008d905504a03"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\build_final_texture.py",
+          "exists": true,
+          "bytes": 2148,
+          "sha256": "8743a22ca916ef4503a762981742907335bab12db81614b4a180272671da2f35"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\apply_v006.py",
+          "exists": true,
+          "bytes": 2115,
+          "sha256": "020dad3691a9342c2dc5b6515f6d9c2cd83f99652d9c35b3cb94c2933ac67f1e"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\readback_v006.py",
+          "exists": true,
+          "bytes": 3987,
+          "sha256": "a8adf82635cc13d89106e39def919a709b9440bfaa6059049806c380406cf1c4"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\render_v006.py",
+          "exists": true,
+          "bytes": 1034,
+          "sha256": "4b52bb064d09d5d92f23ee29aad6c9182baa1eb26626833855413174425d889a"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\export_max_v006.py",
+          "exists": true,
+          "bytes": 4337,
+          "sha256": "31c987cb81c6227bf4b46ebb4c8e1382b657e9fe7e2ecbcff269fdf5d1b2f2f1"
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\scripts\\package_max_v006.py",
+          "exists": true,
+          "bytes": 956,
+          "sha256": "ce866ffbde374ef1267aeaeee4016511bd6e4bd045600c7dbfb4ad3a5b5260c6"
+        }
+      ]
+    },
+    {
+      "id": "01a0f6be-fba5-7833-9df9-5232fdc338ff",
+      "title": "Спроектировать локальную оркестрацию",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791298847,
+      "recommendation": "KEEP",
+      "reason": "Latest request is comparative harness research. Report includes unresolved AGR safety defects and paired-pilot next steps; scope is still actionable.",
+      "confidence": "high",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 2,
+        "native_has_more": true,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/tmp/harness-ab-20261006/REPORT.md",
+          "exists": true,
+          "bytes": 19050,
+          "sha256": "d7d2b1baf3432d5c7ee3b07cecd7604e69ce150a2c9b034b079aee8c5ff81f24"
+        }
+      ]
+    },
+    {
+      "id": "01a0fde0-20bb-7d20-9cc3-091f4e820399",
+      "title": "Восстановить контекст AGR",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1790984750,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/STATE.md",
+          "exists": true,
+          "bytes": 9955,
+          "sha256": "671d2a395146b8e81766013fbe159d3b92f14d1d304161c8895400f4c427976a"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/tmp/agr-hygiene-20261003/REPORT.md",
+          "exists": true,
+          "bytes": 23088,
+          "sha256": "a18032db1fbbb2b89fcca29d8486d3add8886c17e7de202eb2a1ac423d573e3a"
+        }
+      ]
+    },
+    {
+      "id": "01a11149-e599-7fa1-8cb5-b586ae2aaf25",
+      "title": "hi",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791318792,
+      "recommendation": "ARCHIVE_CANDIDATE",
+      "reason": "Native read covers entire two-turn chat: hi and q both failed immediately from quota. No tool calls, generated artifact or substantive continuation. Failure is recorded here; safe reversible archive.",
+      "confidence": "high",
+      "missing_gates": [],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 2,
+        "native_has_more": false,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "review_reversible_archive",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    },
+    {
+      "id": "01a111bc-11b7-7360-b35a-5d020abc72b3",
+      "title": "Установи skills в корень",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791300770,
+      "recommendation": "EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "confidence": "low",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 2,
+        "native_has_more": false,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/tmp/skills-audit-20261006/MANIFEST.md",
+          "exists": true,
+          "bytes": 2865,
+          "sha256": "1b6f4f5cb381306aef51d981c4c3cabe7d5d1115f5249e19deb806837507903b"
+        }
+      ]
+    },
+    {
+      "id": "01a112cd-280b-7862-befb-f228eecc5efe",
+      "title": "Смоделировать ВПМ здания по этапам",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791319212,
+      "recommendation": "KEEP",
+      "reason": "Currently active human chat; preserve ownership and shared resources.",
+      "confidence": "high",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/KPP1-VPM/versions/KPP1_BODY_RETOPO_v004.blend",
+          "exists": true,
+          "bytes": 16963545,
+          "hash_check": "not computed for large scene/assets in read-only chat audit"
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/KPP1-VPM/evidence/retopo-v004-south.png",
+          "exists": true,
+          "bytes": 1786156,
+          "sha256": "1e3282f82c5a386eebb3379efebd003db8cb5f1af9c4cd263e4b5d3546615019"
+        }
+      ]
+    },
+    {
+      "id": "01a112ee-e174-7230-99ad-f97f66d76f2a",
+      "title": "Реорганизовать проект и аудит задач",
+      "title_source": "native_list",
+      "cwd": "\\\\?\\C:\\Users\\artsafro\\.AGR_Project",
+      "updated_at": 1791319213,
+      "recommendation": "KEEP",
+      "reason": "Currently active human chat; preserve ownership and shared resources.",
+      "confidence": "high",
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "coverage": {
+        "indexed_rollout_exists": true,
+        "native_turns": 0,
+        "native_has_more": null,
+        "prior_review_depth": null
+      },
+      "deletion_allowed": false,
+      "proposed_action": "retain",
+      "retention": "Keep session files and all original/accepted/ignored artifacts; archive recommendation does not delete them.",
+      "artifacts": []
+    }
+  ]
+}

@@ -121,7 +121,7 @@ validator, publisher и контракт отчёта; его findings вклю�
    переиспользовать job STATE и AdapterReport, а не создавать второй реестр опыта.
 2. **Штатный проверяющий.** Предложение `.cursor/agents/dt-verifier.md`:
    `name: dt-verifier`, `model: inherit`, `readonly: true`, точная область и
-   проверка artifacts/hashes/requirements. Готовый текст [DRAFTS.md](DRAFTS.md).
+   проверка artifacts/hashes/requirements. Готовый текст [DRAFTS.md](../../history/organization/local-orchestration/DRAFTS.md).
    Не активирован. Проверить обнаружение в Cursor на пустой read-only fixture.
    Проверяющий читает уже сохранённые отчёты; тесты, пишущие tmp, выполняет
    отдельный исполнитель. Worktree изолирует code, но не scene/port/exports.

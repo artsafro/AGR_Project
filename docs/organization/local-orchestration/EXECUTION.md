@@ -101,7 +101,7 @@ Ground/ОКС, количество материалов и наличие тр�
 -6 comparator fixtures ловят порчу UV, indices, winding и missing surface.
   [Неверный тестовый критерий](fixture-test-criterion.json) явно synthetic;
   исправлена проверка quad→tri surface, production критерии не изменены.
-- [Независимое ревью](REVIEW.md), [native wrappers review](NATIVE_REVIEW.md).
+- [Независимое ревью](../../history/organization/local-orchestration/REVIEW.md), [native wrappers review](../../history/organization/local-orchestration/NATIVE_REVIEW.md).
 
 ## Дальнейшая интеграция
 

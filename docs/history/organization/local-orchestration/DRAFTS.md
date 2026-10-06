@@ -4,7 +4,7 @@
 TASK_CONTEXT и протокол AGENT_WORKFLOW дополнены. Native discovery через Cursor
 CLI подтверждён после разрешения контекста и Windows allowlist/--trust:
 custom dt-verifier фактически выполнен в cursor-20261001-004. Ниже исходные предложения;
-актуальные файлы и результаты перечислены в [EXECUTION.md](EXECUTION.md).
+актуальные файлы и результаты перечислены в [EXECUTION.md](../../../organization/local-orchestration/EXECUTION.md).
 
 ## `.cursor/agents/dt-verifier.md`
 

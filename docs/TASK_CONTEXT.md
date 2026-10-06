@@ -1,7 +1,9 @@
 # Указатель контекста — выбрать один маршрут
 
-- Продолжение сохранённой попытки: [RunRecord inspector](organization/local-orchestration/RUN_EVIDENCE.md), `tools/harness_status.py` и skill agr-run-evidence. Integrity не означает delivery.
+Продолжение сохранённой попытки: [RunRecord inspector](organization/local-orchestration/RUN_EVIDENCE.md), tools/harness_status.py и skill agr-run-evidence. Integrity не означает delivery.
 
+Для выбора одной независимой задачи и её worktree: [PROJECT_MAP](organization/PROJECT_MAP.md).
+Аудит чатов/сессий и retirement: [HYGIENE_AUDIT06.10](organization/HYGIENE_AUDIT_2026-10-06.md).
 
 Общий вход: [`STATE.md`](../STATE.md). Перед сходной задачей найдите принятый
 опыт в [`case_studies/README.md`](case_studies/README.md). При первом знакомстве

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "initialized_at_utc": "2026-09-29T15:14:09+00:00",
   "scope": "AGR and related 3D-project Codex chats",
-  "baseline_audit": "CHAT_AUDIT_2026-09-29.json",
+  "baseline_audit": "../history/organization/CHAT_AUDIT_2026-09-29.json",
   "last_seen_updated_at": {
     "01a01922-c8e1-7481-a92c-54d79095e8c8": 1786540495,
     "01a01922-c8e4-7530-bf44-5cf28a659e61": 1786526375,
@@ -69,5 +69,12 @@
       "reason": "A/B harness comparison in progress; no acceptance or complete-stage cursor inferred",
       "observed_updated_at": 1791298311
     }
+  },
+  "hygiene_2026_10_06": {
+    "archived_chats": 11,
+    "canonical_chats": 8,
+    "sections": 3,
+    "pr31_merged_sha": "d53cb5f96a71c8aabe549d9974d07a3e7ccfcfdb",
+    "manual_run_does_not_advance_scheduled_cursors": true
   }
 }

@@ -1,0 +1,1529 @@
+{
+  "date": "2026-10-06",
+  "scope": "20 AGR chats;34 related-project chats retained outside active AGR sections",
+  "history": "../history/organization/CHAT_RETIREMENT_INITIAL_2026-10-06.json",
+  "native_pages": 22,
+  "native_turns": 142,
+  "records": [
+    {
+      "id": "01a0ddd1-4d2c-79e3-84a7-b8048f0cb972",
+      "title": "Обр22 · Геометрия и операции",
+      "previous_title": "Типовой этаж",
+      "action": "KEEP_CANONICAL",
+      "reason": "Existing canonical chat: active task or unique long multi-object/source history.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 10,
+        "last_page_has_more": true,
+        "next_cursor": "{\"requestedThreadId\":\"01a0ddd1-4d2c-79e3-84a7-b8048f0cb972\",\"rolloutOrdinal\":4932,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}"
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/max-v005/facades_v005.max",
+          "sha256": "ed01ee70c1556192fb2b326b0546a7945d6adaa450ae22bc1374c1a282603f25",
+          "exists": true,
+          "bytes": 4669440
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/max-v005/facades_v005_Max_with_textures.zip",
+          "exists": true,
+          "bytes": 6539954
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/metric-v005/facades_metric_v005.blend",
+          "exists": true,
+          "bytes": 18573849
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/metric-v005/Facades_3_Atlases_5_Textures_2K_v005.zip",
+          "sha256": "a0431a9f75d65f05cde8d9b7d76251651eb1a259b1fe87d9736917909c214dc3",
+          "exists": true,
+          "bytes": 1239545
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/FACADES-ATLAS/outputs/metric-v005/Object012_brick_detail.png",
+          "sha256": "6a3d96633e200a14f700db0fd3ced7ff290da9edf00072a205c03220b82f4bac",
+          "exists": true,
+          "bytes": 1438701
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a0e218-32e0-76c3-ba8f-48b0a68300d4",
+      "title": "Обновить правила ВПМ и НПМ",
+      "previous_title": "Обновить правила ВПМ и НПМ",
+      "action": "RETAIN_EXTRACTION_PENDING",
+      "reason": "Prior summary or limited latest-turn reading does not establish all reusable outcomes are extracted. Verify per-task source, negative experience, retained assets and continuation before retiring.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 10,
+        "last_page_has_more": true,
+        "next_cursor": "{\"requestedThreadId\":\"01a0e218-32e0-76c3-ba8f-48b0a68300d4\",\"rolloutOrdinal\":37,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}"
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\research\\max-workbench\\EXPANSION_2026-09-27.md",
+          "sha256": "3aa87d959ddba8d26358eabe76c9a868db65c930f04e5c096c39a3510edc6ed5",
+          "exists": true,
+          "bytes": 18401
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\max\\AGR_Workbench_v0.5.0.zip",
+          "sha256": "d50d03ed992404b279a88f3f57a19f53590dd0a281c369323da3539d8c273019",
+          "exists": true,
+          "bytes": 35880
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\max\\AGR_Workbench_v0.4.0.zip",
+          "sha256": "8a70e25a1b70c2491882ff960ecb978f51eca9200ab84944d4118e5bad871603",
+          "exists": true,
+          "bytes": 29212
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\max\\AGR_Workbench\\README.md",
+          "sha256": "ff61a4ece327dae7d670dd0e64e8dd7dace0e97fdacfa559170ad23ec9d65d40",
+          "exists": true,
+          "bytes": 11857
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\max\\AGR_Workbench_v0.2.0.zip",
+          "sha256": "403070bfb6350e15aa61827eca5923fadf3936ffea8eec715c74e04008790df9",
+          "exists": true,
+          "bytes": 21016
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\max\\AGR_Workbench_v0.1.0.zip",
+          "sha256": "7bec0460e6344f3c5dd15f73bb50ad8bc422f5bd6c2a12df82a57529f4a3d49c",
+          "exists": true,
+          "bytes": 9865
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\research\\max-workbench\\REVIEW.md",
+          "sha256": "ca3ed1ad7078f095d4054f1a3e79dc084cb2a8049264d1d33e9ffc06c2ecb968",
+          "exists": true,
+          "bytes": 21652
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a0e311-3cdc-7603-8c56-6991321d1e06",
+      "title": "Оцени готовность LP модели",
+      "previous_title": "Оцени готовность LP модели",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Failed master and accepted audit separate. MASTER_TRIAL_REPORT saves failures/scripts/unresolved overlaps/34 density failures/targeted repair. Retain both model versions.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 3,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\STATE.md",
+          "sha256": "2f880a1ac9610117cae09a2e34e58ca7d42e6386409675e921d2bb545b565eea",
+          "exists": true,
+          "bytes": 4645
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\MASTER_TRIAL_REPORT.md",
+          "sha256": "99e8af0881d8590d2a29f6953e42aa66cd05a354d0fe556950cabb0372eec7e3",
+          "exists": true,
+          "bytes": 8488
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\MODEL_V002_REPORT.md",
+          "sha256": "217d6e76ef5adc95525091e894abb7df884d2be36f032fb8ceeeb77f8ebcdb31",
+          "exists": true,
+          "bytes": 8003
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\MASHI_LP_SCENE_AUDIT.md",
+          "sha256": "7d636eeb33041cf78e1b4422b205a263de019bf9dbc9354229453d96dca85b18",
+          "exists": true,
+          "bytes": 4280
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\master-v001\\MASHI-comparison-trial-v002.blend",
+          "sha256": "e9cf81ec0c9085b58ba296ebd21696e180de21151e248333f9846b03ed55e8dc",
+          "exists": true,
+          "bytes": 61961806
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\model-v002\\LP_working-v002.blend",
+          "sha256": "50d96a4455b047022578cb80f03a46d14546b4324c03866ab127966addb337f4",
+          "exists": true,
+          "bytes": 57017711
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\master-v001\\MASHI-comparison-trial-v002.blend",
+          "sha256": "e9cf81ec0c9085b58ba296ebd21696e180de21151e248333f9846b03ed55e8dc",
+          "exists": true,
+          "bytes": 61961806
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\MASTER_TRIAL_REPORT.md",
+          "sha256": "99e8af0881d8590d2a29f6953e42aa66cd05a354d0fe556950cabb0372eec7e3",
+          "exists": true,
+          "bytes": 8488
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\master-v001\\LP-and-MASTER.png",
+          "sha256": "fadf1cb3f03f042dd55a2715cf031c53d24c7c37df3f03af85c38889601e3dc0",
+          "exists": true,
+          "bytes": 1266638
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\model-v002\\LP_working-v002.blend",
+          "sha256": "50d96a4455b047022578cb80f03a46d14546b4324c03866ab127966addb337f4",
+          "exists": true,
+          "bytes": 57017711
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\MODEL_V002_REPORT.md",
+          "sha256": "217d6e76ef5adc95525091e894abb7df884d2be36f032fb8ceeeb77f8ebcdb31",
+          "exists": true,
+          "bytes": 8003
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\MASHI_LP_SCENE_AUDIT.md",
+          "sha256": "7d636eeb33041cf78e1b4422b205a263de019bf9dbc9354229453d96dca85b18",
+          "exists": true,
+          "bytes": 4280
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\model-v002\\LP-new-wire.png",
+          "sha256": "455826180a2d455bcb93d953460b4431800169cb9a645a373e9210659b56ae9c",
+          "exists": true,
+          "bytes": 1176338
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\audit-v001\\organized-v001.blend",
+          "sha256": "a22773e9fbfc86c4200e77fffdcef49a4624f2888ce0077f33c3fe22c8739093",
+          "exists": true,
+          "bytes": 56720679
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\AUDIT_AND_PLAN.md",
+          "sha256": "26e5c644f07035b73d0760baa15d23d3db51bd0edc2b22f7ac7124655fde96d5",
+          "exists": true,
+          "bytes": 12540
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MASHI-LP\\outputs\\audit-v001\\LP-B.png",
+          "sha256": "632600c426327de841d433bc2165e5e24bb1887028cd4be5bf8487bd13d4990c",
+          "exists": true,
+          "bytes": 848046
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "Audit accepted separately; master40881quads TRIAL/QA NOT PASSED:110nonmanifold edges,8851coplanar pairs,6703 intersections,34TD failures,3541ID18 unresolved. Next repair patches2666/2698, coherent exterior and frames. Preserve original/LPv002/master and MASTER_TRIAL_REPORT.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0e378-3f54-71e0-ab85-bada998da713",
+      "title": "Смоделируй в Blender",
+      "previous_title": "Смоделируй в Blender",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Approximate ImageGenv002 awaits acceptance; sources/prompt/state retained. Earlier sign geometry separate: preserve all linked sign files too.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 3,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\STATE.md",
+          "sha256": "884ac62ba23e54868471a12424a122a858a32df447b2dcb5161b6ce08256b2d4",
+          "exists": true,
+          "bytes": 3089
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\outputs\\v002\\windows_atlas.png",
+          "sha256": "6b087dbe7a5c232d2541defd535ddc96f543e69898c54400ab3ba03171fc381c",
+          "exists": true,
+          "bytes": 830972
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\outputs\\v002\\PROMPT.txt",
+          "sha256": "ecc02bc5cf40b26a3a2e4a8cdafafba4810c751a44b1542a8895b35b64148282",
+          "exists": true,
+          "bytes": 1890
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\inputs\\window_A_large.png",
+          "sha256": "5fe1b8343b637ea6df79da1a075aa3a844df1127a3a17c0831007b090db1af67",
+          "exists": true,
+          "bytes": 198906
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\inputs\\window_B_large.png",
+          "sha256": "2a7be854061166b2afaa1f04dde8a55fee7e5b4f6b191af17d10fb8b71303bbe",
+          "exists": true,
+          "bytes": 478536
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\outputs\\v002\\windows_atlas.png",
+          "sha256": "6b087dbe7a5c232d2541defd535ddc96f543e69898c54400ab3ba03171fc381c",
+          "exists": true,
+          "bytes": 830972
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\outputs\\v002\\PROMPT.txt",
+          "sha256": "ecc02bc5cf40b26a3a2e4a8cdafafba4810c751a44b1542a8895b35b64148282",
+          "exists": true,
+          "bytes": 1890
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\outputs\\v001\\windows_atlas.png",
+          "sha256": "116b0923e9296bfbb509424a36c2ca102476f79953f708bd1af90de815c03ef3",
+          "exists": true,
+          "bytes": 859919
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-ATLAS\\PROMPT_v002.txt",
+          "sha256": "770c2d18aa4ec3159f46da461ef452972949942ff4f6a9771044485faa146398",
+          "exists": true,
+          "bytes": 10
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\FACADE-SIGNS\\outputs\\v001\\facade_signs_v001.blend",
+          "sha256": "f3f695ec6102f8f76618f661d5f69a5d7e71999bfaad02322a36dd4a53f21410",
+          "exists": true,
+          "bytes": 703299
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\FACADE-SIGNS\\outputs\\v001\\preview.png",
+          "sha256": "da3e6f77584e48e00877d8053e50dcba3737989209a000188ef0f1147bf062c2",
+          "exists": true,
+          "bytes": 767335
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "Two scopes: signs30mm under direct user authorization, raster approximation with silhouette acceptance pending; separate approximate1254px ImageGen window atlasv002 acceptance pending. Preserve FACADE-SIGNS and WINDOW-ATLAS states. PROMPT_v002.txt literal undefined is a failed/unusable historical prompt; v001 prompt not reconstructed. Real outputs/v002/PROMPT.txt1890bytes retained forv002 only.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0e3ad-2c25-7ac3-a07d-fc1a625ff687",
+      "title": "Спроецировать ground на рельеф",
+      "previous_title": "Спроецировать ground на рельеф",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "v003 partial acceptance/rejection, v008 trial, units and allowed overlaps durable. Next visualv008/Max import; archive does not acceptv008.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 2,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\STATE.md",
+          "sha256": "49535e1a5f2b33ec367ceb1fce46854cb7b60de8c42ba552af3dc773263fb51a",
+          "exists": true,
+          "bytes": 1730
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\NPM_RESULT.md",
+          "sha256": "6c2e00d408c117a348acbe93f3685900f9be850dd828694f4669f9cfe777851b",
+          "exists": true,
+          "bytes": 6509
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\GROUND_CONTOURS_AND_NPM.md",
+          "sha256": "d780f41f1c5b68aff3070da97e4a489684c93377368ea53f5d34d3e9ab4b95cd",
+          "exists": true,
+          "bytes": 5303
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v008\\GROUND_NPM_v008.blend",
+          "sha256": "06b1013b9d3978a119bf8aa8168de0dbd8dd525f69e5d8635eda702052ec523f",
+          "exists": true,
+          "bytes": 10335664
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v008\\SHA256.json",
+          "sha256": "e35c018eed60fb8c0d4822611f88f237d952db59ce37a90e38eb0f6da17fd146",
+          "exists": true,
+          "bytes": 836
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v008\\GROUND_NPM_QUADS_v008.fbx",
+          "sha256": "120b897fb56385d7970197513e92eafcd88a71d155f0eaf478f6149fd205752e",
+          "exists": true,
+          "bytes": 2275740
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v008\\GROUND_NPM_v008.blend",
+          "sha256": "06b1013b9d3978a119bf8aa8168de0dbd8dd525f69e5d8635eda702052ec523f",
+          "exists": true,
+          "bytes": 10335664
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v008\\wire_detail.png",
+          "sha256": "31d17f2125200a6815a28153de9b50ffc06534f44c3bee4914a24ff89f7e0afe",
+          "exists": true,
+          "bytes": 2099467
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\NPM_RESULT.md",
+          "sha256": "6c2e00d408c117a348acbe93f3685900f9be850dd828694f4669f9cfe777851b",
+          "exists": true,
+          "bytes": 6509
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v008\\detail.png",
+          "sha256": "a4b849db5981d40d64a810d3bb7d7d5f5e2adc09a1073482ebf74fd39bb868ed",
+          "exists": true,
+          "bytes": 1550246
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v003\\GROUND_projected_v003.fbx",
+          "sha256": "b6c25bc8c89db15d7ecfed4b2080feacc68186028dc0eabdd7ee303ce1edd54a",
+          "exists": true,
+          "bytes": 22315932
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v003\\GROUND_projected_v003.blend",
+          "sha256": "f84c03e810d4471dfa939c831356267c2cd5743928e4707fe14f867673db06d0",
+          "exists": true,
+          "bytes": 82572506
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\RESULT.md",
+          "sha256": "81a6662789d7a4d48032edb861cb46ceab644212775b573b92a86ab026e3d6ed",
+          "exists": true,
+          "bytes": 7231
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\GROUND-PROJECTION\\outputs\\v003\\overview.png",
+          "sha256": "91339b1e7e347c6abc64e843fd7bbcfbe81073be42d41c8001dfd2ff36520fb1",
+          "exists": true,
+          "bytes": 1256317
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "User accepted contours/IDs/materialsv003 only and rejected density/shape. Groundv00832392quads trial;116x164m user-confirmed; inherited overlaps allowed. Visualv008/nativeMax pending; retain STATE/NPM_RESULT/case and original scenes.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0e70a-4dd2-7343-8269-c301d2c44403",
+      "title": "Найти лимит объектов коллизий",
+      "previous_title": "Найти лимит объектов коллизий",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Advice/research only. Names001..999 imply namespace range, not proven universal object cap. PDF36–37 triangle limits differ. No scene supplied for1200-object optimization. Save interpretation in durable handoff before archive.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 2,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\standards\\source\\Rasporyajenies19012026trebovaniya(2).pdf",
+          "sha256": "933f6b700c074d0db6b82030fc79d1dbe9db4a0067495ca716e0636acd544222",
+          "exists": true,
+          "bytes": 24861066
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "Research correction:001..999 is naming range, not independently proved universal object cap. PDF34 naming and36-37 triangle limits differ;1200 to999 requires201 fewer objects, not300. No input scene supplied, no optimization/norm change performed. Next read actual scene and PDF pages before a concrete convex/closed/nonoverlapping collision proposal.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0e971-82fa-73c0-9845-eefe8ee09648",
+      "title": "Оптимизировать полигоны меша",
+      "previous_title": "Оптимизировать полигоны меша",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Optimization trial and source retained. Visual silhouette/UV acceptance pending. Optimization receipt is newer than historical AUDIT; carry both into task handoff.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 2,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\AUDIT.md",
+          "sha256": "9aed304bd6caca95a6f19190209980965694215610a18ade817a1116fb616a4c",
+          "exists": true,
+          "bytes": 7389
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\optimize_live.py",
+          "sha256": "0becdd1578e56502cdca8cced1b16f9c05340170736d7d7b7b4e4b7ba30283bb",
+          "exists": true,
+          "bytes": 4047
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\readback.py",
+          "sha256": "0f135ffcbc6bef8965243be376e830b30ae1dd6b36c0329cdcb590637c424832",
+          "exists": true,
+          "bytes": 1691
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\outputs\\optimization_v001.json",
+          "sha256": "4b5e478ffa6d51973a321842af928601efdbcbbd10820b59405458212ccf6c2d",
+          "exists": true,
+          "bytes": 562
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\outputs\\Object013_source.blend",
+          "sha256": "fef54da31011e6fc13f653eb96f953c1b45777c55a959f02ed37d1ed2838fa87",
+          "exists": true,
+          "bytes": 1265525
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\outputs\\Object013_optimized_v001.blend",
+          "sha256": "f1239f0bef2704327dcab09f6f0b002cfc5ff97dc3b80fb30c6d99ab96d679c2",
+          "exists": true,
+          "bytes": 996427
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\outputs\\Object013_optimized_v001.blend",
+          "sha256": "f1239f0bef2704327dcab09f6f0b002cfc5ff97dc3b80fb30c6d99ab96d679c2",
+          "exists": true,
+          "bytes": 996427
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\outputs\\Object013_source.blend",
+          "sha256": "fef54da31011e6fc13f653eb96f953c1b45777c55a959f02ed37d1ed2838fa87",
+          "exists": true,
+          "bytes": 1265525
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\outputs\\optimized-detail.png",
+          "sha256": "c0cfdc3c92c052f70cd04f7539bfb52656f51b3820e063467451218f0bfa1cc7",
+          "exists": true,
+          "bytes": 277898
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\MESH-OPT-AUDIT\\AUDIT.md",
+          "sha256": "9aed304bd6caca95a6f19190209980965694215610a18ade817a1116fb616a4c",
+          "exists": true,
+          "bytes": 7389
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "User clarified every second EDGE, not floor.53posts removed,45rotors12to6,5476to3677faces. Six-sided silhouette and UV distortion/visual acceptance pending. Historical AUDIT suggests12to8; optimization_v001.json is newer actual receipt. Preserve both blend versions; next visual/UV check.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff",
+      "title": "ГЛБ · НПМ и фасадные атласы",
+      "previous_title": "Спланировать моделирование башенок Н",
+      "action": "KEEP_CANONICAL",
+      "reason": "Existing canonical chat: active task or unique long multi-object/source history.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 10,
+        "last_page_has_more": true,
+        "next_cursor": "{\"requestedThreadId\":\"01a0ebe4-71b4-70c3-90dc-03fa3cc956ff\",\"rolloutOrdinal\":1457,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}"
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/docs/case_studies/GLB_A_MAIN_ATLAS.md",
+          "sha256": "816fd8e9dcb22d3d3c21968c5811833a91a0a7b74ac7c449f56aef1be1521be5",
+          "exists": true,
+          "bytes": 9608
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/A-MAIN-ATLAS/outputs/v005/GLB_A_B_Current_2026-10-01_v005.max",
+          "exists": true,
+          "bytes": 92979200
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GLB-NPM/outputs/tower-k1-v011/GLB_K1_assembled_v023.blend",
+          "exists": true,
+          "bytes": 18248111
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/GLB-NPM/outputs/tower-k1-v011/top-upper-window-oblique-v023.png",
+          "sha256": "5c38f8aed80a0b933176f0f4655bfcf618985cbb80c705523c187a84d517bf7a",
+          "exists": true,
+          "bytes": 1063797
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a0ec14-b5fa-7810-abe3-e87a72701103",
+      "title": "СОШ1150 · Окна и витражи",
+      "previous_title": "Найти и смоделировать оконные типы",
+      "action": "KEEP_CANONICAL",
+      "reason": "Existing canonical chat: active task or unique long multi-object/source history.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 10,
+        "last_page_has_more": true,
+        "next_cursor": "{\"requestedThreadId\":\"01a0ec14-b5fa-7810-abe3-e87a72701103\",\"rolloutOrdinal\":135,\"includeAnchor\":false,\"scope\":{\"kind\":\"turns\"}}"
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:/Users/artsafro/Desktop/!3D viz/!Weltbau/5_chertanovo/впм/maps_kpp",
+          "exists": true,
+          "kind": "directory"
+        },
+        {
+          "path": "C:/Users/artsafro/Desktop/!3D viz/!Weltbau/5_chertanovo/впм/maps_kpp/_info/preview.png",
+          "exists": false
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/KPP_UDIM_maps_v001.zip",
+          "sha256": "d6a6bdbf8447aed1f8e891fa42743c14a5b5752d8685aee2854d181c02633b13",
+          "exists": true,
+          "bytes": 5071354
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/SOSH1150_Body_Openings_Replaced_v005.blend",
+          "exists": true,
+          "bytes": 142200857
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/body-review-map.png",
+          "sha256": "a66fd05422608d68ea65561eb9c225d099545229eaf418ad54288f02f496f74a",
+          "exists": true,
+          "bytes": 3008099
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/body-frames-close.png",
+          "sha256": "660f1f47647ce351b1dcb660b1214022a8cf6853112cb44751a93a6cfb608abd",
+          "exists": true,
+          "bytes": 3482413
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/body-v005/body-opening-map.json",
+          "sha256": "b7195ccb04da30ecf081b14df954e7ed1ae5b3807b0c0e0046214e196f4f739b",
+          "exists": true,
+          "bytes": 266363
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/SOSH1150_FBX_Openings_Placed_v004.blend",
+          "exists": true,
+          "bytes": 142236927
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/elevation-short-side.png",
+          "sha256": "49768a8ffd29a6860c125308e5d3bd9dfe7f9d11fdb5132c1ec291ce73d4bfef",
+          "exists": true,
+          "bytes": 2841372
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/placement-map.json",
+          "sha256": "0d9a0fc5a8cb58b95accede4a6a27933d48a3bca3e1baf0d3c42560c0be6b18d",
+          "exists": true,
+          "bytes": 723548
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/REVIT-OPENINGS/outputs/placements-v004/README.md",
+          "sha256": "c0d794c03df8428088a5f9f6d4e78537d210d37b505a6919bf680f79f0707d47",
+          "exists": true,
+          "bytes": 3167
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a0edad-00b6-7712-acac-7ff555a2d751",
+      "title": "AGR · GitHub и накопление опыта",
+      "previous_title": "Организовать чаты и GitHub",
+      "action": "ARCHIVE_AFTER_AUTOMATION_RETARGET",
+      "reason": "Full19 native turns covered. Management superseded; heartbeat agr must be inspected/retargeted/paused before archive, otherwise it can wake old chat.",
+      "coverage": {
+        "new_native_pages": 2,
+        "new_native_turns": 19,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\CHAT_LEARNING_STATE.json",
+          "sha256": "d3ba855fea52fd54cf89a527034c7e97ff03b879de616944a16d0379392ed5c6",
+          "exists": true,
+          "bytes": 3783
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\CHAT_AUDIT_2026-10-06.json",
+          "sha256": "a17869e63ceaae9a23f63a6424d4644c8e9de29f431232bbfc9be1a0a2e81efc",
+          "exists": true,
+          "bytes": 1918
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\GITHUB_ORGANIZATION_PLAN.md",
+          "sha256": "211d8ca00a875286cc46589232227a8b18782491279790b10973083f47340076",
+          "exists": true,
+          "bytes": 32729
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\STATE.md",
+          "sha256": "671d2a395146b8e81766013fbe159d3b92f14d1d304161c8895400f4c427976a",
+          "exists": true,
+          "bytes": 9955
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\pr28-review\\REVIEW.md",
+          "sha256": "d55063e1de4bd6a9a23abac6a2da15457931e8fb2b6c1af72481beeeacc547a0",
+          "exists": true,
+          "bytes": 8618
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a0edee-a911-7162-abf8-024af82794db",
+      "title": "Разобрать PR и организовать GitHub",
+      "previous_title": "Разобрать PR и организовать GitHub",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "All41 native turns covered including sequential PR reviews, PR18 deferral, hostedCI restriction, newer GitHub lifecycle/global/worktree instructions. Their source pointers and unresolved gates preserved. Old PR chat can retire into current hygiene canonical chat; no new merge or delivery acceptance implied.",
+      "coverage": {
+        "new_native_pages": 5,
+        "new_native_turns": 41,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\AGENTS.md",
+          "sha256": "cfcf62df4069dc4c0307795e5cfe12cc4ad3f29af37069966bf505ad9d3c825e",
+          "exists": true,
+          "bytes": 10726
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\AGENT_WORKFLOW.md",
+          "sha256": "840b8e26dc17f530e6caa3af71ee82a3e757473812e7997c36f49673e0db3854",
+          "exists": true,
+          "bytes": 14277
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\PROJECT_MAP.md",
+          "sha256": "b2df9ea621b23ed3e03fb6f0b18c7a1b74bc2a54f5f2bce7cc8a9c293a3c0455",
+          "exists": true,
+          "bytes": 8487
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\.cursor\\rules\\worktree-policy.mdc",
+          "sha256": "a13bd11ec2fa6fa9c31b2854bd6987e36a2539938cd36a921aa318aee66324f2",
+          "exists": true,
+          "bytes": 871
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\orchestration\\EXECUTORS.md",
+          "sha256": "42dc8f495a3f4c0e5f8e0989c9075436fb281d7721566c5f4e5254c6492a14e5",
+          "exists": true,
+          "bytes": 5543
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\prompts\\AGR_NEW_CHAT_PROMPT.md",
+          "sha256": "6d9496248318c13bc120192e30ed2d4238e4cffb41147e013aae2a05794df9a6",
+          "exists": true,
+          "bytes": 10094
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\prompts\\DOT_CODEX_HANDOFF.md",
+          "sha256": "5886be84d78adf0dc6c47195e4807c1aea24cdcbafb7787c25837b0ba665f483",
+          "exists": true,
+          "bytes": 6411
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\AGENTS.md",
+          "sha256": "cfcf62df4069dc4c0307795e5cfe12cc4ad3f29af37069966bf505ad9d3c825e",
+          "exists": true,
+          "bytes": 10726
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\AGENT_WORKFLOW.md",
+          "sha256": "840b8e26dc17f530e6caa3af71ee82a3e757473812e7997c36f49673e0db3854",
+          "exists": true,
+          "bytes": 14277
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\.cursor\\rules\\worktree-policy.mdc",
+          "sha256": "a13bd11ec2fa6fa9c31b2854bd6987e36a2539938cd36a921aa318aee66324f2",
+          "exists": true,
+          "bytes": 871
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\AGENTS.md",
+          "sha256": "da8a8e81a66f084426e22b0df9532b424ff6db01b9044065d3359b1edccb9119",
+          "exists": true,
+          "bytes": 11953
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\prompts\\AGR_NEW_CHAT_PROMPT.md",
+          "sha256": "6d9496248318c13bc120192e30ed2d4238e4cffb41147e013aae2a05794df9a6",
+          "exists": true,
+          "bytes": 10094
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\prompts\\DOT_CODEX_HANDOFF.md",
+          "sha256": "5886be84d78adf0dc6c47195e4807c1aea24cdcbafb7787c25837b0ba665f483",
+          "exists": true,
+          "bytes": 6411
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\orchestration\\EXECUTORS.md",
+          "sha256": "42dc8f495a3f4c0e5f8e0989c9075436fb281d7721566c5f4e5254c6492a14e5",
+          "exists": true,
+          "bytes": 5543
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\AGR_NEW_CHAT_PROMPT.md",
+          "sha256": "b030220319d7fe8d75fcb462fafe008028b84adbcb1685d330d3926254724af5",
+          "exists": true,
+          "bytes": 487
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\pr29-review-20261002\\REVIEW.md",
+          "sha256": "cbf9309cf7e623bb6834ecd0a4290f8efa90c313c46bdd62a6d0e789e100715b",
+          "exists": true,
+          "bytes": 5162
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\STATE.md",
+          "sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+          "exists": true,
+          "bytes": 9955,
+          "previous_observed_sha256": "671d2a395146b8e81766013fbe159d3b92f14d1d304161c8895400f4c427976a",
+          "role": "mutable_current_context",
+          "retirement_dependency": false
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\pr28-review\\REVIEW.md",
+          "sha256": "d55063e1de4bd6a9a23abac6a2da15457931e8fb2b6c1af72481beeeacc547a0",
+          "exists": true,
+          "bytes": 8618
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.cursor\\projects\\1790847391593\\canvases\\agr-github-audit-2026-10-01.canvas.tsx",
+          "sha256": "13aa8fdab50310d165ab5516f508dc2d1c4bb3a0bc1f8b62423216731fa60e96",
+          "exists": true,
+          "bytes": 13380
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "current_context": {
+        "path": "C:\\Users\\artsafro\\.AGR_Project\\STATE.md",
+        "role": "mutable_current_context",
+        "retirement_dependency": false,
+        "previous_observed_sha256": "671d2a395146b8e81766013fbe159d3b92f14d1d304161c8895400f4c427976a",
+        "current_observed_sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+        "reason": "Independent addendum confirms archived result is retained in job/case/report; current navigation changed under active owner"
+      },
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "Full5pages41turns read. Historical sequential PR results retained; current PR31 now merged after separate independent248test QA. PR18 deferred, hosted startup_failure is not executed tests. Primary/global/worktree instructions retained. Next use current project map and actual default branch, no automatic resume of PR18 or retraining claim.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0f241-ec48-76c2-91a0-7cf37b529e1b",
+      "title": "Упростить сетку оконных рам",
+      "previous_title": "Упростить сетку оконных рам",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Frame stage produced/read back; source and STATE preserve exclusions and pending visual/UV/Checker integration. Archive does not certify delivery.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 2,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\STATE.md",
+          "sha256": "5a2a9618c6ebee9e16da976d7c3a40aab042853d16b611ab8c107e207bcc4d90",
+          "exists": true,
+          "bytes": 2823
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\frame_source_snapshot_v001.blend",
+          "sha256": "d2aad17dd8d1f766add8867e3f1f5f73dc301fde46da933586098142df060aee",
+          "exists": true,
+          "bytes": 3770760
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\window_frames_quad_v002.blend",
+          "sha256": "80e2d6afe7e8838d2828a2abf04b4568c8557a4b734ad5d57e19bb9e966e7c2c",
+          "exists": true,
+          "bytes": 4036427
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\window_frames_quad_v002_qa.json",
+          "sha256": "da27700c2075abff1c10d06c82af4b7d3bfdfa1481ec1dfb15e1b0c2235de7ee",
+          "exists": true,
+          "bytes": 1881
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\window_frames_quad_v002_readback.json",
+          "sha256": "b3813bb282d6959549836a81198e990acff06e19f624f20f7d2179334446a6cf",
+          "exists": true,
+          "bytes": 453
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\window_frames_quad_v002.blend",
+          "sha256": "80e2d6afe7e8838d2828a2abf04b4568c8557a4b734ad5d57e19bb9e966e7c2c",
+          "exists": true,
+          "bytes": 4036427
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\window_frames_quad_v002_readback.json",
+          "sha256": "b3813bb282d6959549836a81198e990acff06e19f624f20f7d2179334446a6cf",
+          "exists": true,
+          "bytes": 453
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\window_frames_quad_v002_preview.png",
+          "sha256": "1488220780742548691f2beb9d153647483fbdc77313ffae582ad299ae4dabd9",
+          "exists": true,
+          "bytes": 1025413
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "Interrupted first turn superseded by MCP stage result:654bars3924quads,3excluded flat fragments. Original saved; visual/UV/FBX/Checker pending in STATE/QA/readback. Next integrate frame stage only under its own job contract.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a0f403-0b4f-7ab1-b544-8a887ba49039",
+      "title": "Создать box light на рамках",
+      "previous_title": "Создать box light на рамках",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Native read covers both task and acceptance turns with no older cursor. Accepted v002 case/state/QA/source/output/scripts preserved and accepted scene hash matches. Complete stage history retained; future integration has separate scope.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Full NPM/VPM delivery, UV/FBX/Checker outside accepted box-light stage",
+        "Ignored source/output scenes retained locally; chat archive must not remove them"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\WINDOW_FRAMES_BOX_LIGHTS.md",
+          "sha256": "39ab8a44deb521134a9d402b734f1309f31badfe040b4a9555a3dbbf1093112f",
+          "exists": true,
+          "bytes": 9868
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\BOX_LIGHTS_STATE.md",
+          "sha256": "7b5aa9ad3836ada0ae298d50930a06b084b7a90d81dc3f807195acbe2fc0d7bc",
+          "exists": true,
+          "bytes": 4006
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\README.md",
+          "sha256": "73ce078a06e2a50b8c49e6ef6f48d8a15bc3a69839f879b1ba59f6af82dc3390",
+          "exists": true,
+          "bytes": 4604
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\frames_box_lights_live_v002.blend",
+          "sha256": "ac464bb8fb903976a8aefcc89c2281978d5f1391f028e479aec5395863b7d15a",
+          "exists": true,
+          "bytes": 1381201
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\box_lights_v002_readback.json",
+          "sha256": "9a96e0f1b12bd5d1c43f6fd61677623ca66cc57e1983b53fc883424f246cea52",
+          "exists": true,
+          "bytes": 38441
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\box_lights_v002_qa.json",
+          "sha256": "c4fda76a883bedbc7a835fa0cafb706078b7fbadec4aa7a2e1200619f88edd8b",
+          "exists": true,
+          "bytes": 38254
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\WINDOW-FRAMES\\outputs\\box_light_source_v001.blend",
+          "sha256": "03af771f4a8b99814721a026d37ff404d7732430f29a88069cd25f7868f4a5fc",
+          "exists": true,
+          "bytes": 1270171
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only"
+    },
+    {
+      "id": "01a0f5e1-0424-7093-b17c-5a9f6ff5c692",
+      "title": "Разложить UV стенок в UDIM 1001",
+      "previous_title": "Разложить UV стенок в UDIM 1001",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Latest user accepted UV/FBX v006. Case, job state, accepted manifest, scripts and every named output/report preserved; accepted hashes independently match. Missing Max/full-OKS checks are retained in case and job state; archive does not certify them.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native Max import and full OKS/Checker pending; outside accepted UV/FBX stage",
+        "Do not retire ignored scripts/scenes with chat; ensure local backup retention"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\case_studies\\SOSH1150_CONTINUOUS_WALL_UV_FBX.md",
+          "sha256": "82378ce44bab4fefe39fd8d423982a747dfc125e8c631c88835c5393743f7732",
+          "exists": true,
+          "bytes": 9954
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\STATE.md",
+          "sha256": "e6d52993506692c9d2185edc50d541a53183601e41b12e21c5f5d6ae872aa31e",
+          "exists": true,
+          "bytes": 11172
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\ACCEPTED_V006.json",
+          "sha256": "38c55eacabde53a7f967953b08e9f5bfcce5d0d49917bc785515a25b35222232",
+          "exists": true,
+          "bytes": 1255
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\walls_UV550-1500_FlipH_v006.blend",
+          "sha256": "406c66057b5912701abecf01868b46a8f6a839f1bb722403ed164163cc8072ca",
+          "exists": true,
+          "bytes": 33775512
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\T_Template_Address_001_Diffuse_FlipH_v005.1001.png",
+          "sha256": "e3a6708fbd89d79e2b44de900eb8bac9a41842f44099a9b972e157a5d74d4f99",
+          "exists": true,
+          "bytes": 271916
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\FBX_For_Max_v006\\Walls_FlipH_v006.fbx",
+          "sha256": "df85decb958bf8a6323a28bb17e8eb44c4f5349b940a8d325beb694f57bbe17e",
+          "exists": true,
+          "bytes": 1506076
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\Walls_FlipH_v006_FBX_For_Max.zip",
+          "sha256": "67f9300596849cd0496eca096573ccd9a512f875dd2263be3c50dbe2c2ea2a40",
+          "exists": true,
+          "bytes": 1486625
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\readback_v006.json",
+          "sha256": "de28db790459d338fcb2701dec2ddfc6435b1e231bc16c978a682623be2e5b74",
+          "exists": true,
+          "bytes": 905
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\agr_scoped_v006.json",
+          "sha256": "6f59bfb7cf94788f2989997100b185b69b40d21e36f3eee9b0a62ba80ff2cdca",
+          "exists": true,
+          "bytes": 318
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\FBX_For_Max_v006\\FBX_READBACK.json",
+          "sha256": "75db44f56cc5b476c6547bcae567db876e24d79466d8e04069fa5e84320b17b2",
+          "exists": true,
+          "bytes": 856
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\jobs\\UV-CONTINUOUS\\outputs\\FBX_For_Max_v006\\PACKAGE_QA.json",
+          "sha256": "64c6735ad127991b68fa1b0c6f89a12e7ffbc93be41561d4287dc6fcb2883d76",
+          "exists": true,
+          "bytes": 750
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only"
+    },
+    {
+      "id": "01a0f6be-fba5-7833-9df9-5232fdc338ff",
+      "title": "AGR · Оркестрация агентов",
+      "previous_title": "Спроектировать локальную оркестрацию",
+      "action": "KEEP_CANONICAL",
+      "reason": "Existing canonical chat: active task or unique long multi-object/source history.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": true,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/tmp/harness-ab-20261006/REPORT.md",
+          "sha256": "d7d2b1baf3432d5c7ee3b07cecd7604e69ce150a2c9b034b079aee8c5ff81f24",
+          "exists": true,
+          "bytes": 19050
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a0fde0-20bb-7d20-9cc3-091f4e820399",
+      "title": "Восстановить контекст AGR",
+      "previous_title": "Восстановить контекст AGR",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Recovery/prior hygiene completed; receipts and continuation preserved in report. Current hygiene supersedes old chat.",
+      "coverage": {
+        "new_native_pages": 1,
+        "new_native_turns": 3,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-hygiene-20261003\\REPORT.md",
+          "sha256": "a18032db1fbbb2b89fcca29d8486d3add8886c17e7de202eb2a1ac423d573e3a",
+          "exists": true,
+          "bytes": 23088
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\docs\\organization\\PROJECT_MAP.md",
+          "sha256": "b2df9ea621b23ed3e03fb6f0b18c7a1b74bc2a54f5f2bce7cc8a9c293a3c0455",
+          "exists": true,
+          "bytes": 8487
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\STATE.md",
+          "sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+          "exists": true,
+          "bytes": 9955,
+          "previous_observed_sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+          "role": "mutable_current_context",
+          "retirement_dependency": false
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\STATE.md",
+          "sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+          "exists": true,
+          "bytes": 9955,
+          "previous_observed_sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+          "role": "mutable_current_context",
+          "retirement_dependency": false
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-hygiene-20261003\\REPORT.md",
+          "sha256": "a18032db1fbbb2b89fcca29d8486d3add8886c17e7de202eb2a1ac423d573e3a",
+          "exists": true,
+          "bytes": 23088
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-hygiene-20261002\\CLEANUP.md",
+          "sha256": "e07574e094f38d4c1d974075b37186271dec1be170dba6474df5c61d53772eb7",
+          "exists": true,
+          "bytes": 9817
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-hygiene-20261002\\MICRO_CLEANUP.md",
+          "sha256": "e2680df10a89a166e064d86d500651e125684b14df587efbf85d8ec940776b5a",
+          "exists": true,
+          "bytes": 3418
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-hygiene-20261002\\REPORT.md",
+          "sha256": "ad372df093de429c03d2b538b3288c2073ffe91fc4560d202428c3f3ea26a013",
+          "exists": true,
+          "bytes": 20775
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-bootstrap-20261002\\REPORT.md",
+          "sha256": "14dc8c6d8052710058086ae0738b16eb31e2af96ac3f9ed288a844c8595f145b",
+          "exists": true,
+          "bytes": 14665
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-bootstrap-20261002\\candidate-audit.md",
+          "sha256": "2ebd757467ec953b0ff2e9d67f04c5cd88fe4280b8bd6f0c1356d474ec438132",
+          "exists": true,
+          "bytes": 20620
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\agr-bootstrap-20261002\\hygiene-manifest.json",
+          "sha256": "d660a0f899c716156dd0590d9f9646907b04a9fd8e1c70e80cd7aa9fc30c7492",
+          "exists": true,
+          "bytes": 692065
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.codex\\worktrees\\agr-bootstrap-20261002\\.AGR_Project",
+          "exists": false,
+          "kind": "worktree_snapshot",
+          "head": "026b1474d314098104a5f3b0592d87dbaeda2f81",
+          "retention": "retained-worktrees/glb-bootstrap.bundle; recovery clone verified before checkout retirement",
+          "source_checkout_removed": true,
+          "recovery_verified": true,
+          "archive_path": "C:/Users/artsafro/.AGR_Project/tmp/project-hygiene-20261006/retained-worktrees/glb-bootstrap.bundle",
+          "archive_sha256": "f17b35a4a742459574c6d6f791f0330e4f34c853bc79407cb12afbc53f3874b0",
+          "branch": "codex/agr-bootstrap-20261002"
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "current_context": {
+        "path": "C:\\Users\\artsafro\\.AGR_Project\\STATE.md",
+        "role": "mutable_current_context",
+        "retirement_dependency": false,
+        "previous_observed_sha256": "671d2a395146b8e81766013fbe159d3b92f14d1d304161c8895400f4c427976a",
+        "current_observed_sha256": "00ea3e53e6d698f28e411eedd248787d5076a0c91ec5104097e475427a89de4d",
+        "reason": "Independent addendum confirms archived result is retained in job/case/report; current navigation changed under active owner"
+      },
+      "independent_review": "native full history and retained SHA verified; reversible archive only",
+      "durable_handoff": "Old hygiene accepted within scope:19test trees,3708files269links,78caches; receipts/recovery retained. Current project map supersedes old navigation; two unique bootstrap historical documents preserved. Original directory pointer replaced by independently restored full Git bundle; old checkout can close only after current retention gate.",
+      "archive_verified": "native list_archived_threads 2026-10-06"
+    },
+    {
+      "id": "01a11149-e599-7fa1-8cb5-b586ae2aaf25",
+      "title": "hi",
+      "previous_title": "hi",
+      "action": "ARCHIVE_CANDIDATE",
+      "reason": "Native read covers entire two-turn chat: hi and q both failed immediately from quota. No tool calls, generated artifact or substantive continuation. Failure is recorded here; safe reversible archive.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [],
+      "retained": [],
+      "session_file_deletion_allowed": false,
+      "archive_executed": true,
+      "independent_review": "native full history and retained SHA verified; reversible archive only"
+    },
+    {
+      "id": "01a111bc-11b7-7360-b35a-5d020abc72b3",
+      "title": "AGR · Skills и правила",
+      "previous_title": "Установи skills в корень",
+      "action": "ARCHIVE_AFTER_FINAL_HANDOFF",
+      "reason": "Complete prior native2 turns. Preserve cleanup manifest and final lock/list verification in durable current package; local uncommitted changes remain.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": false,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\tmp\\skills-audit-20261006\\MANIFEST.md",
+          "sha256": "1b6f4f5cb381306aef51d981c4c3cabe7d5d1115f5249e19deb806837507903b",
+          "exists": true,
+          "bytes": 2865
+        },
+        {
+          "path": "C:\\Users\\artsafro\\.AGR_Project\\skills-lock.json",
+          "sha256": "fe70d60feeff651be71811c2643ac6ce735d694cd135eea5dfa41cd6b5762690",
+          "exists": true,
+          "bytes": 1793
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a112cd-280b-7862-befb-f228eecc5efe",
+      "title": "КПП1 · ВПМ здания",
+      "previous_title": "Смоделировать ВПМ здания по этапам",
+      "action": "KEEP_CANONICAL",
+      "reason": "Existing canonical chat: active task or unique long multi-object/source history.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": null,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/KPP1-VPM/versions/KPP1_BODY_RETOPO_v004.blend",
+          "exists": true,
+          "bytes": 16963545
+        },
+        {
+          "path": "C:/Users/artsafro/.AGR_Project/jobs/KPP1-VPM/evidence/retopo-v004-south.png",
+          "sha256": "1e3282f82c5a386eebb3379efebd003db8cb5f1af9c4cd263e4b5d3546615019",
+          "exists": true,
+          "bytes": 1786156
+        }
+      ],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    },
+    {
+      "id": "01a112ee-e174-7230-99ad-f97f66d76f2a",
+      "title": "AGR · Гигиена и структура",
+      "previous_title": "Реорганизовать проект и аудит задач",
+      "action": "KEEP_CANONICAL",
+      "reason": "Existing canonical chat: active task or unique long multi-object/source history.",
+      "coverage": {
+        "new_native_pages": 0,
+        "new_native_turns": 0,
+        "last_page_has_more": null,
+        "next_cursor": null
+      },
+      "missing_gates": [
+        "All task outcomes/extraction coverage not independently established",
+        "Native/full-model QA only when applicable; missing delivery QA does not itself forbid archive after durable continuation"
+      ],
+      "retained": [],
+      "session_file_deletion_allowed": false,
+      "archive_executed": false
+    }
+  ],
+  "worktrees_retired": [],
+  "session_files_deleted": false,
+  "independent_native_coverage": [
+    {
+      "id": "01a0e311-3cdc-7603-8c56-6991321d1e06",
+      "pages": 1,
+      "turns": 3,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0e346-4c96-7b92-8bc4-3d7fbd6a4e03",
+        "01a0e320-237a-7b92-b0c6-2485b641abed",
+        "01a0e311-473a-77d0-8b35-ab52935e8240"
+      ]
+    },
+    {
+      "id": "01a0e378-3f54-71e0-ab85-bada998da713",
+      "pages": 1,
+      "turns": 3,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0e382-1ee9-77e2-89b7-dc5dbd0e7f97",
+        "01a0e37d-a841-76d3-9fe3-90fc05225979",
+        "01a0e378-5c1c-77d2-93fb-c961944261d0"
+      ]
+    },
+    {
+      "id": "01a0e3ad-2c25-7ac3-a07d-fc1a625ff687",
+      "pages": 1,
+      "turns": 2,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0e3ca-2824-7ba2-bfaf-1cce11a41921",
+        "01a0e3ad-325b-7e52-92f9-1c03d39fcf59"
+      ]
+    },
+    {
+      "id": "01a0e70a-4dd2-7343-8269-c301d2c44403",
+      "pages": 1,
+      "turns": 2,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0e70c-5fcd-7e83-94fc-6b25a103ecac",
+        "01a0e70a-5824-72b3-8dcc-7ebf1d170ea8"
+      ]
+    },
+    {
+      "id": "01a0e971-82fa-73c0-9845-eefe8ee09648",
+      "pages": 1,
+      "turns": 2,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0e978-d1fe-75f1-ad46-e3aa38b73e7d",
+        "01a0e972-82b5-7980-b641-99ecb688495d"
+      ]
+    },
+    {
+      "id": "01a0edee-a911-7162-abf8-024af82794db",
+      "pages": 5,
+      "turns": 41,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0fe2c-9d84-7c93-b993-e70656b345bd",
+        "01a0fdd1-d549-79d0-87c4-c0eba4c27d3b",
+        "01a0fdcc-1dfe-7c42-ba28-cdecbd6c965f",
+        "01a0fdcb-1aea-7103-9b49-02ab23222267",
+        "01a0fdc7-6e54-7450-8163-621a7c0db080",
+        "01a0fdc2-6323-7fc1-b99b-88366ebc7fd6",
+        "01a0fdc2-4c92-7a92-922a-a16da20b018b",
+        "01a0fdc0-d75d-7a50-b8a2-8d300e82eee8",
+        "01a0fdba-8695-7fa2-a2d8-68d6150fa5ec",
+        "01a0fdaa-f60e-7672-87b6-4524a6398e62",
+        "01a0fda7-7f96-76f3-a2bc-ea2cd8379d91",
+        "01a0fda1-04e8-7c92-a7bf-c11300df0bbe",
+        "01a0fd91-b239-7340-9845-cbc4daa775f1",
+        "01a0fd91-45a2-7eb0-ac8b-6d91873c4a5a",
+        "01a0fd90-b508-7ac3-80e2-29b273c576d3",
+        "01a0fd88-a4c7-74f1-a5b2-e78172b1ce0a",
+        "01a0f933-3218-7980-9a1d-e5cdac7d070d",
+        "01a0f92e-0e82-7493-b71a-d904b48dd685",
+        "01a0f7fa-b440-7680-9e45-3c8f02d5bcd8",
+        "01a0f7ea-eac1-7181-8bb1-835452373c97",
+        "01a0f7df-eacc-7351-b67a-494415c1852c",
+        "01a0f7d0-cabd-7fd0-80dc-e5d091553ec9",
+        "01a0f7c7-f724-7d91-a9be-ce811c540e8e",
+        "01a0f7c6-b3fe-7203-bfb1-d836f5d3b738",
+        "01a0f443-6d50-7693-818e-68b28959bc2d",
+        "01a0f407-05cd-7ad0-9f73-2aa3a0904cff",
+        "01a0f3ab-38d6-7602-9583-ec1e111aeafa",
+        "01a0f1de-6dd5-7f83-bc0b-71114a673973",
+        "01a0f1da-bbe6-7173-8bd9-fd06da9cc03b",
+        "01a0f1da-62fc-7112-abf7-ca6c2e9c9dc1",
+        "01a0f1d5-6d91-7442-b29d-4dae7cd045ed",
+        "01a0f1c1-2583-7111-9941-63e81c335c6c",
+        "01a0f1ba-542e-7362-97fc-5f4548711393",
+        "01a0f1b7-01f7-7383-9f27-b04b68a278ac",
+        "01a0ee30-aabd-7b92-8041-e83c4da20a9d",
+        "01a0ee0c-0755-7570-b76e-3e86d6438e79",
+        "01a0ee07-854c-79d0-a137-15529675fa7e",
+        "01a0edf2-c025-7e42-a63e-0b23bb26be75",
+        "01a0edf1-ff6f-7dd1-8f4e-ff25eeac10a2",
+        "01a0edf0-ac67-73c3-8d40-3d2010fa072a",
+        "01a0edee-acbd-7902-8a02-2d8512cd22af"
+      ]
+    },
+    {
+      "id": "01a0f241-ec48-76c2-91a0-7cf37b529e1b",
+      "pages": 1,
+      "turns": 2,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0f245-3de9-7c03-8308-0905d22739f6",
+        "01a0f241-f2bc-7641-8430-ce9fe2826474"
+      ]
+    },
+    {
+      "id": "01a0f403-0b4f-7ab1-b544-8a887ba49039",
+      "pages": 1,
+      "turns": 2,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0f443-bb08-7772-be9b-175a516829f8",
+        "01a0f406-7ceb-7101-a70d-e7cc139f1144"
+      ]
+    },
+    {
+      "id": "01a0f5e1-0424-7093-b17c-5a9f6ff5c692",
+      "pages": 1,
+      "turns": 3,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0f69c-9d2b-75c2-b6a6-8b08d9f49889",
+        "01a0f602-f5f7-7eb2-83d2-f127cf02ec9b",
+        "01a0f5e2-6edc-7392-8d33-01278415df7c"
+      ]
+    },
+    {
+      "id": "01a0fde0-20bb-7d20-9cc3-091f4e820399",
+      "pages": 1,
+      "turns": 3,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a0fec9-c21a-79d2-90b5-3c05ac542b18",
+        "01a0fdff-a732-7e62-ac9b-895b5d5bf9db",
+        "01a0fde0-2ed8-7510-8311-d555160f5da7"
+      ]
+    },
+    {
+      "id": "01a11149-e599-7fa1-8cb5-b586ae2aaf25",
+      "pages": 1,
+      "turns": 2,
+      "has_more": false,
+      "next_cursor": null,
+      "status": "COMPLETE_NATIVE_HISTORY_READ",
+      "turn_ids": [
+        "01a1114a-55b5-7cd2-adb1-fe6f421b308d",
+        "01a1114a-31f4-7180-99b7-3a8358ad289b"
+      ]
+    }
+  ],
+  "retention_review_sha256": "745b496c795b3415f6c794a21710ce3489d3356f8af8d72ce51859f102887444",
+  "execution": {
+    "archived_chats": 11,
+    "canonical_chats": 8,
+    "sections": 3,
+    "retired_clean_worktrees": 2,
+    "preserved_branches": true,
+    "bundle_sha256": "f17b35a4a742459574c6d6f791f0330e4f34c853bc79407cb12afbc53f3874b0",
+    "recovery_readback_tracked_files": 411
+  }
+}
