@@ -35,26 +35,46 @@
     "01a0b06f-8dad-7260-8d16-78414060b95b": 1790609505,
     "01a0c037-b514-7292-bab9-5d25fc9713c6": 1790793878,
     "01a0c82b-fa20-71c2-8ff4-6f8552c09696": 1790247398,
-    "01a0d7bd-48d4-7be1-8ea6-67c7cbd2ded7": 1790793880,
+    "01a0d7bd-48d4-7be1-8ea6-67c7cbd2ded7": 1790951511,
     "01a0d907-b0c4-7e82-b0f1-23c8a5a10d4b": 1790793881,
     "01a0dd01-3411-70a1-bc4f-2e2d0eac1a50": 1790425184,
-    "01a0ddd1-4d2c-79e3-84a7-b8048f0cb972": 1790886389,
+    "01a0ddd1-4d2c-79e3-84a7-b8048f0cb972": 1791290975,
     "01a0e218-32e0-76c3-ba8f-48b0a68300d4": 1790793884,
     "01a0e311-3cdc-7603-8c56-6991321d1e06": 1790582209,
     "01a0e378-3f54-71e0-ab85-bada998da713": 1790854662,
     "01a0e3ad-2c25-7ac3-a07d-fc1a625ff687": 1790769888,
     "01a0e70a-4dd2-7343-8269-c301d2c44403": 1790582760,
     "01a0e971-82fa-73c0-9845-eefe8ee09648": 1790623974,
-    "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff": 1790861780,
-    "01a0ec14-b5fa-7810-abe3-e87a72701103": 1790855472,
-    "01a0edad-00b6-7712-acac-7ff555a2d751": 1790928495,
-    "01a0edee-a911-7162-abf8-024af82794db": 1790887735,
+    "01a0ebe4-71b4-70c3-90dc-03fa3cc956ff": 1790940690,
+    "01a0ec14-b5fa-7810-abe3-e87a72701103": 1790940689,
+    "01a0edad-00b6-7712-acac-7ff555a2d751": 1791298315,
+    "01a0edee-a911-7162-abf8-024af82794db": 1790971259,
     "01a0f241-ec48-76c2-91a0-7cf37b529e1b": 1790858108,
-    "01a0f403-0b4f-7ab1-b544-8a887ba49039": 1790858110,
+    "01a0f403-0b4f-7ab1-b544-8a887ba49039": 1790951215,
     "01a0f5e1-0424-7093-b17c-5a9f6ff5c692": 1790858175,
-    "01a0f6be-fba5-7833-9df9-5232fdc338ff": 1790885065
+    "01a0f6be-fba5-7833-9df9-5232fdc338ff": 1790885065,
+    "01a0fde0-20bb-7d20-9cc3-091f4e820399": 1790984750
   },
-  "last_run_at_utc": "2026-10-02T08:17:32Z",
-  "last_run_status": "third_scheduled_run_reviewed; PR25-28 already merged; new GLB A/B renderer+scoped cases in separate draft branch; native remap/current A v005 QA open",
-  "last_run_audit": "../history/organization/CHAT_AUDIT_2026-10-02.json"
+  "last_run_at_utc": "2026-10-06T14:56:21Z",
+  "last_run_status": "catchup_review_complete_after_2026-10-02; PR29/30 merged; one RunRecord inspector draft prepared; active A/B research cursor retained",
+  "last_run_audit": "CHAT_AUDIT_2026-10-06.json",
+  "last_draft_pr": {
+    "number": 29,
+    "url": "https://github.com/artsafro/AGR_Project/pull/29",
+    "head_sha": "88ddeb0cb6184a0793048f3d7202a197b2b046c8",
+    "merged": true
+  },
+  "pending_threads": {
+    "01a0f6be-fba5-7833-9df9-5232fdc338ff": {
+      "reason": "A/B harness comparison in progress; no acceptance or complete-stage cursor inferred",
+      "observed_updated_at": 1791298311
+    }
+  },
+  "hygiene_2026_10_06": {
+    "archived_chats": 11,
+    "canonical_chats": 8,
+    "sections": 3,
+    "pr31_merged_sha": "d53cb5f96a71c8aabe549d9974d07a3e7ccfcfdb",
+    "manual_run_does_not_advance_scheduled_cursors": true
+  }
 }

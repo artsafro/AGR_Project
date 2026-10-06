@@ -15,6 +15,8 @@ Sidebar: AGR · Проект / AGR · Разработка / AGR · Объект
 Статусы и доказательства: [аудит](docs/organization/HYGIENE_AUDIT_2026-10-06.md),
 [retirement manifest](docs/organization/CHAT_RETIREMENT_2026-10-06.json).
 
+Интегрирован main d53cb5f после независимо проверенного merge PR31.
+RunRecord inspector: docs/organization/local-orchestration/RUN_EVIDENCE.md.
 Предыдущий exact-base QA:222passed/1skipped/1expected warning, profiles3/schemas8.
 Финальный QA/review/publish/merge текущей ревизии пока pending.
 Следующий шаг: independently review сохранённые кандидаты → адресная уборка →

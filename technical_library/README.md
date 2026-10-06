@@ -1,5 +1,8 @@
 # Техническая библиотека AGR
 
+- [RunRecord inspector](../docs/organization/local-orchestration/RUN_EVIDENCE.md): переиспользует существующий ledger/AdapterReport, проверяет сохранённые файлы перед продолжением; native/manual gates отдельно.
+
+
 - [ГЛБ A/B: атлас по захваченным UV](glb_atlas/README.md): один Python-генератор
   и hash-bound конфигурация двух корпусов; строгие replays совпали с закреплёнными
   SHA256, текущий B v002 совпал побайтно, а mutable A v001 позднее изменился. Native
