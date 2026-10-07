@@ -74,7 +74,7 @@ blend=out/'BUTOVSKAYA_BODY_FACADES.blend'
 bpy.ops.wm.save_as_mainfile(filepath=str(blend))
 bpy.ops.wm.open_mainfile(filepath=str(blend))
 saved=np.zeros_like(coords); faces=[None]*len(data['faces']); ids=[None]*len(faces); groups_saved=[None]*len(faces)
-face_sizes=Counter(); wrong=0; zero=0; validated=False; objects=[]
+face_sizes=Counter(); wrong=0; zero=0; nonconvex=[]; validated=False; objects=[]
 for part in bpy.context.scene.objects:
     if part.type!='MESH': continue
     objects.append(part); mesh=part.data
@@ -88,6 +88,10 @@ for part in bpy.context.scene.objects:
         face_sizes[len(f.vertices)]+=1; zero+=f.area<1e-10
         normal=matrix[:3,:3]@np.array(f.normal); normal/=np.linalg.norm(normal)
         wrong+=int(normal@np.array(data['face_normals'][fi])<.99999)
+        corners=world[list(f.vertices)]
+        edges=np.roll(corners,-1,axis=0)-corners
+        if len(f.vertices)!=4 or not np.all(np.cross(edges,np.roll(edges,-1,axis=0))@normal>0):
+            nonconvex.append(int(fi))
         ids[fi]=mesh.attributes['revit_element_id'].data[f.index].value
         groups_saved[fi]=mesh.attributes['source_group_index'].data[f.index].value
     validated|=mesh.validate(clean_customdata=False)
@@ -95,7 +99,7 @@ face_sizes=dict(face_sizes)
 error=float(np.linalg.norm(saved-coords,axis=1).max())
 qa={'blend':str(blend),'blend_sha256':hashlib.sha256(blend.read_bytes()).hexdigest(),
     'face_sizes':face_sizes,'vertices':len(saved),'faces_match':faces==data['faces'],
-    'zero_area_faces':int(zero),'wrong_normals':wrong,'orientation_objects':len(objects),
+    'zero_area_faces':int(zero),'wrong_normals':wrong,'nonconvex_face_indices':nonconvex,'orientation_objects':len(objects),
     'local_plane_projection_max_deviation_m':projection_error,
     'max_coordinate_readback_error_m':error,
     'source_ids_match':ids==data['owner_ids'],
@@ -104,7 +108,7 @@ qa={'blend':str(blend),'blend_sha256':hashlib.sha256(blend.read_bytes()).hexdige
     'mesh_validate_changed':validated,
     'scope':data['scope'],'visual_accepted':False,'delivery_passed':False}
 (out/'native-readback.json').write_text(json.dumps(qa,indent=2),encoding='utf-8')
-if face_sizes!={4:len(faces)} or not qa['faces_match'] or not qa['source_ids_match'] or not qa['source_registry_match'] or not qa['group_indices_match'] or wrong or qa['zero_area_faces'] or error>.002 or qa['mesh_validate_changed']: raise ValueError(qa)
+if face_sizes!={4:len(faces)} or not qa['faces_match'] or not qa['source_ids_match'] or not qa['source_registry_match'] or not qa['group_indices_match'] or wrong or nonconvex or qa['zero_area_faces'] or error>.002 or qa['mesh_validate_changed']: raise ValueError(qa)
 # Rendering adds only temporary cameras and grid curves after the master was saved.
 scene=bpy.context.scene; scene.render.engine='BLENDER_WORKBENCH'
 scene.display.shading.light='STUDIO'; scene.display.shading.color_type='OBJECT'

@@ -1,3 +1,9 @@
+# Current stage: v012
+
+[Current verified state and continuation](CURRENT.md). This supersedes the historical v004 notes below.
+
+---
+
 # Бутовская школа — поэтапное моделирование НПМ
 
 Цель и текущий результат: [STATE](STATE.md). Исходник — открытый Revit2025

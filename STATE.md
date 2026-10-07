@@ -1,3 +1,5 @@
+07.10.2026: [School BODY v012](jobs/BUTOVSKAYA-SCHOOL-NPM/CURRENT.md):14247 convex quads;520 five-metre cells,275PASS/245PENDING/0FAIL. Full BODY and Shell pending.
+
 # AGR — текущий этап
 
 07.10.2026: новая задача [Бутовская СОШ1000 — НПМ в Blender](jobs/BUTOVSKAYA-SCHOOL-NPM/STATE.md).

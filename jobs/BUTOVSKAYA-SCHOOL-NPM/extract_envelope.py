@@ -1,6 +1,7 @@
 """Read-only candidate vertical surfaces and sampled wall occlusion; no automatic selection."""
 import argparse
 import json
+import hashlib
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -16,9 +17,15 @@ def main():
     for name in ('reference', 'inventory', 'selection', 'output'):
         parser.add_argument('--' + name, required=True)
     parser.add_argument('--minimum-plane-area', type=float, default=.000001)
+    parser.add_argument('--maximum-vertical-normal-z',type=float,default=.00001)
+    parser.add_argument('--vertical-projection-tolerance-m',type=float,default=.002)
     args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:])
     if not bpy.app.background:
         raise RuntimeError('Separate background Blender required; live app use forbidden')
+    if not np.isfinite(args.maximum_vertical_normal_z) or not 0<args.maximum_vertical_normal_z<=.001:
+        raise ValueError('Near-vertical angular limit must be between zero and0.001')
+    if not np.isfinite(args.vertical_projection_tolerance_m) or not 0<args.vertical_projection_tolerance_m<=.002:
+        raise ValueError('Measured vertical projection bound must not exceed2mm')
     output = Path(args.output)
     if output.exists():
         raise RuntimeError('Fresh output directory required')
@@ -52,7 +59,7 @@ def main():
     bvh = BVHTree.FromPolygons(vertices, triangles, all_triangles=True)
     epsilon, distance = .005, .65
     barycentrics = np.array([[1/3, 1/3, 1/3], [.6, .2, .2], [.2, .6, .2], [.2, .2, .6]])
-    planes, tiny = [], []
+    planes, tiny, filtered = [], [], []
     for element_id, (obj, world, faces) in sorted(objects.items()):
         groups = defaultdict(list)
         for index, face in enumerate(faces):
@@ -62,7 +69,17 @@ def main():
             if magnitude < 1e-12:
                 continue
             normal /= magnitude
-            if abs(normal[2]) > 1e-5:
+            if abs(normal[2]) > args.maximum_vertical_normal_z:
+                filtered.append({'id':element_id,'source_triangle_index':index,'area_m2':float(magnitude/2),
+                    'normal':normal.tolist(),'reason':'Outside explicit near-vertical angular contract'})
+                continue
+            horizontal=normal.copy();horizontal[2]=0;horizontal/=np.linalg.norm(horizontal)
+            vertical_d=float(np.median(pts@horizontal))
+            vertical_error=float(np.max(abs(pts@horizontal-vertical_d)))
+            if vertical_error>args.vertical_projection_tolerance_m:
+                filtered.append({'id':element_id,'source_triangle_index':index,'area_m2':float(magnitude/2),
+                    'normal':normal.tolist(),'vertical_projection_error_m':vertical_error,
+                    'reason':'Measured source triangle cannot project vertically within declared tolerance'})
                 continue
             d = float(normal @ pts[0])
             key = tuple(round(float(v), 5) for v in normal) + (round(d, 4),)
@@ -158,7 +175,12 @@ def main():
                                  'limitations': 'Sampled visibility does not prove full exposed contours. No automatic visibility threshold selects planes. Back probes first hit source face; inward probes start inside and report same-element thickness only when the first hit belongs to it. Parts absent from reference mappings.'},
               'wall_obstacle_ids': len(wall_ids), 'bvh_triangles': len(triangles),
               'candidate_planes': planes, 'tiny_planes_below_minimum': tiny,
-              'minimum_plane_area_m2': args.minimum_plane_area}
+              'minimum_plane_area_m2': args.minimum_plane_area,
+              'source_reference_sha256':hashlib.sha256(Path(args.reference).read_bytes()).hexdigest(),
+              'vertical_candidate_contract':{'maximum_abs_source_normal_z':args.maximum_vertical_normal_z,
+                  'maximum_measured_vertical_projection_m':args.vertical_projection_tolerance_m,
+                  'complete_group_projection_checked_again_by_compositor':True},
+              'filtered_source_triangles':filtered}
     (output / 'envelope.json').write_text(json.dumps(report, ensure_ascii=False), encoding='utf-8')
     summary = {'candidate_objects': len(objects), 'candidate_planes': len(planes),
                'classification_counts': dict(Counter(p['classification'] for p in planes)),

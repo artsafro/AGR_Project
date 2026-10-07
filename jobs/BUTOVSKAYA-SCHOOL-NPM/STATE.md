@@ -1,3 +1,9 @@
+# Current stage: v012
+
+[Current verified state and continuation](CURRENT.md). This supersedes the historical v004 notes below.
+
+---
+
 # Бутовская СОШ1000 — НПМ, Blender
 
 Цель пользователя 07.10.2026: моделировать школу из открытого Revit по этапам,
@@ -45,6 +51,16 @@ n-gon, вырождений, дублей, непреднамеренных over
 после двух ошибок одной причины сохранить evidence и сменить подход.
 
 ## Текущий этап
+
+Продолжение по прямому указанию пользователя: каждый5м геометрии проверить
+на квады и сопоставить BODY с открытым Revit. Grid5×5×5м от Revit internalorigin,
+без произвольных5м резов в master. Сравнение реальных поверхностей/проёмов,
+source-only cells тоже проверять; unknowns не получатьpassed. RootDCCwriter;
+отдельный owner audit_five_metre.py и independent coplanar repairowner.
+Вход nativeactualworldcoords v004, attribution-v006, exactsourceprofiles;
+fresh Revit exportsource-live-v002 запущен (timeoutunknown outcome, не replay).
+План: sourcefreshness geometryhash →5м audit → адресные source-constrained repairs
+→ newnative master/reopen → повтор5м проверки и независимый review. Shell pending.
 
 Рабочий общий фасадный мастер S1 (НЕ полный принятый BODY):
 Скрипты/README/RESULT сохранены локальным implementation-коммитом5a97c7d;

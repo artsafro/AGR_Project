@@ -10,7 +10,8 @@ from shapely.geometry import Polygon, shape as geometry_shape
 
 
 def rebuild_profile(polygons_2d, normal3, tangent3, plane_d,
-                    rail_cluster_m=.15, coordinate_precision_m=.00005):
+                    rail_cluster_m=.15, coordinate_precision_m=.00005,
+                    contour_simplification_m=0):
     """Rebuild vertical-plane arbitrary Polygon/MultiPolygon-with-holes as quads.
 
     Parameters match quad_geometry for integration, but rails and precision are
@@ -33,9 +34,34 @@ def rebuild_profile(polygons_2d, normal3, tangent3, plane_d,
         polygons.append(poly)
     if not polygons:
         raise ValueError('Empty source profile')
+    if not np.isfinite(contour_simplification_m) or not 0 <= contour_simplification_m <= .00005:
+        raise ValueError('Explicit contour simplification must be between0 and50um')
     profile = shapely.union_all(polygons)
     if profile.geom_type not in ('Polygon','MultiPolygon') or not profile.is_valid:
         raise ValueError('Invalid source union')
+    raw_profile=profile
+    original_parts=list(profile.geoms) if profile.geom_type=='MultiPolygon' else [profile]
+    simplification_qa=None
+    if contour_simplification_m:
+        reduced=profile.simplify(contour_simplification_m,preserve_topology=True)
+        reduced_parts=list(reduced.geoms) if reduced.geom_type=='MultiPolygon' else [reduced]
+        if (len(original_parts)!=len(reduced_parts) or
+                sum(len(p.interiors) for p in original_parts)!=sum(len(p.interiors) for p in reduced_parts)):
+            raise ValueError('Contour simplification changed components or opening loops')
+        simplification_distance=float(profile.boundary.hausdorff_distance(reduced.boundary))
+        if simplification_distance>contour_simplification_m+1e-12:
+            raise ValueError('Contour simplification exceeds explicit boundary displacement bound')
+        for p in original_parts:
+            for ring in p.interiors:
+                if reduced.intersection(Polygon(ring).buffer(-.000075)).area>1e-10:
+                    raise ValueError('Contour simplification filled a protected source opening')
+        simplification_qa=dict(applied=True,tolerance_m=contour_simplification_m,
+                              boundary_hausdorff_m=simplification_distance,
+                              symmetric_difference_m2=float(profile.symmetric_difference(reduced).area),
+                              components_before=len(original_parts),components_after=len(reduced_parts),
+                              opening_loops_before=sum(len(p.interiors) for p in original_parts),
+                              opening_loops_after=sum(len(p.interiors) for p in reduced_parts))
+        profile=reduced
     parts = list(profile.geoms) if profile.geom_type == 'MultiPolygon' else [profile]
     triangle_collection = shapely.constrained_delaunay_triangles(profile)
     triangles = list(triangle_collection.geoms)
@@ -79,6 +105,8 @@ def rebuild_profile(polygons_2d, normal3, tangent3, plane_d,
             len(parts) != len(rebuilt_parts) or
             holes != sum(len(p.interiors) for p in rebuilt_parts)):
         raise ValueError('Fallback fails source boundary/coverage/holes/overlap contract')
+    if contour_simplification_m and any(cell.intersection(raw_profile).area<=0 for cell in cells):
+        raise ValueError('Simplified fallback emits a quad without positive raw source intersection')
     edges = {}
     for face in faces:
         for i,j in zip(face,face[1:]+face[:1]):
@@ -86,9 +114,9 @@ def rebuild_profile(polygons_2d, normal3, tangent3, plane_d,
             edges[key] = edges.get(key,0)+1
     if max(edges.values()) > 2:
         raise ValueError('Nonmanifold fallback surface')
-    return dict(vertices_m=vertices,faces=faces,
+    result=dict(vertices_m=vertices,faces=faces,
                 source_profile_geojson=profile.__geo_interface__,
-                raw_source_profile_geojson=profile.__geo_interface__,
+                raw_source_profile_geojson=raw_profile.__geo_interface__,
                 qa=dict(quads=len(faces),source_triangles=len(triangles),source_components=len(parts),
                         source_opening_loops=holes,contour_hausdorff_m=distance,
                         symmetric_difference_m2=float(profile.symmetric_difference(rebuilt).area),
@@ -99,10 +127,16 @@ def rebuild_profile(polygons_2d, normal3, tangent3, plane_d,
                         min_edge_length_m=min(float(np.linalg.norm(np.array(vertices[i])-vertices[j])) for i,j in edges),
                         cut_style='constrained triangle subdivision fallback; irregular quad flow',
                         visual_acceptance='pending',delivery_passed=False))
+    if simplification_qa is not None:
+        result['qa']['contour_simplification']=simplification_qa
+        result['qa']['contour_hausdorff_m']=float(raw_profile.boundary.hausdorff_distance(rebuilt.boundary))
+        result['qa']['symmetric_difference_m2']=float(raw_profile.symmetric_difference(rebuilt).area)
+    return result
 
 
 def rebuild_normalized_profile(polygons_2d, normal3, tangent3, plane_d,
-                               rail_cluster_m=.15, coordinate_precision_m=.00005):
+                               rail_cluster_m=.15, coordinate_precision_m=.00005,
+                               contour_simplification_m=0):
     """Explicit bounded numerical-noise normalization before irregular fallback.
 
     Retains the exact route above unchanged. A 50um maximum precision grid is
@@ -141,7 +175,17 @@ def rebuild_normalized_profile(polygons_2d, normal3, tangent3, plane_d,
     area_bound=float(raw.boundary.length*bound+np.pi*bound**2)
     if max(removed,added)>area_bound:
         raise ValueError('Normalization coverage change exceeds perimeter-bound allowance')
-    result=rebuild_profile(parts,normal3,tangent3,plane_d,rail_cluster_m,coordinate_precision_m)
+    result=rebuild_profile(parts,normal3,tangent3,plane_d,rail_cluster_m,coordinate_precision_m,contour_simplification_m)
+    normalized_output=geometry_shape(result['source_profile_geojson'])
+    total_distance=float(raw.boundary.hausdorff_distance(normalized_output.boundary))
+    if total_distance>.000075:
+        raise ValueError('Normalization plus contour simplification exceeds total75um boundary bound')
+    if max(raw.difference(normalized_output).area,normalized_output.difference(raw).area)>area_bound:
+        raise ValueError('Total normalization/simplification coverage exceeds perimeter allowance')
+    for p in raw_parts:
+        for ring in p.interiors:
+            if normalized_output.intersection(Polygon(ring).buffer(-.000075)).area>1e-10:
+                raise ValueError('Total normalization/simplification filled protected opening')
     vertices=np.asarray(result['vertices_m'],dtype=np.float64)
     min_area=float('inf')
     for face in result['faces']:
@@ -151,8 +195,8 @@ def rebuild_normalized_profile(polygons_2d, normal3, tangent3, plane_d,
     if min_area<1e-10:
         raise ValueError('Normalized fallback would emit native-degenerate quad area below 1e-10m2')
     qa=result['qa']
-    qa.update(contour_hausdorff_m=distance,
-              symmetric_difference_m2=float(raw.symmetric_difference(normalized).area),
+    qa.update(contour_hausdorff_m=total_distance,
+              symmetric_difference_m2=float(raw.symmetric_difference(normalized_output).area),
               precision_hausdorff_m=distance,
               precision_symmetric_difference_m2=float(raw.symmetric_difference(normalized).area),
               coordinate_precision_m=coordinate_precision_m,min_quad_area_m2=min_area,
@@ -161,5 +205,7 @@ def rebuild_normalized_profile(polygons_2d, normal3, tangent3, plane_d,
                   removed_area_m2=removed,added_area_m2=added,allowed_area_change_m2=area_bound,
                   topology_components_before=len(raw_parts),topology_components_after=len(parts),
                   opening_loops_before=raw_holes,opening_loops_after=holes))
+    if contour_simplification_m:
+        qa['source_normalization']['total_boundary_displacement_m']=total_distance
     result['raw_source_profile_geojson']=raw.__geo_interface__
     return result
