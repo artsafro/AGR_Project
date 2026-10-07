@@ -46,6 +46,69 @@ n-gon, вырождений, дублей, непреднамеренных over
 
 ## Текущий этап
 
+Рабочий общий фасадный мастер S1 (НЕ полный принятый BODY):
+Скрипты/README/RESULT сохранены локальным implementation-коммитом5a97c7d;
+эта запись продолжения фиксируется отдельным state-коммитом. Remote push не выполнялся.
+`tmp/BUTOVSKAYA-SCHOOL-NPM/body-facades-v004/BUTOVSKAYA_BODY_FACADES.blend`.
+SHA808bdcdd09bab521e1f072b107591aa9b5e7372f7318880e49deaea1922d33c2.
+12478 квадов/30214 вершин,88 orientation objects внутри BODYcollection;
+4633 regular quads,7845 irregular fallback quads. Геометрия без Shell.
+Произведено5325.077м² выбранных поверхностей с измеренными проёмами.
+Native save/reopen:0wrong normals/0zero faces; faces/IDs/group registry совпали;
+world-coordinate readback≤12.276мкм, planar-local correction≤6.166мкм.
+Причина421 angular failures v002 — мировые float32 coords мелких45° граней;
+исправлено локальными плоскостями и world transforms, а не ослаблением QA.
+Термин «100%quads» не означает регулярный flow или завершённые стыки.
+
+Активные входы: discovery-v002/envelope-v004 (3935плоскостей, tiny0),
+final-direction-plan-v002.json; geometry composition-v005/body-mesh.json;
+metadata attribution-v006/body-mesh.json.1278 mappings corrected to retain all
+positive intersections;93 tolerance-only mappings explicit pending. Vertices/faces
+byte-identical before/after attribution. Preview: preview-facades-v005/{SE,NW,NE,SW},
+source master SHA unchanged; никакой previewcurve не сохранён в master.
+Независимый native review: review-facades-v004.json подтвердил0wrong/zero/concave
+faces, source attributes/registry и SHA. Fitting previews исправили camera cropping;
+плотные/slivercuts, нерегулярные fanpatterns и fragmented sourcecandidate sheets
+остаются видимыми — architectural flow не принят.
+
+Обязательные pending:33 unresolved outer directions (31substrate,2plinth),
+unsupported source union444.049м²,5 strict visibility discrepancies9.966м²;
+4custom forms имеют только candidate vertical families, не доказанный полный
+наружный контур. Sloped/horizontal caps ещё не собраны. Global seam QA:
+1873exact duplicate pairs,627exact T-joins,3728proximity candidates,1bowtie
+group929 IDs5688821/5688822. Opposed layers blindly weld запрещено.
+Следующее действие: resolve group929 и same-plane pairs267/268,402/403,32/33
+по сохранённым sourceprofiles; затем outer-source directions/unsupported coverage,
+orthogonal corners и QA сохранённого master. Shell только после clean fullBODY.
+Вопрос об эталонном АР_В3/АР_Ф задан; ответа пока нет, текущий вход — открытый АР_В3.
+Доступные Revit tools не возвращают Wall.Orientation/exteriorface geometry;
+не устанавливать add-in/restart без сохранения live document context.
+
+Проверки:247passed/2skipped/1expected zip-warning,21.97s, task-owned basetemp,
+с разрешённым завершением собственного testchild. Profiles3/source hash/traceability
+и schemas8 OK. Module regular/irregular/normalized/seams tests + independent reviews
+в ignored tmp. Final global_geometry_passed=false, user_visual_accepted=false,
+delivery=false. RVT не сохранялся; active Revit тот же, modified=true после S0export.
+GUIBlender v005pilot не заменён. Reference/pilot SHA совпали повторно.
+v001/v002 native failures retained; v003 ownbackground worker119760 terminated
+после долгого single-line Textregistry write. Registry хранится root customproperty.
+Все исходники/неудачные варианты сохранены, ничего не удалено/не опубликовано.
+
+## Продолжение и предыдущий пилот
+
+Продолжение07.10.2026 после «давай далее»: пользователь разрешил следующий этап
+полного наружного BODY. Владелец live apps/экспортов root; отдельный read-only
+discovery анализирует сохранённую подложку в discovery-v002. HEAD начала0f919338,
+fresh origin/main20116762 (без изменений). SHA пилота совпал; Revit тот же документ,
+Blender GUI всё ещё показывает v005. Повторный source-export пока не нужен.
+План: расширить явный набор наружных типов/цоколя → определить фактическую
+наружную сторону относительно физической подложки → построить все поддержанные
+плоскости с реальными проёмами и локальными квад-переходами → проверить стыки,
+покрытие/исключения и native readback/preview → независимый review. Shell только
+после проверенного полного BODY. Не заполнять неизвестные фасады bounding box.
+Revit wall ID2679089 имеет native Length32700мм: физический FBX32.7м совпадает;
+sidecar bbox32.775м остаётся bbox, его75мм не являются измеренной длиной стены.
+
 S0: получены census/FBX/sidecar и SOURCE_REFERENCE.blend. Census109 категорий,
 2468 типов,196 семейств,853 материала,92835 экземпляров с аннотациями/эскизами.
 Отметки census feet; подтверждённые этажи -3.4,-2.1,0,4.5,8.7,12.9,17.1,18.6м.
@@ -57,7 +120,7 @@ FBX47,010,928bytes;10695 meshes/504893triangles;10695 unique sidecar mappings.
 Matrix scale0.3048000038 соответствует feet→m. FBX material slots отсутствуют,
 Blender reset invalid indices; материал/полнота фасадов остаются pending.
 
-S1-пилот: наружная плоскость восточной стены ID2679089, normal+X,
+S1-пилот: плоскость слоя ПОД наружной облицовкой восточной стены ID2679089, normal+X,
 32.7×18.25м. Активная версия:
 `tmp/BUTOVSKAYA-SCHOOL-NPM/body-east-v005/BUTOVSKAYA_BODY_EAST_PANEL_v005.blend`.
 Сохранено/повторно открыто Blender4.4; GUI PID110468 открыт именно с этим файлом.
@@ -68,7 +131,8 @@ Per-face RevitID/source index сохранены; source index0 не утвер�
 Глобальные10мм полосы раннего варианта заменены локальными согласованными
 переходами внутри простенков; min edge0.3м, реальные границы не изменены.
 Sidecar minY отличается от FBX75мм: bbox не использован как контур;
-причина/контроль по Revit ещё pending. Нет утверждения о соответствии всей школы.
+Revit native Length32700мм подтвердил физические32.7м. Этот bbox вопрос разрешён.
+Пилот покрыт деревянной/металлической облицовкой; не считать его внешним BODY.
 
 Evidence/хеши: reference-v001/inventory.json, body-east-v004/panel-mesh.json,
 body-east-v005/panel-readback.json и BODY_EAST_PANEL_wire.png,
