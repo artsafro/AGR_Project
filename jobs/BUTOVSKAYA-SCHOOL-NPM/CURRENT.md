@@ -84,3 +84,6 @@ actual FBX roundtrip PASS; passed=false/synthetic=true. Это не приёмк
 визуальной проверки, затем окна/крыша/UV/отдельный экспорт/Checker.
 Нормы standards/NPM_STANDARD.yaml, docs/GEOMETRY_RULES.md и docs/UV_RULES.md.
 BODY только наружный; Ground density не применять;150ktris — экспортная копия.
+
+Local implementation/evidence commit:413a92e1f9cdc2af437c9aaf78076d6495c1ed57.
+No push/PR. Continuation pointer saved in a subsequent state commit.
