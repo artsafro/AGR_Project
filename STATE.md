@@ -1,5 +1,10 @@
 # AGR — текущий этап
 
+07.10.2026: новая задача [Бутовская СОШ1000 — НПМ в Blender](jobs/BUTOVSKAYA-SCHOOL-NPM/STATE.md).
+Рабочая ветка codex/butovskaya-school-npm от fresh main20116762.
+Первый наружный фасадный участок сохранён отдельно; вся школа ещё не построена.
+Исторический статус гигиены ниже сохранён; сцены и исходники других владельцев не менялись.
+
 Вход: [шесть направлений и восемь рабочих чатов](docs/organization/PROJECT_MAP.md).
 Код и повторяемые операции: [technical_library](technical_library/README.md).
 Технические маршруты: [TASK_CONTEXT](docs/TASK_CONTEXT.md).
