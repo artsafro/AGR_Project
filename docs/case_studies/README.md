@@ -1,5 +1,7 @@
 # Реестр опыта AGR
 
+- [Гарибальди и ДГП: скрипты и сверка версий](GARIBALDI_DGP_SCRIPT_TRANSFER.md): UTF-8 пути, новый восстановленный пакет SINTEZ, pixel-equivalent atlas replay; ручные/визуальные gates отдельно.
+
 - ГЛБ: [A_Main](GLB_A_MAIN_ATLAS.md) и [B_Main](GLB_B_MAIN_ATLAS.md):
   положительная оценка текущей сцены; [Python-пакет](../../technical_library/glb_atlas/README.md)
   воспроизводит карты, но не неизвестные правки A v005. FBX/Checker открыты.

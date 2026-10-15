@@ -1,0 +1,62 @@
+{
+  "saved_blend_sha256": "3fd1cb88f960d5c3eafefe1ad24db810cbaaff12f4c7362c5139cad4dabfcf4d",
+  "archive_sha256": "acc856f020f91e80e7c7ed12d282d2126a63e6305cd9f0cc80c8b193ce122790",
+  "saved_geometry_matches_snapshot": true,
+  "native_import_geometry_matches_snapshot": true,
+  "native_import_packed_textures_match": true,
+  "native_errors": [],
+  "native_check_groups": 44,
+  "historical_auto_checks": "44/44; current native groups are not UI counters",
+  "manual_checks": "28 pending",
+  "signature": "pending",
+  "visual_acceptance": "pending",
+  "delivery": false,
+  "date": "2026-10-15",
+  "source_snapshot_sha256": "fc3a69146cf1fa424ea1a45a27db6939d2efc2faafe44b0e26c23e22b7257a33",
+  "historical_final_sha256_matches": true,
+  "source_script_sha256": "0e880932b568c75a7fd2ef49a22f7288be45475a2865be276b8dfba841356fc7",
+  "case_config_sha256": "a946ad85352a21f081423bf3d5ba0e950c134efeb15238326e9da758fdd1fcba",
+  "discrepancy": {
+    "historical_source_zip_exists": true,
+    "historical_corrected_zip_exists": false,
+    "narrow_source_parent_matches": [
+      "1111_Garibaldi_22",
+      "1111_Garibaldi_22.zip"
+    ],
+    "narrow_corrected_parent_zip_matches": [],
+    "snapshot_sha256": "fc3a69146cf1fa424ea1a45a27db6939d2efc2faafe44b0e26c23e22b7257a33",
+    "historical_final_current_sha256": "57c337c9e11e570f493d4169c6f40a2f553676c0e2ab84429eb477c67004d205",
+    "historical_final_expected_sha256": "57c337c9e11e570f493d4169c6f40a2f553676c0e2ab84429eb477c67004d205",
+    "retained_fbx_count": 3,
+    "retained_map_count": 17,
+    "source_zip_current_sha256": "3636eb0c050d9c4c6f2dad9371a2c1348588c8973277c85cc6a5fbeb26c12e23",
+    "source_zip_expected_sha256": "3636eb0c050d9c4c6f2dad9371a2c1348588c8973277c85cc6a5fbeb26c12e23",
+    "source_zip_hash_matches": true,
+    "source_zip_crc_ok": true,
+    "source_zip_members": [
+      "1111_Garibaldi_22_01.fbx",
+      "1111_Garibaldi_22_02.fbx",
+      "1111_Garibaldi_22_Ground.fbx"
+    ],
+    "source_zip_prior_unavailable_cause": "Manifest UTF-8 was decoded with default Windows cp1251; wrong Cyrillic path. Explicit UTF-8 gives retained original ZIP, matching SHA256 and CRC. Independently repeated by lead."
+  },
+  "historical_equivalence": "Exact 6 saved and native-import mesh signatures plus 17 packed image hashes match historical repair_manifest. FBX/ZIP byte identity is not claimed.",
+  "local_evidence": "tmp/garibaldi-dgp-20261015/garibaldi-{repair,readback}-v004.log and garibaldi-readback-v004/native-readback.json",
+  "publication": "code/config/docs/compact evidence only; generated assets remain local",
+  "tests": {
+    "command": "python -m pytest -q -o addopts= --basetemp <new writable task temp> tests/test_sintez_repair.py",
+    "result": "15 passed; repeated with python -O:15 passed; pytest missing-assertions optimization warning expected, runtime guards use exceptions",
+    "negative_gates": [
+      "unsafe output names",
+      "existing output",
+      "input/output overlap",
+      "addon code or requirements drift",
+      "changed snapshot",
+      "changed saved blend",
+      "changed archive",
+      "source drift after export blocks final save/success"
+    ],
+    "environment_note": "Initial default pytest tmp fixture denied access to existing system pytest temp; explicit new task basetemp passed. Cache write warnings are unrelated to assertions."
+  },
+  "byte_format": "UTF-8 LF; script/config hashes bind final bytes staged for Git"
+}

@@ -1,3 +1,30 @@
+# Гарибальди + ДГП — перенос рабочих скриптов, 15.10.2026
+
+Цель: актуальные файлы/расхождения проверены; подготовлен один compact draft PR без
+моделей и временных версий. [Кейс/версии/приёмка](docs/case_studies/GARIBALDI_DGP_SCRIPT_TRANSFER.md).
+Base origin/main2011676288970760b024908b79a7c012d29ddff4 после fetch; branch
+codex/garibaldi-dgp-library-20261015, owner root. Primary checkout не изменялся.
+Код: SINTEZ repair/readback и расширение существующего texture_tiles; входы/параметры
+в config, новые output-only каталоги, явные guards и источник/результат hash QA.
+Гарибальди: SOURCE ZIP найден, прежняя ошибка пути UTF8/cp1251 исправлена; missing
+corrected ZIP восстановлен новым экспортом и отдельным native import/check.
+6 mesh signatures и17packed textures равны историческому маршруту;44nativegroups без errors.
+ДГП:43PNG byte/pixel equivalent старому маршруту;4changed/39unchanged. Current8eb2...
+прочитан в Max2024.2.5:16objects/343291triangles; геометрия/UV/IDs/smoothing/transform
+совпали сv4 в native formatting, только3visibilityflags отличаются; модели не менялись.
+273passed/2skipped, затем пропущенный DCCroundtrip отдельно1passed; remaining skip:
+Windows symlink privilege. Profiles3/schemas8OK. Expected duplicate-ZIP warning.
+Независимое review выявило и проверило исправление late input-driftguard; focused26passed.
+Подробные private receipts/новые outputs: primary tmp/garibaldi-dgp-20261015; вGit
+только code/config/docs/compactQA/tests. Исходники и предыдущие версии сохранены.
+Ограничения:28manual/УКЭП/visual/fullAGRdelivery pending; точная причина старого Max
+binarySHAнеизвестна, currentQA отдельный; explicitnormals/polygonlayout/VPMscale/seamless
+не доказаны. Публикация подтверждается URL PR, merge не выполняется.
+Следующий шаг: review draftPR и отдельное решение о merge; не пересохранять модели.
+Коммит этого этапа: git log -1 -- technical_library/sintez_repair/repair.py.
+
+---
+
 # AGR — текущий этап
 
 Вход: [шесть направлений и восемь рабочих чатов](docs/organization/PROJECT_MAP.md).
