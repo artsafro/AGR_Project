@@ -1,5 +1,7 @@
 # AGR — рабочий проект
 
+15.10: [Гарибальди/ДГП — перенос рабочих скриптов](../case_studies/GARIBALDI_DGP_SCRIPT_TRANSFER.md), отдельная codex/garibaldi-dgp-library-20261015 на base2011676. Текущие версии перепроверены; пользовательские модели не публикуются.
+
 [STATE](../../STATE.md) — текущий этап; [TASK_CONTEXT](../TASK_CONTEXT.md) — технический маршрут;
 [библиотека операций](../../technical_library/README.md) — повторяемый код и QA.
 

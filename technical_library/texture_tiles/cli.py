@@ -105,6 +105,16 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--reference', type=Path)
+    parser.add_argument('--source', type=Path, help='Supplied atlas for atlas_replace')
+    parser.add_argument('--maps', type=Path, help='Hash-bound input PNG directory for atlas_replace')
     args = parser.parse_args()
-    report = build(json.loads(args.config.read_text(encoding='utf-8')), args.output, args.reference)
-    print(json.dumps({'tiles': len(report['tiles']), 'archive_readback_equal': report['archive_readback_equal']}))
+    config = json.loads(args.config.read_text(encoding='utf-8'))
+    if config.get('operation') == 'atlas_replace':
+        from technical_library.texture_tiles.atlas import replace_atlas
+        if args.source is None or args.maps is None:
+            parser.error('atlas_replace requires --source and --maps')
+        report = replace_atlas(config, args.source, args.maps, args.output, args.reference)
+        print(json.dumps({'maps': len(report['maps']), 'changed_maps': report['changed_maps']}))
+    else:
+        report = build(config, args.output, args.reference)
+        print(json.dumps({'tiles': len(report['tiles']), 'archive_readback_equal': report['archive_readback_equal']}))
