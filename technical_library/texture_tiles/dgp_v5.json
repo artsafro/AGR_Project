@@ -1,0 +1,77 @@
+{
+  "operation": "atlas_replace",
+  "source_sha256": "dea4770cdd42432b08c8515bc70258c6fdad12b4954d517f883eb5514e99b97f",
+  "source_size": [
+    2048,
+    2048
+  ],
+  "crop": [
+    0,
+    1024,
+    2048,
+    2048
+  ],
+  "scaled_size": [
+    820,
+    410
+  ],
+  "target_rectangle": [
+    256,
+    256,
+    1792,
+    768
+  ],
+  "targets": [
+    "T_Krasnobogatyrskaya_Vld_89_006_Main_d_1.png",
+    "T_Krasnobogatyrskaya_Vld_89_011_Main_d_1.png",
+    "T_Krasnobogatyrskaya_Vld_89_012_Main_d_1.png",
+    "T_Krasnobogatyrskaya_Vld_89_013_Main_d_1.png"
+  ],
+  "input_maps": {
+    "T_Krasnobogatyrskaya_Vld_89_001_Main_d_1.png": "200ee2d997810434b0dc186ca195115b660ef04bd952264e7cf014e8502c6976",
+    "T_Krasnobogatyrskaya_Vld_89_001_Main_m_1.png": "ecffe02c6009d368184fe0b00447868ef75c190682271085c3fca4dc16eb6924",
+    "T_Krasnobogatyrskaya_Vld_89_001_Main_o_1.png": "bba2d660e9685845a015c3759e92c5a2a56f2c36d69992805a6752d7e5fd5ca0",
+    "T_Krasnobogatyrskaya_Vld_89_001_Main_r_1.png": "69847ce1243e3a44ced0833e0701cf4e5a769f40b61078bdef067c166310549a",
+    "T_Krasnobogatyrskaya_Vld_89_002_Main_d_1.png": "ce6e38e6a647cc542c11f9dd02a5d32203f1578c224dd7b42b8a4f952d18e48c",
+    "T_Krasnobogatyrskaya_Vld_89_002_Main_m_1.png": "ecffe02c6009d368184fe0b00447868ef75c190682271085c3fca4dc16eb6924",
+    "T_Krasnobogatyrskaya_Vld_89_002_Main_o_1.png": "bba2d660e9685845a015c3759e92c5a2a56f2c36d69992805a6752d7e5fd5ca0",
+    "T_Krasnobogatyrskaya_Vld_89_002_Main_r_1.png": "69847ce1243e3a44ced0833e0701cf4e5a769f40b61078bdef067c166310549a",
+    "T_Krasnobogatyrskaya_Vld_89_003_Main_d_1.png": "bdb5be3fe80e8363509331ceabb3ede04cb8b4f0a084a6112c916773ce59539f",
+    "T_Krasnobogatyrskaya_Vld_89_003_Main_m_1.png": "38dd5523efe8b7b98264b840247e8a8c3b086633d894a2ffb82d232f0d2e2865",
+    "T_Krasnobogatyrskaya_Vld_89_003_Main_o_1.png": "9cf8a2eaf3bc4db9cf3ea3b100bd60a253a5790e700df4bc16f9ff40346573ab",
+    "T_Krasnobogatyrskaya_Vld_89_003_Main_r_1.png": "9c1fbbca6d1a958404887dbea14862736b806342365e0f8d0ac5f8cf18b7c52b",
+    "T_Krasnobogatyrskaya_Vld_89_004_Main_d_1.png": "9fdbf2d99f6cc02da044613d22b54699409ab0ae6db69aedc7f5a7c63808ff48",
+    "T_Krasnobogatyrskaya_Vld_89_004_Main_m_1.png": "4edd80d6432423080ac0cb3c34f1ce08bb95b34ed4867d64cb84ba987a523401",
+    "T_Krasnobogatyrskaya_Vld_89_004_Main_n_1.png": "9682e0205ebae101ccc650cc53191e0e099a61e63a234580dbe67f95e2483e62",
+    "T_Krasnobogatyrskaya_Vld_89_004_Main_o_1.png": "f4caa9440ed40a8257b0f1ea6fb2d833901989db2ec779092d4dec04f1916931",
+    "T_Krasnobogatyrskaya_Vld_89_004_Main_r_1.png": "5d93f2bd161902ed1d6812238c4ec72c5896ffbb1780cbf762b51adef53f6874",
+    "T_Krasnobogatyrskaya_Vld_89_005_Main_d_1.png": "371fce12cca559b2de696c6beceef8ffa64b684f20afd88d67a2999c91205cb7",
+    "T_Krasnobogatyrskaya_Vld_89_005_Main_r_1.png": "cf011fd4f8b904ffea3e2b31784f5757c9ff5674fa34a24ec40b612f087c5055",
+    "T_Krasnobogatyrskaya_Vld_89_006_Main_d_1.png": "9398f4d647005fe585921c218d3493745f90c7de0d199061f5c73499eac93552",
+    "T_Krasnobogatyrskaya_Vld_89_006_Main_m_1.png": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+    "T_Krasnobogatyrskaya_Vld_89_006_Main_o_1.png": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+    "T_Krasnobogatyrskaya_Vld_89_006_Main_r_1.png": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+    "T_Krasnobogatyrskaya_Vld_89_011_Main_d_1.png": "9398f4d647005fe585921c218d3493745f90c7de0d199061f5c73499eac93552",
+    "T_Krasnobogatyrskaya_Vld_89_011_Main_m_1.png": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+    "T_Krasnobogatyrskaya_Vld_89_011_Main_o_1.png": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+    "T_Krasnobogatyrskaya_Vld_89_011_Main_r_1.png": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+    "T_Krasnobogatyrskaya_Vld_89_012_Main_d_1.png": "9398f4d647005fe585921c218d3493745f90c7de0d199061f5c73499eac93552",
+    "T_Krasnobogatyrskaya_Vld_89_012_Main_m_1.png": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+    "T_Krasnobogatyrskaya_Vld_89_012_Main_o_1.png": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+    "T_Krasnobogatyrskaya_Vld_89_012_Main_r_1.png": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+    "T_Krasnobogatyrskaya_Vld_89_013_Main_d_1.png": "9398f4d647005fe585921c218d3493745f90c7de0d199061f5c73499eac93552",
+    "T_Krasnobogatyrskaya_Vld_89_013_Main_m_1.png": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+    "T_Krasnobogatyrskaya_Vld_89_013_Main_o_1.png": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+    "T_Krasnobogatyrskaya_Vld_89_013_Main_r_1.png": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+    "T_Krasnobogatyrskaya_Vld_89_015_Main_d_1.png": "784bb968a1f394129dc98d0d4e7d7846e009a115f58605397884f0dba5acafb9",
+    "T_Krasnobogatyrskaya_Vld_89_015_Main_m_1.png": "3226324dedae905d03a36d18c0f02a2792a5824c6b3e8c156ca87f9db7c3f929",
+    "T_Krasnobogatyrskaya_Vld_89_015_Main_o_1.png": "2a16c007220ed97848c523f4a2f72a52f9fd25a5889bacc46a2f154c803666c7",
+    "T_Krasnobogatyrskaya_Vld_89_015_Main_r_1.png": "dd770a9639fdc262c9e9bd3e58ee6460d7d2804a53ee813a9f924bf9913b7b44",
+    "T_Krasnobogatyrskaya_Vld_89_016_Main_d_1.png": "6a2147f35fc5955a5ae3593e7cdd6cdbd779116c5320387af4b1c9d23eaea6f7",
+    "T_Krasnobogatyrskaya_Vld_89_016_Main_m_1.png": "d3a375bdd998e0f45ab44867af19b449286fd2cebe5932b90219d42b2c4d1685",
+    "T_Krasnobogatyrskaya_Vld_89_016_Main_o_1.png": "2a16c007220ed97848c523f4a2f72a52f9fd25a5889bacc46a2f154c803666c7",
+    "T_Krasnobogatyrskaya_Vld_89_016_Main_r_1.png": "05271a2bd089ad1c900fea61c96cdc338ed3287a27ac55705309b40e26b701c7"
+  },
+  "estimated_brick_length_m": 0.25,
+  "physical_scale_verified_against_vpm": false
+}

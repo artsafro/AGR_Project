@@ -1,0 +1,92 @@
+{
+  "project": "Garibaldi_22",
+  "package": "0707_Garibaldi_22",
+  "blender_version": [
+    4,
+    4
+  ],
+  "addon_digest": "473dc2e81f80e8d2d526fb92aa44c3a8922fee76d766e94545d79a7f302e7734",
+  "snapshot_sha256": "fc3a69146cf1fa424ea1a45a27db6939d2efc2faafe44b0e26c23e22b7257a33",
+  "geometry": {
+    "SM_Garibaldi_22_001_Main": {
+      "hash": "185751acf8eb620e54cb10a3b06ed0e1a1ec3b1660c5cb5cd6831a530519fc2e",
+      "verts": 83191,
+      "faces": 147757,
+      "materials": [
+        "M_Garibaldi_22_001_Main_1"
+      ]
+    },
+    "SM_Garibaldi_22_002_Main": {
+      "hash": "55402ae24583970b1b359de1252407c0b40f0a52cb65aed96f79dad3eec77d11",
+      "verts": 39605,
+      "faces": 73314,
+      "materials": [
+        "M_Garibaldi_22_002_Main_1"
+      ]
+    },
+    "SM_Garibaldi_22_003_Main": {
+      "hash": "cbf95a12c3cfdc6d80b0e2b1084b627948319f2ea38182487f370a8e6992991b",
+      "verts": 28927,
+      "faces": 51018,
+      "materials": [
+        "M_Garibaldi_22_003_Main_1"
+      ]
+    },
+    "SM_Garibaldi_22_Flora": {
+      "hash": "58419bcb3eb0e3cdb453f68f20a8ad9fb90299eba460f7e2bf307aa4237b3c9d",
+      "verts": 15667,
+      "faces": 12476,
+      "materials": [
+        "M_Garibaldi_22_Flora_1"
+      ]
+    },
+    "SM_Garibaldi_22_Ground": {
+      "hash": "63f9769e2926959447e34715be89467d83463b890cd5777aefb4b75bcd7231b0",
+      "verts": 5601,
+      "faces": 9353,
+      "materials": [
+        "M_Garibaldi_22_Ground_1"
+      ]
+    },
+    "SM_Garibaldi_22_GroundEl": {
+      "hash": "53bcdb8fdc68736a0854e097972b5c6704afceb1ffbf852933e68d9281fd6d93",
+      "verts": 45489,
+      "faces": 83052,
+      "materials": [
+        "M_Garibaldi_22_GroundEl_1"
+      ]
+    }
+  },
+  "texture_hashes": {
+    "T_Garibaldi_22_001_Main_d_1.png": "6b1251b77b5611e0b8bdcc85e388a60203edd95133c028f3ed16aed664d9db00",
+    "T_Garibaldi_22_001_Main_m_1.png": "ddf26faf993722a1f6e5c46adede894cb9fbb655ec8a76391a2d9f3698e52ae4",
+    "T_Garibaldi_22_001_Main_o_1.png": "8104d44c24780516d380b64dc258860adce5e25e84d9a03947066bb97d09624f",
+    "T_Garibaldi_22_001_Main_r_1.png": "09bf03286a97192e858ae66f0227cb660a104524911f78ba96740e7e5ef787dd",
+    "T_Garibaldi_22_002_Main_d_1.png": "1983af1b6a7b3fa9b6324e104a5133aca51a6a1ee84bdcdc5bda4274db76da0d",
+    "T_Garibaldi_22_002_Main_m_1.png": "62a41e9301c6667a6091c389adc280d20b550088c72f82d8c61ee76a4b32ab8c",
+    "T_Garibaldi_22_002_Main_o_1.png": "016b896924860d97b9c8d67b7922733b23555bbb3042858052fc66d17446b004",
+    "T_Garibaldi_22_002_Main_r_1.png": "bf36c1e6a20f019c8073523579e10e332fbb7e48ec65330a9010efdb3f53f555",
+    "T_Garibaldi_22_003_Main_d_1.png": "3e9e693e57217130d617faecfd43722090796bbc632989d5868ad601b22b5f8d",
+    "T_Garibaldi_22_003_Main_m_1.png": "cfbee37c99f6973fc1e676edee535447911d292ea2dfafc679081e7e22b69655",
+    "T_Garibaldi_22_003_Main_o_1.png": "5b9722a254008213cae66c260e196b30bef5abd4676ee8bf32097e480d0e1b0a",
+    "T_Garibaldi_22_003_Main_r_1.png": "9c6e07b357cbace866b2462688a900bfd0460cce56efe3ad371d5e0189bfdcd2",
+    "T_Garibaldi_22_Flora_d_1.png": "ac06fa985c400775fb1fab055b1eb9018a6625844569754eeb32cb70964f53ba",
+    "T_Garibaldi_22_Flora_o_1.png": "2677b18c02600ddf380fa26d4110f42bf31558dd9d4710055cfc0f54ad12135f",
+    "T_Garibaldi_22_Ground_d_1.png": "04e9812e55eb03b6e93de0031d0aff216c7c790a8bf7559cff32c51071c4d0e1",
+    "T_Garibaldi_22_GroundEl_d_1.png": "452a88a102bed20c87f593d1a6028f7aaa7b73d12e420b0a0ea9c4748d150e77",
+    "T_Garibaldi_22_GroundEl_o_1.png": "f862acb4b0720ccbddd94f53d41cf2743c1b29d685c7933e34661b93e55fe3e1"
+  },
+  "source_collections": [
+    "1111_Garibaldi_22_01.fbx",
+    "1111_Garibaldi_22_02.fbx",
+    "1111_Garibaldi_22_Ground.fbx"
+  ],
+  "fbx_names": [
+    "0707_Garibaldi_22_01.fbx",
+    "0707_Garibaldi_22_02.fbx",
+    "0707_Garibaldi_22_Ground.fbx"
+  ],
+  "expected_native_groups": 44,
+  "case_scope": "Garibaldi_22 saved snapshot only; 0707 is a native district finding for this object, not a universal replacement.",
+  "historical_source_zip_sha256": "3636eb0c050d9c4c6f2dad9371a2c1348588c8973277c85cc6a5fbeb26c12e23"
+}

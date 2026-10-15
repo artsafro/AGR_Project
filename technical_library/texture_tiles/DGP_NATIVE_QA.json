@@ -1,0 +1,40 @@
+{
+  "source_v4": "062d7d0b34417c4ff0c7d9a70c41a26a29a05817ad4bfed92859bd13f8d3d096",
+  "current_v5": "8eb2da7fa0c30bc4501635016f0f5310ecb385632b7d5b1c39afd1ff08fb414b",
+  "nodes_v4": 16,
+  "nodes_v5": 16,
+  "faces": 343291,
+  "node_differences": {
+    "SM_Krasnobogatyrskaya_Vld_89_015_MainGlass": {
+      "hidden": [
+        true,
+        false
+      ]
+    },
+    "SM_Krasnobogatyrskaya_Vld_89_016_Main": {
+      "hidden": [
+        true,
+        false
+      ]
+    },
+    "SM_Krasnobogatyrskaya_Vld_89_016_MainGlass": {
+      "hidden": [
+        true,
+        false
+      ]
+    }
+  },
+  "changed_bitmaps": [
+    "T_Krasnobogatyrskaya_Vld_89_013_Main_d_1.png",
+    "T_Krasnobogatyrskaya_Vld_89_006_Main_d_1.png",
+    "T_Krasnobogatyrskaya_Vld_89_011_Main_d_1.png",
+    "T_Krasnobogatyrskaya_Vld_89_012_Main_d_1.png"
+  ],
+  "all_bitmap_files_present": true,
+  "limits": "read-only evaluated triangles/face IDs/smoothing/UV/transform/bitmap files; native point formatting precision limits; no explicit normals or visual acceptance",
+  "historical_v5": "Original41ab35... bytes unavailable. Current8eb2... freshly audited; binary resave cause not established.",
+  "max_version": "2024.2.5",
+  "date": "2026-10-15",
+  "source_script_sha256": "17a74abe99fd1ca06c0c62ec1b7ece978dbae3e93cf3a5242907867e4323aae4",
+  "scope": "Fresh separate 3dsmaxbatch safe-scene ON; evaluated triangles/UV/face IDs/smoothing/transform hashes in native numeric formatting; explicit normals and editable polygon layout not inspected."
+}

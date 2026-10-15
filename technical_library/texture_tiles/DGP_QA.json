@@ -1,0 +1,327 @@
+{
+  "operation": "atlas_replace",
+  "maps": [
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_001_Main_d_1.png",
+      "sha256": "200ee2d997810434b0dc186ca195115b660ef04bd952264e7cf014e8502c6976",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_001_Main_m_1.png",
+      "sha256": "ecffe02c6009d368184fe0b00447868ef75c190682271085c3fca4dc16eb6924",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_001_Main_o_1.png",
+      "sha256": "bba2d660e9685845a015c3759e92c5a2a56f2c36d69992805a6752d7e5fd5ca0",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_001_Main_r_1.png",
+      "sha256": "69847ce1243e3a44ced0833e0701cf4e5a769f40b61078bdef067c166310549a",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_002_Main_d_1.png",
+      "sha256": "ce6e38e6a647cc542c11f9dd02a5d32203f1578c224dd7b42b8a4f952d18e48c",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_002_Main_m_1.png",
+      "sha256": "ecffe02c6009d368184fe0b00447868ef75c190682271085c3fca4dc16eb6924",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_002_Main_o_1.png",
+      "sha256": "bba2d660e9685845a015c3759e92c5a2a56f2c36d69992805a6752d7e5fd5ca0",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_002_Main_r_1.png",
+      "sha256": "69847ce1243e3a44ced0833e0701cf4e5a769f40b61078bdef067c166310549a",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_003_Main_d_1.png",
+      "sha256": "bdb5be3fe80e8363509331ceabb3ede04cb8b4f0a084a6112c916773ce59539f",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_003_Main_m_1.png",
+      "sha256": "38dd5523efe8b7b98264b840247e8a8c3b086633d894a2ffb82d232f0d2e2865",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_003_Main_o_1.png",
+      "sha256": "9cf8a2eaf3bc4db9cf3ea3b100bd60a253a5790e700df4bc16f9ff40346573ab",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_003_Main_r_1.png",
+      "sha256": "9c1fbbca6d1a958404887dbea14862736b806342365e0f8d0ac5f8cf18b7c52b",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_004_Main_d_1.png",
+      "sha256": "9fdbf2d99f6cc02da044613d22b54699409ab0ae6db69aedc7f5a7c63808ff48",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_004_Main_m_1.png",
+      "sha256": "4edd80d6432423080ac0cb3c34f1ce08bb95b34ed4867d64cb84ba987a523401",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_004_Main_n_1.png",
+      "sha256": "9682e0205ebae101ccc650cc53191e0e099a61e63a234580dbe67f95e2483e62",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_004_Main_o_1.png",
+      "sha256": "f4caa9440ed40a8257b0f1ea6fb2d833901989db2ec779092d4dec04f1916931",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_004_Main_r_1.png",
+      "sha256": "5d93f2bd161902ed1d6812238c4ec72c5896ffbb1780cbf762b51adef53f6874",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_005_Main_d_1.png",
+      "sha256": "371fce12cca559b2de696c6beceef8ffa64b684f20afd88d67a2999c91205cb7",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_005_Main_r_1.png",
+      "sha256": "cf011fd4f8b904ffea3e2b31784f5757c9ff5674fa34a24ec40b612f087c5055",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_006_Main_d_1.png",
+      "sha256": "b133424b75881b479d64c99bfb878449cb009053471f4dc7996f745a71fd213e",
+      "changed": true,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_006_Main_m_1.png",
+      "sha256": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_006_Main_o_1.png",
+      "sha256": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_006_Main_r_1.png",
+      "sha256": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_011_Main_d_1.png",
+      "sha256": "b133424b75881b479d64c99bfb878449cb009053471f4dc7996f745a71fd213e",
+      "changed": true,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_011_Main_m_1.png",
+      "sha256": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_011_Main_o_1.png",
+      "sha256": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_011_Main_r_1.png",
+      "sha256": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_012_Main_d_1.png",
+      "sha256": "b133424b75881b479d64c99bfb878449cb009053471f4dc7996f745a71fd213e",
+      "changed": true,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_012_Main_m_1.png",
+      "sha256": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_012_Main_o_1.png",
+      "sha256": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_012_Main_r_1.png",
+      "sha256": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_013_Main_d_1.png",
+      "sha256": "b133424b75881b479d64c99bfb878449cb009053471f4dc7996f745a71fd213e",
+      "changed": true,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_013_Main_m_1.png",
+      "sha256": "e51ebf7a4bcaaa1e8b81eef954588912c0b684336a2595a1851d4368a14db785",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_013_Main_o_1.png",
+      "sha256": "6fbb8a9cbe8bc0cfd7aca4b08b68d79a0a3b30ed986331845bef19ee3ddce881",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_013_Main_r_1.png",
+      "sha256": "8deb3f505a08f87bcc0e2e81b53f870fde72e9df640547f2c345a3986e4bf424",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_015_Main_d_1.png",
+      "sha256": "784bb968a1f394129dc98d0d4e7d7846e009a115f58605397884f0dba5acafb9",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_015_Main_m_1.png",
+      "sha256": "3226324dedae905d03a36d18c0f02a2792a5824c6b3e8c156ca87f9db7c3f929",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_015_Main_o_1.png",
+      "sha256": "2a16c007220ed97848c523f4a2f72a52f9fd25a5889bacc46a2f154c803666c7",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_015_Main_r_1.png",
+      "sha256": "dd770a9639fdc262c9e9bd3e58ee6460d7d2804a53ee813a9f924bf9913b7b44",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_016_Main_d_1.png",
+      "sha256": "6a2147f35fc5955a5ae3593e7cdd6cdbd779116c5320387af4b1c9d23eaea6f7",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_016_Main_m_1.png",
+      "sha256": "d3a375bdd998e0f45ab44867af19b449286fd2cebe5932b90219d42b2c4d1685",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_016_Main_o_1.png",
+      "sha256": "2a16c007220ed97848c523f4a2f72a52f9fd25a5889bacc46a2f154c803666c7",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    },
+    {
+      "name": "T_Krasnobogatyrskaya_Vld_89_016_Main_r_1.png",
+      "sha256": "05271a2bd089ad1c900fea61c96cdc338ed3287a27ac55705309b40e26b701c7",
+      "changed": false,
+      "reference_pixels_equal": true,
+      "reference_bytes_equal": true
+    }
+  ],
+  "source_sha256": "dea4770cdd42432b08c8515bc70258c6fdad12b4954d517f883eb5514e99b97f",
+  "changed_maps": 4,
+  "outside_rectangle_equal": true,
+  "scope": "PNG pixels only; no Max, UV, geometry, render, seamlessness or VPM-scale acceptance",
+  "delivery_passed": false,
+  "case": "DGP v4 to v5 brick atlas pixel replacement",
+  "verified_on": "2026-10-15",
+  "original_route": {
+    "source": "dgp-material-edit-20261013-v5/build_brick.py",
+    "sha256": "a3fab4a39ef52a5d1c50cbea684d8e727ca989ad74e0aa31d51563adf585204e",
+    "replay_only_path_bindings_changed": true,
+    "all_43_maps_bytes_equal": true
+  },
+  "runtime": {
+    "Pillow": "12.3.0",
+    "numpy": "2.5.3"
+  },
+  "tests": "11 passed; synthetic equivalence and 10 fail-closed preflight cases",
+  "physical_scale_verified_against_vpm": false,
+  "seamless_verified": false,
+  "native_scene_acceptance": "separate saved-file evidence; texture builder does not edit Max scenes"
+}
