@@ -1,5 +1,8 @@
 # Техническая библиотека AGR
 
+- [NPM Texture Linker для 3ds Max](max_texture_linker/README.md): один drag-and-drop
+  MAXScript, рекурсивный поиск карт по имени ОКС, новые Standard Legacy и отдельное правило M_Glass.
+
 - [Гарибальди + ДГП](../docs/case_studies/GARIBALDI_DGP_SCRIPT_TRANSFER.md): один scoped repair/readback SINTEZ и расширение texture_tiles для кирпича; свежая сверка текущих файлов, без моделей.
 
 - [RunRecord inspector](../docs/organization/local-orchestration/RUN_EVIDENCE.md): переиспользует существующий ledger/AdapterReport, проверяет сохранённые файлы перед продолжением; native/manual gates отдельно.
