@@ -1,5 +1,9 @@
 # Реестр опыта AGR
 
+- [NPM: Standard Legacy и FBX linker](NPM_MAX_MATERIAL_FBX_LINKER.md): частичная
+  пользовательская проверка, Reflection Texture после подключения, уникальное
+  glass и JSON-bound экспорт через временные копии; финальная приёмка pending.
+
 - [Гарибальди и ДГП: скрипты и сверка версий](GARIBALDI_DGP_SCRIPT_TRANSFER.md): UTF-8 пути, новый восстановленный пакет SINTEZ, pixel-equivalent atlas replay; ручные/визуальные gates отдельно.
 
 - ГЛБ: [A_Main](GLB_A_MAIN_ATLAS.md) и [B_Main](GLB_B_MAIN_ATLAS.md):
