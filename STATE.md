@@ -1,3 +1,25 @@
+# NPM — материалы и FBX в 3ds Max, 16.10.2026
+
+Реализация:59fbef22711d44e26d7d7b84a8df898cb0619d96;
+branch codex/max-texture-linker-20261016, base origin/main после fetch
+745bc13634b61c54a30c65e8a3ccf6398f8dbb26. Owner файлов/Max: root.
+[Один runtime .ms и запуск](technical_library/max_texture_linker/README.md),
+[QA](technical_library/max_texture_linker/QA.md),
+[частичная оценка пользователя и опыт](docs/case_studies/NPM_MAX_MATERIAL_FBX_LINKER.md).
+Новые Standard Legacy по T_ наборам; direct Bitmap, Texture после Reflection;
+отдельные M_Glass по natural mesh order. FBX source → NPM naming/container filter
+→ hash-bound JSON в новой папке → экспорт туда же через временные clean copies.
+UI проверен в Max: export disabled без JSON; рабочая сцена агентом не применялась.
+QA:329passed/3skipped, profiles3/schemas8OK;39nativePASS, отдельный Max2024.2.5:
+Undo/sharedopaque regression/sourceCA/selection/settings/FBX native roundtrip bounds.
+Full receipts retained local-only tmp/max-texture-linker-*, originals не менялись.
+Source JSON проверяет только binary7400/naming, не полную сдачу НПМ/AGR Checker.
+Независимые review findings исправлены; последняя пользовательская приёмка pending.
+Локально, без push/PR/merge. Следующий шаг: пользовательский прогон нового UI
+на рабочем наборе; JSON обязателен, существующие выходы не перезаписывать.
+
+---
+
 # Гарибальди + ДГП — перенос рабочих скриптов, 15.10.2026
 
 Цель: актуальные файлы/расхождения проверены; подготовлен один compact draft PR без
