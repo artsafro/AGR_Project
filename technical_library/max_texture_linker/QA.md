@@ -2,7 +2,8 @@
 
 Base после fetch: `745bc13634b61c54a30c65e8a3ccf6398f8dbb26`.
 Ветка: `codex/max-texture-linker-20261016`, владелец кода/Max — root.
-Публикация не запрошена: локальная поставка, без push/PR/merge.
+Исходный этап 16.10: локальная поставка, без push/PR/merge.
+Перенос 17.10 по авторизованному chat-learning loop: отдельный draft PR; без merge.
 
 ## Критерии
 
@@ -75,3 +76,18 @@ Selection, exporter settings, исходный transform и предыдущая
 `verified` относится к mesh membership. Synthetic roundtrip не заменяет проверку
 рабочего пакета пользователя. Hosted CI/push/PR/merge не выполнялись.
 Пользовательская визуальная приёмка последней версии — pending.
+
+## Перенос 17.10.2026
+
+Источник: чат `01a144e6-015a-7ce0-af8f-9ecbfc8b2c45`, commits `59fbef2` / `9a4e3c2`.
+Четыре исполняемых/тестовых исходника после переноса побайтно равны источнику.
+Свежий независимый batch Max: 39 PASS, ALL CHECKS PASSED, exit0; хеши в
+[TRANSFER_QA.json](TRANSFER_QA.json). Активная сцена и пользовательские модели не менялись.
+Первый sandbox batch завершился до fixture; повтор с обычным доступом прошёл.
+Независимое review actual code/spec и исходных receipts: блокирующих замечаний нет.
+Полные исходные и новые логи/синтетические FBX остаются локальными.
+
+Перенос: полный suite **329 passed / 3 skipped / 1 expected warning**, 18.03s;
+profiles3/schemas8. Начальный sandbox suite:328passed/3skipped/1failed
+(Windows process-tree taskkill); без изменения кода полный повтор вне sandbox прошёл.
+Blender и два symlink-gates остаются skipped, не объявляются пройденными.

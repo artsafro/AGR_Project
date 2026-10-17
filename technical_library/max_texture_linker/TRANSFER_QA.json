@@ -1,0 +1,46 @@
+{
+  "source_thread": "01a144e6-015a-7ce0-af8f-9ecbfc8b2c45",
+  "source_commits": [
+    "59fbef2",
+    "9a4e3c2"
+  ],
+  "transfer_base": "745bc13634b61c54a30c65e8a3ccf6398f8dbb26",
+  "date": "2026-10-17",
+  "files": {
+    "NPM_Texture_Linker.ms": "ff65477c9e8c0da02579bb137a377572d0fab0e200d141afcf2d835613d09175",
+    "fbx_inventory.py": "a5813b6053bc91305aa2d58fbc31e9466cdae67bf85445cb978f141fb7fad60d",
+    "embed_fbx.py": "76f1c3dc7ada0770add6eb48783e7d7ab8493385ed033b7d88395934db4cc5ed",
+    "test_native.ms": "ee5603e8b2390493acb693f4bd8f7fab16b303e5441d7c399df1cc0cf77330b1"
+  },
+  "source_equivalence": "all four executable/test sources byte-identical to completed source worktree",
+  "native": {
+    "application": "3ds Max 2024.2.5 batch",
+    "assertions_passed": 39,
+    "all_checks_passed": true,
+    "receipt_sha256": "71e58250a0ccaf2ed33ba5fb0dd0e3f663757c311a2ef2c37383c011996c482d",
+    "scope": "synthetic fixture, materials/undo/FBX membership and native reimport names/world bounds/custom-data checks; not real-model delivery",
+    "export_report_sha256": [
+      "d661aa72a6daf6c2633ff10e7da2346a28c9358b5c85b10a2fdb2fcfc23d2b4c"
+    ]
+  },
+  "acceptance": {
+    "early_user_version": "partial acceptance with explicit metallic/glass defects; exact user-run hash unknown",
+    "final_user_version": "pending",
+    "full_npm_checker": "not performed",
+    "forced_mid_export_failure_cancel": "not tested"
+  },
+  "privacy": "models, full chats, raw absolute-path manifests and images not published",
+  "python": {
+    "command": "python -m pytest -q -rs",
+    "passed": 329,
+    "skipped": 3,
+    "warning": "expected duplicate ZIP member",
+    "skip_scope": [
+      "Blender DCC not supplied",
+      "two Windows symlink privilege fixtures"
+    ],
+    "initial_sandbox": "328 passed, 3 skipped, Windows process-tree cleanup test failed; unchanged full suite outside sandbox 329 passed"
+  },
+  "profiles": 3,
+  "schemas": 8
+}

@@ -119,5 +119,6 @@ triangulate, smoothing groups, embed textures; без animation/lights/cameras.
 
 ## Статус
 
-Реализация и проверки: [QA.md](QA.md). Base после fetch: см. STATE.md.
+Реализация и проверки: [QA.md](QA.md). База переноса: `745bc13634b61c54a30c65e8a3ccf6398f8dbb26`; источник `59fbef2` / `9a4e3c2`.
+Хеши и свежая область QA — [TRANSFER_QA.json](TRANSFER_QA.json).
 Нет разрешения запускать массовое назначение на текущей пользовательской сцене.

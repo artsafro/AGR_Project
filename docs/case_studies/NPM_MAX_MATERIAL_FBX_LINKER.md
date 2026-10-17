@@ -54,5 +54,7 @@ Runtime — один `.ms`, embedded Python не требует внешних �
 оставлены reader, embed builder и тесты; все находятся в технической библиотеке.
 Воспроизведение и native команда — в README/QA. Повторять в новой output папке;
 originals не перезаписывать. Сохранено как scoped script, новый Skill не создавался.
-Git: local branch `codex/max-texture-linker-20261016`, exact commit — `git log`;
-push/PR не запрошены. Реестр и STATE обновляются в этом этапе.
+Git: local branch `codex/max-texture-linker-20261016`, исходные commits `59fbef2` / `9a4e3c2`;
+исходный этап локальный. Перенос 17.10 в отдельный draft PR разрешён общим
+chat-learning loop; новая ветка `codex/chat-learning-linker-20261017`. Merge не выполняется.
+Свежие хеши/QA: [TRANSFER_QA.json](../../technical_library/max_texture_linker/TRANSFER_QA.json).
