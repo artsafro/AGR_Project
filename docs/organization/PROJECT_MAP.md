@@ -1,6 +1,12 @@
 # AGR — рабочий проект
 
-15.10: [Гарибальди/ДГП — перенос рабочих скриптов](../case_studies/GARIBALDI_DGP_SCRIPT_TRANSFER.md), отдельная codex/garibaldi-dgp-library-20261015 на base2011676. Текущие версии перепроверены; пользовательские модели не публикуются.
+20.10: [Max материалы/FBX](../../technical_library/max_texture_linker/README.md) и
+[Blender4.4 сглаживание/readback](../../technical_library/mesh_audit/SMOOTHING.md)
+связаны с компактными QA/кейсами; [PR37–41](https://github.com/artsafro/AGR_Project/pulls?q=is%3Apr+37+38+39+40+41) — исходные изменения.
+Актуальный merge/HEAD проверять по GitHub. PR18 остаётся отложенным;
+ручная/визуальная/full AGR приёмка отдельно.
+15.10: [Гарибальди/ДГП](../case_studies/GARIBALDI_DGP_SCRIPT_TRANSFER.md) — ранее перенесённые сценарии; base2011676 является историческим происхождением.
+Ни один из этих этапов не публикует пользовательские модели.
 
 [STATE](../../STATE.md) — текущий этап; [TASK_CONTEXT](../TASK_CONTEXT.md) — технический маршрут;
 [библиотека операций](../../technical_library/README.md) — повторяемый код и QA.

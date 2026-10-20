@@ -1,5 +1,9 @@
 # Реестр опыта AGR
 
+- [NPM: Standard Legacy и FBX linker](NPM_MAX_MATERIAL_FBX_LINKER.md): частичная
+  пользовательская проверка, Reflection Texture после подключения, уникальное
+  glass и JSON-bound экспорт через временные копии; финальная приёмка pending.
+
 - [Blender4.4: Sharp и Smooth by Angle](BLENDER_SMOOTHING_4_4.md): один scoped
   маршрут, fresh saved-file/reference equality; current-version drift сохранён,
   visual/user/full AGR pending.

@@ -1,3 +1,32 @@
+# AGR — интеграция скриптов и зависимостей,20.10.2026
+
+Собраны изменения [PR37](https://github.com/artsafro/AGR_Project/pull/37),
+[38](https://github.com/artsafro/AGR_Project/pull/38), [39](https://github.com/artsafro/AGR_Project/pull/39),
+[40](https://github.com/artsafro/AGR_Project/pull/40), [41](https://github.com/artsafro/AGR_Project/pull/41).
+Актуальный published HEAD/merge статус сверять с GitHub; base745bc136.
+[Max материалы/FBX](technical_library/max_texture_linker/README.md) и
+[Blender сглаживание](technical_library/mesh_audit/SMOOTHING.md) доступны через
+[общий каталог](technical_library/README.md); source QA и ограничения рядом.
+Pydantic2.14.1, pypdf6.20.1, Shapely2.2.0; остальные пины сохранены.
+PR18 отложен. Primary dirty, активные задачи и модели сохраняются у владельцев.
+CI не запускал шаги из-за billing account lock; это не hosted test pass.
+Merge библиотеки не закрывает visual/user/full AGR gates.
+Следующее действие: выбирать сценарий по входам/версии и проверять его границы.
+
+## История отдельных этапов переноса
+
+# NPM Max Texture Linker — перенос 17.10.2026
+
+Отдельная ветка `codex/chat-learning-linker-20261017`, base `745bc13634b61c54a30c65e8a3ccf6398f8dbb26`.
+Источник: завершённый чат `01a144e6-015a-7ce0-af8f-9ecbfc8b2c45`, commits59fbef2/9a4e3c2.
+[Пакет](technical_library/max_texture_linker/README.md) · [receipt](technical_library/max_texture_linker/TRANSFER_QA.json) · [каталог](docs/organization/SCRIPT_LIBRARY.md).
+Четыре исходника совпали с источником побайтно; свежие329tests/3skips, profiles3/schemas8,
+native39checks Max2024.2.5 synthetic roundtrip passed. Независимое review без blockers.
+Финальная пользовательская/визуальная приёмка, реальный пакет, full AGR Checker и
+forced export error/Cancel остаются pending. PR только draft; не merge.
+PR18, активные задачи, primary implementation и модели не изменены.
+Следующий шаг: review draft по точному head, без запуска на пользовательской сцене.
+
 # Blender smoothing transfer — 20.10.2026
 
 Branch codex/blender-smoothing-transfer-20261020; base745bc13634b61c54a30c65e8a3ccf6398f8dbb26.

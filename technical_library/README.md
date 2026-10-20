@@ -1,5 +1,8 @@
 # Техническая библиотека AGR
 
+- [NPM Texture Linker для 3ds Max](max_texture_linker/README.md): один drag-and-drop
+  MAXScript, рекурсивный поиск карт по имени ОКС, новые Standard Legacy и отдельное правило M_Glass.
+
 - [Blender4.4: Sharp → Smooth by Angle](mesh_audit/SMOOTHING.md): один сценарий
   внутри mesh_audit; эквивалентный replay16mesh, без моделей/MCP-настроек.
 

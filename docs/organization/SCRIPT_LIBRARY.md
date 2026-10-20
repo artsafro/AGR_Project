@@ -1,7 +1,22 @@
-# Библиотека сценариев
+# Каталог сценариев
 
-Основной каталог компактных пакетов: [technical_library/README.md](../../technical_library/README.md).
+Полная навигация по компактным пакетам: [техническая библиотека](../../technical_library/README.md).
+Сначала выбирайте существующую операцию; временные версии и модели в этот каталог не входят.
 
-- [Blender4.4: Sharp → Smooth by Angle](../../technical_library/mesh_audit/SMOOTHING.md):
-  один сценарий внутри mesh_audit с protected-input guards и saved-file/reference QA.
-  Только установленная область кейса; visual/user/full AGR gates остаются открытыми.
+## NPM: материалы Max и FBX по исходному составу
+
+[NPM Texture Linker](../../technical_library/max_texture_linker/README.md) — один
+автономный MAXScript для подключения найденных T_ карт, новых Standard Legacy,
+отдельных M_Glass и экспорта по проверенному source-FBX JSON. Python reader и
+embed builder оставлены для разработки; отдельный runtime Python не требуется.
+
+[Область проверки и ограничения](../../technical_library/max_texture_linker/QA.md) ·
+[Кейс и точная пользовательская оценка](../case_studies/NPM_MAX_MATERIAL_FBX_LINKER.md).
+Один реальный кейс и синтетический roundtrip не доказывают универсальность или
+полную приёмку НПМ. Актуальная сцена пользователя не запускается при переносе.
+
+## Blender4.4: Sharp и Smooth by Angle
+
+[Сценарий в mesh_audit](../../technical_library/mesh_audit/SMOOTHING.md):
+один CLI, защита входов, проверка saved output и исторического reference.
+Один16mesh-кейс; visual/user/fullAGR остаются pending.
