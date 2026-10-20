@@ -1,3 +1,15 @@
+# NPM Max Texture Linker — перенос 17.10.2026
+
+Отдельная ветка `codex/chat-learning-linker-20261017`, base `745bc13634b61c54a30c65e8a3ccf6398f8dbb26`.
+Источник: завершённый чат `01a144e6-015a-7ce0-af8f-9ecbfc8b2c45`, commits59fbef2/9a4e3c2.
+[Пакет](technical_library/max_texture_linker/README.md) · [receipt](technical_library/max_texture_linker/TRANSFER_QA.json) · [каталог](docs/organization/SCRIPT_LIBRARY.md).
+Четыре исходника совпали с источником побайтно; свежие329tests/3skips, profiles3/schemas8,
+native39checks Max2024.2.5 synthetic roundtrip passed. Независимое review без blockers.
+Финальная пользовательская/визуальная приёмка, реальный пакет, full AGR Checker и
+forced export error/Cancel остаются pending. PR только draft; не merge.
+PR18, активные задачи, primary implementation и модели не изменены.
+Следующий шаг: review draft по точному head, без запуска на пользовательской сцене.
+
 # Гарибальди + ДГП — перенос рабочих скриптов, 15.10.2026
 
 Цель: актуальные файлы/расхождения проверены; подготовлен один compact draft PR без
