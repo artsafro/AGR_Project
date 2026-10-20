@@ -1,3 +1,20 @@
+# AGR — интеграция скриптов и зависимостей,20.10.2026
+
+Собраны изменения [PR37](https://github.com/artsafro/AGR_Project/pull/37),
+[38](https://github.com/artsafro/AGR_Project/pull/38), [39](https://github.com/artsafro/AGR_Project/pull/39),
+[40](https://github.com/artsafro/AGR_Project/pull/40), [41](https://github.com/artsafro/AGR_Project/pull/41).
+Актуальный published HEAD/merge статус сверять с GitHub; base745bc136.
+[Max материалы/FBX](technical_library/max_texture_linker/README.md) и
+[Blender сглаживание](technical_library/mesh_audit/SMOOTHING.md) доступны через
+[общий каталог](technical_library/README.md); source QA и ограничения рядом.
+Pydantic2.14.1, pypdf6.20.1, Shapely2.2.0; остальные пины сохранены.
+PR18 отложен. Primary dirty, активные задачи и модели сохраняются у владельцев.
+CI не запускал шаги из-за billing account lock; это не hosted test pass.
+Merge библиотеки не закрывает visual/user/full AGR gates.
+Следующее действие: выбирать сценарий по входам/версии и проверять его границы.
+
+## История отдельных этапов переноса
+
 # NPM Max Texture Linker — перенос 17.10.2026
 
 Отдельная ветка `codex/chat-learning-linker-20261017`, base `745bc13634b61c54a30c65e8a3ccf6398f8dbb26`.
@@ -9,6 +26,15 @@ native39checks Max2024.2.5 synthetic roundtrip passed. Независимое re
 forced export error/Cancel остаются pending. PR только draft; не merge.
 PR18, активные задачи, primary implementation и модели не изменены.
 Следующий шаг: review draft по точному head, без запуска на пользовательской сцене.
+
+# Blender smoothing transfer — 20.10.2026
+
+Branch codex/blender-smoothing-transfer-20261020; base745bc13634b61c54a30c65e8a3ccf6398f8dbb26.
+[Сценарий](technical_library/mesh_audit/SMOOTHING.md) · [QA](technical_library/mesh_audit/SMOOTHING_QA.json) · [кейс](docs/case_studies/BLENDER_SMOOTHING_4_4.md).
+16mesh: fresh native raw/evaluated/shading equal historical.blend1; source unchanged.
+Current.blend differs, retained untouched; no silent restore. Visual/user/fullAGR pending.
+One compact draft PR; no merge. PR18, active scenes, config and local models untouched.
+Next: review exact draft head and scoped limits; broader use needs another representativecase.
 
 # Гарибальди + ДГП — перенос рабочих скриптов, 15.10.2026
 

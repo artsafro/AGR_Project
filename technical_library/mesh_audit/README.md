@@ -1,5 +1,9 @@
 # Общая инвентаризация сетки
 
+[Scoped smoothing Blender4.4](SMOOTHING.md): отдельный изменяющий shading сценарий
+в этом пакете, с новым output и проверкой сохранности. Основной inventory ниже
+остаётся операцией чтения; smoothing не является topology/AGR-приёмкой.
+
 Одна операция вместо локальных копий basic inventory/readback в Ground, MASHI,
 Revit, знаках, mesh optimization и продуктовых Blender-кейсах. Не заменяет
 специализированный contour, BVH, CheckToolBox, геометрический fit и AGR Checker.

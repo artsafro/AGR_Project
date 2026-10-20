@@ -14,3 +14,9 @@ embed builder оставлены для разработки; отдельный
 [Кейс и точная пользовательская оценка](../case_studies/NPM_MAX_MATERIAL_FBX_LINKER.md).
 Один реальный кейс и синтетический roundtrip не доказывают универсальность или
 полную приёмку НПМ. Актуальная сцена пользователя не запускается при переносе.
+
+## Blender4.4: Sharp и Smooth by Angle
+
+[Сценарий в mesh_audit](../../technical_library/mesh_audit/SMOOTHING.md):
+один CLI, защита входов, проверка saved output и исторического reference.
+Один16mesh-кейс; visual/user/fullAGR остаются pending.
