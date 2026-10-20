@@ -1,3 +1,12 @@
+# Blender smoothing transfer — 20.10.2026
+
+Branch codex/blender-smoothing-transfer-20261020; base745bc13634b61c54a30c65e8a3ccf6398f8dbb26.
+[Сценарий](technical_library/mesh_audit/SMOOTHING.md) · [QA](technical_library/mesh_audit/SMOOTHING_QA.json) · [кейс](docs/case_studies/BLENDER_SMOOTHING_4_4.md).
+16mesh: fresh native raw/evaluated/shading equal historical.blend1; source unchanged.
+Current.blend differs, retained untouched; no silent restore. Visual/user/fullAGR pending.
+One compact draft PR; no merge. PR18, active scenes, config and local models untouched.
+Next: review exact draft head and scoped limits; broader use needs another representativecase.
+
 # Гарибальди + ДГП — перенос рабочих скриптов, 15.10.2026
 
 Цель: актуальные файлы/расхождения проверены; подготовлен один compact draft PR без

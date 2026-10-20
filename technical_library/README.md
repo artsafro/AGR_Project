@@ -1,5 +1,8 @@
 # Техническая библиотека AGR
 
+- [Blender4.4: Sharp → Smooth by Angle](mesh_audit/SMOOTHING.md): один сценарий
+  внутри mesh_audit; эквивалентный replay16mesh, без моделей/MCP-настроек.
+
 - [Гарибальди + ДГП](../docs/case_studies/GARIBALDI_DGP_SCRIPT_TRANSFER.md): один scoped repair/readback SINTEZ и расширение texture_tiles для кирпича; свежая сверка текущих файлов, без моделей.
 
 - [RunRecord inspector](../docs/organization/local-orchestration/RUN_EVIDENCE.md): переиспользует существующий ledger/AdapterReport, проверяет сохранённые файлы перед продолжением; native/manual gates отдельно.

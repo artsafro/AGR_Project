@@ -1,5 +1,9 @@
 # Реестр опыта AGR
 
+- [Blender4.4: Sharp и Smooth by Angle](BLENDER_SMOOTHING_4_4.md): один scoped
+  маршрут, fresh saved-file/reference equality; current-version drift сохранён,
+  visual/user/full AGR pending.
+
 - [Гарибальди и ДГП: скрипты и сверка версий](GARIBALDI_DGP_SCRIPT_TRANSFER.md): UTF-8 пути, новый восстановленный пакет SINTEZ, pixel-equivalent atlas replay; ручные/визуальные gates отдельно.
 
 - ГЛБ: [A_Main](GLB_A_MAIN_ATLAS.md) и [B_Main](GLB_B_MAIN_ATLAS.md):

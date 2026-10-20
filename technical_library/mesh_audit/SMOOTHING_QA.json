@@ -1,0 +1,47 @@
+{
+  "blender_version": "4.4.0",
+  "source_sha256": "de75e3553425dc0a6441a7eb4cdcc35151cf80e092a4da01859f36308f7c5563",
+  "output_sha256": "0e60d859e5eb3519182292a5739e513662e046e1de4054b4b823d6eef39cf94c",
+  "asset_sha256": "a3c1b8eb6c1231b6a00b575c44b38571597da65e6a0238074c37a10c50a77023",
+  "reference_sha256": "36b3b6fdb51e8756b17095b7e8298714a08b54e7d54a18c19796cba27a80711c",
+  "reference_equivalent": true,
+  "angle_degrees": 30.0,
+  "mesh_count": 16,
+  "source_unchanged": true,
+  "saved_source_output_invariants_equal": true,
+  "native_checks_passed": true,
+  "visual_acceptance": "pending",
+  "user_acceptance": "pending",
+  "full_agr_acceptance": "pending",
+  "delivery_passed": false,
+  "scope": "Blender 4.4 local meshes without prior modifiers; shading-only operation",
+  "source_thread": "01a15321-49e2-7432-af4f-0eabcbb38141",
+  "transfer_date": "2026-10-20",
+  "base_sha": "745bc13634b61c54a30c65e8a3ccf6398f8dbb26",
+  "source_scripts": {
+    "apply_smoothing.py": "0fa01b1bc8a4e9622bb7d3012f6b9f4847a406c3c8c37aefb7894c64b1f859ea",
+    "finish_smoothing.py": "ce92ddd690d7b1b180e38053aa349fcd46d833be5cce4ef694c196e1b059269e",
+    "verify_saved.py": "8f651a9bd414081c02baecdb0cd5376706914c37650d8a639b8562b66ccb5ac8"
+  },
+  "code_sha256": "98d45c6bee5e1a73b7e8dcd2b4e866b5fac0affe2ef09c649c65800919f182c8",
+  "current_model_sha256": "6e4d97b98027287f37dfae11c077703b1ce35b829897b9ce34ffa4ff2df331be",
+  "current_model_matches_historical_invariants": false,
+  "current_model_status": "No overwrite or restoration;16vertex-coordinate/transform fingerprints differ; exact cause unknown",
+  "historical_reference_kind": "preserved .blend1, original verifier passes16meshes",
+  "fresh_native_readback": "Source/output reopened; exact raw invariants and evaluated shading equivalent to historicalreference; source/reference SHA unchanged",
+  "independent_review": "Code/spec/native artifact and hashes independently verified; no blockingfindings",
+  "tests": {
+    "focused": 23,
+    "fullsuite_passed": 296,
+    "skipped": 2,
+    "expected_warning": "duplicate ZIP member",
+    "skip_scope": [
+      "Blender pipeline integration DT_BLENDER not supplied (scoped smoothing native replay passed separately)",
+      "Windows symlink privilege"
+    ],
+    "initial_fixture_failure": "Test name contained approved and incorrectly hit protected-path guard; renamed fixture only, criteria/code guards unchanged; finalfullsuite passed"
+  },
+  "profiles": 3,
+  "schemas": 8,
+  "privacy": "No models, raw absolute-path logs, fullchats or MCPconfig published"
+}
