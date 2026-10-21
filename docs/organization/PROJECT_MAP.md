@@ -1,5 +1,11 @@
 # AGR — рабочий проект
 
+21.10: [декор трубы](../case_studies/PIPE_DECOR_LATTICE.md) — перенос фактического
+генератора решётки в mesh_audit с replay; восстановление генератора стоек отдельно pending.
+Принята геометрическая сборка, не поздняя текстура. Новый этап публикуется draft;
+main7849bc132f6defc522cead8dd71b98709863fbb5 содержит ранее слитые PR37–41.
+PR18 отложен, модели и активные сцены остаются локально.
+
 20.10: [Max материалы/FBX](../../technical_library/max_texture_linker/README.md) и
 [Blender4.4 сглаживание/readback](../../technical_library/mesh_audit/SMOOTHING.md)
 связаны с компактными QA/кейсами; [PR37–41](https://github.com/artsafro/AGR_Project/pulls?q=is%3Apr+37+38+39+40+41) — исходные изменения.

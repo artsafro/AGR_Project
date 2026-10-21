@@ -1,5 +1,8 @@
 # Техническая библиотека AGR
 
+- [Решётка декора трубы](mesh_audit/pipe_lattice/README.md): один Node.js сценарий,
+  replay по исходному профилю; генератор 18 стоек пока не восстановлен.
+
 - [NPM Texture Linker для 3ds Max](max_texture_linker/README.md): один drag-and-drop
   MAXScript, рекурсивный поиск карт по имени ОКС, новые Standard Legacy и отдельное правило M_Glass.
 

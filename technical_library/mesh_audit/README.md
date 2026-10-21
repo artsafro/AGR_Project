@@ -1,5 +1,8 @@
 # Общая инвентаризация сетки
 
+[Решётка трубы](pipe_lattice/README.md): отдельный создающий геометрию сценарий
+фиксированного кейса с Node.js; не часть read-only inventory ниже.
+
 [Scoped smoothing Blender4.4](SMOOTHING.md): отдельный изменяющий shading сценарий
 в этом пакете, с новым output и проверкой сохранности. Основной inventory ниже
 остаётся операцией чтения; smoothing не является topology/AGR-приёмкой.

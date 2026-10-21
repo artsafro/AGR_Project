@@ -1,0 +1,12 @@
+{
+  "scenario": "pipe-lattice-v002",
+  "units": "m",
+  "center_x": 43.34540939331055,
+  "sectors": 18,
+  "half_rows": 16,
+  "gap_m": 0.0102,
+  "depth_m": 0.12,
+  "inset_m": 0.12,
+  "source_sha256": "1d1aa779878f0dae5c42d259f1adef636ccbb397938f1a6519cd4a5564b8b1ee",
+  "reference_sha256": "cafd07441d1ab77159c3a0bc54d0e0b11181604b0979d30f0bd91c3d82634024"
+}
