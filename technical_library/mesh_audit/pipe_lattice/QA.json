@@ -1,0 +1,52 @@
+{
+  "scenario": "pipe-lattice-v002",
+  "checked_on": "2026-10-21",
+  "runtime": "v22.17.1",
+  "original_builder_sha256": "4e6857d1efac012a8e81bf43c16b808ffe156c69f211f869c5c360dce7ce919b",
+  "source_sha256": "1d1aa779878f0dae5c42d259f1adef636ccbb397938f1a6519cd4a5564b8b1ee",
+  "reference_sha256": "cafd07441d1ab77159c3a0bc54d0e0b11181604b0979d30f0bd91c3d82634024",
+  "same_input_replay": {
+    "vertices": 22608,
+    "faces": 23760,
+    "ordered_faces_equal": true,
+    "max_coordinate_error_m": 7.105427357601002e-15,
+    "tolerance_m": 1e-12,
+    "gap_metadata_corrected_m": 0.0102
+  },
+  "cli_tests": {
+    "passed": 5,
+    "skipped": 0,
+    "includes_private_same_input": true
+  },
+  "historical_native_evidence": {
+    "date": "2026-10-20",
+    "lattice_sample_count": 12,
+    "max_sample_error_mm": 0.003801,
+    "complete_lattice_native_coordinate_readback": false
+  },
+  "historical_numerical_evidence": {
+    "self_intersection_pairs": 754255,
+    "self_intersections": 0,
+    "minimum_pipe_clearance_mm": 10.157362229761066
+  },
+  "acceptance_scope": "User accepted geometry assembly on 2026-10-20; this package transfers only lattice construction",
+  "pending": [
+    "Recover original post/profile and18objectarray builder",
+    "Texture variant",
+    "Full savedMAX reopen",
+    "AGR Checker",
+    "Second representative object for portability"
+  ],
+  "native_operations_during_transfer": 0,
+  "repository_checks": {
+    "pytest_passed": 357,
+    "pytest_skipped": 3,
+    "skip_scope": "DCC executable not supplied; Windows symlink privileges unavailable",
+    "profiles": 3,
+    "schemas": 8,
+    "independent_review": "No blocking code/spec findings; original JS versus transferred geometry equal",
+    "environment_retries": "Sandbox taskkill failed; second temp path included protected word approved; corrected execution environment passed without code or test changes",
+    "hosted_ci": "Not verified for this draft"
+  },
+  "delivery_passed": false
+}

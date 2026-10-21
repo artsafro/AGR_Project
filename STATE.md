@@ -1,4 +1,25 @@
-# AGR — интеграция скриптов и зависимостей,20.10.2026
+# AGR — перенос генератора решётки,21.10.2026
+
+Цель: сохранить рабочий генератор принятой решётки как один сценарий в mesh_audit,
+с параметрами, hash-guard, командой запуска и эквивалентным replay. Модели/массивы
+и временные версии не публиковать; генератор 18 стоек пока не найден.
+[Сценарий](technical_library/mesh_audit/pipe_lattice/README.md) ·
+[кейс/точная приёмка](docs/case_studies/PIPE_DECOR_LATTICE.md).
+Worktree tmp/chat-learning-20261021/worktree, ветка codex/pipe-lattice-learning-20261021,
+base7849bc132f6defc522cead8dd71b98709863fbb5 после fetch. Владелец lead;
+bounded executor пишет только сценарий/тесты, независимый reviewer проверяет diff/replay.
+Ресурсы: только новый output для CLI; source75ea и MAF-a043 read-only; live DCC не запускать.
+Проверки: exact-source/reference replay, invalid-input/no-overwrite, pytest,
+profiles/schemas и независимое review. Стоп: input drift/несовпадение reference.
+QA: 357passed/3skips (без DCC и Windows symlink privileges), profiles3/schemas8;
+новый CLI5passed, включая private replay/readback/no-overwrite. Независимое review:
+геометрия исходного JS совпала, metadata зазора исправлена отдельно. Первые общие
+запуски выявили sandbox taskkill и protected-word в temp-пути; с корректным
+окружением проверки прошли, код и требования не ослаблялись.
+Публикация: один draft PR после QA; автоматического merge нет. PR18 и dirty primary
+сохранены. Следующее действие: review точного head; поиск исходника стоек отдельно.
+
+## Интеграция скриптов и зависимостей,20.10.2026
 
 Собраны изменения [PR37](https://github.com/artsafro/AGR_Project/pull/37),
 [38](https://github.com/artsafro/AGR_Project/pull/38), [39](https://github.com/artsafro/AGR_Project/pull/39),
