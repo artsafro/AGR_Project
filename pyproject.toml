@@ -7,7 +7,7 @@ name = "digital-twin-ai"
 version = "0.1.0"
 description = "Traceable NPM/VPM synthetic vertical slice"
 requires-python = ">=3.11"
-dependencies = ["PyYAML==6.0.3", "pydantic==2.14.1", "Pillow==12.3.0", "pypdf==6.20.1"]
+dependencies = ["PyYAML==6.0.3", "pydantic==2.14.1", "Pillow==12.3.0", "pypdf==6.21.2"]
 
 [project.optional-dependencies]
 dev = ["pytest==9.1.1", "numpy==2.5.3", "shapely==2.2.0"]
