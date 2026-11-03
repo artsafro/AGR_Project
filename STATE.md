@@ -1,4 +1,24 @@
-# AGR — интеграция скриптов и зависимостей,20.10.2026
+# AGR — точное ×2 в TIFF,03.11.2026
+
+Цель: перенести фактически использованный ImageMagick Lanczos200%→TIFF LZW
+в один проверяемый сценарий рядом с texture_tiles, без замены алгоритма Pillow.
+Источник: чат01a1a02e-0980-7090-98e3-1fed409ea77f, два завершённых этапа;
+пользователь выбрал точное масштабирование, не AI. Финальная приёмка не заявлена.
+Base7849bc132f6defc522cead8dd71b98709863fbb5 после fetch;
+worktree tmp/chat-learning-20261103/worktree, branch codex/tiff-resize-learning-20261103.
+Владелец lead; исполнитель пишет только resize_tiff/README/QA/tests, lead — навигацию/кейс.
+Входы и исторические8TIFF read-only; новые output только в task-owned local tmp.
+Приёмка переноса: same-input decoded pixel equality8/8, source SHA unchanged,
+размеры×2/декодирование/ICC и запрет перезаписи; затем pytest/profiles/schemas,
+независимое review. Стоп при source drift, несовпадении или необходимости live DCC.
+Один draft PR после QA; не merge. PR18, PR42, activeK5 и модели не менять.
+Локальные проверки: fresh8/8 decoded pixel+ICC replay, source/referenceSHA unchanged,
+10scoped tests; общий pytest362passed/3skips (DCC/Windows symlink privilege),
+profiles3/schemas8. Независимое review: блокирующих замечаний нет, separate readback8/8.
+Код проверен в exact snapshot; hash/коммит — git log по resize_tiff.py и QA рядом.
+Следующее: review опубликованного draft head; visual/user acceptance отдельно, не merge.
+
+## Интеграция скриптов и зависимостей,20.10.2026
 
 Собраны изменения [PR37](https://github.com/artsafro/AGR_Project/pull/37),
 [38](https://github.com/artsafro/AGR_Project/pull/38), [39](https://github.com/artsafro/AGR_Project/pull/39),

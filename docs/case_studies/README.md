@@ -1,5 +1,8 @@
 # Реестр опыта AGR
 
+- [Восемь изображений ×2 в TIFF](EXACT_TIFF_X2.md): выбран точный resampling,
+  исполнение ImageMagick сохранено в одном сценарии; финальная приёмка отдельно.
+
 - [NPM: Standard Legacy и FBX linker](NPM_MAX_MATERIAL_FBX_LINKER.md): частичная
   пользовательская проверка, Reflection Texture после подключения, уникальное
   glass и JSON-bound экспорт через временные копии; финальная приёмка pending.

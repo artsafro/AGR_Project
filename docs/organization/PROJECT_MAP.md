@@ -1,5 +1,10 @@
 # AGR — рабочий проект
 
+03.11: [точное ×2 в TIFF](../case_studies/EXACT_TIFF_X2.md) — перенос фактической
+ImageMagick-команды с replay и readback; final user/visual acceptance отдельно.
+Новый этап — draft, без автоматического merge. PR18 и PR42 сохраняются.
+Новая задача К5/26СК находится у активного владельца сцены; не запускать её из аудита.
+
 20.10: [Max материалы/FBX](../../technical_library/max_texture_linker/README.md) и
 [Blender4.4 сглаживание/readback](../../technical_library/mesh_audit/SMOOTHING.md)
 связаны с компактными QA/кейсами; [PR37–41](https://github.com/artsafro/AGR_Project/pulls?q=is%3Apr+37+38+39+40+41) — исходные изменения.

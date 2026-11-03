@@ -1,5 +1,9 @@
 # Каталог сценариев
 
+[Точное ×2 в TIFF](../../technical_library/texture_tiles/RESIZE_TIFF.md):
+whole-image ImageMagick Lanczos → TIFF LZW; [кейс](../case_studies/EXACT_TIFF_X2.md).
+Исходные изображения и промежуточные варианты не публикуются.
+
 Полная навигация по компактным пакетам: [техническая библиотека](../../technical_library/README.md).
 Сначала выбирайте существующую операцию; временные версии и модели в этот каталог не входят.
 
