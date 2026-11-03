@@ -1,5 +1,8 @@
 # Карты материалов: одна операция, конфигурация объекта отдельно
 
+[Точное ×2 в TIFF](RESIZE_TIFF.md) — отдельный whole-image сценарий ImageMagick
+в этом пакете; не использует и не дублирует PNG atlas/raster ниже.
+
 `cli.py` выполняет validate → draw → PNG readback → ZIP readback. `panels.py`
 содержит неизменённую панельную математику КПП v001. `kpp_v001.json` — цвета,
 размеры и ID/UDIM конкретного кейса; временный clipboard путь не переносится.

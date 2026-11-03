@@ -1,0 +1,200 @@
+{
+  "scenario": "exact-2x-tiff",
+  "checked_on": "2026-11-03",
+  "source_thread": "01a1a02e-0980-7090-98e3-1fed409ea77f",
+  "source_turn": "01a1a02e-18dd-7783-9f49-94ad15e34dc2",
+  "runtime": "Version: ImageMagick 7.1.2-31 Q16-HDRI x64 fb965f1:20260903 https://imagemagick.org",
+  "operation_args": [
+    "-filter",
+    "Lanczos",
+    "-resize",
+    "200%",
+    "-compress",
+    "LZW"
+  ],
+  "private_same_input_replay_files": 8,
+  "reference_pixels_and_icc_equal": true,
+  "source_and_reference_hashes_unchanged": true,
+  "source_to_output_icc_bytes_equal": true,
+  "tests_passed": 10,
+  "tests_skipped": 0,
+  "geometry_or_ai_generation": false,
+  "native_operations_during_transfer": 0,
+  "user_scope": "Exact2x ordinary resampling and TIFF; no final visual/user approval",
+  "pending": [
+    "Visual/final user acceptance",
+    "Portability beyond RGB8sRGB and the tested runtime"
+  ],
+  "delivery_passed": false,
+  "independent_review": "No blocking requirements/standards findings; actual CLI plus separate Pillow readback verified all8 reference pixels, dimensions, RGB/LZW and ICC",
+  "repository_checks": {
+    "pytest_passed": 362,
+    "pytest_skipped": 3,
+    "skips": "DCC executable not supplied and Windows symlink privileges unavailable",
+    "profiles": 3,
+    "schemas": 8,
+    "hosted_ci": "Not verified at local publication gate"
+  },
+  "files": [
+    {
+      "index": 1,
+      "source_sha256": "0888a7c49ca82caf3db032f3fd898318b292586132397ef713b2a1f7761a896f",
+      "reference_sha256": "e0f4ef19e53749b23c7d0af1ba4f0c4fabb6080ad42ad7fdc79bc67a7e1b1d17",
+      "output_sha256": "e0f4ef19e53749b23c7d0af1ba4f0c4fabb6080ad42ad7fdc79bc67a7e1b1d17",
+      "input_size": [
+        1615,
+        974
+      ],
+      "output_size": [
+        3230,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "2f875f071a4103ac6217cd05023af5a24c2db854e2537776fab346409fdaf0d1",
+      "icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e",
+      "reference_equal": true
+    },
+    {
+      "index": 2,
+      "source_sha256": "75235ceca2f9894034015912ad6724493b7eee0b80dc7dacf08603e674dc7e62",
+      "reference_sha256": "1b7c7cc4152747367786de9fd1ef1d3c0ef962c889652f7e0810cb44781fb057",
+      "output_sha256": "1b7c7cc4152747367786de9fd1ef1d3c0ef962c889652f7e0810cb44781fb057",
+      "input_size": [
+        1615,
+        974
+      ],
+      "output_size": [
+        3230,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "022bd10246feabc46f17ad4d2bc8d1645c3566508aa2cd01f7c1852c677e4a04",
+      "icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e",
+      "reference_equal": true
+    },
+    {
+      "index": 3,
+      "source_sha256": "62bf49e720c296f7662d189c28fea7dcb584130916b537d0e41f47035d90541a",
+      "reference_sha256": "8a1fef3ae03d6bc80946ad4319ba52a63ea3c5ab1d6f85d435a4e9793b6e3466",
+      "output_sha256": "8a1fef3ae03d6bc80946ad4319ba52a63ea3c5ab1d6f85d435a4e9793b6e3466",
+      "input_size": [
+        1615,
+        974
+      ],
+      "output_size": [
+        3230,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "31056175144c248a28cf438cfb473363b10314bb20e99c943b861084fa9b7f9d",
+      "icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e",
+      "reference_equal": true
+    },
+    {
+      "index": 4,
+      "source_sha256": "0ef65c5b127081f87840f54a5ae43d37275ae2a4db8ed15837f5c4b63986207f",
+      "reference_sha256": "732add9d88185c46035a4668b0fa0b629049f710231a33e74679f9c1e3c51dc5",
+      "output_sha256": "732add9d88185c46035a4668b0fa0b629049f710231a33e74679f9c1e3c51dc5",
+      "input_size": [
+        1615,
+        974
+      ],
+      "output_size": [
+        3230,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "b0fcd77ab9aa3c0a1497ef37bc9af57b1bcc7c2ac9ccf3586087c288cfb6fbcc",
+      "icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e",
+      "reference_equal": true
+    },
+    {
+      "index": 5,
+      "source_sha256": "4f378fad03108d061731e80c32b574cfc2c63ff442651ebe190ec2c557b3344f",
+      "reference_sha256": "181c3a0aa701d574e1a31143638ca32ee243deac925897e42b116b5061b48759",
+      "output_sha256": "181c3a0aa701d574e1a31143638ca32ee243deac925897e42b116b5061b48759",
+      "input_size": [
+        1935,
+        812
+      ],
+      "output_size": [
+        3870,
+        1624
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "2c3dc1d46cb8470e49d89d131b2d3a9a43de3f14a67bf35a7772d8439a364b5b",
+      "icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e",
+      "reference_equal": true
+    },
+    {
+      "index": 6,
+      "source_sha256": "4ca92cc36563c94abd92c10cfcd27a0129f41d80f42ff71103c73b905344fb57",
+      "reference_sha256": "bdfb944decdaa72de982a599654d0dd35a4c0e5f872cbc7bd45887bf95877587",
+      "output_sha256": "bdfb944decdaa72de982a599654d0dd35a4c0e5f872cbc7bd45887bf95877587",
+      "input_size": [
+        1615,
+        974
+      ],
+      "output_size": [
+        3230,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "2a11545b19c8274f16701183113362c8a0c44c64eee7c44baee5645efdaab77d",
+      "icc_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reference_equal": true
+    },
+    {
+      "index": 7,
+      "source_sha256": "382db41ea8877fb59997ce0050729f5b275abeb5d646a76ca03683dc73beb9ba",
+      "reference_sha256": "492d481393d7faca84a7d3e78e78697682dee65dc0316e2161fde1b1faf6d2db",
+      "output_sha256": "492d481393d7faca84a7d3e78e78697682dee65dc0316e2161fde1b1faf6d2db",
+      "input_size": [
+        1614,
+        974
+      ],
+      "output_size": [
+        3228,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "4e06412c25733a9d4beb712356ee0b7748999917046bfb79fd734843e023565c",
+      "icc_sha256": "2b3aa1645779a9e634744faf9b01e9102b0c9b88fd6deced7934df86b949af7e",
+      "reference_equal": true
+    },
+    {
+      "index": 8,
+      "source_sha256": "f3af2d24e227e267b9a3db46672f8660bb4625386649aaa56607208c12a8b2a6",
+      "reference_sha256": "ef8393d0b773884316033c4bc678dc7da51205fe82f43e2fd198c28e51ed67d2",
+      "output_sha256": "ef8393d0b773884316033c4bc678dc7da51205fe82f43e2fd198c28e51ed67d2",
+      "input_size": [
+        1615,
+        974
+      ],
+      "output_size": [
+        3230,
+        1948
+      ],
+      "mode": "RGB",
+      "depth": 8,
+      "compression": "LZW",
+      "pixels_sha256": "796a630e76372158a3bba9333abff02199f86ae797a2fe4fffca6ab339af3845",
+      "icc_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reference_equal": true
+    }
+  ]
+}

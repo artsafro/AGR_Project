@@ -1,5 +1,8 @@
 # Техническая библиотека AGR
 
+- [Точное ×2 в TIFF](texture_tiles/RESIZE_TIFF.md): один ImageMagick-сценарий,
+  новый output, source guards и сравнение исторического результата; без AI-дорисовки.
+
 - [NPM Texture Linker для 3ds Max](max_texture_linker/README.md): один drag-and-drop
   MAXScript, рекурсивный поиск карт по имени ОКС, новые Standard Legacy и отдельное правило M_Glass.
 
